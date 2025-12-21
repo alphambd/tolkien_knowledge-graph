@@ -1,5 +1,3 @@
-# WS_Project
-
 # Tolkien Knowledge Graph
 
 This project builds a Knowledge Graph from the Tolkien Gateway wiki,
