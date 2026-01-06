@@ -1,0 +1,2545 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tolkien: <http://example.org/tolkien/> .
+
+tolkien:Character a rdfs:Class ;
+    rdfs:label "Character" .
+
+tolkien:Event a rdfs:Class ;
+    rdfs:label "Event" .
+
+tolkien:Item a rdfs:Class ;
+    rdfs:label "Item" .
+
+tolkien:Location a rdfs:Class ;
+    rdfs:label "Location" .
+
+tolkien:Media a rdfs:Class ;
+    rdfs:label "Media" .
+
+tolkien:Organization a rdfs:Class ;
+    rdfs:label "Organization" .
+
+tolkien:Other a rdfs:Class ;
+    rdfs:label "Other" .
+
+tolkien:A_Shadow_of_the_Past a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:caption "Cover art for the episode's." ;
+    tolkien:director "J. A. Bayona" ;
+    tolkien:gallery "The Rings of Power (TV series)" ;
+    tolkien:image "The Lord of the Rings The Rings of Power - A Shadow of the Past.jpg" ;
+    tolkien:imdb_id "9788618" ;
+    tolkien:music "Bear McCreary" ;
+    tolkien:next "Adrift" ;
+    tolkien:pageTitle "A Shadow of the Past" ;
+    tolkien:released "1 September 2022" ;
+    tolkien:runtime "65 minutes" ;
+    tolkien:studio "Amazon Studios" ;
+    tolkien:templateType "Episode infobox" ;
+    tolkien:writer "J. D. Payne<br/>Patrick McKay" .
+
+tolkien:A_Short_Rest a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "c. 29 May—Midyear's Day, {{TA|2941" ;
+    tolkien:events "Thorin and Company reach Rivendell. Elrond deciphers Thrór's Map and identifies their swords." ;
+    tolkien:image "J.R.R. Tolkien - Riding down into Rivendell.jpg" ;
+    tolkien:name "A Short Rest" ;
+    tolkien:next "Over Hill and Under Hill" ;
+    tolkien:number "3" ;
+    tolkien:pageTitle "A Short Rest" ;
+    tolkien:previous "Roast Mutton" ;
+    tolkien:templateType "Chapter" .
+
+tolkien:Adanel a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:caption "Adanel (right) in \"Adanel the Wise\" by Juliana Pinho" ;
+    tolkien:image "Juliana Pinho - Adanel the Wise.png" ;
+    tolkien:location "Estolad; Hithlum;{{fact" ;
+    tolkien:name "Adanel" ;
+    tolkien:pageTitle "Adanel" ;
+    tolkien:position "\"Wise-woman\"" ;
+    tolkien:templateType "Infobox character" .
+
+tolkien:Adar a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:director "Wayne Che Yip" ;
+    tolkien:gallery "The Rings of Power (TV series)" ;
+    tolkien:image "The Lord of the Rings The Rings of Power - Adar.jpg" ;
+    tolkien:imdb_id "11609034" ;
+    tolkien:music "Bear McCreary<br/>Main Title by Howard Shore" ;
+    tolkien:next "The Great Wave" ;
+    tolkien:pageTitle "Adar (episode)" ;
+    tolkien:previous "Adrift" ;
+    tolkien:released "9 September 2022" ;
+    tolkien:runtime "69 minutes" ;
+    tolkien:studio "Amazon Studios" ;
+    tolkien:templateType "Episode infobox" ;
+    tolkien:writer "Jason Cahill<br/>Justin Doble" .
+
+tolkien:Adelard_Took a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:birth "{{SR|1328" ;
+    tolkien:caption "Adelard Took from ''The Lord of the Rings Online''" ;
+    tolkien:image "The Lord of the Rings Online - Adelard Took.jpg" ;
+    tolkien:pageTitle "Adelard Took" ;
+    tolkien:people "Hobbit" ;
+    tolkien:templateType "Infobox character" .
+
+tolkien:Adrift a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:director "J. A. Bayona" ;
+    tolkien:gallery "The Rings of Power (TV series)" ;
+    tolkien:image "The Lord of the Rings The Rings of Power - Adrift.jpg" ;
+    tolkien:imdb_id "10582302" ;
+    tolkien:music "Bear McCreary<br/>Main Title by Howard Shore" ;
+    tolkien:next "Adar" ;
+    tolkien:pageTitle "Adrift" ;
+    tolkien:previous "A Shadow of the Past" ;
+    tolkien:released "1 September 2022" ;
+    tolkien:runtime "67 minutes" ;
+    tolkien:studio "Amazon Studios" ;
+    tolkien:templateType "Episode infobox" ;
+    tolkien:writer "Gennifer Hutchison" .
+
+tolkien:Adurant a tolkien:Location,
+        rdfs:Resource ;
+    tolkien:description "Southernmost of the seven rivers of Ossiriand" ;
+    tolkien:image "Christopher Tolkien - Ossiriand.jpg" ;
+    tolkien:inhabitants "Laiquendi; Beren, Lúthien, Dior" ;
+    tolkien:location "Beleriand, Ossiriand" ;
+    tolkien:pageTitle "Adurant" ;
+    tolkien:regions "Island: Tol Galen" ;
+    tolkien:templateType "Location infobox" ;
+    tolkien:type "River" .
+
+tolkien:Aegnor a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:caption "\"Aegnor\" by Elena Kukanova" ;
+    tolkien:image "Elena Kukanova - Aegnor 2.jpg" ;
+    tolkien:name "Aegnor" ;
+    tolkien:pageTitle "Aegnor" ;
+    tolkien:pronun "S, {{IPA|[ˈa͡ɛɡnor]" ;
+    tolkien:templateType "Infobox character" .
+
+tolkien:Aelin-uial a tolkien:Location,
+        rdfs:Resource ;
+    tolkien:caption "\"Finrod and Turgon at the Meres of Twilight\" by Peter Xavier Price" ;
+    tolkien:image "Peter Xavier Price - Finrod and Turgon at the Meres of Twilight.jpg" ;
+    tolkien:pageTitle "Aelin-uial" ;
+    tolkien:pronun "{{respell|eye|lin|oo-i|al" ;
+    tolkien:templateType "Location infobox" .
+
+tolkien:Aerin a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:caption "\"Aerin\" by Turner Mohan" ;
+    tolkien:death "{{FA|496" ;
+    tolkien:image "Turner Mohan - Aerin.jpg" ;
+    tolkien:location "Dor-lómin" ;
+    tolkien:name "Aerin" ;
+    tolkien:othernames "Lady Aerin, Indor’s daughter" ;
+    tolkien:pageTitle "Aerin" ;
+    tolkien:templateType "Infobox character" .
+
+tolkien:Aghan a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:affiliation "Drúedain, Haladin" ;
+    tolkien:gender "Male" ;
+    tolkien:height "Short" ;
+    tolkien:language "Drúadan language" ;
+    tolkien:location "Brethil" ;
+    tolkien:name "Aghan" ;
+    tolkien:pageTitle "Aghan" ;
+    tolkien:siblings "Unnamed brother" ;
+    tolkien:templateType "Infobox character" .
+
+tolkien:Ainulindalë a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:book "The Silmarillion" ;
+    tolkien:caption "''Ainulindale'' by Alystraea" ;
+    tolkien:date "Music of the Ainur" ;
+    tolkien:event "Creation of the Ainur" ;
+    tolkien:location "Arda" ;
+    tolkien:next "Valaquenta" ;
+    tolkien:number "1" ;
+    tolkien:pageTitle "Ainulindalë" ;
+    tolkien:templateType "Chapter" ;
+    tolkien:title "Ainulindalë" .
+
+tolkien:Ainur a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:caption "Ainulindale by Anna Kulisz" ;
+    tolkien:image "Anna Kulisz - Ainulindale.jpg" ;
+    tolkien:pageTitle "Ainur" ;
+    tolkien:pronun "{{IPA|[ˈaɪnur]" ;
+    tolkien:templateType "Race infobox" .
+
+tolkien:Alan_Lee a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "20 August, 1947" ;
+    tolkien:images "Gallery" ;
+    tolkien:location "Dartmoor, Devon, UK" ;
+    tolkien:name "Alan Lee" ;
+    tolkien:pageTitle "Alan Lee" ;
+    tolkien:style "Realistic/Romantic" ;
+    tolkien:templateType "Artist infobox" .
+
+tolkien:Amon_Darthir a tolkien:Location,
+        rdfs:Resource ;
+    tolkien:belongs "the Ered Wethrin" ;
+    tolkien:etymology "Amon Darthis: ''amon'' - steep-sloped mountain + ''dartha - to wait" ;
+    tolkien:location "the range of Ered Wethrin separating Dor-lomin and Beleriand" ;
+    tolkien:name "Amon Darthir" ;
+    tolkien:pageTitle "Amon Darthir" ;
+    tolkien:templateType "Mountain" .
+
+tolkien:Amon_Hen a tolkien:Media,
+        rdfs:Resource ;
+    tolkien:date "November 1972 - present" ;
+    tolkien:editor "Cate Palmer-Billing, Amanda Drake and Mathew Suta" ;
+    tolkien:format "A5 stapled paperback" ;
+    tolkien:frequency "Bimonthly" ;
+    tolkien:image "AmonHen284.png" ;
+    tolkien:issn "0306-8781" ;
+    tolkien:pageTitle "Amon Hen (journal)" ;
+    tolkien:pages "up to 44" ;
+    tolkien:publisher "The Tolkien Society" ;
+    tolkien:templateType "Journal" ;
+    tolkien:website "[http://www.tolkiensociety.org/society/publications/amon-hen/ ''Amon Hen'' at the Tolkien Society website]" .
+
+tolkien:Amon_Hen_191 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Chris Leaper" ;
+    tolkien:date "January 2005" ;
+    tolkien:editor "Andrew Butler" ;
+    tolkien:format "A5 stapled paperback, glossy" ;
+    tolkien:image "AmonHen191.jpg" ;
+    tolkien:issn "0306-8781" ;
+    tolkien:pageTitle "Amon Hen 191" ;
+    tolkien:pages "36" ;
+    tolkien:printer "[http://www.horshampress.co.uk/ Horsham Press], Horsham, UK" ;
+    tolkien:templateType "Amonhen" .
+
+tolkien:Amon_Hen_192 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Jill Thwaites" ;
+    tolkien:date "March 2005" ;
+    tolkien:editor "Andrew Butler" ;
+    tolkien:format "A5 stapled paperback, glossy" ;
+    tolkien:image "AmonHen192.jpg" ;
+    tolkien:issn "0306-8781" ;
+    tolkien:pageTitle "Amon Hen 192" ;
+    tolkien:pages "40" ;
+    tolkien:printer "[http://www.horshampress.co.uk/ Horsham Press], Horsham, UK" ;
+    tolkien:templateType "Amonhen" .
+
+tolkien:Amon_Hen_193 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Jef Murray" ;
+    tolkien:date "May 2005" ;
+    tolkien:editor "Andrew Butler" ;
+    tolkien:format "A5 stapled paperback, glossy" ;
+    tolkien:image "AmonHen193.jpg" ;
+    tolkien:issn "0306-8781" ;
+    tolkien:pageTitle "Amon Hen 193" ;
+    tolkien:pages "36" ;
+    tolkien:printer "[http://www.horshampress.co.uk/ Horsham Press], Horsham, UK" ;
+    tolkien:templateType "Amonhen" .
+
+tolkien:Amon_Hen_194 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Steve McKibben/Gene Fields" ;
+    tolkien:date "July 2005" ;
+    tolkien:editor "Andrew Butler" ;
+    tolkien:format "A5 stapled paperback, glossy" ;
+    tolkien:image "Amon Hen 194.jpg" ;
+    tolkien:issn "0306-8781" ;
+    tolkien:pageTitle "Amon Hen 194" ;
+    tolkien:pages "40" ;
+    tolkien:printer "[http://www.horshampress.co.uk/ Horsham Press], Horsham, UK" ;
+    tolkien:templateType "Amonhen" .
+
+tolkien:Amon_Hen_195 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Katrin Kunde" ;
+    tolkien:date "September 2005" ;
+    tolkien:editor "Andrew Butler" ;
+    tolkien:format "A5 stapled paperback, glossy" ;
+    tolkien:image "AmonHen195.jpg" ;
+    tolkien:issn "0306-8781" ;
+    tolkien:pageTitle "Amon Hen 195" ;
+    tolkien:pages "44" ;
+    tolkien:printer "[http://www.horshampress.co.uk/ Horsham Press], Horsham, UK" ;
+    tolkien:templateType "Amonhen" .
+
+tolkien:An_Unexpected_Party a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:book "The Hobbit" ;
+    tolkien:caption "\"One Morning Early in the Quiet of the World\" by J.R.R. Tolkien" ;
+    tolkien:date "25 April—26 April {{TA|2941" ;
+    tolkien:event "Gandalf meets Bilbo Baggins; the next day Dwarves visit his smial." ;
+    tolkien:image "J.R.R. Tolkien - One Morning Early in the Quiet of the World.png" ;
+    tolkien:number "1" ;
+    tolkien:pageTitle "An Unexpected Party" ;
+    tolkien:templateType "Chapter" ;
+    tolkien:written "Late 1920s" .
+
+tolkien:Ancalagon a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:affiliation "Morgoth" ;
+    tolkien:birth "After {{FA|510" ;
+    tolkien:caption "\"War of Wrath: Ancalagon the Black\" by Donato Giancola" ;
+    tolkien:name "Ancalagon" ;
+    tolkien:pageTitle "Ancalagon" ;
+    tolkien:templateType "Dragon infobox" ;
+    tolkien:titles "The Black" .
+
+tolkien:Anduin a tolkien:Location,
+        rdfs:Resource ;
+    tolkien:caption "\"The Great River Anduin\" by Gianna Michele Kaye" ;
+    tolkien:image "Gianna Michele Kaye - The Great River Anduin.jpg" ;
+    tolkien:pageTitle "Anduin" ;
+    tolkien:pronun "S, {{IPA|[ˈanduɪn]" ;
+    tolkien:templateType "Location infobox" .
+
+tolkien:Andy_Serkis a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:film "''The Lord of the Rings'' (film series)<br>''The Hobbit: An Unexpected Journey''" ;
+    tolkien:film2 "''The Lord of the Rings'' (film series)" ;
+    tolkien:imdb "[https://www.imdb.com/name/nm0785227/ Profile]" ;
+    tolkien:lifetime "April 20, 1964" ;
+    tolkien:name "Andy Serkis" ;
+    tolkien:pageTitle "Andy Serkis" ;
+    tolkien:played "Gollum" ;
+    tolkien:played2 "Witch-king of Angmar (voice)" ;
+    tolkien:templateType "Actor" .
+
+tolkien:Andúril a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:caption "\"Andúril, Flame of the West\" by Artigas" ;
+    tolkien:image "Artigas - Anduril Flame of the West.jpg" ;
+    tolkien:pageTitle "Andúril" ;
+    tolkien:pronun "{{respell|an|doo|ril" ;
+    tolkien:templateType "Object infobox" .
+
+tolkien:Angelo_Montanini a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "21 May 1951" ;
+    tolkien:caption "Self-portrait" ;
+    tolkien:location "Italy" ;
+    tolkien:name "Angelo Montanini" ;
+    tolkien:occupation "Artist" ;
+    tolkien:pageTitle "Angelo Montanini" ;
+    tolkien:templateType "Person infobox" .
+
+tolkien:Anglachel a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:appearance "A glowing black blade that could slice through iron; forged from a meteorite" ;
+    tolkien:caption "\"Eöl's Swords\" by María Lombide Ezpeleta" ;
+    tolkien:created "First Age" ;
+    tolkien:createdlocation "Nan Elmoth" ;
+    tolkien:creator "Eöl" ;
+    tolkien:destroyed "Reforged as Gurthang" ;
+    tolkien:image "Elena Kukanova - Anglachel.jpg" ;
+    tolkien:location "Nan Elmoth, Menegroth" ;
+    tolkien:notablefor "killing of Beleg by Túrin" ;
+    tolkien:owner "Thingol, Beleg, Túrin" ;
+    tolkien:pageTitle "Anglachel" ;
+    tolkien:templateType "Object infobox" ;
+    tolkien:type "Weapon" .
+
+tolkien:Angrist a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:appearance "Long dwarf-knife" ;
+    tolkien:caption "\"Angrist\" by Artigas" ;
+    tolkien:created "First Age" ;
+    tolkien:creator "Telchar" ;
+    tolkien:destroyed "{{FA|466" ;
+    tolkien:destroyer "Beren/Morgoth" ;
+    tolkien:image "Artigas - Angrist.jpg" ;
+    tolkien:location "Nargothrond, Forest of Brethil, Angband" ;
+    tolkien:owner "Curufin, Beren" ;
+    tolkien:pageTitle "Angrist" ;
+    tolkien:templateType "Object infobox" ;
+    tolkien:type "Weapon" .
+
+tolkien:Anguirel a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:appearance "A black blade that could slice through iron; forged from a meteorite" ;
+    tolkien:caption "\"Eöl's Swords\" by María Lombide Ezpeleta" ;
+    tolkien:created "First Age" ;
+    tolkien:createdlocation "Nan Elmoth" ;
+    tolkien:creator "Eöl" ;
+    tolkien:image "María Lombide Ezpeleta - Eöl's Swords.jpg" ;
+    tolkien:location "Nan Elmoth, Gondolin" ;
+    tolkien:owner "Eöl, Maeglin" ;
+    tolkien:pageTitle "Anguirel" ;
+    tolkien:templateType "Object infobox" ;
+    tolkien:type "Weapon" .
+
+tolkien:Arnor a tolkien:Location,
+        rdfs:Resource ;
+    tolkien:capital "Annúminas, later Fornost Erain" ;
+    tolkien:event1 "Founded" ;
+    tolkien:event1date "{{SA|3320" ;
+    tolkien:govern1 "King of Arnor/High King" ;
+    tolkien:govern2 "Council of Arnor" ;
+    tolkien:language "Westron, Sindarin, Quenya, Hobbitish" ;
+    tolkien:location "Most of Eriador" ;
+    tolkien:name "Arnor" ;
+    tolkien:othernames "Kingdom of the North, the Lost Realm, the North-kingdom, the Northern Kingdom, the North-realm" ;
+    tolkien:pageTitle "Arnor" ;
+    tolkien:population "Arnorians<br>Middle Men<br>Hobbits<br>Few Elves" ;
+    tolkien:precededby "Númenor" ;
+    tolkien:regions "Arthedain, Cardolan, Rhudaur" ;
+    tolkien:templateType "Kingdom" ;
+    tolkien:towns "Lond Daer, Tharbad, Bree, Hobbiton" .
+
+tolkien:Arthedain a tolkien:Location,
+        rdfs:Resource ;
+    tolkien:capital "Fornost" ;
+    tolkien:event1 "Founded" ;
+    tolkien:event1date "{{TA|861" ;
+    tolkien:govern1 "King of Arthedain" ;
+    tolkien:language "Westron" ;
+    tolkien:location "Western Eriador; west of Baranduin and the Weather Hills" ;
+    tolkien:name "Arthedain" ;
+    tolkien:pageTitle "Arthedain" ;
+    tolkien:population "Dúnedain, Hobbits" ;
+    tolkien:precededby "Arnor" ;
+    tolkien:templateType "Kingdom" ;
+    tolkien:towns "Annúminas, Bree, Hobbiton" .
+
+tolkien:Arthur_Rankin_Jr a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:awards "1977 - ''Peabody Award'', Best Movie, ''The Hobbit'' (1977 film)" ;
+    tolkien:children "2" ;
+    tolkien:image "Arthur Rankin, Jr..jpg" ;
+    tolkien:imdb "[https://www.imdb.com/name/nm0710230/ Profile]" ;
+    tolkien:lifetime "July 19, 1924 - January 30, 2014" ;
+    tolkien:nationality "American" ;
+    tolkien:notable_collaborators "Jules Bass" ;
+    tolkien:notable_films "''The Hobbit''<br>''The Return of the King''" ;
+    tolkien:occupation "Director, Producer, Writer" ;
+    tolkien:pageTitle "Arthur Rankin, Jr." ;
+    tolkien:production_company "Rankin/Bass" ;
+    tolkien:spouse "Elizabeth Shuldiner (divorced)<br>Olga Karlatos" ;
+    tolkien:templateType "Director" ;
+    tolkien:years_active "1940s–1999" .
+
+tolkien:Arthur_Tolkien a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "18 February, 1857" ;
+    tolkien:caption "|Arthur Tolkien, unknown date" ;
+    tolkien:died "15 February, 1896" ;
+    tolkien:location "England and South Africa" ;
+    tolkien:name "Arthur Tolkien" ;
+    tolkien:occupation "Bank Manager" ;
+    tolkien:pageTitle "Arthur Tolkien" ;
+    tolkien:templateType "Person infobox" .
+
+tolkien:Ascar a tolkien:Location,
+        rdfs:Resource ;
+    tolkien:events "Battle of Sarn Athrad" ;
+    tolkien:image "Christopher Tolkien - Ossiriand.jpg" ;
+    tolkien:location "Between Thargelion and Ossiriand" ;
+    tolkien:othernames "Rathlóriel" ;
+    tolkien:pageTitle "Ascar" ;
+    tolkien:templateType "Location infobox" ;
+    tolkien:type "River" .
+
+tolkien:Athelas a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:caption "\"Athelas\" by John Howe" ;
+    tolkien:image "John Howe - Athelas.jpg" ;
+    tolkien:pageTitle "Athelas" ;
+    tolkien:pronun "{{respell|ath|eh-las" ;
+    tolkien:templateType "Plant infobox" .
+
+tolkien:Avari a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:caption "\"Avari\" by Jenny Dolfen" ;
+    tolkien:image "Jenny Dolfen - Avari.jpg" ;
+    tolkien:language "Various Avarin languages" ;
+    tolkien:lifespan "Immortal" ;
+    tolkien:location "Eriador, Rhûn, Taur-im-Duinath, Vales of Anduin" ;
+    tolkien:members "Morwë, Nurwë" ;
+    tolkien:origin "Elves who refused to make the Great Journey" ;
+    tolkien:othernames "Dark-elves, The Unwilling, Wild Elves" ;
+    tolkien:pageTitle "Avari" ;
+    tolkien:rivalry "Eldar<ref name=WJA /><ref name=WJ377 />" ;
+    tolkien:templateType "People infobox" .
+
+tolkien:Awakening_of_Men a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:date "{{FA|1" ;
+    tolkien:event "Awakening of Men" ;
+    tolkien:location "Hildórien" ;
+    tolkien:pageTitle "Awakening of Men" ;
+    tolkien:templateType "Events" .
+
+tolkien:Awakening_of_the_Elves a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:date "{{YT|1050" ;
+    tolkien:event "Awakening of the Elves" ;
+    tolkien:location "Cuiviénen" ;
+    tolkien:pageTitle "Awakening of the Elves" ;
+    tolkien:templateType "Events" .
+
+tolkien:Bag_End a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:album "The Lord of the Rings: The Fellowship of the Ring - The Complete Recordings" ;
+    tolkien:composer "Howard Shore" ;
+    tolkien:duration "4:35" ;
+    tolkien:image "The_Lord_of_the_Rings_-_The_Fellowship_of_the_Ring_-_The_Complete_Recordings.jpg" ;
+    tolkien:next "Very Old Friends" ;
+    tolkien:pageTitle "Bag End (soundtrack)" ;
+    tolkien:performer "London Philharmonic Orchestra" ;
+    tolkien:previous "The Shire" ;
+    tolkien:spotify "https://open.spotify.com/track/4qaxeVzW69AqS6HHeMZaYC" ;
+    tolkien:templateType "Song" ;
+    tolkien:track "Disc 1 Track 3" .
+
+tolkien:Balchoth a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:affiliation "Sauron" ;
+    tolkien:caption "\"Balchoth\" by Stephen King" ;
+    tolkien:distinctions "Few cavalry, many wains, boats and rafts" ;
+    tolkien:image "Stephen King - Balchoth.jpg" ;
+    tolkien:location "Rhovanion (between Mirkwood and River Running), southern Vales of Anduin" ;
+    tolkien:origin "Easterlings, around Rhûn" ;
+    tolkien:pageTitle "Balchoth" ;
+    tolkien:rivalry "Northmen, Gondorians" ;
+    tolkien:templateType "People infobox" ;
+    tolkien:weapons "Crude weapons" .
+
+tolkien:Balrogs a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:affiliation "Morgoth" ;
+    tolkien:caption "\"Glorfindel's Bane\" by Ted Nasmith" ;
+    tolkien:distinctions "Man-like, surrounded by shadow and fire, covered in smoke<br />''(cf. Balrogs/Wings)''" ;
+    tolkien:height "Twice the height of a man" ;
+    tolkien:image "Ted Nasmith - Glorfindel's Bane.jpg" ;
+    tolkien:lifespan "Immortal" ;
+    tolkien:location "Primarily Angband,<br>Moria (Durin's Bane)" ;
+    tolkien:members "Gothmog, Durin's Bane, Lungorthin" ;
+    tolkien:origin "Creation of the Ainur" ;
+    tolkien:othernames "''Valaraukar'' (Q)" ;
+    tolkien:pageTitle "Balrogs" ;
+    tolkien:templateType "People infobox" ;
+    tolkien:weapons "Whips, swords, axes" .
+
+tolkien:Battle_of_Bywater a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:conflict "War of the Ring" ;
+    tolkien:date "3 November {{TA|3019" ;
+    tolkien:image "Ted Nasmith - Storming the Bank.jpg" ;
+    tolkien:pageTitle "Battle of Bywater" ;
+    tolkien:templateType "Battle" .
+
+tolkien:Battle_of_the_Camp a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:conflict "Battle of the Camp" ;
+    tolkien:date "{{TA|1944" ;
+    tolkien:name "Battle of the Camp" ;
+    tolkien:pageTitle "Battle of the Camp" ;
+    tolkien:templateType "Battle" .
+
+tolkien:Battle_of_the_Powers a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:begin "{{YT|1090" ;
+    tolkien:image "300px" ;
+    tolkien:name "Battle of the Powers" ;
+    tolkien:next "Wars of Beleriand" ;
+    tolkien:pageTitle "Battle of the Powers" ;
+    tolkien:place "Across the northern parts of Middle-earth, passing eastward from its northwestern coasts" ;
+    tolkien:result "Decisive victory for the Valar" ;
+    tolkien:templateType "War" .
+
+tolkien:Battlelore a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:formermembers "Miika Kokkola<br/>Patrik Mennander<br/>Tommi Havo<br/>Gorthaur" ;
+    tolkien:genre "Epic Metal" ;
+    tolkien:label "Napalm Records" ;
+    tolkien:members "Kaisa Jouhki<br/>Tomi Mykkänen<br/>Jussi Rautio<br/>Jyri Vahvanen<br/>Timo Honkanen<br/>Maria<br/>Henri Vahvanen" ;
+    tolkien:origin "Lappeenranta, Finland" ;
+    tolkien:pageTitle "Battlelore" ;
+    tolkien:templateType "Band" ;
+    tolkien:website "[http://www.battlelore.net www.battlelore.net]" ;
+    tolkien:years "1999-present" .
+
+tolkien:Belegost a tolkien:Location,
+        rdfs:Resource ;
+    tolkien:name "Belegost" ;
+    tolkien:othernames "''Gabilgathol'' (K)<br />''Túrosto'' (Q)<br />''Mickleburg''<ref>{{S|Sindar" ;
+    tolkien:pageTitle "Belegost" ;
+    tolkien:templateType "Kingdom" .
+
+tolkien:Blind_Guardian a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:formermembers "Thomas \"Thomen\" Stauch<br/>Markus Dörk<br/>Christof Theißen<br/>Peter Frey" ;
+    tolkien:genre "Power metal, speed metal, progressive metal" ;
+    tolkien:label "No Remorse, Virgin, Century Media, Nuclear Blast" ;
+    tolkien:members "Hansi Kürsch<br/>André Olbrich<br/>Marcus Siepen<br/>Frederik Ehmke" ;
+    tolkien:origin "Krefeld, Germany" ;
+    tolkien:pageTitle "Blind Guardian" ;
+    tolkien:templateType "Band" ;
+    tolkien:website "[http://www.blind-guardian.com/ www.blind-guardian.com]" ;
+    tolkien:years "1984-present" .
+
+tolkien:Bombadil_Goes_Boating a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:caption "Chapterhead illustration by Pauline Baynes" ;
+    tolkien:image "Pauline Baynes - Bombadil Goes Boating chapterhead.jpeg" ;
+    tolkien:other_names "germ of Tom Bombadil<br>''The Fliting of Tom Bombadil'',<br>''The Merry Fliting of Tom Bombadil'',<br>''The Adventures of Tom Bombadil II: The Merry Fliting''<br>''Fliting''" ;
+    tolkien:pageTitle "Bombadil Goes Boating" ;
+    tolkien:published "''The Adventures of Tom Bombadil''<br>''The Collected Poems of J.R.R. Tolkien''" ;
+    tolkien:revised "1962" ;
+    tolkien:subject "Tom Bombadil" ;
+    tolkien:templateType "Poem infobox" ;
+    tolkien:written "mid-1930s" .
+
+tolkien:Boromir_s_Sacrifice a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:duration "0:49 (see below)" ;
+    tolkien:event "Death of Boromir,<br>Capture of Pippin and Merry" ;
+    tolkien:film "''The Lord of the Rings'' (1978 film)" ;
+    tolkien:name "Boromir's Sacrifice" ;
+    tolkien:next "Following the Orcs" ;
+    tolkien:number "24" ;
+    tolkien:pageTitle "Boromir's Sacrifice" ;
+    tolkien:previous "Borimir's Madness" ;
+    tolkien:templateType "Scene" .
+
+tolkien:Buckland a tolkien:Location,
+        rdfs:Resource ;
+    tolkien:capital "Bucklebury" ;
+    tolkien:event1 "Founded" ;
+    tolkien:event1date "{{TA|2340" ;
+    tolkien:govern1 "Master of Buckland" ;
+    tolkien:language "Bucklandish (variant of Hobbitish)" ;
+    tolkien:location "Between the Brandywine River and the Old Forest" ;
+    tolkien:name "Buckland" ;
+    tolkien:pageTitle "Buckland" ;
+    tolkien:population "Hobbits, mostly Brandybucks" ;
+    tolkien:templateType "Kingdom" ;
+    tolkien:towns "Breredon, Crickhollow, Haysend, Newbury, Standelf" .
+
+tolkien:Caradhras a tolkien:Location,
+        rdfs:Resource ;
+    tolkien:belongs "the Misty Mountains" ;
+    tolkien:caption "\"The Anger of the Mountain\" by Ted Nasmith" ;
+    tolkien:events "Capture of Celebrían<br />Attempt of Fellowship of the Ring to cross Misty Mountains" ;
+    tolkien:location "above Khazad-dûm, between Celebdil and Fanuidhol, on the border between Eriador and Rhovanion" ;
+    tolkien:name "Caradhras" ;
+    tolkien:othernames "''Redhorn'' (W), ''Barazinbar'' (K)" ;
+    tolkien:pageTitle "Caradhras" ;
+    tolkien:templateType "Mountain" .
+
+tolkien:Cate_Blanchett a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:film "''The Lord of the Rings'' (film series)<br>''The Hobbit'' (film series)" ;
+    tolkien:imdb "[https://www.imdb.com/name/nm0000949/ Profile]" ;
+    tolkien:lifetime "May 14, 1969" ;
+    tolkien:name "Cate Blanchett" ;
+    tolkien:pageTitle "Cate Blanchett" ;
+    tolkien:played "Galadriel" ;
+    tolkien:templateType "Actor" .
+
+tolkien:Celebdil a tolkien:Location,
+        rdfs:Resource ;
+    tolkien:belongs "the Misty Mountains" ;
+    tolkien:etymology "Celebdil: ''celeb'' - silver, ''dil'' - horn<br />Zirakzigil: ''zirak'' - spike, ''zigil'' - silver" ;
+    tolkien:events "final struggle between Gandalf and Durin's Bane" ;
+    tolkien:gallery "Celebdil" ;
+    tolkien:location "above Khazad-dûm, south of Caradhras and Fanuidhol, on the border between Eriador and Rhovanion" ;
+    tolkien:name "Celebdil" ;
+    tolkien:othernames "''Silvertine'' (Westron), ''Zirakzigil'' (Khuzdul)" ;
+    tolkien:pageTitle "Celebdil" ;
+    tolkien:templateType "Mountain" .
+
+tolkien:Celeborn a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:family "Seedling of Galathilion" ;
+    tolkien:location "Tol Eressëa" ;
+    tolkien:othernames "\"White Tree\"" ;
+    tolkien:pageTitle "Celeborn (White Tree)" ;
+    tolkien:templateType "Plant infobox" .
+
+tolkien:Christopher_Tolkien a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "21 November, 1924" ;
+    tolkien:died "16 January, 2020" ;
+    tolkien:education "Trinity College, Oxford" ;
+    tolkien:location "England<br/>France" ;
+    tolkien:name "Christopher Tolkien" ;
+    tolkien:occupation "Author, Professor" ;
+    tolkien:pageTitle "Christopher Tolkien" ;
+    tolkien:templateType "Author infobox" ;
+    tolkien:website "[http://www.tolkienestate.com TolkienEstate.com]" .
+
+tolkien:Chrysophylax a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:caption "\"Farmer Giles of Ham\" by Alan Lee" ;
+    tolkien:hoard "In the mountains, composed of gold, silver, rings, necklaces, jewels, diamonds, and more" ;
+    tolkien:image "Alan Lee - Farmer Giles of Ham.jpg" ;
+    tolkien:legs "Four" ;
+    tolkien:pageTitle "Chrysophylax" ;
+    tolkien:templateType "Dragon infobox" ;
+    tolkien:titles "The Rich" ;
+    tolkien:type "Fire" ;
+    tolkien:wings "Yes" .
+
+tolkien:Cirith_Gorgor a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:genre "Black Metal" ;
+    tolkien:members "Levithmong, Marchosias, Valtyr" ;
+    tolkien:name "Cirith Gorgor" ;
+    tolkien:origin "The Netherlands" ;
+    tolkien:pageTitle "Cirith Gorgor (band)" ;
+    tolkien:templateType "Band" ;
+    tolkien:website "[http://www.cirithgorgor.nl/ www.cirithgorgor.nl]" ;
+    tolkien:years "1993-present" .
+
+tolkien:Corn a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:caption "Cornfield in ''The Lord of the Rings: The Fellowship of the Ring''" ;
+    tolkien:image "The Lord of the Rings - The Fellowship of the Ring - Corn.jpg" ;
+    tolkien:location "Númenor, Middle-earth, Aman" ;
+    tolkien:othernames "Barley, rye, wheat, oats" ;
+    tolkien:pageTitle "Corn" ;
+    tolkien:templateType "Plant infobox" .
+
+tolkien:Council_of_Elrond a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:date "25 October, {{TA|3018" ;
+    tolkien:event "Council of Elrond" ;
+    tolkien:location "Rivendell" ;
+    tolkien:pageTitle "Council of Elrond" ;
+    tolkien:templateType "Events" .
+
+tolkien:Council_of_the_Sceptre a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:disbanded "Likely during the Downfall of Númenor" ;
+    tolkien:founder "Kings of Númenor" ;
+    tolkien:location "Númenor" ;
+    tolkien:members "Númenóreans" ;
+    tolkien:othernames "King's Council of Númenor" ;
+    tolkien:pageTitle "Council of the Sceptre" ;
+    tolkien:purpose "Advising the King on multiple matters of state" ;
+    tolkien:templateType "Organization infobox" .
+
+tolkien:Dagor_Aglareb a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:conflict "Wars of Beleriand" ;
+    tolkien:date "{{FA|60" ;
+    tolkien:image "Luis F. Bejarano - Dagor Aglareb.jpg" ;
+    tolkien:pageTitle "Dagor Aglareb" ;
+    tolkien:templateType "Battle" .
+
+tolkien:Dagor_Bragollach a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:conflict "Wars of Beleriand" ;
+    tolkien:date "{{FA|455" ;
+    tolkien:image "Alan Lee - Battle of Sudden Flame.jpg" ;
+    tolkien:pageTitle "Dagor Bragollach" ;
+    tolkien:templateType "Battle" .
+
+tolkien:Decipher a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:founded "1983" ;
+    tolkien:founder "Warren Holland" ;
+    tolkien:pageTitle "Decipher" ;
+    tolkien:products "The Lord of the Rings Trading Card Game, The Lord of the Rings Roleplaying Game" ;
+    tolkien:templateType "Company infobox" .
+
+tolkien:Dominic_Monaghan a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:caption "|Dominic Monaghan" ;
+    tolkien:film "''The Lord of the Rings'' (film series)<br>" ;
+    tolkien:film2 "''The Lord of the Rings: The War of the Rohirrim''" ;
+    tolkien:imdb "[http://www.imdb.com/name/nm0597480/ IMDb Profile]" ;
+    tolkien:lifetime "December 8, 1976" ;
+    tolkien:name "Dominic Monaghan" ;
+    tolkien:pageTitle "Dominic Monaghan" ;
+    tolkien:played "Meriadoc Brandybuck" ;
+    tolkien:played2 "Wrot" ;
+    tolkien:templateType "Actor" .
+
+tolkien:Downfall_of_Barad-dûr a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:date "25 March, T.A. 3019" ;
+    tolkien:location "Mordor" ;
+    tolkien:pageTitle "Downfall of Barad-dûr" ;
+    tolkien:partof "War of the Ring" ;
+    tolkien:result "Tower of Barad-dûr destroyed" ;
+    tolkien:templateType "Events" .
+
+tolkien:Dragons a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:affiliation "Morgoth" ;
+    tolkien:caption "\"''hringboga heorte gefýsed''\" by J.R.R. Tolkien" ;
+    tolkien:image "J.R.R. Tolkien - Dragon.jpg" ;
+    tolkien:language "Various Mannish and Elvish tongues<ref>J.R.R. Tolkien, \"Letter to Leila Keene and Pat Kirke\" (letter); quoted in {{PM|II" ;
+    tolkien:location "Angband, Nargothrond, Grey Mountains, Erebor, Withered Heath, Northern Waste" ;
+    tolkien:origin "Morphed by Morgoth in Angband" ;
+    tolkien:othernames "\"Great worms\"" ;
+    tolkien:pageTitle "Dragons" ;
+    tolkien:templateType "Race infobox" .
+
+tolkien:Dwarves a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:affiliation "Alliance of Dwarves and Men<br />Union of Maedhros<br />Last Alliance of Elves and Men<br />Fellowship of the Ring<br />Thorin and Company" ;
+    tolkien:caption "\"A bunch of dwarves\" by Alarie" ;
+    tolkien:image "Alarie - A bunch of dwarves.jpg" ;
+    tolkien:language "Khuzdul<br />Westron<br />Sindarin<ref name=\"S10\">{{S|10" ;
+    tolkien:location "Khazad-dûm<br />Belegost<br />Nogrod<br />Amon Rûdh<br />Nulukkizdîn<br />Erebor<br />Iron Hills<br />Aglarond<br />Grey Mountains (incl. Dáin's hall)<br />Blue Mountains (incl. Thorin's hall)<br />Gundabad<br />Rhûn (possibly the Orocarni)" ;
+    tolkien:origin "Descended from the seven Fathers of the Dwarves created by Aulë" ;
+    tolkien:othernames "''Khazâd'' (K), ''Naugrim'' (S), ''Nogothrim'' (S), ''Hadhodrim'' (S), ''Gonnhirrim'' (S), ''Casari'' (Q)" ;
+    tolkien:pageTitle "Dwarves" ;
+    tolkien:rivalry "Elves<br />Dragons<br />Orcs" ;
+    tolkien:templateType "Race infobox" .
+
+tolkien:Dúnedain_of_Arnor a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:affiliation "Last Alliance of Elves and Men, Host of the West, Grey Company" ;
+    tolkien:caption "\"Aranarth\" by Elena Kukanova" ;
+    tolkien:distinctions "Retained their pure Númenórean blood<ref name=blood/>" ;
+    tolkien:gallery "Arnorians" ;
+    tolkien:hair "Dark<ref name=\"Sign\"/>" ;
+    tolkien:height "Tall<ref name=\"Sign\"/>" ;
+    tolkien:image "Elena Kukanova - Aranarth.jpeg" ;
+    tolkien:language "Westron, Sindarin, Quenya" ;
+    tolkien:lifespan "''See below''" ;
+    tolkien:location "Eriador, Arnor" ;
+    tolkien:members "Argeleb I, Aragorn II, Gilraen" ;
+    tolkien:origin "Descendants of the Númenóreans in Arnor" ;
+    tolkien:othernames "Dúnedain of the North, Northern Dúnedain, Rangers or Rangers of the North" ;
+    tolkien:pageTitle "Dúnedain of Arnor" ;
+    tolkien:rivalry "Hill-men" ;
+    tolkien:skin "Pale<ref name=\"Sign\"/>" ;
+    tolkien:templateType "People infobox" .
+
+tolkien:Eagles a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:affiliation "Manwë" ;
+    tolkien:caption "\"Bilbo woke with the early sun in his eyes\" by J.R.R. Tolkien" ;
+    tolkien:image "J.R.R. Tolkien - Bilbo woke with the early sun in his eyes.jpg" ;
+    tolkien:language "Quenya, Sindarin, Westron" ;
+    tolkien:lifespan "Unknown, but obviously very longeval<ref name=P1>{{WJ|P1" ;
+    tolkien:location "Taniquetil<br/>Crissaegrim<br/>Meneltarma<br/>Eagle's Eyrie" ;
+    tolkien:members "Thorondor, Great Eagle, Gwaihir, Landroval, Meneldor, Witnesses of Manwë" ;
+    tolkien:origin "Unknown (see below)" ;
+    tolkien:pageTitle "Eagles" ;
+    tolkien:templateType "Race infobox" .
+
+tolkien:Edith_Tolkien a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "January 21, 1889" ;
+    tolkien:died "November 29, 1971" ;
+    tolkien:name "Edith Tolkien" ;
+    tolkien:pageTitle "Edith Tolkien" ;
+    tolkien:templateType "Person infobox" .
+
+tolkien:Eglantine a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:family "Roses" ;
+    tolkien:image "Eglantine.jpg" ;
+    tolkien:location "Ithilien, the Shire" ;
+    tolkien:othernames "Sweet briar" ;
+    tolkien:pageTitle "Eglantine" ;
+    tolkien:templateType "Plant infobox" .
+
+tolkien:Eldamo a tolkien:Media,
+        rdfs:Resource ;
+    tolkien:URL "http://eldamo.org/index.html" ;
+    tolkien:commercial "No" ;
+    tolkien:language "English (Includes [http://eldamo.org/translations/international-searches.html optional glosses in Russian and Polish])" ;
+    tolkien:launch "2008" ;
+    tolkien:owner "Paul Strack" ;
+    tolkien:pageTitle "Eldamo" ;
+    tolkien:slogan "An Elvish Lexicon" ;
+    tolkien:status "Active <br />(last version 0.8.4.2 — generated 11 December 2022)" ;
+    tolkien:templateType "Website" .
+
+tolkien:Elendor a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:genre "MUSH, RPG" ;
+    tolkien:name "Elendor" ;
+    tolkien:pageTitle "Elendor" ;
+    tolkien:platform "Personal Computer" ;
+    tolkien:releasedate "October 1991" ;
+    tolkien:templateType "Video game infobox" .
+
+tolkien:Elijah_Wood a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:caption "|Elijah Wood" ;
+    tolkien:film "''The Lord of the Rings'' (film series)<br>''The Hobbit: An Unexpected Journey''" ;
+    tolkien:imdb "[https://imdb.com/name/nm0000704/ Profile]" ;
+    tolkien:lifetime "January 28, 1981" ;
+    tolkien:name "Elijah Wood" ;
+    tolkien:pageTitle "Elijah Wood" ;
+    tolkien:played "Frodo" ;
+    tolkien:templateType "Actor" .
+
+tolkien:Elves a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:caption "\"Vanyar\" by Janka Latečková" ;
+    tolkien:hair "Black, brown, blond, red, and silver" ;
+    tolkien:height "Tall" ;
+    tolkien:image "Janka Latečková - Vanyar.jpg" ;
+    tolkien:language "Various Elvish languages, most notably Quenya and Sindarin; Westron" ;
+    tolkien:lifespan "Arda's existence; near immortality" ;
+    tolkien:location "Cuiviénen, Tirion, Taniquetil, Formenos, Alqualondë, Tol Eressëa, Doriath, Falas, Hithlum, Ossiriand, Vinyamar, Nargothrond, Gondolin, Edhellond, Mouths of Sirion, Isle of Balar, Lindon, Eldalondë, Eregion, Lothlórien, Rivendell, Mirkwood, Ithilien" ;
+    tolkien:members "Ingwë, Thingol, Finwë, Fëanor, Fingolfin, Gil-galad, Galadriel, Finrod, Sons of Fëanor, Lúthien, Fingon, Turgon, Idril, Maeglin, Círdan, Celeborn, Celebrimbor" ;
+    tolkien:origin "Firstborn of the Children of Ilúvatar" ;
+    tolkien:othernames "People of the Stars, Firstborn, Elder Children of Ilúvatar" ;
+    tolkien:pageTitle "Elves" ;
+    tolkien:people "Vanyar, Noldor, Teleri, Sindar, Nandor, Silvan, Falmari, Avari" ;
+    tolkien:rivalry "Orcs, Dwarves" ;
+    tolkien:skin "Pale, occasionally ruddy" ;
+    tolkien:templateType "Race infobox" ;
+    tolkien:weapons "Typically swords and bows" .
+
+tolkien:Entmoot a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:caption "\"Entmoot\" by Darrell Sweet" ;
+    tolkien:founder "Treebeard" ;
+    tolkien:gallery "Entmoots" ;
+    tolkien:image "Darrell Sweet - Entmoot.jpg" ;
+    tolkien:location "Derndingle in Fangorn Forest" ;
+    tolkien:members "Treebeard, Bregalad, Beechbone" ;
+    tolkien:notablefor "Last March of the Ents" ;
+    tolkien:pageTitle "Entmoot" ;
+    tolkien:purpose "Discussion for Ents" ;
+    tolkien:templateType "Organization infobox" .
+
+tolkien:Essential_Tolkien a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:date "6 November 2007" ;
+    tolkien:format "Audio CD" ;
+    tolkien:image "Essential_tolkien.jpg" ;
+    tolkien:isbn "978-0061376498" ;
+    tolkien:narrator "J.R.R. Tolkien" ;
+    tolkien:pageTitle "Essential Tolkien" ;
+    tolkien:publisher "Caedmon" ;
+    tolkien:runtime "1 hour" ;
+    tolkien:templateType "Audiobook infobox" .
+
+tolkien:Faithful a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:caption "\"The Ships of the Faithful\" by Ted Nasmith" ;
+    tolkien:founded "c. {{SA|2221" ;
+    tolkien:image "Ted Nasmith - The Ships of the Faithful.jpg" ;
+    tolkien:othernames "Elendili, Nimruzîrim, Elf-friends" ;
+    tolkien:pageTitle "Faithful" ;
+    tolkien:templateType "Organization infobox" .
+
+tolkien:Fastitocalon a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:caption "\"Fastitocalon\" by Pauline Baynes" ;
+    tolkien:image "Pauline Baynes - Fastitocalon Chapterhead.jpeg" ;
+    tolkien:pageTitle "Fastitocalon (poem)" ;
+    tolkien:revised "1961 or 1962<ref name=CG>{{CG|2II" ;
+    tolkien:templateType "Poem infobox" ;
+    tolkien:written "Before June of 1927" .
+
+tolkien:Film_Frame_Collectible a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:company "Sideshow Collectibles" ;
+    tolkien:link "Sold Out" ;
+    tolkien:name "Film Frame Collectible" ;
+    tolkien:pageTitle "Film Frame Collectible" ;
+    tolkien:price "Free to Trilogy Tuesday attendees" ;
+    tolkien:released "December 16th, 2003" ;
+    tolkien:templateType "Collectible" ;
+    tolkien:type "Ornament" .
+
+tolkien:Following_the_Orcs a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:duration "5:12" ;
+    tolkien:event "Three Hunters chase Orcs through Rohan" ;
+    tolkien:film "''The Lord of the Rings'' (1978 film)" ;
+    tolkien:name "Following the Orcs" ;
+    tolkien:next "Whiteskins Attack" ;
+    tolkien:number "25" ;
+    tolkien:pageTitle "Following the Orcs" ;
+    tolkien:previous "Borimir's Sacrifice" ;
+    tolkien:templateType "Scene" .
+
+tolkien:Fourth_of_the_Nazgûl a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:affiliation "Nazgûl<br>Eye of Sauron" ;
+    tolkien:birth "{{SA|1888" ;
+    tolkien:caption "''“Indûr Dawndeath”'' by Liz Danforth" ;
+    tolkien:content1 "{{infobox character" ;
+    tolkien:image "Liz Danforth - Indûr Dawndeath.jpeg" ;
+    tolkien:name "Jí Indûr" ;
+    tolkien:othernames "Dawndeath<br>the Shadow of the South<br>the Cloud-Lord" ;
+    tolkien:pageTitle "Fourth of the Nazgûl" ;
+    tolkien:people "Man (early)<br/>Wraith (later)" ;
+    tolkien:position "Fourth of the Nazgûl" ;
+    tolkien:templateType "Infoboxes" .
+
+tolkien:Galathilion a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:appearance "made in the image of Telperion" ;
+    tolkien:family "many seedlings (including Celeborn)" ;
+    tolkien:location "Tirion" ;
+    tolkien:othernames "\"White Tree\"" ;
+    tolkien:pageTitle "Galathilion" ;
+    tolkien:templateType "Plant infobox" .
+
+tolkien:Glaurung a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:caption "\"The End of Glaurung\" by Coliandre" ;
+    tolkien:name "Glaurung" ;
+    tolkien:pageTitle "Glaurung" ;
+    tolkien:people "Dragon" ;
+    tolkien:pronun "S. pron. {{IPA|[ˈɡlaʊruŋ]" ;
+    tolkien:templateType "Dragon infobox" .
+
+tolkien:Gollum_s_Song a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:album "The Lord of the Rings: The Two Towers - Original Motion Picture Soundtrack" ;
+    tolkien:composer "Howard Shore" ;
+    tolkien:duration "5:51" ;
+    tolkien:image "The_Lord_of_the_Rings_-_The_Two_Towers_-_Original_Motion_Picture_Soundtrack.jpg" ;
+    tolkien:next "Farewell to Lorien" ;
+    tolkien:pageTitle "Gollum's Song" ;
+    tolkien:performer "London Philharmonic Orchestra, Emilíana Torrini" ;
+    tolkien:previous "Samwise the Brave" ;
+    tolkien:spotify "https://open.spotify.com/track/0mQ1btcyqFDvTpaCFs04cR" ;
+    tolkien:subtitle "performed by Emilíana Torrini" ;
+    tolkien:templateType "Song" ;
+    tolkien:track "19" .
+
+tolkien:Guards_of_the_Citadel a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:caption "''Fountain Guard'' by Tom Romain" ;
+    tolkien:image "Tom Romain - Fountain Guard.png" ;
+    tolkien:location "Gondor" ;
+    tolkien:members "Beregond, among others" ;
+    tolkien:notablefor "Only soldiers allowed to wear livery of the heirs of Elendil" ;
+    tolkien:pageTitle "Guards of the Citadel" ;
+    tolkien:purpose "Protecting the Citadel of Gondor" ;
+    tolkien:templateType "Organization infobox" .
+
+tolkien:H_E_Riddett a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "1905" ;
+    tolkien:died "1990" ;
+    tolkien:location "England, UK" ;
+    tolkien:name "H.E. Riddett" ;
+    tolkien:pageTitle "H.E. Riddett" ;
+    tolkien:templateType "Artist infobox" .
+
+tolkien:Hirilondë a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:caption "\"Hirilonde (from 'Aldarion and Erendis')\" by David Greset" ;
+    tolkien:image "David Greset - Hirilonde (from 'Aldarion and Erendis').jpg" ;
+    tolkien:pageTitle "Hirilondë" ;
+    tolkien:pronun "Q, {{IPA|[ˌhiriˈlonde]" ;
+    tolkien:templateType "Object infobox" .
+
+tolkien:Hiswelókë a tolkien:Media,
+        rdfs:Resource ;
+    tolkien:URL "https://www.tolkiendil.com/essais/hisweloke" ;
+    tolkien:commercial "No" ;
+    tolkien:language "French (main website);<br/>English, French and German (dictionary)" ;
+    tolkien:launch "1997" ;
+    tolkien:name "Hiswelókë" ;
+    tolkien:owner "Didier Willis" ;
+    tolkien:pageTitle "Hiswelókë" ;
+    tolkien:slogan "''le Dragon de Brume''<br/>(\"The Dragon of Mist\")" ;
+    tolkien:status "Inactive" ;
+    tolkien:templateType "Website" ;
+    tolkien:type "Scholarly articles, essays and dictionary; e-zine" .
+
+tolkien:Homage_to_Gandalf a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:duration "3:27" ;
+    tolkien:event "Arrival at Lothlórien" ;
+    tolkien:film "''The Lord of the Rings'' (1978 film)" ;
+    tolkien:name "Homage to Gandalf" ;
+    tolkien:next "Galadriel's Test" ;
+    tolkien:number "21" ;
+    tolkien:pageTitle "Homage to Gandalf" ;
+    tolkien:previous "Balrog Strikes" ;
+    tolkien:templateType "Scene" .
+
+tolkien:House_of_Bëor a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:affiliation "House of Finarfin" ;
+    tolkien:destroyed "Last formal leader of this people, Barahir, was slain in {{FA|460" ;
+    tolkien:founder "Bëor the Old" ;
+    tolkien:image "Quentandil - Beor device.png" ;
+    tolkien:leader "Briefly the Lords of Ladros" ;
+    tolkien:location "Estolad, Dorthonion (especially Ladros), Dor-Lómin, Brethil, later Númenor" ;
+    tolkien:othernames "'''House:'''<br>First House of the Edain<br />''Bar Bëora'' (S)<br>'''People:'''<br>Bëorians, Men of Dorthonion, People of Bëor" ;
+    tolkien:pageTitle "House of Bëor" ;
+    tolkien:templateType "Noble House infobox" .
+
+tolkien:House_of_Elendil a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:affiliation "Last Alliance of Elves and Men, Host of the West" ;
+    tolkien:founder "Elendil, son of Amandil" ;
+    tolkien:hair "Dark" ;
+    tolkien:height "Tall" ;
+    tolkien:heirlooms "Crown of Gondor, Elendilmir, Elfstone, Ring of Barahir, Sceptre of Annúminas," ;
+    tolkien:language "Sindarin, Westron, Quenya" ;
+    tolkien:leader "King of Arnor, King of Arthedain, King of Gondor, Chieftain of the Dunedain, later the High King" ;
+    tolkien:location "Eriador, Arnor, Gondor" ;
+    tolkien:members "Isildur, Anárion, Aragorn II, Arathorn II, Hyarmendacil I, Eärnur, Fíriel" ;
+    tolkien:pageTitle "House of Elendil" ;
+    tolkien:race "Initially Númenórean, Dúnedain after Meneldil" ;
+    tolkien:skin "Pale" ;
+    tolkien:templateType "Noble House infobox" ;
+    tolkien:weapons "Narsil (later Andúril)" .
+
+tolkien:House_of_Eorl a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:affiliation "Oath of Eorl" ;
+    tolkien:founder "Eorl the Young" ;
+    tolkien:image "Pbrks - House of Eorl.png" ;
+    tolkien:language "Rohanese" ;
+    tolkien:leader "Kings of Rohan" ;
+    tolkien:location "Rohan" ;
+    tolkien:pageTitle "House of Eorl" ;
+    tolkien:race "Rohirrim" ;
+    tolkien:rivalry "Dunlendings" ;
+    tolkien:templateType "Noble House infobox" .
+
+tolkien:House_of_Finarfin a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:affiliation "House of Finwë" ;
+    tolkien:distinctions "The most beautiful Noldorin house" ;
+    tolkien:founder "Finarfin" ;
+    tolkien:gallery "the House of Finarfin" ;
+    tolkien:hair "Golden" ;
+    tolkien:height "Tall" ;
+    tolkien:heirlooms "Ring of Felagund" ;
+    tolkien:image "Quentandil - Finarfin device.png" ;
+    tolkien:language "Exilic Quenya, Sindarin" ;
+    tolkien:location "Tirion, Nargothrond, Dorthonion, Minas Tirith, Lindon, Lothlórien" ;
+    tolkien:othernames "''Nost Finarfin'' (S)<br/>Golden House of Finarfin" ;
+    tolkien:pageTitle "House of Finarfin" ;
+    tolkien:race "Noldor" ;
+    tolkien:templateType "Noble House infobox" ;
+    tolkien:weapons "Aeglos" .
+
+tolkien:House_of_Fëanor a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:affiliation "Gwaith-i-Mírdain, House of Finwë, Union of Maedhros" ;
+    tolkien:destroyed "{{SA|1697" ;
+    tolkien:founder "Fëanor" ;
+    tolkien:image "Amanyar - Fëanor device.png" ;
+    tolkien:location "Tirion, Formenos, East Beleriand, Eregion" ;
+    tolkien:othernames "''Nos Fëanor'' (N)<br />The Dispossessed" ;
+    tolkien:pageTitle "House of Fëanor" ;
+    tolkien:templateType "Noble House infobox" .
+
+tolkien:Howard_Shore a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "October 18, 1946" ;
+    tolkien:name "Howard Shore" ;
+    tolkien:occupation "Composer" ;
+    tolkien:pageTitle "Howard Shore" ;
+    tolkien:templateType "Person infobox" ;
+    tolkien:website "[http://www.howardshore.com Official website]" .
+
+tolkien:Humphrey_Carpenter a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "29 April 1946" ;
+    tolkien:died "4 January 2005" ;
+    tolkien:name "Humphrey Carpenter" ;
+    tolkien:occupation "Author" ;
+    tolkien:pageTitle "Humphrey Carpenter" ;
+    tolkien:templateType "Author infobox" .
+
+tolkien:Hyarmentir a tolkien:Location,
+        rdfs:Resource ;
+    tolkien:belongs "The Pelóri" ;
+    tolkien:description "One of the tallest mountain peaks of Aman" ;
+    tolkien:location "Southeastern Aman" ;
+    tolkien:name "Mount Hyarmentir" ;
+    tolkien:pageTitle "Hyarmentir" ;
+    tolkien:references "''The Silmarillion''" ;
+    tolkien:templateType "Mountain" .
+
+tolkien:Ian_Brodie a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "August 25, 1957" ;
+    tolkien:name "Ian Brodie" ;
+    tolkien:occupation "Photographer and Author" ;
+    tolkien:pageTitle "Ian Brodie" ;
+    tolkien:templateType "Author infobox" ;
+    tolkien:website "[http://www.ianbrodie.net Official website]" .
+
+tolkien:Into_the_West a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:album "The Lord of the Rings: The Return of the King - Original Motion Picture Soundtrack" ;
+    tolkien:composer "Howard Shore" ;
+    tolkien:duration "5:47" ;
+    tolkien:image "The_Lord_of_the_Rings_-_The_Return_of_the_King_-_Original_Motion_Picture_Soundtrack.jpg" ;
+    tolkien:pageTitle "Into the West" ;
+    tolkien:performer "London Philharmonic Orchestra, Annie Lennox" ;
+    tolkien:previous "The Grey Havens" ;
+    tolkien:spotify "https://open.spotify.com/track/0gSEyG7pOFuHM05433EibX" ;
+    tolkien:subtitle "performed by Annie Lennox" ;
+    tolkien:templateType "Song" ;
+    tolkien:track "19" .
+
+tolkien:Iron_Crown_Enterprises a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:founded "1980" ;
+    tolkien:founder "Pete Fenlon, Coleman Charlton, et al." ;
+    tolkien:image "ice_logo.png" ;
+    tolkien:pageTitle "Iron Crown Enterprises" ;
+    tolkien:products "MECCG, MERP" ;
+    tolkien:templateType "Company infobox" .
+
+tolkien:J_R_R_Tolkien a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "3 January 1892<br>Bloemfontein, Orange Free State" ;
+    tolkien:died "2 September 1973 (aged 81 years)<br>Bournemouth, England" ;
+    tolkien:education "University of Oxford" ;
+    tolkien:location "United Kingdom" ;
+    tolkien:name "J.R.R. Tolkien" ;
+    tolkien:occupation "Academic<br/>Author<br/>Philologist<br>Poet" ;
+    tolkien:pageTitle "J.R.R. Tolkien" ;
+    tolkien:templateType "Author infobox" ;
+    tolkien:website "[http://www.tolkienestate.com Tolkien: The official site of the Tolkien Estate]" .
+
+tolkien:J_R_R_Tolkien_An_Audio_Portrait a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:date "12 November 2001" ;
+    tolkien:format "Audio Cassette" ;
+    tolkien:image "Tolkien Audio Portrait.png" ;
+    tolkien:isbn "0563536918" ;
+    tolkien:narrator "Brian Sibley" ;
+    tolkien:pageTitle "J.R.R. Tolkien: An Audio Portrait" ;
+    tolkien:publisher "BBC Audiobooks Ltd" ;
+    tolkien:templateType "Audiobook infobox" .
+
+tolkien:John_Howe a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "21 August, 1957" ;
+    tolkien:location "Switzerland" ;
+    tolkien:name "John Howe" ;
+    tolkien:pageTitle "John Howe" ;
+    tolkien:templateType "Artist infobox" ;
+    tolkien:website "[http://www.john-howe.com/ John-Howe.com]" .
+
+tolkien:Kin-strife a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:begin "{{TA|1432" ;
+    tolkien:name "Kin-strife" ;
+    tolkien:next "Corsair Wars" ;
+    tolkien:pageTitle "Kin-strife" ;
+    tolkien:templateType "War" .
+
+tolkien:Letter_1 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "October 1914" ;
+    tolkien:pageTitle "Letter 1" ;
+    tolkien:subject "''The Story of Kullervo''" ;
+    tolkien:templateType "Letter infobox" ;
+    tolkien:to "Edith Bratt" .
+
+tolkien:Letter_2 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "27 November 1914" ;
+    tolkien:pageTitle "Letter 2" ;
+    tolkien:subject "''The Voyage of Éarendel the Evening Star''" ;
+    tolkien:templateType "Letter infobox" ;
+    tolkien:to "Edith Bratt" .
+
+tolkien:Letter_3 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "26 November 1915" ;
+    tolkien:pageTitle "Letter 3" ;
+    tolkien:subject "World War I<br />''Kortirion among the Trees''" ;
+    tolkien:templateType "Letter infobox" ;
+    tolkien:to "Edith Bratt" .
+
+tolkien:Letter_4 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "2 March 1916" ;
+    tolkien:pageTitle "Letter 4" ;
+    tolkien:subject "Quenya" ;
+    tolkien:templateType "Letter infobox" ;
+    tolkien:to "Edith Bratt" .
+
+tolkien:Letter_5 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "12 August 1916" ;
+    tolkien:pageTitle "Letter 5" ;
+    tolkien:subject "T.C.B.S.<br />World War I" ;
+    tolkien:templateType "Letter infobox" ;
+    tolkien:to "G.B. Smith" .
+
+tolkien:Lord_of_the_Rings a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:ages "12+" ;
+    tolkien:designer "Reiner Knizia" ;
+    tolkien:name "Lord of the Rings" ;
+    tolkien:pageTitle "Lord of the Rings (board game)" ;
+    tolkien:players "2-5" ;
+    tolkien:publisher "Sophisticated Games (developer)" ;
+    tolkien:releasedate "2000" ;
+    tolkien:templateType "Board game infobox" .
+
+tolkien:MEPR_Fatty_Bolger a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:alignment "Hero" ;
+    tolkien:artist "Christina Wald" ;
+    tolkien:game "meccg" ;
+    tolkien:homesite "Bag End" ;
+    tolkien:name "Fatty Bolger" ;
+    tolkien:number "TW485" ;
+    tolkien:pageTitle "MEPR: Fatty Bolger" ;
+    tolkien:rarity "Promotional" ;
+    tolkien:templateType "Collectible card" ;
+    tolkien:type "Character" .
+
+tolkien:MEP_An_Unexpected_Party a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Angus McBride" ;
+    tolkien:edition "Unlimited" ;
+    tolkien:ice "31001" ;
+    tolkien:image "Middle-earth Puzzles - An Unexpected Party.jpg" ;
+    tolkien:pageTitle "MEP: An Unexpected Party" ;
+    tolkien:pieces "1000" ;
+    tolkien:publisher "Iron Crown Enterprises" ;
+    tolkien:releasedate "1997" ;
+    tolkien:size "44&nbsp;cm x 68&nbsp;cm , 26 x 17 inches" ;
+    tolkien:templateType "Puzzle infobox" .
+
+tolkien:MEP_Burglar_Baggins a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Donato Giancola" ;
+    tolkien:edition "Unlimited" ;
+    tolkien:ice "30502" ;
+    tolkien:image "Middle-earth Puzzles - Burglar Baggins.jpg" ;
+    tolkien:pageTitle "MEP: Burglar Baggins" ;
+    tolkien:pieces "500" ;
+    tolkien:publisher "Iron Crown Enterprises" ;
+    tolkien:releasedate "1997" ;
+    tolkien:size "36&nbsp;cm x 49&nbsp;cm" ;
+    tolkien:templateType "Puzzle infobox" .
+
+tolkien:MEP_The_Mirror_Of_Galadriel a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Stephen Walsh" ;
+    tolkien:edition "Unlimited" ;
+    tolkien:ice "31002" ;
+    tolkien:image "Middle-earth Puzzles - Mirror of Galadriel.jpg" ;
+    tolkien:pageTitle "MEP: The Mirror Of Galadriel" ;
+    tolkien:pieces "1000" ;
+    tolkien:publisher "Iron Crown Enterprises" ;
+    tolkien:releasedate "1997" ;
+    tolkien:size "44&nbsp;cm x 68&nbsp;cm , 26 x 17 inches" ;
+    tolkien:templateType "Puzzle infobox" .
+
+tolkien:MEP_The_Way_is_Shut a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Ted Nasmith" ;
+    tolkien:edition "Unlimited" ;
+    tolkien:ice "30501" ;
+    tolkien:image "Middle-earth Puzzles - The Way is Shut.jpg" ;
+    tolkien:pageTitle "MEP: The Way is Shut" ;
+    tolkien:pieces "500" ;
+    tolkien:publisher "Iron Crown Enterprises" ;
+    tolkien:releasedate "1997" ;
+    tolkien:size "36&nbsp;cm x 49&nbsp;cm" ;
+    tolkien:templateType "Puzzle infobox" .
+
+tolkien:MEP_Éowyn_and_the_Witch-king a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Angus McBride" ;
+    tolkien:edition "Unlimited" ;
+    tolkien:ice "30503" ;
+    tolkien:image "Middle-earth Puzzles - Eowyn and the Witch-king.jpg" ;
+    tolkien:pageTitle "MEP: Éowyn and the Witch-king" ;
+    tolkien:pieces "500" ;
+    tolkien:publisher "Iron Crown Enterprises" ;
+    tolkien:releasedate "1997" ;
+    tolkien:size "49&nbsp;cm x 36&nbsp;cm" ;
+    tolkien:templateType "Puzzle infobox" .
+
+tolkien:METW_Akhôrahil a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:alignment "Neutral" ;
+    tolkien:artist "Liz Danforth" ;
+    tolkien:game "meccg" ;
+    tolkien:name "Akhôrahil" ;
+    tolkien:number "TW254" ;
+    tolkien:pageTitle "METW: Akhôrahil" ;
+    tolkien:rarity "Rare" ;
+    tolkien:templateType "Collectible card" ;
+    tolkien:type "Hazard Creature" .
+
+tolkien:METW_Alatar a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:alignment "Avatar" ;
+    tolkien:artist "Angus McBride" ;
+    tolkien:game "meccg" ;
+    tolkien:homesite "Edhellond" ;
+    tolkien:name "Alatar" ;
+    tolkien:number "TW001" ;
+    tolkien:pageTitle "METW: Alatar" ;
+    tolkien:rarity "Fixed2" ;
+    tolkien:templateType "Collectible card" ;
+    tolkien:type "Character" .
+
+tolkien:METW_Aragorn_II a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:alignment "Hero" ;
+    tolkien:artist "Angus McBride" ;
+    tolkien:game "meccg" ;
+    tolkien:homesite "Bree" ;
+    tolkien:number "TW009" ;
+    tolkien:pageTitle "METW: Aragorn II" ;
+    tolkien:rarity "Fixed1" ;
+    tolkien:templateType "Collectible card" ;
+    tolkien:type "Character" .
+
+tolkien:METW_Arwen a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:alignment "Hero" ;
+    tolkien:artist "Angus McBride" ;
+    tolkien:game "meccg" ;
+    tolkien:homesite "Rivendell" ;
+    tolkien:name "Arwen" ;
+    tolkien:number "TW011" ;
+    tolkien:pageTitle "METW: Arwen" ;
+    tolkien:rarity "Rare" ;
+    tolkien:templateType "Collectible card" ;
+    tolkien:type "Character" .
+
+tolkien:Mallorn a tolkien:Media,
+        rdfs:Resource ;
+    tolkien:date "October 1970 - present" ;
+    tolkien:editor "Luke Shelton" ;
+    tolkien:format "A4 stapled paperback" ;
+    tolkien:frequency "Annually" ;
+    tolkien:image "Mallorn60.jpg" ;
+    tolkien:issn "0308-6674" ;
+    tolkien:pageTitle "Mallorn (journal)" ;
+    tolkien:pages "up to 64" ;
+    tolkien:publisher "The Tolkien Society" ;
+    tolkien:templateType "Journal" ;
+    tolkien:website "[http://www.tolkiensociety.org/society/publications/mallorn/ ''Mallorn'' at the Tolkien Society website]" .
+
+tolkien:Mallorn_10 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Pauline Baynes" ;
+    tolkien:date "1976" ;
+    tolkien:editor "Kevin Young" ;
+    tolkien:format "A4 paperback" ;
+    tolkien:image "Mallorn 10.png" ;
+    tolkien:issn "0308-6674" ;
+    tolkien:pageTitle "Mallorn 10" ;
+    tolkien:pages "46" ;
+    tolkien:printer "[http://hanwayprint.com/ Hanway Print Centre]" ;
+    tolkien:templateType "Mallorn" .
+
+tolkien:Mallorn_12 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Pauline Baynes" ;
+    tolkien:date "1978" ;
+    tolkien:editor "Kevin Young" ;
+    tolkien:format "A4 stapled paperback" ;
+    tolkien:image "Mallorn 12.jpg" ;
+    tolkien:issn "0308-6674" ;
+    tolkien:pageTitle "Mallorn 12" ;
+    tolkien:pages "52" ;
+    tolkien:templateType "Mallorn" .
+
+tolkien:Mallorn_23 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Pauline Baynes" ;
+    tolkien:date "Summer 1986" ;
+    tolkien:editor "Denis Bridoux" ;
+    tolkien:format "A4 stapled paperback" ;
+    tolkien:image "Mallorn 23.jpg" ;
+    tolkien:issn "0308-6674" ;
+    tolkien:pageTitle "Mallorn 23" ;
+    tolkien:pages "40" ;
+    tolkien:printer "[http://hanwayprint.com/ Hanway Print Centre]" ;
+    tolkien:templateType "Mallorn" .
+
+tolkien:Mallorn_43 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Pauline Baynes" ;
+    tolkien:date "July 2005" ;
+    tolkien:editor "Len Sanford" ;
+    tolkien:format "A4 stapled paperback, glossy" ;
+    tolkien:image "Mallorn43.png" ;
+    tolkien:issn "0308-6674" ;
+    tolkien:pageTitle "Mallorn 43" ;
+    tolkien:pages "64" ;
+    tolkien:printer "[http://www.printedword.co.uk/ The Printed Word], Horsham, UK" ;
+    tolkien:templateType "Mallorn" .
+
+tolkien:Mallorn_46 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:artist "Ruth Lacon" ;
+    tolkien:date "Autumn 2008" ;
+    tolkien:editor "Henry Gee" ;
+    tolkien:format "A4 stapled paperback, glossy" ;
+    tolkien:image "Mallorn46.png" ;
+    tolkien:issn "0308-6674" ;
+    tolkien:pageTitle "Mallorn 46" ;
+    tolkien:pages "52" ;
+    tolkien:printer "[http://www.printedword.co.uk/ The Printed Word], Horsham, UK" ;
+    tolkien:templateType "Mallorn" .
+
+tolkien:May_It_Be a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:album "The Lord of the Rings: The Fellowship of the Ring - Original Motion Picture Soundtrack" ;
+    tolkien:composer "Enya, Nicky Ryan, Roma Ryan" ;
+    tolkien:content1 "{{song" ;
+    tolkien:duration "4:17" ;
+    tolkien:image "The_Lord_of_the_Rings_-_The_Fellowship_of_the_Ring_-_Original_Motion_Picture_Soundtrack.jpg" ;
+    tolkien:pageTitle "May It Be" ;
+    tolkien:performer "London Philharmonic Orchestra, Enya" ;
+    tolkien:previous "The Breaking of the Fellowship" ;
+    tolkien:spotify "https://open.spotify.com/track/7LAJWSKK8JMIZAcblgUMS6" ;
+    tolkien:subtitle "Composed & performed by Enya" ;
+    tolkien:templateType "Infoboxes" ;
+    tolkien:title "May It Be" ;
+    tolkien:track "18" .
+
+tolkien:Michael_Martinez a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "1959" ;
+    tolkien:education "Kennesaw State University, Georgia, USA" ;
+    tolkien:name "Michael Martinez" ;
+    tolkien:occupation "SEO Theorist and Tolkien Scholar" ;
+    tolkien:pageTitle "Michael Martinez" ;
+    tolkien:templateType "Person infobox" ;
+    tolkien:website "[https://www.michael-martinez.com/ Official website]<br />[https://middle-earth.xenite.org/ Middle-earth Blog]" .
+
+tolkien:Middle-earth a tolkien:Location,
+        rdfs:Resource ;
+    tolkien:caption "\"The Map of Middle-earth\" by John Howe" ;
+    tolkien:events "Sleep of Yavanna, Battle of the Powers, Great March, War of the Jewels, Dark Years, Changing of the World, War of the Ring" ;
+    tolkien:image "John Howe - The Map of Middle-earth.jpg" ;
+    tolkien:inhabitants "Men, Elves, Dwarves, Orcs, Hobbits, Ents, others" ;
+    tolkien:location "Arda, east of Belegaer" ;
+    tolkien:othernames "''Ennorath'', ''Endor''" ;
+    tolkien:pageTitle "Middle-earth" ;
+    tolkien:regions "The Westlands (Beleriand, Rohan, Gondor, Arnor, Mordor, Rhovanion, Forodwaith), Harad, Rhûn, Cuiviénen, Hildorien, others" ;
+    tolkien:templateType "Location infobox" ;
+    tolkien:type "Continent" .
+
+tolkien:Middle-earth_Collectible_Card_Game a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:designer "Coleman Charlton, Mike Reynolds" ;
+    tolkien:image "meccg.jpg" ;
+    tolkien:pageTitle "Middle-earth Collectible Card Game" ;
+    tolkien:players "1-5" ;
+    tolkien:publisher "Iron Crown Enterprises" ;
+    tolkien:releasedate "1995" ;
+    tolkien:templateType "Board game infobox" ;
+    tolkien:type "ccg" .
+
+tolkien:Middle-earth_Role_Playing a tolkien:Item,
+        tolkien:Other,
+        rdfs:Resource ;
+    tolkien:author "S. Coleman Charlton" ;
+    tolkien:caption "2nd edition logotype" ;
+    tolkien:content1 "{{book" ;
+    tolkien:date "1993" ;
+    tolkien:designer "Coleman Charlton" ;
+    tolkien:format "Hardcover" ;
+    tolkien:ice "2000" ;
+    tolkien:illustrator "Angus McBride (cover)" ;
+    tolkien:image "Middle-earth Role Playing (2nd edition, hardcover).jpg",
+        "merp_logo.png" ;
+    tolkien:isbn "1-55806-190-8" ;
+    tolkien:pageTitle "Middle-earth Role Playing",
+        "Middle-earth Role Playing (2nd edition)" ;
+    tolkien:pages "272" ;
+    tolkien:publisher "Iron Crown Enterprises" ;
+    tolkien:releasedate "1984" ;
+    tolkien:templateType "Board game infobox",
+        "Infoboxes" ;
+    tolkien:title "Middle-earth Role Playing Second Edition: Collector's Edition" ;
+    tolkien:type "rpg" .
+
+tolkien:Mindolluin a tolkien:Location,
+        rdfs:Resource ;
+    tolkien:belongs "White Mountains" ;
+    tolkien:events "finding of a sapling of the White Tree" ;
+    tolkien:location "above Minas Tirith" ;
+    tolkien:name "Mindolluin" ;
+    tolkien:pageTitle "Mindolluin" ;
+    tolkien:templateType "Mountain" .
+
+tolkien:Morgoth_s_Ring a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:author "J.R.R. Tolkien" ;
+    tolkien:dateUK "23 September 1993" ;
+    tolkien:dateUS "14 December 1993" ;
+    tolkien:editor "Christopher Tolkien" ;
+    tolkien:followedby "The War of the Jewels (1994)" ;
+    tolkien:format "Hardcover; paperback" ;
+    tolkien:image "Morgoth's Ring 1993.png" ;
+    tolkien:isbn "0261103040" ;
+    tolkien:pageTitle "Morgoth's Ring" ;
+    tolkien:pages "480" ;
+    tolkien:precededby "Sauron Defeated (1992)" ;
+    tolkien:publisherUK "HarperCollins" ;
+    tolkien:publisherUS "Houghton Mifflin" ;
+    tolkien:templateType "Book" .
+
+tolkien:Moria a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:developer "Mike Howard (ZX-Spectrum)<ref name=\"Tolkien Games\">{{webcite|author=Fredrik Ekman|articleurl=http://www.lysator.liu.se/tolkien-games/entry/moria.html|articlename=Moria|dated=|website=Games|accessed=14 august 2010" ;
+    tolkien:name "Moria" ;
+    tolkien:pageTitle "Moria (video game)" ;
+    tolkien:templateType "Video game infobox" .
+
+tolkien:Mythlore_1 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "January, 1969" ;
+    tolkien:editor "Glen GoodKnight" ;
+    tolkien:format "Paperback" ;
+    tolkien:image "Mythlore 1.jpg" ;
+    tolkien:pageTitle "Mythlore 1" ;
+    tolkien:pages "48" ;
+    tolkien:publisher "Mythopoeic Society" ;
+    tolkien:templateType "Mythlore" .
+
+tolkien:Mythlore_10 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "1975" ;
+    tolkien:editor "Glen GoodKnight" ;
+    tolkien:format "Paperback" ;
+    tolkien:image "Mythlore_10.gif" ;
+    tolkien:pageTitle "Mythlore 10" ;
+    tolkien:pages "35" ;
+    tolkien:publisher "Mythopoeic Society" ;
+    tolkien:templateType "Mythlore" .
+
+tolkien:Mythlore_109_110 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "Spring/Summer 2010" ;
+    tolkien:editor "Janet Brennan Croft" ;
+    tolkien:format "Paperback" ;
+    tolkien:image "Mythlore 109 110.gif" ;
+    tolkien:pageTitle "Mythlore 109/110" ;
+    tolkien:pages "208" ;
+    tolkien:publisher "Mythopoeic Society" ;
+    tolkien:templateType "Mythlore" .
+
+tolkien:Mythlore_2 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "April, 1969" ;
+    tolkien:editor "Glen GoodKnight" ;
+    tolkien:format "Paperback" ;
+    tolkien:image "Mythlore 2.png" ;
+    tolkien:pageTitle "Mythlore 2" ;
+    tolkien:pages "54" ;
+    tolkien:publisher "Mythopoeic Society" ;
+    tolkien:templateType "Mythlore" .
+
+tolkien:Mythlore_56 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "Winter 1988" ;
+    tolkien:editor "Glen GoodKnight" ;
+    tolkien:format "Paperback" ;
+    tolkien:image "Mythlore 56.jpg" ;
+    tolkien:pageTitle "Mythlore 56" ;
+    tolkien:pages "67" ;
+    tolkien:publisher "Mythopoeic Society" ;
+    tolkien:templateType "Mythlore" .
+
+tolkien:Mythopoeic_Society a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:founded "1967" ;
+    tolkien:founder "Glen H. GoodKnight" ;
+    tolkien:image "Mythopoeic Society logo.gif" ;
+    tolkien:location "United States" ;
+    tolkien:pageTitle "Mythopoeic Society" ;
+    tolkien:templateType "Company infobox" ;
+    tolkien:type "Non-profit" ;
+    tolkien:website "[https://www.mythsoc.org mythsoc.org]" .
+
+tolkien:Nightfall_in_Middle-Earth a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:artist "Blind Guardian" ;
+    tolkien:genre "Metal" ;
+    tolkien:image "Blind guardian nightfall cover.jpg" ;
+    tolkien:label "Virgin/Century Media" ;
+    tolkien:language "English" ;
+    tolkien:length "65:29" ;
+    tolkien:pageTitle "Nightfall in Middle-Earth" ;
+    tolkien:recorded "July 1997 – January 1998" ;
+    tolkien:released "28 April 1998" ;
+    tolkien:templateType "Album" ;
+    tolkien:type "Studio album" .
+
+tolkien:Númenóreans a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:caption "\"Ar-Pharazôn\" by Steamey" ;
+    tolkien:image "Steamey - Ar-Pharazôn.jpg" ;
+    tolkien:pageTitle "Númenóreans" ;
+    tolkien:pronun "{{respell|noo|meh|noh|reh-ans" ;
+    tolkien:templateType "People infobox" .
+
+tolkien:Oliphaunt a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:image "Matěj Čadil - Oliphaunt.jpg" ;
+    tolkien:other_names "''Iumbo, or ye Kinde of ye Oliphaunt''" ;
+    tolkien:pageTitle "Oliphaunt (poem)" ;
+    tolkien:published "''Stapeldon Magazine''<br>''The Two Towers'',<br>''The Adventures of Tom Bombadil'',<br>''Oliphaunt''<br>''Oliphaunt''<br>''The Collected Poems of J.R.R. Tolkien''" ;
+    tolkien:revised "April, 1944" ;
+    tolkien:subject "Oliphaunts, Samwise Gamgee" ;
+    tolkien:templateType "Poem infobox" ;
+    tolkien:written "Before 1927" .
+
+tolkien:Over_Hill_and_Under_Hill a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:book "The Hobbit" ;
+    tolkien:date "Midyear's Day—10 July {{TA|2941" ;
+    tolkien:events "Thorin and Company ascent the Misty Mountains and are captured by goblins" ;
+    tolkien:image "J.R.R. Tolkien - The Mountain-path.jpg" ;
+    tolkien:location "Rivendell, Misty Mountains, Goblin-town" ;
+    tolkien:next "Riddles in the Dark" ;
+    tolkien:pageTitle "Over Hill and Under Hill" ;
+    tolkien:previous "A Short Rest" ;
+    tolkien:templateType "Chapter" ;
+    tolkien:title "Over Hill and Under Hill" .
+
+tolkien:Oxonmoot_2006 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:attendees "210" ;
+    tolkien:dates "September 15th-17th 2006" ;
+    tolkien:location "Somerville College, Oxford" ;
+    tolkien:organizer "Tolkien Society" ;
+    tolkien:pageTitle "Oxonmoot 2006" ;
+    tolkien:templateType "Convention" ;
+    tolkien:title "Oxonmoot 2006" .
+
+tolkien:Parma_Eldalamberon a tolkien:Media,
+        rdfs:Resource ;
+    tolkien:editor "Christopher Gilson, Arden R. Smith, Carl F. Hostetter and others" ;
+    tolkien:format "Paperback, print on demand" ;
+    tolkien:frequency "Irregular" ;
+    tolkien:image "Parma Eldalamberon 6.png" ;
+    tolkien:latest "23" ;
+    tolkien:pageTitle "Parma Eldalamberon" ;
+    tolkien:publisher "Issue 1-5: Mythopoeic Society<br> Since issue 6: Elvish Linguistic Fellowship" ;
+    tolkien:templateType "Journal" ;
+    tolkien:website "[http://www.eldalamberon.com/ Eldalamberon]" .
+
+tolkien:Partings a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:director "Wayne Che Yip" ;
+    tolkien:gallery "The Rings of Power (TV series)" ;
+    tolkien:image "The Lord of the Rings The Rings of Power - Partings.jpg" ;
+    tolkien:imdb_id "11609040" ;
+    tolkien:music "Bear McCreary<br/>Main Title by Howard Shore" ;
+    tolkien:next "Udûn" ;
+    tolkien:pageTitle "Partings" ;
+    tolkien:previous "The Great Wave" ;
+    tolkien:released "23 September 2022" ;
+    tolkien:runtime "72 minutes" ;
+    tolkien:studio "Amazon Studios" ;
+    tolkien:templateType "Episode infobox" ;
+    tolkien:writer "Justin Doble" .
+
+tolkien:Pauline_Baynes a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "9 September 1922" ;
+    tolkien:died "1 August 2008" ;
+    tolkien:images "Gallery" ;
+    tolkien:location "England" ;
+    tolkien:name "Pauline Baynes" ;
+    tolkien:pageTitle "Pauline Baynes" ;
+    tolkien:templateType "Artist infobox" .
+
+tolkien:Peter_Jackson a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:caption "Jackson at 2014's San Diego Comic Con International" ;
+    tolkien:children "Katie Jackson<br>Billy Jackson" ;
+    tolkien:image "Peter Jackson 2014.jpg" ;
+    tolkien:imdb "[https://www.imdb.com/name/nm0001392/ Profile]" ;
+    tolkien:lifetime "31 October 1961" ;
+    tolkien:nationality "Kiwi" ;
+    tolkien:notable_collaborators "Fran Walsh" ;
+    tolkien:notable_films "''The Lord of the Rings''" ;
+    tolkien:occupation "Director<br>Writer<br>Producer" ;
+    tolkien:pageTitle "Peter Jackson" ;
+    tolkien:spouse "Fran Walsh" ;
+    tolkien:templateType "Director" ;
+    tolkien:years_active "1976-present" .
+
+tolkien:Prologue_A_Ring_s_Tale a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:duration "3:41" ;
+    tolkien:event "forging of the Rings,<br>War of the Last Alliance" ;
+    tolkien:film "''The Lord of the Rings'' (1978 film)" ;
+    tolkien:name "Prologue: A Ring's Tale" ;
+    tolkien:next "Bilbo's Farewell" ;
+    tolkien:number "2" ;
+    tolkien:pageTitle "Prologue: A Ring's Tale" ;
+    tolkien:templateType "Scene" .
+
+tolkien:Prologue_One_Ring_to_Rule_Them_All a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:album "The Lord of the Rings: The Fellowship of the Ring - The Complete Recordings" ;
+    tolkien:composer "Howard Shore" ;
+    tolkien:duration "7:16" ;
+    tolkien:image "The_Lord_of_the_Rings_-_The_Fellowship_of_the_Ring_-_The_Complete_Recordings.jpg" ;
+    tolkien:next "The Shire" ;
+    tolkien:pageTitle "Prologue: One Ring to Rule Them All" ;
+    tolkien:performer "London Philharmonic Orchestra" ;
+    tolkien:spotify "https://open.spotify.com/track/6zW80jVqLtgSF1yCtGHiiD" ;
+    tolkien:templateType "Song" ;
+    tolkien:track "Disc 1 Track 1" .
+
+tolkien:Ralph_Bakshi a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:children "4" ;
+    tolkien:image "Ralph Bakshi.jpeg" ;
+    tolkien:imdb "[https://www.imdb.com/name/nm0000835/ Profile]" ;
+    tolkien:lifetime "October 29, 1938" ;
+    tolkien:nationality "American" ;
+    tolkien:notable_films "''The Lord of the Rings''" ;
+    tolkien:occupation "Director" ;
+    tolkien:pageTitle "Ralph Bakshi" ;
+    tolkien:production_company "Bakshi Productions, Inc." ;
+    tolkien:spouse "Elaine Bakshi<br>Elisabeth \"Liz\" Bakshi" ;
+    tolkien:templateType "Director" ;
+    tolkien:website "https://www.bakshistudio.com/" ;
+    tolkien:years_active "1956–2015 (director)" .
+
+tolkien:Ringers_Lord_of_the_Fans a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:country "USA" ;
+    tolkien:director "Carlene Cordova" ;
+    tolkien:distributor "Sony Pictures Home Entertainment" ;
+    tolkien:imdb_id "0379473" ;
+    tolkien:language "English" ;
+    tolkien:name "Ringers: Lord of the Fans" ;
+    tolkien:narrator "Dominic Monaghan" ;
+    tolkien:pageTitle "Ringers: Lord of the Fans" ;
+    tolkien:producer "Cliff Broadway, Carlene Cordova, Jeff Marchelletta, Tom DeSanto" ;
+    tolkien:released "2005" ;
+    tolkien:runtime "97 minutes" ;
+    tolkien:starring "Various ''The Lord of the Rings'' (film series) cast members" ;
+    tolkien:templateType "Film infobox" ;
+    tolkien:writer "Cliff Broadway, Carlene Cordova" .
+
+tolkien:Roast_Mutton a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:book "The Hobbit" ;
+    tolkien:date "April 27<ref>{{UT|Quest" ;
+    tolkien:event "Quest of Erebor begins; Thorin and Company encounter the three Trolls; they discover Glamdring, Orcrist and a knife in the Trolls' cave." ;
+    tolkien:image "J.R.R. Tolkien - The Three Trolls are turned to Stone (Colored by H.E. Riddett).jpg" ;
+    tolkien:number "2" ;
+    tolkien:pageTitle "Roast Mutton" ;
+    tolkien:templateType "Chapter" .
+
+tolkien:SEVEN_17 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "2000<ref name=\"jstor\">{{webcite|articleurl=https://www.jstor.org/stable/i40229611|articlename=Vol. 17, 2000|website=[https://jstor.org JSTOR]|accessed=13 August 2025" ;
+    tolkien:image "SEVEN 17.png" ;
+    tolkien:pageTitle "SEVEN 17" ;
+    tolkien:templateType "SEVEN" .
+
+tolkien:SEVEN_18 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "2001<ref name=\"jstor\">{{webcite|articleurl=https://www.jstor.org/stable/i40229612|articlename=Vol. 18, 2001|website=[https://jstor.org JSTOR]|accessed=13 August 2025" ;
+    tolkien:pageTitle "SEVEN 18" ;
+    tolkien:templateType "SEVEN" .
+
+tolkien:SEVEN_19 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "2002<ref name=\"jstor\">{{webcite|articleurl=https://www.jstor.org/stable/i40229630|articlename=Vol. 19, 2002|website=[https://jstor.org JSTOR]|accessed=13 August 2025" ;
+    tolkien:pageTitle "SEVEN 19" ;
+    tolkien:templateType "SEVEN" .
+
+tolkien:SEVEN_20 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "2003<ref name=\"jstor\">{{webcite|articleurl=https://www.jstor.org/stable/i40229631|articlename=Vol. 20, 2003|website=[https://jstor.org JSTOR]|accessed=13 August 2025" ;
+    tolkien:pageTitle "SEVEN 20" ;
+    tolkien:templateType "SEVEN" .
+
+tolkien:SEVEN_27 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "2010<ref name=\"jstor\">{{webcite|articleurl=https://www.jstor.org/stable/i40229645|articlename=Vol. 27, 2010|website=[https://jstor.org JSTOR]|accessed=13 August 2025" ;
+    tolkien:pageTitle "SEVEN 27" ;
+    tolkien:templateType "SEVEN" .
+
+tolkien:San_Diego_Comic-Con_2001 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:dates "2001" ;
+    tolkien:location "San Diego Convention Center" ;
+    tolkien:pageTitle "San Diego Comic-Con 2001" ;
+    tolkien:templateType "Convention" ;
+    tolkien:title "Comic-Con 2001" .
+
+tolkien:San_Diego_Comic-Con_2003 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:dates "2003" ;
+    tolkien:location "San Diego Convention Center" ;
+    tolkien:pageTitle "San Diego Comic-Con 2003" ;
+    tolkien:templateType "Convention" ;
+    tolkien:title "Comic-Con 2003" .
+
+tolkien:San_Diego_Comic-Con_2006 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:dates "2006" ;
+    tolkien:location "San Diego Convention Center" ;
+    tolkien:pageTitle "San Diego Comic-Con 2006" ;
+    tolkien:templateType "Convention" ;
+    tolkien:title "Comic-Con 2006" .
+
+tolkien:Scatha a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:caption "\"The Slaying of Scatha\" by Wouter Florusse" ;
+    tolkien:image "Wouter Florusse - The Slaying of Scatha.png" ;
+    tolkien:location "Grey Mountains<ref name=appendix>{{App|Eorl" ;
+    tolkien:pageTitle "Scatha" ;
+    tolkien:templateType "Dragon infobox" ;
+    tolkien:titles "The Worm" .
+
+tolkien:Sean_Astin a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:film "''The Lord of the Rings'' (film series)" ;
+    tolkien:imdb "[https://www.imdb.com/name/nm0000276/ Profile]" ;
+    tolkien:lifetime "25 February 1971" ;
+    tolkien:name "Sean Astin" ;
+    tolkien:pageTitle "Sean Astin" ;
+    tolkien:played "Sam" ;
+    tolkien:templateType "Actor" .
+
+tolkien:Shelob_s_Lair a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:album "The Lord of the Rings: The Return of the King - Original Motion Picture Soundtrack" ;
+    tolkien:composer "Howard Shore" ;
+    tolkien:content1 "{{song" ;
+    tolkien:duration "4:07" ;
+    tolkien:image "The_Lord_of_the_Rings_-_The_Return_of_the_King_-_Original_Motion_Picture_Soundtrack.jpg" ;
+    tolkien:next "Ash and Smoke" ;
+    tolkien:pageTitle "Shelob's Lair (soundtrack)" ;
+    tolkien:performer "London Philharmonic Orchestra" ;
+    tolkien:previous "Anduril" ;
+    tolkien:spotify "https://open.spotify.com/track/2JzuB2RsCTditjUfWfECI0" ;
+    tolkien:templateType "Infoboxes" ;
+    tolkien:title "Shelob's Lair" ;
+    tolkien:track "11" .
+
+tolkien:Simon_Tolkien a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "12 January 1959" ;
+    tolkien:education "Trinity College, Oxford" ;
+    tolkien:location "Southern California" ;
+    tolkien:name "Simon Tolkien" ;
+    tolkien:occupation "Author, barrister" ;
+    tolkien:pageTitle "Simon Tolkien" ;
+    tolkien:templateType "Author infobox" ;
+    tolkien:website "[http://www.simontolkien.com/ SimonTolkien.com]" .
+
+tolkien:Smaug a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:birth "Presumably born in the 3rd millennium of the Third Age<ref name=\"H12\"/>" ;
+    tolkien:caption "\"Conversation with Smaug\" by J.R.R. Tolkien" ;
+    tolkien:death "{{TA|2941" ;
+    tolkien:hoard "Treasure of Thrór, including the Arkenstone<ref name=\"AppA3\"/>" ;
+    tolkien:image "J.R.R. Tolkien - Conversation with Smaug (large).jpg" ;
+    tolkien:othernames "Smaug the Golden<br/>Lord Smaug the Impenetrable<br/>Trāgu<br/>(''see below'')" ;
+    tolkien:pageTitle "Smaug" ;
+    tolkien:realm "Erebor<ref name=\"AppA3\"/>" ;
+    tolkien:templateType "Dragon infobox" .
+
+tolkien:Song_of_the_Mounds_of_Mundburg a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:pageTitle "Song of the Mounds of Mundburg" ;
+    tolkien:published "''The Return of the King''<br>''The Collected Poems of J.R.R. Tolkien''" ;
+    tolkien:revised "Between 1938 and 1954" ;
+    tolkien:subject "Mounds of Mundburg, Gondorians, Rohirrim, Battle of the Pelennor Fields" ;
+    tolkien:templateType "Poem infobox" ;
+    tolkien:written "Between 1938 and 1954" .
+
+tolkien:Spring_of_Arda a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:date "{{VY|1900" ;
+    tolkien:event "Spring of Arda" ;
+    tolkien:pageTitle "Spring of Arda" ;
+    tolkien:templateType "Events" .
+
+tolkien:Summoning a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:formermembers "Trifixion<br/>Pazuzu" ;
+    tolkien:genre "Black metal, Tolkien metal" ;
+    tolkien:label "Napalm Records" ;
+    tolkien:members "Protector<br/>Silenius" ;
+    tolkien:name "Summoning" ;
+    tolkien:origin "Vienna, Austria" ;
+    tolkien:pageTitle "Summoning" ;
+    tolkien:templateType "Band" ;
+    tolkien:website "[http://www.summoning.info/ www.summoning.info]" ;
+    tolkien:years "1993-present" .
+
+tolkien:Tales_of_Middle_Earth a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:developer "Nicolas Casalini" ;
+    tolkien:genre "Roguelike" ;
+    tolkien:modes "Single player" ;
+    tolkien:name "Tales of Middle Earth" ;
+    tolkien:pageTitle "Tales of Middle Earth" ;
+    tolkien:platform "Windows, Mac OS, Unix-like" ;
+    tolkien:releasedate "1998" ;
+    tolkien:templateType "Video game infobox" .
+
+tolkien:Ted_Nasmith a tolkien:Character,
+        rdfs:Resource ;
+    tolkien:born "1956, Goderich, Ontario, Canada" ;
+    tolkien:images "Images by Ted Nasmith" ;
+    tolkien:location "Toronto, Canada" ;
+    tolkien:name "Ted Nasmith" ;
+    tolkien:pageTitle "Ted Nasmith" ;
+    tolkien:style "Luminism, Victorian neoclassical" ;
+    tolkien:templateType "Artist infobox" ;
+    tolkien:website "http://www.tednasmith.com" .
+
+tolkien:The_Battle_of_the_Eastern_Field a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:pageTitle "The Battle of the Eastern Field" ;
+    tolkien:published "''King Edward's School Chronicle'',<br>''Mallorn 12'',<br>''Mallorn 13'',<br> ''Mallorn 46'',<br>''The Collected Poems of J.R.R. Tolkien''" ;
+    tolkien:revised "After March of 1911" ;
+    tolkien:subject "Rugby match" ;
+    tolkien:templateType "Poem infobox" ;
+    tolkien:written "Before March of 1911" .
+
+tolkien:The_Children_of_Húrin a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:audio "<spotify>show/26pyQgpQKBPJtJIF1lEd4O</spotify>" ;
+    tolkien:author "J.R.R. Tolkien" ;
+    tolkien:coverart "Alan Lee" ;
+    tolkien:date "2007" ;
+    tolkien:format "Audio CD" ;
+    tolkien:image "The Children of Hurin Audiobook.jpg" ;
+    tolkien:isbn "9780007263455" ;
+    tolkien:narrator "Christopher Tolkien and Christopher Lee" ;
+    tolkien:pageTitle "The Children of Húrin (audiobook)" ;
+    tolkien:publisher "HarperCollins" ;
+    tolkien:templateType "Audiobook infobox" ;
+    tolkien:work "''The Children of Húrin''" .
+
+tolkien:The_Great_Wave a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:director "Wayne Che Yip" ;
+    tolkien:gallery "The Rings of Power (TV series)" ;
+    tolkien:image "The Lord of the Rings The Rings of Power - The Great Wave.jpg" ;
+    tolkien:imdb_id "11609038" ;
+    tolkien:music "Bear McCreary<br/>Main Title by Howard Shore" ;
+    tolkien:next "Partings" ;
+    tolkien:pageTitle "The Great Wave" ;
+    tolkien:previous "Adar" ;
+    tolkien:released "16 September 2022" ;
+    tolkien:runtime "71 minutes" ;
+    tolkien:studio "Amazon Studios" ;
+    tolkien:templateType "Episode infobox" ;
+    tolkien:writer "Stephany Folsom<br/>J.D. Payne<br/>Patrick McKay" .
+
+tolkien:The_Hobbit a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:budget "$3 million (est.)" ;
+    tolkien:country "USA" ;
+    tolkien:director "Arthur Rankin, Jr.<br>Jules Bass" ;
+    tolkien:distributor "NBC (original transmission)<br>Warner Bros. (home video)" ;
+    tolkien:imdb_id "0077687" ;
+    tolkien:language "English" ;
+    tolkien:music "Maury Laws (music)<br>Jules Bass (lyrics/lyrical adaptations)" ;
+    tolkien:name "The Hobbit" ;
+    tolkien:pageTitle "The Hobbit (1977 film)" ;
+    tolkien:producer "Arthur Rankin, Jr.<br>Jules Bass" ;
+    tolkien:released "November 27, 1977" ;
+    tolkien:runtime "77 minutes" ;
+    tolkien:starring "Orson Bean<br>Richard Boone<br>Hans Conried<br>John Huston" ;
+    tolkien:templateType "Film infobox" ;
+    tolkien:writer "J.R.R. Tolkien (original novel)<br>Romeo Muller (screenplay)" .
+
+tolkien:The_Lord_of_the_Rings a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:author "J.R.R. Tolkien" ;
+    tolkien:caption "Michael Hordern, John Le Mesurier and Ian Holm, as Gandalf, Bilbo and Frodo." ;
+    tolkien:cinematography "Andrew Lesnie" ;
+    tolkien:country "New Zealand<br/>United Kingdom<br/>United States" ;
+    tolkien:date "1st edition:<br/>vol.1: 29 July 1954<br>vol.2: 11 November 1954<br>vol.3: 20 October 1955<br/>2nd edition:<br/>27 October 1966",
+        "Original Airing: 8 March – 30 August 1981<br />Audio CD: 1 December, 1999" ;
+    tolkien:director "Peter Jackson" ;
+    tolkien:distributor "New Line Cinema<ref group=\"note\">The films' distribution rights were transferred to Warner Bros. Pictures in 2008.</ref>" ;
+    tolkien:editing "John Gilbert<ref group=\"note\">He only worked on ''The Fellowship of the Ring''.</ref><br/>Michael Horton<ref group=\"note\">He only worked on ''The Two Towers''.</ref><br/>Jamie Selkirk<ref group=\"note\">He is only crdited as editor on ''The Return of the King''.</ref>" ;
+    tolkien:followedby "The Adventures of Tom Bombadil (1962)" ;
+    tolkien:format "Hardcover; paperback; deluxe-edition; audio-book",
+        "Radio broadcast" ;
+    tolkien:gallery "1-Volume Editions<br>3-Volume Editions<br>7-Volume Editions" ;
+    tolkien:image "Hordern, LeMesurier, Holm 1981 lotr.jpg",
+        "The Lord of the Rings 1954-55.png" ;
+    tolkien:isbn "978-0553456530" ;
+    tolkien:language "English" ;
+    tolkien:music "Howard Shore" ;
+    tolkien:name "The Lord of the Rings" ;
+    tolkien:pageTitle "The Lord of the Rings",
+        "The Lord of the Rings (1981 radio series)",
+        "The Lord of the Rings (film series)" ;
+    tolkien:pages "vol.1: 423<br>vol.2: 352<br>vol.3: 416" ;
+    tolkien:precededby "The Hobbit (1937)" ;
+    tolkien:producer "Peter Jackson<br/>Fran Walsh<br/>Barrie M. Osborne<br/>Philippa Boyens<br/>Tim Sanders<ref group=\"note\">He only worked on ''The Fellowship of the Ring''.</ref>" ;
+    tolkien:publisherUK "George Allen and Unwin" ;
+    tolkien:publisherUS "Houghton Mifflin" ;
+    tolkien:released "'''''The Fellowship of the Ring''''': 19 December 2001<br/>'''''The Two Towers''''': 18 December 2002<br/>'''''The Return of the King''''': 17 December 2003" ;
+    tolkien:runtime "13 hours",
+        "557 minutes (Theatrical Edition)<br/>681 minutes (Extended Edition)" ;
+    tolkien:starring "Elijah Wood<br/>Ian McKellen<br/>Viggo Mortensen<br/>''See cast section below for more''" ;
+    tolkien:studio "New Line Cinema<br/>WingNut Films" ;
+    tolkien:templateType "Audiobook infobox",
+        "Book",
+        "Film infobox" ;
+    tolkien:website "[http://www.lordoftherings.net Official Website]" ;
+    tolkien:writer "Peter Jackson<br/>Fran Walsh<br/>Philippa Boyens<br/>Stephen Sinclair<ref group=\"note\">He only worked on ''The Fellowship of the Ring''.</ref><br/>'''(screenplay)'''<br/>J.R.R.Tolkien<br/>'''(novels)'''" .
+
+tolkien:The_Lord_of_the_Rings_Online_Shadows_of_Angmar a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:developer "Turbine, Inc" ;
+    tolkien:name "The Lord of the Rings Online:<br>Shadows of Angmar" ;
+    tolkien:pageTitle "The Lord of the Rings Online: Shadows of Angmar" ;
+    tolkien:publisher "Turbine, Inc (North America and Europe)<br />Midway Games<br />Codemasters (Europe, till 2010))<br/>IT Territory (Russia)<ref name=\"Korea and Russia\">{{webcite|author=William Dobson|articleurl=http://www.engadget.com/2009-04-23-lord-of-the-rings-online-launches-in-korea-and-russia.html|articlename=Lord of the Rings Online launches in Korea and Russia|dated=23 April 2009|website=Engadget|accessed=23 August 2020" ;
+    tolkien:templateType "Video game infobox" .
+
+tolkien:The_Lord_of_the_Rings_The_Fellowship_of_the_Ring_-_Original_Motion_Picture_Soundtrack a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:artist "Howard Shore" ;
+    tolkien:label "Reprise Records" ;
+    tolkien:language "English" ;
+    tolkien:pageTitle "The Lord of the Rings: The Fellowship of the Ring - Original Motion Picture Soundtrack" ;
+    tolkien:released "20 November, 2001" ;
+    tolkien:templateType "Album" ;
+    tolkien:title "''The Lord of the Rings: The Fellowship of the Ring - Original Motion Picture song''" ;
+    tolkien:type "Soundtrack" .
+
+tolkien:The_Lord_of_the_Rings_The_Fellowship_of_the_Ring_-_The_Complete_Recordings a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:artist "Howard Shore" ;
+    tolkien:label "Reprise Records" ;
+    tolkien:language "English" ;
+    tolkien:length "180:35" ;
+    tolkien:pageTitle "The Lord of the Rings: The Fellowship of the Ring - The Complete Recordings" ;
+    tolkien:released "13 December, 2005" ;
+    tolkien:templateType "Album" ;
+    tolkien:title "The Lord of the Rings: The Fellowship of the Ring - The Complete Recordings" ;
+    tolkien:type "Soundtrack" .
+
+tolkien:The_Lord_of_the_Rings_The_Return_of_the_King a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:budget "$94 million" ;
+    tolkien:cinematography "Andrew Lesnie" ;
+    tolkien:country "New Zealand & USA" ;
+    tolkien:director "Peter Jackson" ;
+    tolkien:distributor "New Line Cinema" ;
+    tolkien:editing "Jamie Selkirk" ;
+    tolkien:imdb_id "0120737" ;
+    tolkien:language "English" ;
+    tolkien:music "Howard Shore" ;
+    tolkien:name "The Return of the King" ;
+    tolkien:pageTitle "The Lord of the Rings: The Return of the King" ;
+    tolkien:producer "Peter Jackson<br>Barrie M. Osborne<br>Fran Walsh" ;
+    tolkien:released "December 17, 2003" ;
+    tolkien:runtime "'''Theatrical:'''<br>200 min.<br>'''Extended Edition:'''<br>252 min." ;
+    tolkien:starring "see below" ;
+    tolkien:studio "WingNut Films<br>New Line Cinema" ;
+    tolkien:templateType "Film infobox" ;
+    tolkien:website "[http://www.lordoftherings.net Official website]" ;
+    tolkien:writer "'''Book:'''<br>J.R.R. Tolkien<br>'''Screenplay:'''<br>Fran Walsh<br>Philippa Boyens<br>Peter Jackson" .
+
+tolkien:The_Lord_of_the_Rings_The_Return_of_the_King_-_The_Complete_Recordings a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:artist "Howard Shore" ;
+    tolkien:label "Reprise Records" ;
+    tolkien:language "English" ;
+    tolkien:length "229:17" ;
+    tolkien:pageTitle "The Lord of the Rings: The Return of the King - The Complete Recordings" ;
+    tolkien:released "20 November, 2007" ;
+    tolkien:templateType "Album" ;
+    tolkien:title "The Lord of the Rings: The Return of the King - The Complete Recordings" ;
+    tolkien:type "Soundtrack" .
+
+tolkien:The_Lord_of_the_Rings_The_Two_Towers a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:budget "$94 million" ;
+    tolkien:cinematography "Andrew Lesnie" ;
+    tolkien:country "New Zealand & USA" ;
+    tolkien:director "Peter Jackson" ;
+    tolkien:distributor "New Line Cinema" ;
+    tolkien:editing "Michael J. Horton" ;
+    tolkien:imdb_id "0120737" ;
+    tolkien:language "English" ;
+    tolkien:music "Howard Shore" ;
+    tolkien:name "The Two Towers" ;
+    tolkien:pageTitle "The Lord of the Rings: The Two Towers" ;
+    tolkien:producer "Peter Jackson<br>Barrie M. Osborne<br>Fran Walsh" ;
+    tolkien:released "December 18, 2002" ;
+    tolkien:runtime "'''Theatrical:'''<br>179 min.<br>'''Extended Edition:'''<br>223 min." ;
+    tolkien:starring "see below" ;
+    tolkien:studio "WingNut Films<br>New Line Cinema" ;
+    tolkien:templateType "Film infobox" ;
+    tolkien:website "[http://www.lordoftherings.net Official website]" ;
+    tolkien:writer "'''Book:'''<br>J.R.R. Tolkien<br>'''Screenplay:'''<br>Fran Walsh<br>Philippa Boyens<br>Peter Jackson" .
+
+tolkien:The_Lord_of_the_Rings_The_Two_Towers_-_The_Complete_Recordings a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:artist "Howard Shore" ;
+    tolkien:label "Reprise Records" ;
+    tolkien:language "English" ;
+    tolkien:length "188:13" ;
+    tolkien:pageTitle "The Lord of the Rings: The Two Towers - The Complete Recordings" ;
+    tolkien:released "7 November, 2006" ;
+    tolkien:templateType "Album" ;
+    tolkien:title "The Lord of the Rings: The Two Towers - The Complete Recordings" ;
+    tolkien:type "Soundtrack" .
+
+tolkien:The_Lord_of_the_Rings_Trading_Card_Game a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:designer "Mike Reynolds, Chuck Kallenbach II, Tom Lischke, and Joe Alread" ;
+    tolkien:pageTitle "The Lord of the Rings Trading Card Game" ;
+    tolkien:players "2 or more" ;
+    tolkien:publisher "Decipher" ;
+    tolkien:releasedate "2001" ;
+    tolkien:templateType "Board game infobox" ;
+    tolkien:type "ccg" .
+
+tolkien:The_Peoples_of_Middle-earth a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:author "J.R.R. Tolkien" ;
+    tolkien:dateUK "2 September 1996" ;
+    tolkien:dateUS "6 December 1996" ;
+    tolkien:editor "Christopher Tolkien" ;
+    tolkien:followedby "The History of Middle-earth Index (2002)" ;
+    tolkien:format "Hardcover; paperback" ;
+    tolkien:image "Peoples of Middle-earth 1996.png" ;
+    tolkien:isbn "0261103377" ;
+    tolkien:pageTitle "The Peoples of Middle-earth" ;
+    tolkien:pages "496" ;
+    tolkien:precededby "J.R.R. Tolkien: Artist and Illustrator (1995)" ;
+    tolkien:publisherUK "HarperCollins" ;
+    tolkien:publisherUS "Houghton Mifflin" ;
+    tolkien:templateType "Book" .
+
+tolkien:The_Prophecy a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:album "The Lord of the Rings: The Fellowship of the Ring - Original Motion Picture Soundtrack" ;
+    tolkien:composer "Howard Shore" ;
+    tolkien:duration "3:55" ;
+    tolkien:image "The_Lord_of_the_Rings_-_The_Fellowship_of_the_Ring_-_Original_Motion_Picture_Soundtrack.jpg" ;
+    tolkien:next "Concerning Hobbits" ;
+    tolkien:pageTitle "The Prophecy" ;
+    tolkien:performer "London Philharmonic Orchestra" ;
+    tolkien:spotify "https://open.spotify.com/track/6ANHfvTsKVUMQD1xD2VAMr" ;
+    tolkien:templateType "Song" ;
+    tolkien:track "1" .
+
+tolkien:The_Silmarillion a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:author "J.R.R. Tolkien" ;
+    tolkien:date "15 September 1977" ;
+    tolkien:editor "Christopher Tolkien" ;
+    tolkien:followedby "The Inklings: C.S. Lewis, J.R.R. Tolkien, Charles Williams, and Their Friends (1978)" ;
+    tolkien:format "Hardcover; paperback; deluxe-edition; audio-book" ;
+    tolkien:gallery "Publication history and gallery" ;
+    tolkien:image "The Silmarillion 1977.png" ;
+    tolkien:isbn "0048231398" ;
+    tolkien:pageTitle "The Silmarillion" ;
+    tolkien:pages "365" ;
+    tolkien:precededby "Letters from Father Christmas (1976)" ;
+    tolkien:publisherUK "George Allen and Unwin" ;
+    tolkien:publisherUS "Houghton Mifflin" ;
+    tolkien:templateType "Book" .
+
+tolkien:The_Spoken_Word_British_Writers a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:date "23 October 2008" ;
+    tolkien:format "3 CD set with booklet" ;
+    tolkien:image "Spoken_word.jpg" ;
+    tolkien:isbn "978 0 7123 0541 9" ;
+    tolkien:pageTitle "The Spoken Word: British Writers" ;
+    tolkien:publisher "BBC Audiobooks Ltd" ;
+    tolkien:runtime "214 minutes" ;
+    tolkien:templateType "Audiobook infobox" .
+
+tolkien:The_Tolkien_Society a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:founded "6 November 1969 (informal)<ref name=\"Mallorn50\">Charles E. Noad, \"The Tolkien Society - the early days\" in Henry Gee (ed.) ''Mallorn 50'', p. 17</ref><br/>15 January 1972 (formal)<br/>7 July 1977 (charitable status)<ref name=\"CC\">{{webcite|author=|articleurl=https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/273809/governance?_uk_gov_ccew_onereg_charitydetails_web_portlet_CharityDetailsPortlet_organisationNumber=273809|articlename=Charity Commision - THE TOLKIEN SOCIETY - Charity number: 273809|dated=|website=[https://www.gov.uk/government/organisations/charity-commission The Charity Commission]|accessed=13 November 2025" ;
+    tolkien:image "The Tolkien Society - logo.png" ;
+    tolkien:pageTitle "The Tolkien Society" ;
+    tolkien:templateType "Company infobox" .
+
+tolkien:The_Two_Towers_MUD a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:genre "LP MUD,<ref name=\"Tolkien Games\">[http://www.lysator.liu.se/tolkien-games/entry/t2t.html The Two Towers] at Tolkien Games (retrieved 20 March 2011)</ref> RPG" ;
+    tolkien:name "The Two Towers MUD" ;
+    tolkien:pageTitle "The Two Towers MUD" ;
+    tolkien:platform "Online" ;
+    tolkien:rating "PG-13" ;
+    tolkien:releasedate "September 1994<ref name=\"Official\">[http://t2tmud.org/ Official Site] (retrieved 20 March 2011)</ref>" ;
+    tolkien:templateType "Video game infobox" .
+
+tolkien:The_War_of_the_Jewels a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:author "J.R.R. Tolkien" ;
+    tolkien:dateUK "20 October 1994" ;
+    tolkien:dateUS "6 December 1994" ;
+    tolkien:editor "Christopher Tolkien" ;
+    tolkien:followedby "J.R.R. Tolkien: Artist and Illustrator (1995)" ;
+    tolkien:format "Hardback; paperback" ;
+    tolkien:image "The War of the Jewels (UK).jpg" ;
+    tolkien:isbn "0261103148" ;
+    tolkien:pageTitle "The War of the Jewels" ;
+    tolkien:pages "470" ;
+    tolkien:precededby "Morgoth's Ring (1993)" ;
+    tolkien:publisherUK "HarperCollins" ;
+    tolkien:publisherUS "Houghton Mifflin" ;
+    tolkien:templateType "Book" .
+
+tolkien:Theoden_of_Rohan a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:duration "3:48" ;
+    tolkien:event "Arrival at Edoras" ;
+    tolkien:film "''The Lord of the Rings'' (1978 film)" ;
+    tolkien:name "Theoden of Rohan" ;
+    tolkien:next "Gollum gets Touchy" ;
+    tolkien:number "31" ;
+    tolkien:pageTitle "Theoden of Rohan" ;
+    tolkien:previous "Back from the Abyss" ;
+    tolkien:templateType "Scene" .
+
+tolkien:Third_of_the_Nazgûl a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:affiliation "Nazgûl<br>Eye of Sauron" ;
+    tolkien:birth "{{SA|1949" ;
+    tolkien:caption "''“Dwar the Ringwraith”'' by Donato Giancola" ;
+    tolkien:content1 "{{infobox character" ;
+    tolkien:image "Donato Giancola - Dwar of Waw - One of the Nine Wraiths.jpg" ;
+    tolkien:name "Dwar of Waw" ;
+    tolkien:othernames "Dog-lord" ;
+    tolkien:pageTitle "Third of the Nazgûl" ;
+    tolkien:people "Man (early)<br/>Wraith (later)" ;
+    tolkien:position "Third of the Nazgûl" ;
+    tolkien:templateType "Infoboxes" ;
+    tolkien:titles "King of Waw" .
+
+tolkien:Tolkien_2005 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:attendees "c. 750<ref name=\"Souvenir\">The Tolkien Society, ''Tolkien 2005 Souvenir Book'', pp. 19 & 22</ref>" ;
+    tolkien:dates "11-15 August, 2005" ;
+    tolkien:location "Aston University, Birmingham" ;
+    tolkien:organizer "The Tolkien Society" ;
+    tolkien:pageTitle "Tolkien 2005" ;
+    tolkien:previous "Mythcon 35|next=Mythcon 37" ;
+    tolkien:templateType "Convention" ;
+    tolkien:title "Tolkien 2005: The Ring Goes Ever On" .
+
+tolkien:Tolkien_Collector_s_Guide a tolkien:Media,
+        rdfs:Resource ;
+    tolkien:URL "https://www.tolkienguide.com" ;
+    tolkien:creator "Jeremy Edmonds" ;
+    tolkien:image "Tolkien Collector's Guide logo.jpg" ;
+    tolkien:language "English" ;
+    tolkien:launch "September 29th, 2005<ref>{{webcite|author=|articleurl=https://mxtoolbox.com/SuperTool.aspx?action=a%3atolkienguide.com&run=toolpage|articlename=Whois Lookup|dated=|website=MxToolbox|accessed=May 25th, 2024" ;
+    tolkien:pageTitle "Tolkien Collector's Guide" ;
+    tolkien:templateType "Website" .
+
+tolkien:Tolkien_Ensemble a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:formermembers "Christopher Lee" ;
+    tolkien:genre "Classical, Folk" ;
+    tolkien:label "ClassicO, Membran, Decca" ;
+    tolkien:members "Caspar Reiff, Peter Hall, Signe Asmussen, Øyvind Ougaard, Katja Nielsen, Morten Ryelund Sørensen" ;
+    tolkien:name "Tolkien Ensemble" ;
+    tolkien:origin "Denmark" ;
+    tolkien:pageTitle "Tolkien Ensemble" ;
+    tolkien:templateType "Band" ;
+    tolkien:website "[http://tolkien-ensemble.net tolkien-ensemble.net]" ;
+    tolkien:years "1995-2013" .
+
+tolkien:Tolkien_Estate a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:founded "1996<ref>{{webcite|author=Raphaëlle Rérolle|articleurl=https://www.lemonde.fr/culture/article/2012/07/05/tolkien-l-anneau-de-la-discorde_1729858_3246.html|articlename=Tolkien, The Ring of Discord|website=[https://www.lemonde.fr/ Le Monde]|accessed=2025" ;
+    tolkien:image "JRRT.jpeg" ;
+    tolkien:pageTitle "Tolkien Estate" ;
+    tolkien:templateType "Company infobox" .
+
+tolkien:Tolkien_Gateway a tolkien:Media,
+        rdfs:Resource ;
+    tolkien:URL "https://tolkiengateway.net/" ;
+    tolkien:articlecount "{{NUMBEROFARTICLES" ;
+    tolkien:commercial "No" ;
+    tolkien:image "Tolkien Gateway wordmark - no underline.svg" ;
+    tolkien:language "British English" ;
+    tolkien:license "[https://creativecommons.org/licenses/by-sa/4.0/ Creative Commons Attribution-ShareAlike 4.0]" ;
+    tolkien:pageTitle "Tolkien Gateway" ;
+    tolkien:slogan "''The J.R.R. Tolkien encyclopedia built by fans''" ;
+    tolkien:templateType "Website" ;
+    tolkien:type "Wiki; collaborative encyclopedia" .
+
+tolkien:Tolkien_News a tolkien:Media,
+        rdfs:Resource ;
+    tolkien:URL "http://tolkiennews.net" ;
+    tolkien:commercial "No" ;
+    tolkien:language "English" ;
+    tolkien:launch "1 January, 2006" ;
+    tolkien:name "Tolkien News" ;
+    tolkien:owner "Hyarion" ;
+    tolkien:pageTitle "Tolkien News" ;
+    tolkien:status "Closed" ;
+    tolkien:templateType "Website" ;
+    tolkien:type "News aggregator" .
+
+tolkien:Tolkien_Studies a tolkien:Media,
+        rdfs:Resource ;
+    tolkien:editor "Michael D.C. Drout, Verlyn Flieger, and David Bratman" ;
+    tolkien:format "Hardcover; electronic" ;
+    tolkien:frequency "Annual" ;
+    tolkien:image "Tolkien Studies - Volume 2.jpg" ;
+    tolkien:latest "Volume 20" ;
+    tolkien:pageTitle "Tolkien Studies (journal)" ;
+    tolkien:publisher "West Virginia University" ;
+    tolkien:templateType "Journal" ;
+    tolkien:website "[https://wvupressonline.com/journals/tolkien_studies Tolkien Studies]" .
+
+tolkien:Vinyar_Tengwar a tolkien:Media,
+        rdfs:Resource ;
+    tolkien:editor "Carl F. Hostetter" ;
+    tolkien:format "Paperback (collected volumes)" ;
+    tolkien:frequency "Irregular" ;
+    tolkien:image "Vinyar Tengwar.png" ;
+    tolkien:latest "50" ;
+    tolkien:pageTitle "Vinyar Tengwar" ;
+    tolkien:publisher "Elvish Linguistic Fellowship" ;
+    tolkien:templateType "Journal" ;
+    tolkien:website "[https://www.elvish.org/VT/ Vinyar Tengwar]" .
+
+tolkien:Vinyar_Tengwar_1 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "September 1988" ;
+    tolkien:editor "Jorge Quiñónez" ;
+    tolkien:format "Paperback journal" ;
+    tolkien:illustrator "Tom Loback (front cover)" ;
+    tolkien:image "Vinyar Tengwar 1.jpg" ;
+    tolkien:pageTitle "Vinyar Tengwar 1" ;
+    tolkien:pages "12" ;
+    tolkien:publisher "Elvish Linguistic Fellowship" ;
+    tolkien:templateType "VTbox" .
+
+tolkien:Vinyar_Tengwar_2 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "November 1988" ;
+    tolkien:editor "Jorge Quiñónez" ;
+    tolkien:format "Paperback journal" ;
+    tolkien:illustrator "Tom Loback (front cover)" ;
+    tolkien:image "Vinyar Tengwar 2.jpg" ;
+    tolkien:pageTitle "Vinyar Tengwar 2" ;
+    tolkien:pages "16" ;
+    tolkien:publisher "Elvish Linguistic Fellowship" ;
+    tolkien:templateType "VTbox" .
+
+tolkien:Vinyar_Tengwar_3 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "January 1989" ;
+    tolkien:editor "Jorge Quiñónez" ;
+    tolkien:format "Paperback journal" ;
+    tolkien:illustrator "Patrick H. Wynne (front cover)" ;
+    tolkien:image "Vinyar Tengwar 3.jpg" ;
+    tolkien:pageTitle "Vinyar Tengwar 3" ;
+    tolkien:pages "12" ;
+    tolkien:publisher "Elvish Linguistic Fellowship" ;
+    tolkien:templateType "VTbox" .
+
+tolkien:Vinyar_Tengwar_4 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "March 1989" ;
+    tolkien:editor "Jorge Quiñónez" ;
+    tolkien:format "Paperback journal" ;
+    tolkien:illustrator "Ronald Kyrmse (front cover)" ;
+    tolkien:image "Vinyar Tengwar 4.jpg" ;
+    tolkien:pageTitle "Vinyar Tengwar 4" ;
+    tolkien:pages "12" ;
+    tolkien:publisher "Elvish Linguistic Fellowship" ;
+    tolkien:templateType "VTbox" .
+
+tolkien:Vinyar_Tengwar_5 a tolkien:Other,
+        rdfs:Resource ;
+    tolkien:date "May 1989" ;
+    tolkien:editor "Jorge Quiñónez" ;
+    tolkien:format "Paperback journal" ;
+    tolkien:illustrator "Tom Loback (front cover)" ;
+    tolkien:image "Vinyar Tengwar 5.jpg" ;
+    tolkien:pageTitle "Vinyar Tengwar 5" ;
+    tolkien:pages "16" ;
+    tolkien:publisher "Elvish Linguistic Fellowship" ;
+    tolkien:templateType "VTbox" .
+
+tolkien:War_of_Wrath a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:conflict "Wars of Beleriand" ;
+    tolkien:date "{{FA|545" ;
+    tolkien:image "Per Sjögren - War of Wrath.jpg" ;
+    tolkien:pageTitle "War of Wrath" ;
+    tolkien:templateType "Battle" .
+
+tolkien:War_of_the_Dwarves_and_Orcs a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:begin "{{TA|2793" ;
+    tolkien:image "300px" ;
+    tolkien:name "War of the Dwarves and Orcs" ;
+    tolkien:next "War of the Ring" ;
+    tolkien:pageTitle "War of the Dwarves and Orcs" ;
+    tolkien:templateType "War" .
+
+tolkien:War_of_the_Elves_and_Sauron a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:begin "{{SA|1693" ;
+    tolkien:image "300px" ;
+    tolkien:name "War of the Elves and Sauron" ;
+    tolkien:next "War of the Last Alliance" ;
+    tolkien:pageTitle "War of the Elves and Sauron" ;
+    tolkien:templateType "War" .
+
+tolkien:War_of_the_Last_Alliance a tolkien:Event,
+        rdfs:Resource ;
+    tolkien:battles "First Fall of Minas Ithil, Anárion's defence of Osgiliath, Battle of Dagorlad, Siege of Barad-dûr" ;
+    tolkien:begin "{{SA|3429" ;
+    tolkien:image "300px" ;
+    tolkien:name "War of the Last Alliance" ;
+    tolkien:next "Angmar War" ;
+    tolkien:pageTitle "War of the Last Alliance" ;
+    tolkien:place "Mordor and the lower Vales of Anduin" ;
+    tolkien:result "Victory for the Last Alliance" ;
+    tolkien:templateType "War" .
+
+tolkien:War_of_the_Ring a tolkien:Item,
+        rdfs:Resource ;
+    tolkien:ages "12+" ;
+    tolkien:designer "Roberto Di Meglio, Marco Maggi, Francesco Nepitello" ;
+    tolkien:name "War of the Ring" ;
+    tolkien:pageTitle "War of the Ring (2004 board game)" ;
+    tolkien:players "2-4" ;
+    tolkien:publisher "Sophisticated Games" ;
+    tolkien:releasedate "2004" ;
+    tolkien:templateType "Board game infobox" .
+
+tolkien:White_Council a tolkien:Organization,
+        rdfs:Resource ;
+    tolkien:caption "The White Council in ''The Hobbit: An Unexpected Journey''" ;
+    tolkien:image "The Hobbit - An Unexpected Journey - The White Council meets.jpg" ;
+    tolkien:othernames "Council of the Wise<ref name=\"SRings\">{{S|Rings" ;
+    tolkien:pageTitle "White Council" ;
+    tolkien:templateType "Organization infobox" .
+

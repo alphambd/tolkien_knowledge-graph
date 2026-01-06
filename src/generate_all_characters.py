@@ -14,35 +14,35 @@ API_URL = "https://tolkiengateway.net/w/api.php"
 
 
 # ---------------------------
-# Fonctions auxiliaires améliorées
+# Enhanced helper functions
 # ---------------------------
 def safe_uri_name(name):
     """
-    Convertit un nom en une version sûre pour une URI.
-    Gère les parenthèses, guillemets, et caractères spéciaux.
+    Convert a name to a URI-safe version.
+    Handles parentheses, quotes, and special characters.
     """
     safe = name.strip()
 
-    # Gestion spéciale pour les parenthèses contenant des descriptions
-    # Ex: "Adrahil (Captain of the Left Wing)" -> "Adrahil"
+    # Special handling for parentheses containing descriptions
+    # Example: "Adrahil (Captain of the Left Wing)" -> "Adrahil"
     if " (" in safe and safe.endswith(")"):
-        # Extraire le nom principal sans la description entre parenthèses
+        # Extract the main name without the description in parentheses
         safe = safe.split(" (")[0].strip()
 
-    # Supprimer les guillemets
+    # Remove quotes
     safe = safe.replace('"', '').replace("'", "")
 
-    # Liste des caractères à remplacer par des underscores
+    # List of characters to replace with underscores
     chars_to_replace = [" ", ":", "(", ")", "[", "]", "{", "}",
                         "|", "\\", "/", "#", ",", ";", ".", "!"]
 
     for char in chars_to_replace:
         safe = safe.replace(char, "_")
 
-    # Remplacer les séquences de multiples underscores par un seul
+    # Replace multiple underscore sequences with a single one
     safe = re.sub(r"_+", "_", safe)
 
-    # Supprimer les underscores en début et fin
+    # Remove underscores from beginning and end
     safe = safe.strip("_")
 
     return safe
@@ -50,8 +50,8 @@ def safe_uri_name(name):
 
 def extract_description_from_name(name):
     """
-    Extrait la description entre parenthèses d'un nom.
-    Ex: "Adrahil (Captain of the Left Wing)" -> "Captain of the Left Wing"
+    Extract the description from parentheses in a name.
+    Example: "Adrahil (Captain of the Left Wing)" -> "Captain of the Left Wing"
     """
     name = name.strip()
     if " (" in name and name.endswith(")"):
@@ -66,35 +66,35 @@ def parse_wiki_value(value, namespace):
     - If it contains one or more links [[X]] or [[X|Y]], return a list of URIRefs.
     - Otherwise, return a single Literal.
     """
-    # Trouver tous les liens [[X]] ou [[X|Y]]
+    # Find all links [[X]] or [[X|Y]]
     links = re.findall(r"\[\[([^\|\]]+)(?:\|([^\]]+))?\]\]", value)
     if links:
         uris = []
         for link in links:
-            entity_name = link[0].strip()  # la cible du lien
+            entity_name = link[0].strip()  # link target
             safe_name = safe_uri_name(entity_name)
             uris.append(URIRef(namespace[safe_name]))
         return uris
-    # Si pas de lien, retourner valeur brute comme Literal
+    # If no link, return raw value as Literal
     return [Literal(value.strip())]
 
 
 def get_characters_from_category(category, limit=None):
     """
-    Récupère les personnages d'une catégorie Wikipedia.
+    Retrieve characters from a Wikipedia category.
     """
     members = []
     cmcontinue = ""
     count = 0
 
-    print(f"Récupération des personnages de la catégorie: {category}")
+    print(f"Retrieving characters from category: {category}")
 
     while True:
         params = {
             "action": "query",
             "list": "categorymembers",
             "cmtitle": f"Category:{category}",
-            "cmlimit": "max",  # Utiliser max (500) au lieu de 50
+            "cmlimit": "max",  # Use max (500) instead of 50
             "format": "json",
         }
         if cmcontinue:
@@ -103,7 +103,7 @@ def get_characters_from_category(category, limit=None):
         try:
             r = requests.get(API_URL, params=params, timeout=15).json()
         except Exception as e:
-            print(f"Erreur lors de la récupération: {e}")
+            print(f"Error during retrieval: {e}")
             break
 
         if "query" in r:
@@ -119,19 +119,19 @@ def get_characters_from_category(category, limit=None):
 
         if "continue" in r:
             cmcontinue = r["continue"]["cmcontinue"]
-            # Petite pause pour ne pas surcharger l'API
+            # Small pause to avoid overloading the API
             time.sleep(0.5)
         else:
             break
 
-    print(f"  {len(members)} personnages trouvés")
+    print(f"  {len(members)} characters found")
     return members
 
 
 def get_infobox(title):
     """
-    Récupère le contenu de l'infobox d'une page Wikipedia.
-    Version robuste avec meilleure gestion d'erreurs.
+    Retrieve infobox content from a Wikipedia page.
+    Robust version with better error handling.
     """
     params = {
         "action": "query",
@@ -142,22 +142,22 @@ def get_infobox(title):
     }
 
     try:
-        # Faire la requête avec un timeout
+        # Make request with timeout
         response = requests.get(API_URL, params=params, timeout=15)
 
-        # Vérifier si la réponse est valide
+        # Check if response is valid
         if response.status_code != 200:
-            # Ne pas afficher d'erreur pour les pages normales qui n'existent pas
+            # Don't display error for normal pages that don't exist
             return ""
 
-        # Essayer de parser le JSON
+        # Try to parse JSON
         try:
             data = response.json()
-        except ValueError:  # JSON invalide
-            # Silencieux pour ne pas polluer la sortie
+        except ValueError:  # Invalid JSON
+            # Silent to avoid cluttering output
             return ""
 
-        # Vérifier la structure attendue
+        # Check expected structure
         if "query" not in data:
             return ""
 
@@ -165,15 +165,15 @@ def get_infobox(title):
         if not pages:
             return ""
 
-        # Prendre la première page
+        # Take the first page
         page = next(iter(pages.values()))
 
-        # Vérifier si la page existe (pageid négatif ou 'missing' présent)
+        # Check if page exists (negative pageid or 'missing' present)
         if page.get("missing") is not None or page.get("pageid", 0) <= 0:
-            # Page n'existe pas - c'est normal pour certains noms
+            # Page doesn't exist - this is normal for some names
             return ""
 
-        # Récupérer le contenu
+        # Retrieve content
         revisions = page.get("revisions", [])
         if revisions:
             return revisions[0].get("*", "")
@@ -181,89 +181,89 @@ def get_infobox(title):
         return ""
 
     except requests.exceptions.Timeout:
-        # Timeout silencieux
+        # Silent timeout
         return ""
     except requests.exceptions.ConnectionError:
-        # Erreur de connexion silencieuse
+        # Silent connection error
         return ""
     except Exception:
-        # Toute autre exception - retourner vide silencieusement
+        # Any other exception - return empty silently
         return ""
 
 
 def wait_for_fuseki(max_retries=10):
     """
-    Attend que Fuseki soit disponible.
+    Wait for Fuseki to be available.
     """
     for i in range(max_retries):
         try:
             response = requests.get("http://localhost:3030/", timeout=2)
             if response.status_code == 200:
-                print("✓ Fuseki est accessible")
+                print("Fuseki is accessible")
                 return True
         except:
             if i < max_retries - 1:
-                print(f"  Tentative {i + 1}/{max_retries} - En attente de Fuseki...")
+                print(f"  Attempt {i + 1}/{max_retries} - Waiting for Fuseki...")
                 time.sleep(2)
     return False
 
 
 # ---------------------------
-# Création du graphe RDF
+# RDF graph creation
 # ---------------------------
 g = Graph()
 
-# Ajouter la déclaration du namespace
+# Add namespace declaration
 g.bind("tolkien", TOlkien)
 
 print("=" * 50)
-print("Début de la génération du graphe RDF - TOUS LES PERSONNAGES")
+print("Starting RDF graph generation - ALL CHARACTERS")
 print("=" * 50)
 
-# Récupérer TOUS les personnages (sans limite)
+# Retrieve ALL characters (no limit)
 characters = get_characters_from_category("Third_Age_characters")
 
-# Compteurs pour le suivi
+# Counters for tracking
 total_characters = len(characters)
 characters_with_infobox = 0
 characters_without_infobox = 0
 characters_with_errors = 0
 
-print(f"\nTraitement de {total_characters} personnages...")
-print("(Les personnages sans infobox seront ignorés silencieusement)")
+print(f"\nProcessing {total_characters} characters...")
+print("(Characters without infobox will be silently ignored)")
 print("")
 
 start_time = time.time()
 
 for index, name in enumerate(characters, 1):
-    # Afficher la progression tous les 20 personnages
+    # Display progress every 20 characters
     if index % 20 == 0:
         elapsed = time.time() - start_time
         print(
-            f"[Progression: {index}/{total_characters}] - {characters_with_infobox} infoboxes parsées - Temps: {elapsed:.1f}s")
+            f"[Progress: {index}/{total_characters}] - {characters_with_infobox} infoboxes parsed - Time: {elapsed:.1f}s")
 
-    # Extraire la description si présente
+    # Extract description if present
     description = extract_description_from_name(name)
 
-    # Créer un nom sûr pour l'URI
+    # Create a safe name for the URI
     safe_name = safe_uri_name(name)
     character_uri = URIRef(TOlkien[safe_name])
 
-    # Ajouter les métadonnées de base
+    # Add basic metadata
     g.add((character_uri, RDF.type, TOlkien.Character))
     g.add((character_uri, RDF.type, RDFS.Resource))
     g.add((character_uri, TOlkien.originalName, Literal(name)))
 
-    # Ajouter la description si elle existe
+    # Add description if it exists
     if description:
         g.add((character_uri, TOlkien.descriptionNote, Literal(description)))
 
-    # Récupérer et parser l'infobox
+    # Retrieve and parse infobox
     try:
         infobox_text = get_infobox(name)
         if not infobox_text:
             characters_without_infobox += 1
-            continue  # Passer au suivant silencieusement
+            continue  # Move to next one silently
 
         characters_with_infobox += 1
         fields_parsed = 0
@@ -280,7 +280,7 @@ for index, name in enumerate(characters, 1):
                     if not field or not value:
                         continue
 
-                    # Nettoyer le nom du champ
+                    # Clean field name
                     safe_field = safe_uri_name(field)
 
                     try:
@@ -289,68 +289,68 @@ for index, name in enumerate(characters, 1):
                             g.add((character_uri, TOlkien[safe_field], obj))
                         fields_parsed += 1
                     except Exception:
-                        # Erreur mineure sur un champ, on continue
+                        # Minor error on a field, continue
                         pass
 
-        # Afficher le succès pour ce personnage
-        print(f"  [{index}] {name}: {fields_parsed} champs parsés")
+        # Display success for this character
+        print(f"  [{index}] {name}: {fields_parsed} fields parsed")
 
     except Exception as e:
         characters_with_errors += 1
-        # Erreur majeure sur ce personnage, on continue avec les autres
-        print(f"  [{index}] ✗ Erreur sur {name}: {str(e)[:50]}...")
+        # Major error on this character, continue with others
+        print(f"  [{index}] Error on {name}: {str(e)[:50]}...")
 
-    # Petite pause pour ne pas surcharger l'API
+    # Small pause to avoid overloading the API
     time.sleep(0.1)
 
 # ---------------------------
-# Sérialisation et envoi
+# Serialization and sending
 # ---------------------------
 elapsed_total = time.time() - start_time
 
 print("\n" + "=" * 50)
-print("SÉRIALISATION DU GRAPHE RDF")
+print("RDF GRAPH SERIALIZATION")
 print("=" * 50)
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_FILE = os.path.join(PROJECT_ROOT, "data", "all_characters.ttl")
 
-# Créer le dossier data s'il n'existe pas
+# Create data folder if it doesn't exist
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-# Sérialiser le graphe RDF
+# Serialize RDF graph
 try:
     g.serialize(OUTPUT_FILE, format="turtle")
-    print(f"✓ RDF généré: {OUTPUT_FILE}")
-    print(f"✓ Taille du fichier: {os.path.getsize(OUTPUT_FILE) / 1024:.1f} KB")
-    print(f"✓ Total de triplets: {len(g)}")
+    print(f"RDF generated: {OUTPUT_FILE}")
+    print(f"File size: {os.path.getsize(OUTPUT_FILE) / 1024:.1f} KB")
+    print(f"Total triples: {len(g)}")
 
-    # Compter les personnages uniques dans le graphe
+    # Count unique characters in the graph
     characters_in_graph = len(set(s for s, p, o in g if (s, RDF.type, TOlkien.Character) in g))
-    print(f"✓ Personnages dans le graphe: {characters_in_graph}")
+    print(f"Characters in graph: {characters_in_graph}")
 
 except Exception as e:
-    print(f"✗ Erreur lors de la sérialisation: {e}")
-    # Sauvegarde de secours
+    print(f"Error during serialization: {e}")
+    # Backup save
     backup_file = OUTPUT_FILE.replace(".ttl", ".nt")
     g.serialize(backup_file, format="nt")
-    print(f"✓ Sauvegarde NTriples: {backup_file}")
+    print(f"NTriples backup: {backup_file}")
 
 print("\n" + "=" * 50)
-print("RÉSUMÉ FINAL")
+print("FINAL SUMMARY")
 print("=" * 50)
-print(f"Personnages total dans la catégorie: {total_characters}")
-print(f"Personnages avec infobox traités: {characters_with_infobox}")
-print(f"Personnages sans infobox: {characters_without_infobox}")
-print(f"Personnages avec erreurs: {characters_with_errors}")
-print(f"Temps total d'exécution: {elapsed_total:.1f} secondes")
-print(f"Triplets RDF générés: {len(g)}")
+print(f"Total characters in category: {total_characters}")
+print(f"Characters with infobox processed: {characters_with_infobox}")
+print(f"Characters without infobox: {characters_without_infobox}")
+print(f"Characters with errors: {characters_with_errors}")
+print(f"Total execution time: {elapsed_total:.1f} seconds")
+print(f"RDF triples generated: {len(g)}")
 
 print("\n" + "=" * 50)
-print("ENVOI À FUSEKI")
+print("SENDING TO FUSEKI")
 print("=" * 50)
 
-# Vérifier et envoyer à Fuseki
+# Check and send to Fuseki
 if os.path.exists(OUTPUT_FILE):
     if wait_for_fuseki():
         try:
@@ -362,24 +362,24 @@ if os.path.exists(OUTPUT_FILE):
                     timeout=60
                 )
                 if r.status_code in [200, 201, 204]:
-                    print("✅ RDF ajouté avec succès à Fuseki!")
-                    print(f"   {len(g)} triplets - {characters_with_infobox} personnages")
+                    print("RDF successfully added to Fuseki!")
+                    print(f"   {len(g)} triples - {characters_with_infobox} characters")
                 else:
-                    print(f"✗ Erreur Fuseki: {r.status_code}")
+                    print(f"Fuseki error: {r.status_code}")
                     if r.text:
                         print(f"  Message: {r.text[:200]}...")
         except requests.exceptions.ConnectionError:
-            print("⚠  Fuseki n'est plus accessible")
+            print("Fuseki is no longer accessible")
         except Exception as e:
-            print(f"✗ Erreur lors de l'envoi: {e}")
+            print(f"Error during sending: {e}")
     else:
-        print("⚠  Fuseki n'est pas accessible")
-        print("   Pour démarrer Fuseki:")
-        print("   cd ~/Téléchargements/Semantic_WEB/Fusiki/apache-jena-fuseki-4.9.0")
+        print("Fuseki is not accessible")
+        print("   To start Fuseki:")
+        print("   cd ~/Downloads/Semantic_WEB/Fusiki/apache-jena-fuseki-4.9.0")
         print("   ./fuseki-server --update --mem /tolkienKG")
 else:
-    print("✗ Fichier RDF non trouvé")
+    print("RDF file not found")
 
 print("\n" + "=" * 50)
-print("TERMINÉ!")
+print("COMPLETED!")
 print("=" * 50)

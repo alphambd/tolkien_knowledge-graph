@@ -1,0 +1,51 @@
+WORKING TEMPLATES:
+Template:Actor
+Template:Album
+Template:Amonhen
+Template:Artist infobox
+Template:Audiobook infobox
+Template:Author infobox
+Template:Band
+Template:Battle
+Template:Beyondbree
+Template:Board game infobox
+Template:Book
+Template:Campaign
+Template:Chapter
+Template:Collectible
+Template:Collectible card
+Template:Company infobox
+Template:Convention
+Template:Director
+Template:Dragon infobox
+Template:Episode infobox
+Template:Events
+Template:Film infobox
+Template:Infobox character
+Template:Infoboxes
+Template:Journal
+Template:Kingdom
+Template:Letter infobox
+Template:Location infobox
+Template:Mallorn
+Template:Modernpeople infobox
+Template:Mountain
+Template:Mythlore
+Template:Noble House infobox
+Template:Object infobox
+Template:Organization infobox
+Template:People infobox
+Template:Person infobox
+Template:Plant infobox
+Template:Poem infobox
+Template:Puzzle infobox
+Template:Race infobox
+Template:SEVEN
+Template:Scene
+Template:Song
+Template:VTbox
+Template:Video game infobox
+Template:War
+Template:Website
+
+Total: 48 templates

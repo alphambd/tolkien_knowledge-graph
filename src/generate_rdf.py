@@ -4,7 +4,6 @@ import requests
 import re
 import os
 
-
 # ---------------------------
 # Enhanced Helper functions
 # ---------------------------
@@ -42,7 +41,7 @@ def clean_wiki_text(text):
     # Clean extra whitespace
     text = re.sub(r'\s+', ' ', text).strip()
 
-    text = re.split(r'<ref', text)[0]  # Garde seulement ce qui est avant <ref
+    text = re.split(r'<ref', text)[0]  # Keep only content before <ref
 
     return text
 
@@ -111,12 +110,11 @@ def split_multiple_values(value):
 
     return result
 
-
 # ---------------------------
 # Configuration
 # ---------------------------
 TOlkien = Namespace("http://example.org/tolkien/")
-ELROND_URI = URIRef(TOlkien.Elrond)  # CORRECTION: ELROND_URI (tout en majuscules)
+ELROND_URI = URIRef(TOlkien.Elrond)
 
 # Use correct relative paths
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -136,12 +134,21 @@ g.bind("rdfs", RDFS)
 
 # Check if input file exists
 if not os.path.exists(INPUT_FILE):
-    print(f"ERROR: File not found: {INPUT_FILE}")
-    print("Please create the file data/elrond_infobox.txt")
+    print("================================================================")
+    print("ERROR: FILE NOT FOUND")
+    print("================================================================")
+    print(f"File: {INPUT_FILE}")
+    print()
+    print("Solution: Create the file data/elrond_infobox.txt")
+    print("================================================================")
     exit(1)
 
-print(f"Reading file: {INPUT_FILE}")
-print("Processing with enhanced WikiText cleaning...")
+print("================================================================")
+print("WIKITEXT CLEANING & RDF GENERATION")
+print("================================================================")
+print(f"Reading file: {os.path.basename(INPUT_FILE)}")
+print("Processing with advanced WikiText cleaning...")
+print("================================================================")
 
 try:
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
@@ -154,6 +161,9 @@ except UnicodeDecodeError:
 lines = content.split('\n')
 triple_count = 0
 skipped_count = 0
+
+print("\nPROCESSING PROPERTIES:")
+print("-" * 60)
 
 for line in lines:
     line = line.strip()
@@ -183,7 +193,6 @@ for line in lines:
     # Check for multiple values
     values_to_process = []
     if '<br/>' in raw_value or (',' in raw_value and len(raw_value) > 30):
-        # Likely multiple values
         split_values = split_multiple_values(raw_value)
         values_to_process = split_values
     else:
@@ -198,7 +207,6 @@ for line in lines:
             if field == 'age' and isinstance(obj, Literal):
                 obj = Literal(str(obj), datatype=XSD.integer)
             elif field in ['gender', 'race', 'name']:
-                # These are simple strings
                 pass
 
             g.add((ELROND_URI, TOlkien[field], obj))
@@ -206,17 +214,17 @@ for line in lines:
         else:
             skipped_count += 1
 
-print(f"\nProcessing complete:")
-print(f"  - Created: {triple_count} RDF triples")
-print(f"  - Skipped: {skipped_count} values (empty or invalid)")
+print("\nPROCESSING RESULTS:")
+print("-" * 60)
+print(f"RDF triples created     : {triple_count}")
+print(f"Values skipped          : {skipped_count}")
 
 # ---------------------------
 # Add inferred triples
 # ---------------------------
-# Add type declaration for Elrond - CORRECTION: utiliser ELROND_URI (pas ELrOND_URI)
 g.add((ELROND_URI, RDF.type, TOlkien.Character))
 g.add((ELROND_URI, RDF.type, TOlkien.HalfElven))
-g.add((ELROND_URI, RDFS.label, Literal("Elrond Half-elven")))  # CORRECTION ICI
+g.add((ELROND_URI, RDFS.label, Literal("Elrond Half-elven")))
 
 # ---------------------------
 # Save Turtle file
@@ -226,54 +234,68 @@ if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 g.serialize(OUTPUT_FILE, format="turtle")
-print(f"RDF saved to: {OUTPUT_FILE}")
+
+print("\nSAVING FILE:")
+print("-" * 60)
+print(f"Directory : {output_dir}")
+print(f"File      : {os.path.basename(OUTPUT_FILE)}")
+print(f"Size      : {os.path.getsize(OUTPUT_FILE)/1024:.1f} KB")
 
 # ---------------------------
 # Result preview
 # ---------------------------
-print("\nPreview of cleaned triples (first 10):")
+print("\nTRIPLES PREVIEW (first 10):")
+print("-" * 60)
+
 triples = list(g.triples((ELROND_URI, None, None)))
 for i, (s, p, o) in enumerate(triples[:10]):
     prop_name = str(p).split('/')[-1]
     obj_str = str(o)
 
     # Truncate long values
-    if len(obj_str) > 60:
-        obj_str = obj_str[:57] + "..."
+    if len(obj_str) > 40:
+        obj_str = obj_str[:37] + "..."
 
-    print(f"  {i + 1:2}. {prop_name:20} -> {obj_str}")
+    # Format based on type
+    if isinstance(o, URIRef):
+        type_marker = "[URI]"
+    elif isinstance(o, Literal) and o.datatype == XSD.integer:
+        type_marker = "[INT]"
+    else:
+        type_marker = "[STR]"
+
+    print(f"{i + 1:2}. {prop_name:20} {type_marker} {obj_str}")
 
 if len(triples) > 10:
-    print(f"  ... and {len(triples) - 10} more triples")
+    print(f"... and {len(triples) - 10} more triples")
 
 # ---------------------------
 # Show cleaning examples
 # ---------------------------
-print("\nExamples of WikiText cleaning:")
-print("-" * 50)
+print("\nWIKITEXT CLEANING EXAMPLES:")
+print("-" * 60)
 
-# Sample problematic values from your original output
 examples = [
-    ('Original: "[[Elladan]] & [[Elrohir]] ([[twins]])<br/>[[Arwen]]"',
-     'Cleaned: "Elladan & Elrohir (twins) Arwen"'),
-    ('Original: "{{FA|532}}<ref>...</ref>"',
-     'Cleaned: "FA 532"'),
-    ('Original: "Grey<ref name=\"meetings\"/>"',
-     'Cleaned: "Grey"'),
-    ('Original: "[[Sindarin|S]], {{IPA|[\'ɛlʲrond]}}"',
-     'Cleaned: "S, IPA [\'ɛlʲrond]"'),
+    ('"[[Elladan]] & [[Elrohir]] ([[twins]])<br/>[[Arwen]]"', '"Elladan & Elrohir (twins) Arwen"'),
+    ('"{{FA|532}}<ref>...</ref>"', '"FA 532"'),
+    ('"Grey<ref name=\"meetings\"/>"', '"Grey"'),
+    ('"[[Sindarin|S]], {{IPA|[\'ɛlʲrond]}}"', '"S, IPA [\'ɛlʲrond]"'),
 ]
 
 for original, cleaned in examples:
-    print(original)
-    print(cleaned)
-    print()
+    print(f"BEFORE : {original}")
+    print(f"AFTER  : {cleaned}")
+    print("-" * 40)
 
 # ---------------------------
 # Optional: send to Fuseki
 # ---------------------------
-send_to_fuseki = input("\nSend cleaned RDF to Fuseki? (y/n): ").lower()
+print("\nSENDING TO FUSEKI:")
+print("-" * 60)
+send_to_fuseki = input("Send cleaned RDF to Fuseki? (y/n): ").lower()
+
 if send_to_fuseki == 'y' or send_to_fuseki == 'o':
+    print("Connecting to Fuseki...")
     try:
         with open(OUTPUT_FILE, "rb") as f:
             r = requests.post(
@@ -283,11 +305,11 @@ if send_to_fuseki == 'y' or send_to_fuseki == 'o':
                 timeout=10
             )
             if r.status_code in [200, 201, 204]:
-                print("SUCCESS: Cleaned RDF added to Fuseki!")
+                print("SUCCESS: RDF data added to Fuseki!")
             else:
                 print(f"ERROR Fuseki: {r.status_code}")
                 if len(r.text) > 0:
-                    print(r.text[:200])
+                    print(f"Message: {r.text[:100]}...")
     except requests.exceptions.ConnectionError:
         print("ERROR: Cannot connect to Fuseki")
         print("Make sure Fuseki is running on http://localhost:3030")
@@ -296,4 +318,6 @@ if send_to_fuseki == 'y' or send_to_fuseki == 'o':
 else:
     print("Transfer cancelled")
 
-print("\nEnhanced RDF generation completed!")
+print("\n" + "=" * 60)
+print("ENHANCED RDF GENERATION COMPLETED!")
+print("=" * 60)
