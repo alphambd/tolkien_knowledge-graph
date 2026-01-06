@@ -1,0 +1,81 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tolkien: <http://example.org/tolkien/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+tolkien:Elrond a tolkien:Character,
+        tolkien:HalfElven ;
+    rdfs:label "Elrond Half-elven" ;
+    tolkien:affiliation tolkien:White_Council ;
+    tolkien:age 6520 ;
+    tolkien:birth "FA 532 WJ Years, version C of the manuscript, year changed to [>532]",
+        "p. 348" ;
+    tolkien:birthlocation tolkien:Havens_of_Sirion ;
+    tolkien:born "FA 532" ;
+    tolkien:caption "\"Portrait of Elrond\" by Tatyafinwe" ;
+    tolkien:children tolkien:Arwen,
+        "Aragorn (foster son)",
+        "Elladan & Elrohir (twins)" ;
+    tolkien:clothing "Grey mantle",
+        "Silver circlet" ;
+    tolkien:dated tolkien:Galadriel,
+        "10-February-2022|website=[https://www.vanityfair.com VanityFair]|accessed=11-February-2022}} first appears sitting in a tree at Lindon",
+        "writing the exact words of the speech that Gil-galad gives later. He is alerted by an Elf Attendant of the arrival of his friend" ;
+    tolkien:dates "SA 1697 - 29 September",
+        "SA 1701 - SA 3441|n",
+        "SA 1701 - after 29 September",
+        "TA 3021" ;
+    tolkien:died "Sailed west on 29 September",
+        "TA 3021" ;
+    tolkien:eyes "Grey" ;
+    tolkien:gender "Male" ;
+    tolkien:hair "Dark" ;
+    tolkien:heritage "Half-elven father and mother" ;
+    tolkien:house tolkien:House_of_Hador,
+        "''Author's notes''",
+        "Note 1",
+        "Though Elrond and his brother Elros belonged to the House of Hador",
+        "but he preferred the lineage of Elwë because Elwë had not been subject to the Doom of Mandos. PM Ros",
+        "p. 323 but preferred the House of Elwë Elrond chose the fate of the Eldar to carry on the lineages of Elwë and Turgon",
+        "p. 371; and associated Note 19 on p. 376",
+        "they descended from all three Houses of the Edain as well as the Elven Houses of Fingolfin and Elwë (Thingol). NM P3xi" ;
+    tolkien:image "Tatyafinwe - Portrait of Elrond.jpg" ;
+    tolkien:language tolkien:Quenya,
+        tolkien:Sindarin,
+        tolkien:Westron ;
+    tolkien:list "Keeper of Vilya",
+        "Lord of Rivendell",
+        "Vice-regent of Eriador" ;
+    tolkien:location tolkien:Lindon,
+        tolkien:Rivendell,
+        "Aman (after TA 3021)",
+        "Mouths of Sirion (before FA 590)" ;
+    tolkien:name "Elrond" ;
+    tolkien:next "Presumably, still Elrond",
+        "Titles abandoned" ;
+    tolkien:nrow 2 ;
+    tolkien:nvac "None" ;
+    tolkien:othernames "\"Half-elven\")",
+        "''Elerondo'' (Q)",
+        "''Peredhel'' (S",
+        "Master Elrond" ;
+    tolkien:parentage "Elwing (mother)",
+        "Eärendil (father)",
+        "Maglor (foster father)" ;
+    tolkien:people tolkien:Half-elven ;
+    tolkien:position "Herald to Gil-galad",
+        "Ring-bearer of Vilya",
+        "Vice-regent of Eriador" ;
+    tolkien:prev tolkien:Gil-galad,
+        "Titles established" ;
+    tolkien:pronun tolkien:Sindarin,
+        "IPA ['ɛlʲrond]" ;
+    tolkien:prow 2 ;
+    tolkien:pvac "None" ;
+    tolkien:race "halfelf" ;
+    tolkien:rule "SA 1697 - TA 3021 (ruled 4765 years)" ;
+    tolkien:sailedfrom tolkien:Grey_Havens ;
+    tolkien:sailedwest "29 September, TA 3021"^^xsd:string ;
+    tolkien:siblings "Elros (twin brother)" ;
+    tolkien:spouse tolkien:Celebrían ;
+    tolkien:titles "Lord of Rivendell" .
+
