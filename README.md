@@ -27,3 +27,25 @@ The KG will represent characters, items, and locations from Tolkien's legendariu
 - **RDF Output Format**: Turtle (.ttl)
 
 ## Project Structure
+
+
+
+
+## Question : `list=allpages` avec distinction page/entity
+
+**Script :** `generate_wiki_pages_entities.py`
+
+**Ce qui a été fait :**
+- Utilisation de l'API MediaWiki avec `action=query` et `list=allpages`
+- Gestion de la pagination via le paramètre `continue` (token `apcontinue`)
+- Récupération exhaustive de **23,038 pages** de Tolkien Gateway
+- Pour chaque page X, création de deux URIs distinctes :
+  - `http://example.org/tolkien/page/X` (le document wiki)
+  - `http://example.org/tolkien/resource/X` (l'entité réelle)
+- Lien établi via `foaf:primaryTopic` : `page/X → resource/X`
+- Inspiration DBpedia/YAGO : même distinction conceptuelle
+
+**Résultats :**
+- Fichier RDF : `data/tolkien_pages_entities.ttl` (7.5 MB)
+- Triples générés : 115,190
+- Données dans Fuseki : 137,610 triples (avec métadonnées)

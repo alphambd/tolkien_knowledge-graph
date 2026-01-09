@@ -2542,10 +2542,11 @@ tolkien:Gwaihir a tolkien:Character,
         tolkien:Gandalf,
         tolkien:Lúthien ;
     tolkien:originalName "Gwaihir" ;
-    tolkien:othernames "The Windlord; ''Gwaehir''" ;
+    tolkien:othernames "''Gwaehir''" ;
     tolkien:parentage tolkien:Thorondor ;
     tolkien:people tolkien:Eagles ;
-    tolkien:siblings tolkien:Landroval .
+    tolkien:siblings tolkien:Landroval ;
+    tolkien:titles "Windlord" .
 
 tolkien:Gálmód a tolkien:Character,
         rdfs:Resource ;
