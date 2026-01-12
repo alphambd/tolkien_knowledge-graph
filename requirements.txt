@@ -1,3 +1,5 @@
 rdflib
 requests
 g
+python-Levenshtein>=0.20.0
+
