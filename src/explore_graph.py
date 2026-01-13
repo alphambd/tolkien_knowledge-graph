@@ -5,7 +5,7 @@ endpoint = "http://localhost:3030/tolkienKG/query"
 
 
 def explore_graph():
-    print("🔍 EXPLORATION DU GRAPHE TOLKIEN")
+    print(" EXPLORATION DU GRAPHE TOLKIEN")
     print("=" * 60)
 
     queries = {
@@ -76,7 +76,7 @@ def explore_graph():
 
 def find_entities_with_most_data():
     """Trouve les entités avec le plus de données"""
-    print("\n\n🎯 ENTITÉS LES PLUS RICHES (pour l'interface)")
+    print("\n\n ENTITÉS LES PLUS RICHES (pour l'interface)")
     print("=" * 60)
 
     query = """

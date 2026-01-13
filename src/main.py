@@ -314,8 +314,8 @@ def download_turtle(entity_name):
 
 
 if __name__ == '__main__':
-    print("✅ Linked Data Interface ready!")
-    print("🌐 HTML: http://localhost:5000/resource/Gandalf")
-    print("📥 Download: http://localhost:5000/resource/Gandalf?format=ttl")
-    print("🔍 Fuseki: http://localhost:3030/")
+    print("- Linked Data Interface ready!")
+    print("- HTML: http://localhost:5000/resource/Gandalf")
+    print("- Download: http://localhost:5000/resource/Gandalf?format=ttl")
+    print("- Fuseki: http://localhost:3030/")
     app.run(debug=True, port=5000, host='0.0.0.0')

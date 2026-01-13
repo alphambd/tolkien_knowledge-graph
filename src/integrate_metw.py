@@ -41,7 +41,7 @@ def print_success(text):
 
 def print_info(text):
     """Print info message."""
-    print(f"{Colors.CYAN}ℹ {text}{Colors.END}")
+    print(f"{Colors.CYAN} {text}{Colors.END}")
 
 def print_warning(text):
     """Print warning message."""

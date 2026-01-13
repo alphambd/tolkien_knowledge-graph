@@ -51,7 +51,7 @@ def get_external_links_api(page_title):
 
         return wikipedia_links
     except Exception as e:
-        print(f"❌ Erreur API pour '{page_title}': {e}")
+        print(f" Erreur API pour '{page_title}': {e}")
         return []
 
 
@@ -82,24 +82,24 @@ def main():
     print()
 
     for character in test_characters:
-        print(f"\n🔍 Analyse de: {character}")
+        print(f"\n Analyse de: {character}")
 
         # 1. Appel API MediaWiki
         print(f"    Appel API: action=query, titles={character}, prop=extlinks")
         external_links = get_external_links_api(character)
 
         if not external_links:
-            print(f"   ⚠ Aucun lien externe trouvé")
+            print(f"   Warning: Aucun lien externe trouvé")
             continue
 
-        print(f"   ✅ {len(external_links)} lien(s) externe(s) trouvé(s)")
+        print(f"    {len(external_links)} lien(s) externe(s) trouvé(s)")
 
         # 2. Filtrer les liens Wikipedia
         wikipedia_links = []
         for link in external_links:
             if "wikipedia.org" in link.lower():
                 wikipedia_links.append(link)
-                print(f"   📎 Wikipedia: {link}")
+                print(f"   Wikipedia: {link}")
 
         if not wikipedia_links:
             print(f"    Aucun lien Wikipedia trouvé")

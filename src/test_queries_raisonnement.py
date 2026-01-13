@@ -34,11 +34,10 @@ def execute_with_prefixes(endpoint, query, title):
                 print("Aucun résultat")
 
         else:
-            print(f"❌ Erreur {response.status_code}: {response.text[:200]}")
+            print(f" Erreur {response.status_code}: {response.text[:200]}")
 
     except Exception as e:
-        print(f"❌ Exception: {e}")
-
+        print(f" Exception: {e}")
 
 def main():
     endpoint = "http://localhost:3030/tolkienKG/query"

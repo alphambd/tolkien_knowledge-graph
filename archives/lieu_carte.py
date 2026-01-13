@@ -15,7 +15,7 @@ try:
     with open(CARDS_FILE, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    print(f"✅ JSON loaded. Top-level keys: {list(data.keys())}")
+    print(f" JSON loaded. Top-level keys: {list(data.keys())}")
 
     # Let's examine one expansion in detail
     first_expansion = list(data.keys())[0]
@@ -136,7 +136,7 @@ try:
         print(f"  {key}: {count} items")
 
 except Exception as e:
-    print(f"❌ Error: {e}")
+    print(f" Error: {e}")
     import traceback
 
     traceback.print_exc()

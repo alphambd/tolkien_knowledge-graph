@@ -871,16 +871,16 @@ def main():
         # print("=" * 70)
         #
         # if send_to_fuseki(graph, FUSEKI_ENDPOINT):
-        #     print("\n✅ EXTRACTION COMPLETE!")
+        #     print("\n EXTRACTION COMPLETE!")
         #     print(f"   Graph saved to: {main_filename}")
         #     print(f"   Total triples: {len(graph)}")
         #     print(f"   Fuseki endpoint: {FUSEKI_ENDPOINT.replace('/update', '')}")
         # else:
-        #     print("\n⚠️  Extraction complete but Fuseki upload failed")
+        #     print("\n  Extraction complete but Fuseki upload failed")
         #     print(f"   Graph saved to: {main_filename}")
 
     else:
-        print("\n❌ NO DATA EXTRACTED!")
+        print("\nErr : NO DATA EXTRACTED!")
         print("   Check your internet connection and API access.")
 
     print("\n" + "=" * 70)

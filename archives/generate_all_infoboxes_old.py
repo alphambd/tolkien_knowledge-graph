@@ -105,7 +105,7 @@ def get_all_infobox_templates():
             print(f"  Error fetching templates: {e}")
             break
 
-    print(f"\n✅ Found {len(templates)} infobox templates")
+    print(f"\nSucces : Found {len(templates)} infobox templates")
     return sorted(templates)
 
 def get_pages_using_template_improved(template_name, limit=20):
@@ -593,7 +593,7 @@ def main():
     all_templates = get_all_infobox_templates()
 
     if not all_templates:
-        print("❌ No templates found!")
+        print(" No templates found!")
         return
 
     # Step 2: Categorize templates more accurately
@@ -739,7 +739,7 @@ def main():
             time.sleep(0.2)
 
         success_rate = (template_pages_successful / template_pages_processed * 100) if template_pages_processed > 0 else 0
-        print(f"  ✅ Results: {template_pages_successful}/{template_pages_processed} pages successful ({success_rate:.1f}%)")
+        print(f"  Success : Results: {template_pages_successful}/{template_pages_processed} pages successful ({success_rate:.1f}%)")
 
     elapsed = time.time() - start_time
 
@@ -819,7 +819,7 @@ def main():
                     )
 
                     if response.status_code in [200, 201, 204]:
-                        print("✅ Successfully sent to Fuseki!")
+                        print(" Successfully sent to Fuseki!")
                         print(f"   Dataset now contains ~{len(graph)} triples")
                     else:
                         print(f"⚠️  Fuseki returned status {response.status_code}")
@@ -832,16 +832,16 @@ def main():
                 print(f"⚠️  Error sending to Fuseki: {e}")
 
         except Exception as e:
-            print(f"❌ Error saving files: {e}")
+            print(f" Error saving files: {e}")
             # Try to save at least in NT format
             try:
                 backup_file = os.path.join(PROJECT_ROOT, "data", f"backup_{timestamp}.nt")
                 graph.serialize(backup_file, format="nt")
-                print(f"💾 Backup saved as NTriples: {backup_file}")
+                print(f" Backup saved as NTriples: {backup_file}")
             except:
-                print("❌ Could not save backup file either")
+                print(" Error saving backup file either")
     else:
-        print("\n⚠️  No data extracted. Check your template selection and API connection.")
+        print("\nWarning: No data extracted. Check your template selection and API connection.")
 
     print(f"\n" + "=" * 80)
     print("DONE!")

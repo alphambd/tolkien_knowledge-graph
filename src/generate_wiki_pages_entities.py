@@ -100,7 +100,7 @@ def get_all_wiki_pages(limit=None):
             response = requests.get(API_URL, params=params, timeout=30)
 
             if response.status_code != 200:
-                print(f"❌ API Error: {response.status_code}")
+                print(f" API Error: {response.status_code}")
                 break
 
             data = response.json()
@@ -131,9 +131,9 @@ def get_all_wiki_pages(limit=None):
                 break
 
     except Exception as e:
-        print(f"❌ Error during page fetch: {e}")
+        print(f" Error during page fetch: {e}")
 
-    print(f"✅ Retrieved {len(all_pages)} total pages")
+    print(f"Success : Retrieved {len(all_pages)} total pages")
     return all_pages
 
 
@@ -184,18 +184,18 @@ def send_to_fuseki(graph, output_file):
             )
 
             if response.status_code in [200, 201, 204]:
-                print(f"✅ Successfully sent {len(graph)} triples to Fuseki!")
+                print(f" Successfully sent {len(graph)} triples to Fuseki!")
                 return True
             else:
-                print(f"❌ Fuseki error: {response.status_code}")
+                print(f"Err : Fuseki error: {response.status_code}")
                 return False
 
     except requests.exceptions.ConnectionError:
-        print("❌ Cannot connect to Fuseki")
+        print(" Cannot connect to Fuseki")
         print("   Make sure Fuseki is running: http://localhost:3030")
         return False
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f" Error: {e}")
         return False
 
 
@@ -258,19 +258,19 @@ def main():
         wiki_url = f"https://tolkiengateway.net/wiki/{page_title.replace(' ', '_')}"
 
         # --- TRIPLES FOR THE PAGE (schema:WebPage) ---
-        g.add((page_uri, RDF.type, SCHEMA.WebPage))  # ✅ SCHEMA.ORG
+        g.add((page_uri, RDF.type, SCHEMA.WebPage))  # SCHEMA.ORG
         g.add((page_uri, SCHEMA.name, Literal(f"Wiki page: {page_title}")))
         g.add((page_uri, SCHEMA.url, Literal(wiki_url, datatype=XSD.anyURI)))
         g.add((page_uri, DCTERMS.title, Literal(page_title)))
         g.add((page_uri, DCTERMS.source, Literal("Tolkien Gateway")))
 
         # --- TRIPLES FOR THE ENTITY (schema:Thing) ---
-        g.add((entity_uri, RDF.type, SCHEMA.Thing))  # ✅ SCHEMA.ORG
+        g.add((entity_uri, RDF.type, SCHEMA.Thing))  # SCHEMA.ORG
         g.add((entity_uri, SCHEMA.name, Literal(page_title)))
         g.add((entity_uri, SCHEMA.url, Literal(wiki_url, datatype=XSD.anyURI)))
 
         # --- CRUCIAL LINK: page is about entity (schema:about) ---
-        g.add((page_uri, SCHEMA.about, entity_uri))  # ✅ SCHEMA.ORG
+        g.add((page_uri, SCHEMA.about, entity_uri))  # SCHEMA.ORG
 
         # Also: entity is described by the page
         g.add((entity_uri, SCHEMA.subjectOf, page_uri))
@@ -288,7 +288,7 @@ def main():
         g.serialize(OUTPUT_FILE, format="turtle")
         file_size = os.path.getsize(OUTPUT_FILE) / 1024
 
-        print(f"✅ File saved: {OUTPUT_FILE}")
+        print(f" Success : File saved: {OUTPUT_FILE}")
         print(f"   Size: {file_size:.1f} KB")
         print(f"   Triples created: {triples_count}")
         print(f"   Time: {elapsed_total:.1f} seconds")

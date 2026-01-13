@@ -773,7 +773,7 @@ def main():
             graph.serialize(OUTPUT_FILE, format="turtle")
             file_size = os.path.getsize(OUTPUT_FILE) / 1024
 
-            print(f"\n✅ Saved RDF with schema.org: {OUTPUT_FILE}")
+            print(f"\nSuccess : Saved RDF with schema.org: {OUTPUT_FILE}")
             print(f"   Size: {file_size:.1f} KB")
             print(f"   Triples: {len(graph)}")
 

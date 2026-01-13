@@ -138,6 +138,6 @@ try:
     print(f"Found {len(large_lists)} large lists")
 
 except Exception as e:
-    print(f"❌ Error: {e}")
+    print(f" Error: {e}")
 
 print("\n" + "=" * 70)

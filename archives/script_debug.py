@@ -15,7 +15,7 @@ try:
     with open(CARDS_FILE, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    print(f"✅ JSON loaded successfully")
+    print(f" JSON loaded successfully")
     print(f"File size: {os.path.getsize(CARDS_FILE) / 1024:.1f} KB")
 
     # Check type
@@ -54,24 +54,24 @@ try:
         if isinstance(data["cards"], list):
             cards_count = len(data["cards"])
 
-    print(f"\n🎴 TOTAL CARDS FOUND: {cards_count}")
+    print(f"\n TOTAL CARDS FOUND: {cards_count}")
 
 except json.JSONDecodeError as e:
-    print(f"❌ JSON parsing error: {e}")
+    print(f" JSON parsing error: {e}")
     print("   The file might be corrupted")
 
     # Try to read first/last few lines
     with open(CARDS_FILE, 'r', encoding='utf-8') as f:
         lines = f.readlines()
-        print(f"\n📄 First 3 lines:")
+        print(f"\n First 3 lines:")
         for i, line in enumerate(lines[:3], 1):
             print(f"  {i}: {line[:100]}...")
 
-        print(f"\n📄 Last 3 lines:")
+        print(f"\n Last 3 lines:")
         for i, line in enumerate(lines[-3:], 1):
             print(f"  {i}: {line[:100]}...")
 
 except Exception as e:
-    print(f"❌ Error: {e}")
+    print(f" Error: {e}")
 
 print("\n" + "=" * 70)
