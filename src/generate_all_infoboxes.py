@@ -626,10 +626,10 @@ def main():
 
         if test_template_has_pages(template):
             working_templates.append(template)
-            print(f"  ✓ Has pages")
+            print(f"   Has pages")
         else:
             failed_templates.append(template)
-            print(f"  ✗ No pages found")
+            print(f"   No pages found")
 
         time.sleep(0.3)
 

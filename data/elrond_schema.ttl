@@ -5,8 +5,15 @@
 @prefix tgwo: <http://tolkiengateway.net/ontology/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+tgw:Arwen schema1:parent tgw:Elrond .
+
+"Aragorn (foster son)" schema1:parent tgw:Elrond .
+
+"Elladan & Elrohir (twins)" schema1:parent tgw:Elrond .
+
 tgw:Elrond a schema1:Person ;
-    rdfs:label "Elrond Half-elven" ;
+    rdfs:label "Elrond Half-elven"@en,
+        "Elrond Semi-elfe"@fr ;
     dcterms:source "Tolkien Gateway" ;
     schema1:additionalType "halfelf" ;
     schema1:alternateName "\"Half-elven\")",
