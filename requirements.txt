@@ -2,4 +2,6 @@ rdflib
 requests
 g
 python-Levenshtein>=0.20.0
+Flask==2.3.3
+
 
