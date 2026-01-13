@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ entity_name }} - Tolkien Knowledge Graph</title>
+    <link rel="alternate" type="text/turtle" href="{{ request.url }}?format=ttl">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .entity-header {
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6572 100%);
+            color: white;
+            padding: 30px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .entity-header::before {
+            content: "⚔️";
+            position: absolute;
+            font-size: 150px;
+            opacity: 0.05;
+            top: 50%;
+            right: 40px;
+            transform: translateY(-50%);
+        }
+
+        .entity-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .entity-title h1 {
+            font-size: 2.5rem;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            position: relative;
+            z-index: 1;
+        }
+
+        .entity-icon {
+            font-size: 2.5rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .entity-uri {
+            font-family: 'Courier New', monospace;
+            background: rgba(255,255,255,0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            word-break: break-all;
+            margin-top: 15px;
+            position: relative;
+            z-index: 1;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section-title {
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.4rem;
+        }
+
+        .section-title i {
+            color: #3498db;
+        }
+
+        .properties-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .properties-table thead {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+        }
+
+        .properties-table th {
+            padding: 18px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .properties-table tbody tr {
+            transition: all 0.2s ease;
+        }
+
+        .properties-table tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .properties-table tbody tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        .properties-table tbody tr:hover {
+            background-color: #e8f4fc;
+            transform: translateX(5px);
+        }
+
+        .properties-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .property-cell {
+            vertical-align: top;
+        }
+
+        .property-name {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .property-uri {
+            color: #7f8c8d;
+            font-size: 0.8rem;
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+        }
+
+        .value-cell {
+            max-width: 500px;
+        }
+
+        .value-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .value-text {
+            flex: 1;
+            word-break: break-word;
+        }
+
+        .value-link {
+            color: #3498db;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .value-link:hover {
+            background: #e3f2fd;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        .value-link.internal {
+            background: #e8f4fc;
+            color: #2980b9;
+            font-weight: 500;
+        }
+
+        .value-link.external {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .value-literal {
+            background: #f1f8e9;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border-left: 3px solid #7cb342;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border: 2px dashed #ddd;
+        }
+
+        .no-data i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #bdc3c7;
+        }
+
+        .actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            flex-wrap: wrap;
+        }
+
+        .action-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(50, 150, 255, 0.2);
+        }
+
+        .action-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(50, 150, 255, 0.3);
+            text-decoration: none;
+            color: white;
+        }
+
+        .action-button.secondary {
+            background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .action-button.secondary:hover {
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .type-badges {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .type-badge {
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .properties-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .entity-title h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .action-button {
+                justify-content: center;
+            }
+        }
+
+        /* Color coding for property types */
+        .property-schema { border-left: 4px solid #3498db; }
+        .property-tolkien { border-left: 4px solid #9b59b6; }
+        .property-rdfs { border-left: 4px solid #2ecc71; }
+        .property-rdf { border-left: 4px solid #e74c3c; }
+        .property-owl { border-left: 4px solid #f39c12; }
+        .property-dc { border-left: 4px solid #1abc9c; }
+    </style>
+    <script>
+        function getPropertyClass(propertyUri) {
+            if (propertyUri.includes('schema.org')) return 'property-schema';
+            if (propertyUri.includes('tolkiengateway.net/ontology')) return 'property-tolkien';
+            if (propertyUri.includes('rdf-schema')) return 'property-rdfs';
+            if (propertyUri.includes('rdf-syntax')) return 'property-rdf';
+            if (propertyUri.includes('owl#')) return 'property-owl';
+            if (propertyUri.includes('dc/terms')) return 'property-dc';
+            return '';
+        }
+
+        function getEntityIcon(entityName) {
+            const icons = {
+                'Gandalf': 'fa-hat-wizard',
+                'Aragorn': 'fa-crown',
+                'Frodo': 'fa-ring',
+                'Sauron': 'fa-eye',
+                'Rivendell': 'fa-mountain',
+                'Mordor': 'fa-mountain',
+                'Shire': 'fa-home',
+                'Ring': 'fa-gem',
+                'Sting': 'fa-sword',
+                'Balrog': 'fa-dragon',
+                'Elrond': 'fa-star',
+                'Galadriel': 'fa-sparkles'
+            };
+
+            for (const [key, icon] of Object.entries(icons)) {
+                if (entityName.includes(key)) return icon;
+            }
+            return 'fa-user';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set icon based on entity name
+            const entityName = "{{ entity_name }}";
+            const iconElement = document.querySelector('.entity-icon i');
+            const iconClass = getEntityIcon(entityName);
+            if (iconElement && iconClass) {
+                iconElement.className = `fas ${iconClass}`;
+            }
+
+            // Add property type classes to table rows
+            document.querySelectorAll('.property-cell').forEach(cell => {
+                const uri = cell.querySelector('.property-uri').textContent;
+                const row = cell.closest('tr');
+                const propertyClass = getPropertyClass(uri);
+                if (propertyClass) {
+                    row.classList.add(propertyClass);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="entity-header">
+            <div class="entity-title">
+                <div class="entity-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h1>{{ entity_name }}</h1>
+            </div>
+            <div class="entity-uri">
+                <i class="fas fa-link"></i> {{ entity_uri }}
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="type-badges">
+                <span class="type-badge">
+                    <i class="fas fa-database"></i> Linked Data Entity
+                </span>
+                <span class="type-badge">
+                    <i class="fas fa-code"></i> RDF Resource
+                </span>
+            </div>
+
+            <h2 class="section-title">
+                <i class="fas fa-bars"></i> Properties & Relations
+                <span style="font-size: 0.9rem; color: #7f8c8d; margin-left: auto;">
+                    {{ properties|length }} properties
+                </span>
+            </h2>
+
+            {% if properties %}
+            <table class="properties-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Property</th>
+                        <th style="width: 70%;">Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for prop in properties %}
+                    <tr>
+                        <td class="property-cell">
+                            <div class="property-name">
+                                {% set prop_name = prop.property %}
+                                {% if '#' in prop_name %}
+                                    {{ prop_name.split('#')[-1] }}
+                                {% elif '/' in prop_name %}
+                                    {{ prop_name.split('/')[-1] }}
+                                {% else %}
+                                    {{ prop_name }}
+                                {% endif %}
+                            </div>
+                            <div class="property-uri">
+                                {{ prop.property[:80] }}{% if prop.property|length > 80 %}...{% endif %}
+                            </div>
+                        </td>
+                        <td class="value-cell">
+                            <div class="value-content">
+                                {% if prop.value.startswith('http://') %}
+                                    {% if 'tolkiengateway.net/resource' in prop.value %}
+                                        <a href="/resource/{{ prop.value.split('/')[-1] }}"
+                                           class="value-link internal">
+                                            <i class="fas fa-arrow-right"></i>
+                                            {{ prop.value.split('/')[-1] }}
+                                        </a>
+                                    {% else %}
+                                        <a href="{{ prop.value }}"
+                                           target="_blank"
+                                           class="value-link external">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            {{ prop.value.split('/')[-1]|default(prop.value[:50]) }}
+                                            {% if prop.value|length > 50 %}...{% endif %}
+                                        </a>
+                                    {% endif %}
+                                {% else %}
+                                    <div class="value-literal">
+                                        {{ prop.value }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <div class="no-data">
+                <i class="fas fa-inbox"></i>
+                <h3>No Properties Found</h3>
+                <p>This entity doesn't have any properties in the knowledge graph.</p>
+            </div>
+            {% endif %}
+
+            <div class="actions">
+    <button onclick="downloadTurtle()" class="action-button">
+        <i class="fas fa-download"></i> Download as Turtle (RDF)
+    </button>
+    <a href="/" class="action-button secondary">
+        <i class="fas fa-home"></i> Back to Home
+    </a>
+    <a href="http://localhost:3030/"
+       target="_blank"
+       class="action-button secondary">
+        <i class="fas fa-database"></i> SPARQL Endpoint (Fuseki UI)
+    </a>
+</div>
+
+<script>
+function downloadTurtle() {
+    // Générer le Turtle depuis les données de la page
+    const entityName = "{{ entity_name }}";
+    const entityUri = "{{ entity_uri }}";
+    const properties = {{ properties|tojson|safe }};
+
+    let turtleContent = `@prefix schema: <http://schema.org/> .
+@prefix tgo: <http://tolkiengateway.net/ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<${entityUri}>
+`;
+
+    properties.forEach((prop, index) => {
+        const propUri = prop.property;
+        const value = prop.value;
+
+        let line;
+        if (value.startsWith('http://') || value.startsWith('https://')) {
+            // URI
+            line = `    <${propUri}> <${value}>`;
+        } else {
+            // Littéral - échapper les guillemets
+            const escapedValue = value.replace(/"/g, '\\"')
+                                      .replace(/\n/g, '\\n');
+            line = `    <${propUri}> "${escapedValue}"`;
+        }
+
+        if (index < properties.length - 1) {
+            line += " ;";
+        } else {
+            line += " .";
+        }
+
+        turtleContent += line + "\n";
+    });
+
+    // Créer et télécharger le fichier
+    const blob = new Blob([turtleContent], { type: 'text/turtle' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${entityName}.ttl`;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+
+            <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                <h3 style="color: #2c3e50; margin-bottom: 10px;">
+                    <i class="fas fa-info-circle"></i> About This Page
+                </h3>
+                <p style="color: #666; line-height: 1.6;">
+                    This is a <strong>Linked Data interface</strong> that provides both human-readable (HTML)
+                    and machine-readable (RDF/Turtle) representations of the entity.
+                    The data is fetched from the Tolkien Gateway Knowledge Graph using SPARQL queries.
+                    Colors indicate different vocabularies:
+                    <span style="color: #3498db;">■ schema.org</span>,
+                    <span style="color: #9b59b6;">■ Tolkien ontology</span>,
+                    <span style="color: #2ecc71;">■ RDFS</span>.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

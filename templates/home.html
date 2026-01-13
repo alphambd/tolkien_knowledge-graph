@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tolkien Gateway Knowledge Graph</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6572 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "KG";
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+            font-family: monospace;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section-title {
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: #3498db;
+        }
+
+        .category-section {
+            margin: 40px 0;
+        }
+
+        .category-title {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+            color: #2c3e50;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .entities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .entity-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .entity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: #3498db;
+            background: white;
+        }
+
+        .entity-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .entity-properties {
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .entity-desc {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .entity-type {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #666;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+
+        .property-count {
+            font-size: 0.85rem;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .category-description {
+            color: #666;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid #eee;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .endpoints {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .endpoint-item {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        .endpoint-item h4 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .endpoint-item code {
+            background: #e8f4fc;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #2c3e50;
+            word-break: break-all;
+        }
+
+        .instructions {
+            background: #fff8e1;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ffb300;
+            margin: 30px 0;
+        }
+
+        .instructions h3 {
+            color: #e65100;
+            margin-bottom: 10px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+        }
+
+        .instructions li {
+            margin: 10px 0;
+        }
+
+        .exploration-results {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .result-item {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .result-item h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .result-item pre {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #7f8c8d;
+            border-top: 1px solid #ecf0f1;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .entities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tolkien Gateway Knowledge Graph</h1>
+            <p class="subtitle">Linked Data Interface with Content Negotiation (HTML/Turtle)</p>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <span class="stat-number">270,967</span>
+                    <span class="stat-label">RDF Triples</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">47,512</span>
+                    <span class="stat-label">Distinct Entities</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">22,962</span>
+                    <span class="stat-label">Things</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">22,834</span>
+                    <span class="stat-label">Web Pages</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <h2 class="section-title"><i class="fas fa-search"></i> Explore Middle-earth Knowledge Graph</h2>
+
+            <!-- EXPLORATION RESULTS -->
+            <div class="exploration-results">
+                <h2 class="section-title"><i class="fas fa-chart-bar"></i> Graph Exploration Statistics</h2>
+
+                <div class="result-item">
+                    <h4><i class="fas fa-database"></i> Top 10 Classes in the Graph</h4>
+                    <pre>schema:Thing                      | 22,962 entities
+schema:WebPage                   | 22,834 entities
+schema:CreativeWork              |  1,779 entities
+tolkiengateway.net/ontology/Card |  1,683 entities
+schema:Person                    |    870 entities
+schema:Periodical                |    139 entities
+schema:Movie                     |     78 entities
+schema:Event                     |     56 entities
+schema:Place                     |     56 entities
+schema:Book                      |     51 entities</pre>
+                </div>
+
+                <div class="result-item">
+                    <h4><i class="fas fa-crown"></i> Top 10 Most Described Entities</h4>
+                    <pre>Aragorn              | 109 properties
+Galadriel            |  95 properties
+Samwise_Gamgee       |  95 properties
+Sauron               |  93 properties
+Gandalf              |  80 properties
+Elrond               |  79 properties
+Faramir              |  78 properties
+Frodo_Baggins        |  78 properties
+Celeborn             |  74 properties
+Boromir              |  73 properties</pre>
+                </div>
+            </div>
+
+            <!-- TOP ENTITIES -->
+            <div class="category-section">
+                <div class="category-title">
+                    <i class="fas fa-crown"></i> Most Described Characters
+                </div>
+                <p class="category-description">
+                    Characters with the richest descriptions in the knowledge graph,
+                    based on the number of properties describing them.
+                </p>
+                <div class="entities-grid">
+                    <a href="/resource/Aragorn" class="entity-card">
+                        <div class="entity-title">
+                            Aragorn
+                            <span class="entity-properties">109 properties</span>
+                        </div>
+                        <div class="entity-desc">King of Gondor, descendant of Isildur, wielder of Andúril</div>
+                        <span class="entity-type">schema:Person</span>
+                    </a>
+
+                    <a href="/resource/Galadriel" class="entity-card">
+                        <div class="entity-title">
+                            Galadriel
+                            <span class="entity-properties">95 properties</span>
+                        </div>
+                        <div class="entity-desc">Lady of Lothlórien, one of the greatest of the Elves</div>
+                        <span class="entity-type">schema:Person</span>
+                    </a>
+
+                    <a href="/resource/Samwise_Gamgee" class="entity-card">
+                        <div class="entity-title">
+                            Samwise Gamgee
+                            <span class="entity-properties">95 properties</span>
+                        </div>
+                        <div class="entity-desc">Loyal companion of Frodo Baggins, bearer of the One Ring</div>
+                        <span class="entity-type">schema:Person</span>
+                    </a>
+
+                    <a href="/resource/Sauron" class="entity-card">
+                        <div class="entity-title">
+                            Sauron
+                            <span class="entity-properties">93 properties</span>
+                        </div>
+                        <div class="entity-desc">The Dark Lord, creator of the One Ring, primary antagonist</div>
+                        <span class="entity-type">schema:Person</span>
+                    </a>
+
+                    <a href="/resource/Gandalf" class="entity-card">
+                        <div class="entity-title">
+                            Gandalf
+                            <span class="entity-properties">80 properties</span>
+                        </div>
+                        <div class="entity-desc">The Grey Pilgrim, one of the Istari, member of the Fellowship</div>
+                        <span class="entity-type">schema:Person</span>
+                    </a>
+
+                    <a href="/resource/Elrond" class="entity-card">
+                        <div class="entity-title">
+                            Elrond
+                            <span class="entity-properties">79 properties</span>
+                        </div>
+                        <div class="entity-desc">Lord of Rivendell, bearer of Vilya, Half-elven</div>
+                        <span class="entity-type">schema:Person</span>
+                    </a>
+
+                    <a href="/resource/Faramir" class="entity-card">
+                        <div class="entity-title">
+                            Faramir
+                            <span class="entity-properties">78 properties</span>
+                        </div>
+                        <div class="entity-desc">Captain of Gondor, son of Denethor II, Prince of Ithilien</div>
+                        <span class="entity-type">schema:Person</span>
+                    </a>
+
+                    <a href="/resource/Frodo_Baggins" class="entity-card">
+                        <div class="entity-title">
+                            Frodo Baggins
+                            <span class="entity-properties">78 properties</span>
+                        </div>
+                        <div class="entity-desc">Hobbit of the Shire, Ring-bearer, cousin of Bilbo Baggins</div>
+                        <span class="entity-type">schema:Person</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- LIEUX IMPORTANTS -->
+            <div class="category-section">
+                <div class="category-title">
+                    <i class="fas fa-map-marker-alt"></i> Important Locations
+                </div>
+                <p class="category-description">
+                    Key geographical locations, cities, realms, and natural features
+                    that play significant roles in Middle-earth's history.
+                </p>
+                <div class="entities-grid">
+                    <a href="/resource/Minas_Tirith" class="entity-card">
+                        <div class="entity-title">Minas Tirith</div>
+                        <div class="entity-desc">Capital of Gondor, the White City, seven-tiered fortress</div>
+                        <span class="entity-type">schema:Place</span>
+                    </a>
+
+                    <a href="/resource/Moria" class="entity-card">
+                        <div class="entity-title">Moria</div>
+                        <div class="entity-desc">Ancient dwarven kingdom, greatest mine of Middle-earth</div>
+                        <span class="entity-type">schema:Place</span>
+                    </a>
+
+                    <a href="/resource/Lothlorien" class="entity-card">
+                        <div class="entity-title">Lothlorien</div>
+                        <div class="entity-desc">Elven forest realm ruled by Galadriel and Celeborn</div>
+                        <span class="entity-type">schema:Place</span>
+                    </a>
+
+                    <a href="/resource/The_Shire" class="entity-card">
+                        <div class="entity-title">The Shire</div>
+                        <div class="entity-desc">Hobbit homeland in northwest Middle-earth</div>
+                        <span class="entity-type">schema:Place</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CREATIVE WORKS -->
+            <div class="category-section">
+                <div class="category-title">
+                    <i class="fas fa-book"></i> Creative Works
+                </div>
+                <p class="category-description">
+                    Books, movies, and other creative works in the Tolkien universe.
+                </p>
+                <div class="entities-grid">
+                    <a href="/resource/The_Hobbit" class="entity-card">
+                        <div class="entity-title">
+                            The Hobbit
+                            <span class="entity-properties">72 properties</span>
+                        </div>
+                        <div class="entity-desc">Fantasy novel by J.R.R. Tolkien, published in 1937</div>
+                        <span class="entity-type">schema:Book</span>
+                    </a>
+
+                    <a href="/resource/The_Lord_of_the_Rings" class="entity-card">
+                        <div class="entity-title">
+                            The Lord of the Rings
+                            <span class="entity-properties">72 properties</span>
+                        </div>
+                        <div class="entity-desc">High fantasy novel by J.R.R. Tolkien, sequel to The Hobbit</div>
+                        <span class="entity-type">schema:Book</span>
+                    </a>
+
+                    <a href="/resource/The_Fellowship_of_the_Ring" class="entity-card">
+                        <div class="entity-title">The Fellowship of the Ring</div>
+                        <div class="entity-desc">First volume of The Lord of the Rings</div>
+                        <span class="entity-type">schema:CreativeWork</span>
+                    </a>
+
+                    <a href="/resource/The_Two_Towers" class="entity-card">
+                        <div class="entity-title">The Two Towers</div>
+                        <div class="entity-desc">Second volume of The Lord of the Rings</div>
+                        <span class="entity-type">schema:CreativeWork</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- EVENTS -->
+            <div class="category-section">
+                <div class="category-title">
+                    <i class="fas fa-history"></i> Events
+                </div>
+                <p class="category-description">
+                    Historical events, wars, and significant occurrences in Middle-earth.
+                </p>
+                <div class="entities-grid">
+                    <a href="/resource/War_of_the_Ring" class="entity-card">
+                        <div class="entity-title">War of the Ring</div>
+                        <div class="entity-desc">Great conflict at the end of the Third Age over the One Ring</div>
+                        <span class="entity-type">schema:Event</span>
+                    </a>
+
+                    <a href="/resource/Battle_of_the_Hornburg" class="entity-card">
+                        <div class="entity-title">Battle of the Hornburg</div>
+                        <div class="entity-desc">Major battle during the War of the Ring at Helm's Deep</div>
+                        <span class="entity-type">schema:Event</span>
+                    </a>
+
+                    <a href="/resource/Battle_of_the_Pelennor_Fields" class="entity-card">
+                        <div class="entity-title">Battle of the Pelennor Fields</div>
+                        <div class="entity-desc">Battle before the gates of Minas Tirith</div>
+                        <span class="entity-type">schema:Event</span>
+                    </a>
+
+                    <a href="/resource/Council_of_Elrond" class="entity-card">
+                        <div class="entity-title">Council of Elrond</div>
+                        <div class="entity-desc">Meeting in Rivendell to decide the fate of the One Ring</div>
+                        <span class="entity-type">schema:Event</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="endpoints">
+                <h2 class="section-title"><i class="fas fa-code"></i> Technical Endpoints</h2>
+
+                <div class="endpoint-item">
+                    <h4><i class="fas fa-globe"></i> Linked Data Interface</h4>
+                    <p>Access entities with content negotiation:</p>
+                    <code>http://localhost:5000/resource/{entity_name}</code>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">
+                        <strong>Accept headers:</strong>
+                        <code>text/html</code> (human-readable) or
+                        <code>text/turtle</code> (machine-readable RDF)
+                    </p>
+                </div>
+
+                <div class="endpoint-item">
+                    <h4><i class="fas fa-database"></i> SPARQL Endpoint</h4>
+                    <p>Query the knowledge graph directly:</p>
+                    <code>http://localhost:3030/tolkienKG/query</code>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h3><i class="fas fa-graduation-cap"></i> How to Use This Interface</h3>
+                <ol>
+                    <li><strong>Browse entities</strong>: Click on any card above to view details</li>
+                    <li><strong>Content negotiation</strong>:
+                        <ul style="margin-left: 20px; margin-top: 5px;">
+                            <li>Browser -> HTML page (default)</li>
+                            <li><code>curl -H "Accept: text/turtle" URL</code> -> RDF/Turtle data</li>
+                        </ul>
+                    </li>
+                    <li><strong>Navigate relationships</strong>: Click on linked entities within pages</li>
+                    <li><strong>Query data</strong>: Use the SPARQL endpoint for complex queries</li>
+                </ol>
+
+                <h4 style="margin-top: 20px;">Quick Examples:</h4>
+                <div style="background: #f5f5f5; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <code>curl -H "Accept: text/turtle" http://localhost:5000/resource/Gandalf > gandalf.ttl</code><br>
+                    <small>Downloads Gandalf's data as RDF/Turtle</small>
+                </div>
+                <div style="background: #f5f5f5; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <code>curl "http://localhost:3030/tolkienKG/query?query=SELECT * WHERE { ?s a schema:Person } LIMIT 10"</code><br>
+                    <small>Gets first 10 persons from the graph</small>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Semantic Web Project - Tolkien Gateway Knowledge Graph</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                Built with Flask, RDFLib, Apache Jena Fuseki -
+                Data from Tolkien Gateway, DBpedia, YAGO
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
