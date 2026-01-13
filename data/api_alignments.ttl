@@ -1,0 +1,19 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix tgw: <http://tolkiengateway.net/resource/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix yago: <http://yago-knowledge.org/resource/> .
+
+tgw:Elrond owl:sameAs dbpedia:Elrond .
+tgw:Elrond owl:sameAs yago:Elrond .
+
+tgw:Aragorn owl:sameAs dbpedia:Aragorn .
+tgw:Aragorn owl:sameAs yago:Aragorn_II .
+
+tgw:Frodo_Baggins owl:sameAs dbpedia:Frodo_Baggins .
+tgw:Frodo_Baggins owl:sameAs yago:Frodo_Baggins .
+
+tgw:Gandalf owl:sameAs dbpedia:Gandalf .
+tgw:Gandalf owl:sameAs yago:Gandalf .
+
+tgw:Sauron owl:sameAs dbpedia:Sauron .
+tgw:Sauron owl:sameAs yago:Sauron .
