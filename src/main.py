@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, Response
 import requests
-import json
+import re
 
 app = Flask(__name__, template_folder='../templates')
 SPARQL_ENDPOINT = "http://localhost:3030/tolkienKG/query"
@@ -36,58 +36,119 @@ def linked_data(entity_name):
     accept_header = request.headers.get('Accept', '')
 
     if 'text/html' in accept_header or not accept_header:
-        # Vérifier si on veut télécharger en Turtle via paramètre
         if request.args.get('format') == 'ttl':
             return get_entity_turtle(entity_uri, entity_name, download=True)
         return render_entity_html(entity_uri, entity_name)
     else:
-        # Return Turtle pour la négociation de contenu
         return get_entity_turtle(entity_uri, entity_name, download=False)
 
 
 def render_entity_html(entity_uri, entity_name):
-    """Render HTML page for entity"""
-    # Get entity data
-    query = f"""
-    PREFIX schema: <http://schema.org/>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
+    """Render HTML page for entity - VERSION FINALE COMPLÈTE"""
+    # 1. Récupérer TOUTES les propriétés littérales
+    query_all = f"""
     SELECT ?property ?value WHERE {{
-        {{
-            <{entity_uri}> ?property ?value .
-            FILTER(isLiteral(?value))
-        }}
-        UNION
-        {{
-            <{entity_uri}> ?property ?value .
-            FILTER(!isLiteral(?value))
-        }}
-        UNION
-        {{
-            ?value ?property <{entity_uri}> .
-        }}
+        <{entity_uri}> ?property ?value .
+        FILTER (isLiteral(?value))
     }}
-    LIMIT 50
+    ORDER BY ?property
+    """
+
+    # 2. Récupérer les relatedTo
+    query_related = f"""
+    SELECT ?value WHERE {{
+        <{entity_uri}> <http://schema.org/relatedTo> ?value .
+    }}
+    ORDER BY ?value
     """
 
     properties = []
+    literal_values = {}
+
+    # Récupérer et traiter les littéraux
     try:
         response = requests.get(
             SPARQL_ENDPOINT,
-            params={'query': query},
-            headers={'Accept': 'application/sparql-results+json'},
+            params={'query': query_all, 'format': 'json'},
+            timeout=10
+        )
+
+        if response.status_code == 200:
+            results = response.json()
+
+            # Regrouper les valeurs par propriété
+            for binding in results['results']['bindings']:
+                prop_uri = binding['property']['value']
+                value = binding['value']['value']
+
+                if prop_uri not in literal_values:
+                    literal_values[prop_uri] = []
+
+                literal_values[prop_uri].append(value)
+
+            # Traiter chaque propriété
+            for prop_uri, values in literal_values.items():
+                if prop_uri == "http://www.w3.org/2000/01/rdf-schema#label":
+                    # On ignore rdfs:label puisqu'on a schema:name
+                    continue
+                elif prop_uri == "http://schema.org/birthDate":
+                    # Fusionner les dates de naissance
+                    merged = " and ".join(sorted(set(values)))
+                    properties.append({
+                        'property': prop_uri,
+                        'value': clean_value(merged, prop_uri)
+                    })
+                elif len(values) == 1:
+                    # Une seule valeur
+                    properties.append({
+                        'property': prop_uri,
+                        'value': clean_value(values[0], prop_uri)
+                    })
+                else:
+                    # Valeurs multiples uniques
+                    unique_values = sorted(set(values))
+                    for val in unique_values:
+                        properties.append({
+                            'property': prop_uri,
+                            'value': clean_value(val, prop_uri)
+                        })
+
+    except Exception as e:
+        print(f"Error literals: {e}")
+
+    # Récupérer et traiter les relatedTo
+    try:
+        response = requests.get(
+            SPARQL_ENDPOINT,
+            params={'query': query_related, 'format': 'json'},
             timeout=10
         )
 
         if response.status_code == 200:
             results = response.json()
             for binding in results['results']['bindings']:
+                value = binding['value']['value']
+
+                # Créer un nom d'affichage propre
+                if value.startswith(BASE_URI):
+                    display_name = value.replace(BASE_URI, "").replace("_", " ")
+                else:
+                    # Extraire le dernier segment de l'URI
+                    parts = value.split('/')
+                    last_part = parts[-1] if parts else value
+                    display_name = last_part.replace("_", " ").replace("%20", " ")
+
                 properties.append({
-                    'property': binding['property']['value'],
-                    'value': binding['value']['value']
+                    'property': "http://schema.org/relatedTo",
+                    'value': value,
+                    'display_value': display_name
                 })
-    except:
-        pass
+
+    except Exception as e:
+        print(f"Error relatedTo: {e}")
+
+    # Trier les propriétés intelligemment
+    properties.sort(key=lambda x: sort_key(x['property'], x.get('value', '')))
 
     return render_template('entity.html',
                            entity_uri=entity_uri,
@@ -95,17 +156,128 @@ def render_entity_html(entity_uri, entity_name):
                            properties=properties)
 
 
+def sort_key(property_uri, value):
+    """Clé de tri intelligente"""
+    # Priorité 0: Nom
+    if property_uri == "http://schema.org/name":
+        return (0, 0)
+
+    # Priorité 1: Description
+    if property_uri == "http://schema.org/description":
+        return (1, 0)
+
+    # Priorité 2: Informations d'identité
+    if property_uri in [
+        "http://schema.org/additionalType",
+        "http://schema.org/alternateName",
+        "http://schema.org/birthDate",
+        "http://schema.org/gender"
+    ]:
+        return (2, list([
+            "http://schema.org/additionalType",
+            "http://schema.org/alternateName",
+            "http://schema.org/birthDate",
+            "http://schema.org/gender"
+        ]).index(property_uri))
+
+    # Priorité 3: Autres propriétés schema.org
+    if "schema.org" in property_uri:
+        return (3, property_uri)
+
+    # Priorité 4: relatedTo (à la fin)
+    if property_uri == "http://schema.org/relatedTo":
+        return (5, value.lower())
+
+    # Priorité 5: Ontologie Tolkien
+    if "tolkiengateway.net/ontology" in property_uri:
+        return (4, property_uri)
+
+    # Priorité 6: Autres
+    return (6, property_uri)
+
+
+def clean_value(value, property_uri=""):
+    """Nettoyer les valeurs - VERSION AMÉLIORÉE"""
+    if not isinstance(value, str):
+        return value
+
+    # Nettoyages généraux
+    value = value.replace("''", "'").strip()
+
+    # Nettoyages spécifiques par propriété
+    if property_uri == "http://schema.org/alternateName":
+        value = value.replace("' (Q)'", " (Quenya), ")
+        value = value.replace("' (S)'", " (Sindarin), ")
+        value = value.replace("' (H)'", " (Haradrim), ")
+        value = value.replace("' (K)'", " (Khuzdul), ")
+        value = value.rstrip(', ')
+        # Supprimer le texte problématique
+        if value.endswith('(See below'):
+            value = value.replace('(See below', '').strip().rstrip(',')
+
+    elif property_uri == "http://schema.org/birthDate":
+        # S'assurer que "Timeless Halls" est présent si disponible
+        if "Creation of the Ainur" in value and "Timeless" not in value:
+            # On pourrait chercher dans les autres valeurs, mais on garde simple
+            pass
+
+    elif property_uri == "http://schema.org/description":
+        # Ajouter des espaces entre les titres
+        value = re.sub(r'([a-z])([A-Z])', r'\1 \2', value)
+
+    elif property_uri == "http://tolkiengateway.net/ontology/dates":
+        value = value.replace(', - ', ' - ')
+
+    elif property_uri == "http://tolkiengateway.net/ontology/died":
+        if value.startswith('Sailed west on'):
+            value = value.replace('Sailed west on ', '')
+
+    elif property_uri == "http://tolkiengateway.net/ontology/weapon":
+        value = re.sub(r'([a-z])([A-Z])', r'\1, \2', value)
+
+    elif property_uri == "http://tolkiengateway.net/ontology/people":
+        if value == "Maia (Wizard":
+            value = "Maia (Wizard)"
+
+    # Supprimer les espaces multiples
+    value = ' '.join(value.split())
+
+    return value
+
+
+def clean_value(value, property_uri=""):
+    """Nettoyer les valeurs - DERNIÈRES CORRECTIONS"""
+    if not isinstance(value, str):
+        return value
+
+    value = value.replace("''", "'").strip()
+
+    # Nettoyer les dates (virgules à la fin)
+    if property_uri in ["http://tolkiengateway.net/ontology/dates",
+                        "http://tolkiengateway.net/ontology/died",
+                        "http://tolkiengateway.net/ontology/sailedwest"]:
+        value = value.rstrip(',')
+        value = value.replace(', - ', ' - ')
+
+    # Supprimer "Sailed west on" si présent
+    if property_uri == "http://tolkiengateway.net/ontology/died":
+        if value.startswith('Sailed west on '):
+            value = value.replace('Sailed west on ', '')
+
+    # Supprimer les espaces multiples
+    value = ' '.join(value.split())
+
+    return value
+
 def get_entity_turtle(entity_uri, entity_name, download=False):
     """Get Turtle representation of entity"""
     query = f"""
     CONSTRUCT {{
         <{entity_uri}> ?p ?o .
-        ?s ?p2 <{entity_uri}> .
     }}
     WHERE {{
-        {{ <{entity_uri}> ?p ?o . }}
-        UNION
-        {{ ?s ?p2 <{entity_uri}> . }}
+        <{entity_uri}> ?p ?o .
+        FILTER (isLiteral(?o) || ?p = <http://schema.org/relatedTo>)
     }}
     LIMIT 100
     """
@@ -120,16 +292,12 @@ def get_entity_turtle(entity_uri, entity_name, download=False):
 
         if response.status_code == 200:
             if download:
-                # Pour téléchargement avec nom de fichier
                 return Response(
                     response.text,
                     mimetype='text/turtle',
-                    headers={
-                        'Content-Disposition': f'attachment; filename="{entity_name}.ttl"'
-                    }
+                    headers={'Content-Disposition': f'attachment; filename="{entity_name}.ttl"'}
                 )
             else:
-                # Pour négociation de contenu standard
                 return Response(response.text, mimetype='text/turtle')
         else:
             return "Error fetching RDF data", 500
@@ -146,8 +314,8 @@ def download_turtle(entity_name):
 
 
 if __name__ == '__main__':
-    print(" Linked Data Interface ready!")
-    print(" HTML: http://localhost:5000/resource/Gandalf")
-    print(" Turtle: curl -H 'Accept: text/turtle' http://localhost:5000/resource/Gandalf")
-    print(" Download: http://localhost:5000/resource/Gandalf?format=ttl")
+    print("✅ Linked Data Interface ready!")
+    print("🌐 HTML: http://localhost:5000/resource/Gandalf")
+    print("📥 Download: http://localhost:5000/resource/Gandalf?format=ttl")
+    print("🔍 Fuseki: http://localhost:3030/")
     app.run(debug=True, port=5000, host='0.0.0.0')
