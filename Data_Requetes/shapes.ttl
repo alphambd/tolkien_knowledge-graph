@@ -1,0 +1,95 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <http://schema.org/> .
+@prefix tgwo: <http://tolkiengateway.net/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# -----------------------------------------------------------------
+# SHAPE 1: Characters (based on infobox character template)
+# -----------------------------------------------------------------
+schema:PersonShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Person ;
+    sh:name "Person validation shape" ;
+    sh:description "Validates entities created from 'infobox character' template" ;
+    sh:property [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:maxCount 3 ;                  # ← CHANGED: 2 → 3 (some have 3 names)
+        sh:message "Every character must have 1-3 names" ;
+    ] ;
+    sh:property [
+        sh:path schema:birthDate ;
+        sh:maxCount 2 ;                  # ← CHANGED: 1 → 2 (some have 2 dates)
+        sh:datatype xsd:string ;
+        sh:message "Birth date should be a string (e.g., 'Third Age 2931')" ;
+    ] ;
+    sh:property [
+        sh:path tgwo:race ;
+        sh:minCount 0 ;                  
+        sh:datatype xsd:string ;
+        sh:message "Character can have a race (e.g., 'Elf', 'Man', 'Hobbit')" ;
+    ] .
+
+# -----------------------------------------------------------------
+# SHAPE 2: Locations (based on infobox location template)
+# -----------------------------------------------------------------
+schema:PlaceShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Place ;
+    sh:name "Location validation shape" ;
+    sh:description "Validates entities created from location infobox templates" ;
+    sh:property [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:message "Every location must have a name" ;
+    ] ;
+    sh:property [
+        sh:path schema:containedInPlace ;
+        sh:maxCount 5 ;
+        sh:message "A location can be contained in other places (max 5)" ;
+    ] .
+
+# -----------------------------------------------------------------
+# SHAPE 3: METW Cards (based on cards.json)
+# -----------------------------------------------------------------
+tgwo:CardShape
+    a sh:NodeShape ;
+    sh:targetClass tgwo:Card ;
+    sh:name "METW Card validation shape" ;
+    sh:description "Validates Middle Earth: The Wizards cards" ;
+    sh:property [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:message "Every card must have a name" ;
+    ] ;
+    sh:property [
+        sh:path tgwo:cardId ;
+        sh:minCount 1 ;
+        sh:pattern "^[A-Z]{2}-[0-9]+$" ;
+        sh:message "Card ID must follow pattern like 'AS-100'" ;
+    ] ;
+    sh:property [
+        sh:path tgwo:expansion ;
+        sh:minCount 1 ;
+        sh:message "Expansion must be a valid code (AS, BA, DM, LE, TD, TW, WH)" ;
+    ] .
+
+# -----------------------------------------------------------------
+# SHAPE 4: Web Pages (based on page/entity distinction)
+# -----------------------------------------------------------------
+schema:WebPageShape
+    a sh:NodeShape ;
+    sh:targetClass schema:WebPage ;
+    sh:name "WebPage validation shape" ;
+    sh:description "Validates wiki page documents (not the entities themselves)" ;
+    sh:property [
+        sh:path schema:url ;
+        sh:minCount 1 ;
+        sh:message "WebPage must have a valid URL" ;
+    ] ;
+    sh:property [
+        sh:path schema:about ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "WebPage must be about an entity (schema:about)" ;
+    ] .

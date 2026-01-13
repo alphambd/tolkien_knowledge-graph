@@ -451,7 +451,7 @@ def main():
     # Serialize RDF graph
     try:
         g.serialize(OUTPUT_FILE, format="turtle")
-        print(f"✅ RDF generated with schema.org: {OUTPUT_FILE}")
+        print(f" RDF generated with schema.org: {OUTPUT_FILE}")
         print(f"   File size: {os.path.getsize(OUTPUT_FILE) / 1024:.1f} KB")
         print(f"   Total triples: {len(g)}")
 
@@ -518,7 +518,7 @@ def main():
     #     print("RDF file not found")
 
     print("\n" + "=" * 50)
-    print("✅ COMPLETED WITH SCHEMA.ORG!")
+    print(" COMPLETED WITH SCHEMA.ORG!")
     print("=" * 50)
 
 

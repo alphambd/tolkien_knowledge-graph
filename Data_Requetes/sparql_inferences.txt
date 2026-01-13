@@ -1,0 +1,101 @@
+# Toutes les classes d'une entité, y compris les superclasses
+PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?classe ?superClasse WHERE {
+  ?entity a ?classe .
+  ?classe rdfs:subClassOf* ?superClasse .
+  FILTER(?entity = <http://tolkiengateway.net/resource/Gandalf>)
+}
+
+
+# Toutes les relations, en prenant en compte owl:sameAs
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?sujet ?relation ?objet WHERE {
+  {
+    ?sujet ?relation ?objet .
+  }
+  UNION
+  {
+    ?sujet owl:sameAs ?same .
+    ?same ?relation ?objet .
+  }
+  FILTER(?sujet = <http://tolkiengateway.net/resource/Gandalf>)
+}
+
+
+
+
+
+PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX tolkien: <http://tolkiengateway.net/ontology/>
+
+SELECT DISTINCT ?property ?value ?valueLabel ?lang WHERE {
+  {
+    # Propriétés directes
+    <http://tolkiengateway.net/resource/Gandalf> ?property ?value .
+    FILTER(!STRSTARTS(STR(?property), STR(owl:)))
+  }
+  UNION
+  {
+    # Propriétés via owl:sameAs
+    <http://tolkiengateway.net/resource/Gandalf> owl:sameAs ?same .
+    ?same ?property ?value .
+    FILTER(!STRSTARTS(STR(?property), STR(owl:)))
+  }
+
+  # Obtenir les labels des valeurs (si ce sont des URIs)
+  OPTIONAL {
+    ?value rdfs:label|schema:name ?valueLabel .
+    FILTER(isLiteral(?valueLabel))
+  }
+
+  # Langue pour les littéraux
+  BIND(IF(isLiteral(?value), LANG(?value), "") AS ?lang)
+}
+ORDER BY ?property
+
+
+
+
+
+PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX tolkien: <http://tolkiengateway.net/ontology/>
+
+CONSTRUCT {
+  <http://tolkiengateway.net/resource/Gandalf> ?p ?o .
+  ?s ?p2 <http://tolkiengateway.net/resource/Gandalf> .
+  <http://tolkiengateway.net/resource/Gandalf> owl:sameAs ?same .
+  ?same ?p3 ?o2 .
+}
+WHERE {
+  {
+    # Propriétés sortantes
+    <http://tolkiengateway.net/resource/Gandalf> ?p ?o .
+    FILTER(!STRSTARTS(STR(?p), "http://www.w3.org/2002/07/owl#"))
+  }
+  UNION
+  {
+    # Propriétés entrantes
+    ?s ?p2 <http://tolkiengateway.net/resource/Gandalf> .
+    FILTER(!STRSTARTS(STR(?p2), "http://www.w3.org/2002/07/owl#"))
+  }
+  UNION
+  {
+    # Équivalences
+    <http://tolkiengateway.net/resource/Gandalf> owl:sameAs ?same .
+  }
+  UNION
+  {
+    # Propriétés des équivalents
+    <http://tolkiengateway.net/resource/Gandalf> owl:sameAs ?same .
+    ?same ?p3 ?o2 .
+    FILTER(!STRSTARTS(STR(?p3), "http://www.w3.org/2002/07/owl#"))
+    FILTER(!isBlank(?o2))
+  }
+}

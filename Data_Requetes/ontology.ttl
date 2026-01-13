@@ -1,0 +1,20 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix tgwo: <http://tolkiengateway.net/ontology/> .
+
+# Classes principales (subClassOf schema.org)
+tgwo:TolkienCharacter rdfs:subClassOf schema:Person ;
+    rdfs:label "Tolkien character"@en ;
+    rdfs:comment "A character from J.R.R. Tolkien's legendarium"@en .
+
+tgwo:TolkienLocation rdfs:subClassOf schema:Place ;
+    rdfs:label "Tolkien location"@en .
+
+# Propriétés personnalisées
+tgwo:hairColor a rdfs:Property ;
+    rdfs:label "hair color"@en ;
+    rdfs:domain schema:Person ;
+    rdfs:range xsd:string .
+
+tgwo:usesTemplate a rdfs:Property ;
+    rdfs:label "uses wiki template"@en .
