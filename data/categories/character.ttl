@@ -1,0 +1,665 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema1: <http://schema.org/> .
+@prefix tgw: <http://tolkiengateway.net/resource/> .
+@prefix tgwo: <http://tolkiengateway.net/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+tgw:Adanel a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:birthDate "Presumably Estolad" ;
+    schema1:caption "Adanel (right) in \"Adanel the Wise\" by Juliana Pinho" ;
+    schema1:children "Beren" ;
+    schema1:deathDate "unknown (aged 35+" ;
+    schema1:image "Juliana Pinho - Adanel the Wise.png" ;
+    schema1:location "Estolad; Hithlum; Dorthonion" ;
+    schema1:name "Adanel" ;
+    schema1:spouse "Belemir of the House of Bëor" ;
+    schema1:url "https://tolkiengateway.net/wiki/Adanel"^^xsd:anyURI ;
+    tgwo:age "Malach Aradan & Zimrahin Meldis" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Female" ;
+    tgwo:house "House of Marach" ;
+    tgwo:people "Adan" ;
+    tgwo:position "Wise-woman" ;
+    tgwo:siblings "Magor" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Adelard_Took a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:caption "Adelard Took from ''The Lord of the Rings Online" ;
+    schema1:children "Reginard Took, Everard Took, 2 daughters" ;
+    schema1:image "95",
+        "The Lord of the Rings Online - Adelard Took.jpg" ;
+    schema1:name "Adelard Took" ;
+    schema1:url "https://tolkiengateway.net/wiki/Adelard_Took"^^xsd:anyURI ;
+    tgwo:age "Flambard Took" ;
+    tgwo:category "Character" ;
+    tgwo:family "Took" ;
+    tgwo:gender "Male" ;
+    tgwo:people "Hobbit" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Aerin a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:caption "Aerin\" by Turner Mohan" ;
+    schema1:deathDate "(suicide",
+        "Dor-lómin" ;
+    schema1:image "Turner Mohan - Aerin.jpg" ;
+    schema1:location "Dor-lómin" ;
+    schema1:name "Aerin",
+        "Lady Aerin, Indor’s daughter" ;
+    schema1:spouse "Brodda" ;
+    schema1:url "https://tolkiengateway.net/wiki/Aerin"^^xsd:anyURI ;
+    tgwo:age "Indor" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Female" ;
+    tgwo:house "House of Hador" ;
+    tgwo:people "Adan" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Aghan a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:height "Short" ;
+    schema1:location "Brethil" ;
+    schema1:name "Aghan" ;
+    schema1:url "https://tolkiengateway.net/wiki/Aghan"^^xsd:anyURI ;
+    tgwo:affiliation "Drúedain, Haladin" ;
+    tgwo:age "Drúadan language" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:people "Drúadan" ;
+    tgwo:siblings "Unnamed brother" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Ailinel a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "Soronto" ;
+    schema1:deathDate "unknown (aged 87+" ;
+    schema1:location "Númenor" ;
+    schema1:name "Ailinel" ;
+    schema1:spouse "Orchaldor" ;
+    schema1:url "https://tolkiengateway.net/wiki/Ailinel"^^xsd:anyURI ;
+    tgwo:age "Adûnaic, Sindarin and Quenya",
+        "Tar-Meneldur and Almarian" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Female" ;
+    tgwo:house "House of Elros" ;
+    tgwo:people "Númenórean" ;
+    tgwo:pronun "Q," ;
+    tgwo:siblings "Tar-Aldarion and Almiel" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Aldamir a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:caption "Aldamir of Gondor\" by Matěj Čadil" ;
+    schema1:children "Hyarmendacil II" ;
+    schema1:image "210",
+        "Matěj_Čadil_-_Aldamir_of_Gondor.jpg" ;
+    schema1:location "Gondor" ;
+    schema1:name "Aldamir",
+        "King of Gondor" ;
+    schema1:url "https://tolkiengateway.net/wiki/Aldamir"^^xsd:anyURI ;
+    tgwo:age "Eldacar" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:people "Gondorian" ;
+    tgwo:rule "- (50 years" ;
+    tgwo:siblings "Ornendil" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Algund a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:location "Dor-lómin, Dor-Cúarthol" ;
+    schema1:name "Algund" ;
+    schema1:url "https://tolkiengateway.net/wiki/Algund"^^xsd:anyURI ;
+    tgwo:affiliation "Gaurwaith" ;
+    tgwo:age "Mannish dialect" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:people "Adan" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Almarian a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:birthDate "Before" ;
+    schema1:caption "A Royal Wedding in Númenor\" by Matěj Čadil" ;
+    schema1:children "Anardil, Ailinel and Almiel" ;
+    schema1:deathDate "After" ;
+    schema1:image "Matěj Čadil - A Royal Wedding in Numenor.jpg" ;
+    schema1:location "Númenor" ;
+    schema1:name "Almarian",
+        "Queen of Númenor" ;
+    schema1:spouse "Tar-Meneldur" ;
+    schema1:url "https://tolkiengateway.net/wiki/Almarian"^^xsd:anyURI ;
+    tgwo:age "Adûnaic, Sindarin and Quenya",
+        "Vëantur" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Female" ;
+    tgwo:hairColor "Golden" ;
+    tgwo:people "Númenórean" ;
+    tgwo:rule "- (143 years" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Almiel a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:birthDate "Forostar" ;
+    schema1:location "Númenor" ;
+    schema1:name "Almiel" ;
+    schema1:url "https://tolkiengateway.net/wiki/Almiel"^^xsd:anyURI ;
+    tgwo:age "Adûnaic, Sindarin and Quenya",
+        "Tar-Meneldur and Almarian" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Female" ;
+    tgwo:house "House of Elros" ;
+    tgwo:people "Númenórean" ;
+    tgwo:siblings "Anardil and Ailinel" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Amarië a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:birthDate "During" ;
+    schema1:caption "Amarie of the Vanyar\" by Marya Filatova" ;
+    schema1:image "Marya Filatova - Amarie of the Vanyar.jpg" ;
+    schema1:location "Valinor" ;
+    schema1:name "Amarië",
+        "Amárië" ;
+    schema1:spouse "Finrod (lover" ;
+    schema1:url "https://tolkiengateway.net/wiki/Amarië"^^xsd:anyURI ;
+    tgwo:age "Vanyarin" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Female" ;
+    tgwo:people "Vanya" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Amlach a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:caption "Amlach (right) in \"Adanel and Amlach\" by Juliana Pinho" ;
+    schema1:image "Juliana Pinho - Adanel and Amlach.png" ;
+    schema1:name "Amlach" ;
+    schema1:url "https://tolkiengateway.net/wiki/Amlach"^^xsd:anyURI ;
+    tgwo:age "Imlach",
+        "Mannish dialect" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Marach" ;
+    tgwo:people "Adan" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Amlaith a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:caption "Amlaith, king of Arthedain\" by ElfinFen" ;
+    schema1:children "Beleg" ;
+    schema1:image "220",
+        "ElfinFen - Amlaith, king of Arthedain.jpg" ;
+    schema1:location "Arthedain" ;
+    schema1:name "Amlaith",
+        "King of Arthedain" ;
+    schema1:url "https://tolkiengateway.net/wiki/Amlaith"^^xsd:anyURI ;
+    tgwo:age "Eärendur",
+        "Sindarin, Westron" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Isildur" ;
+    tgwo:people "Arnorian" ;
+    tgwo:rule "-" ;
+    tgwo:siblings "two unnamed brothers" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Anairë a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:birthDate "during the Years of the Trees" ;
+    schema1:caption "Anaire\" by Marya Filatova" ;
+    schema1:children "Fingon, Turgon, Aredhel and Argon" ;
+    schema1:image "Marya Filatova - Anaire.jpg" ;
+    schema1:location "Valinor" ;
+    schema1:name "Anairë" ;
+    schema1:spouse "Fingolfin" ;
+    schema1:url "https://tolkiengateway.net/wiki/Anairë"^^xsd:anyURI ;
+    tgwo:age "Quenya" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Female" ;
+    tgwo:house "House of Fingolfin (by marriage" ;
+    tgwo:people "Noldo" ;
+    tgwo:pronun "Q," ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Anborn a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:birthDate "Late Third Age" ;
+    schema1:caption "Anborn from The Lord of the Rings Trading Card Game" ;
+    schema1:image "Decipher - Anborn.jpg" ;
+    schema1:location "Near the Harad Road, Henneth Annûn, Forbidden Pool" ;
+    schema1:name "Anborn" ;
+    schema1:url "https://tolkiengateway.net/wiki/Anborn"^^xsd:anyURI ;
+    tgwo:affiliation "Rangers of Ithilien" ;
+    tgwo:age "Westron, Sindarin" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:people "Gondorian" ;
+    tgwo:position "ScoutArcher" ;
+    tgwo:usesTemplate "Infobox character" ;
+    tgwo:weapon "Bow" .
+
+tgw:Andreth a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:caption "Andreth\" by Elena Kukanova" ;
+    schema1:deathDate "c." ;
+    schema1:image "Elena Kukanova - Andreth.jpg",
+        "c. 94" ;
+    schema1:location "Ladros" ;
+    schema1:name "Andreth",
+        "Saelind",
+        "Wise-woman of the Bëorians" ;
+    schema1:spouse "In love with Aegnor (never married" ;
+    schema1:url "https://tolkiengateway.net/wiki/Andreth"^^xsd:anyURI ;
+    tgwo:age "Boromir" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Female" ;
+    tgwo:hairColor "Dark" ;
+    tgwo:house "House of Bëor" ;
+    tgwo:people "Adan" ;
+    tgwo:siblings "Bregor & Beril" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Andróg a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:birthDate "Dor-lómin" ;
+    schema1:caption "Andróg (standing, right) in \"Forweg's end\" by Anke Eißmann" ;
+    schema1:children "Andvír" ;
+    schema1:deathDate "Amon Rûdh" ;
+    schema1:image "Anke Eißmann - Forweg's end.jpg" ;
+    schema1:location "Dor-Cúarthol" ;
+    schema1:name "Andróg" ;
+    schema1:url "https://tolkiengateway.net/wiki/Andróg"^^xsd:anyURI ;
+    tgwo:affiliation "Gaurwaith" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:people "Adan" ;
+    tgwo:position "Outlaw" ;
+    tgwo:usesTemplate "Infobox character" ;
+    tgwo:weapon "Bow and knife" .
+
+tgw:Andwise_Roper a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "Anson Roper" ;
+    schema1:location "Tighfield" ;
+    schema1:name "Andwise Roper",
+        "Andy" ;
+    schema1:url "https://tolkiengateway.net/wiki/Andwise_Roper"^^xsd:anyURI ;
+    tgwo:age "Hobson \"Roper\" Gamgee" ;
+    tgwo:category "Character" ;
+    tgwo:family "Gamgee" ;
+    tgwo:gender "Male" ;
+    tgwo:people "Hobbit" ;
+    tgwo:siblings "Hamfast, May and Halfred" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Annael a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:caption "Rían gives Tuor to Annael\" by Svirina Vera" ;
+    schema1:children "fostered Tuor" ;
+    schema1:image "Svirina Vera - Rian gives Tuor to Annael.jpg" ;
+    schema1:location "Mithrim, Androth, Mouths of Sirion" ;
+    schema1:name "Annael" ;
+    schema1:url "https://tolkiengateway.net/wiki/Annael"^^xsd:anyURI ;
+    tgwo:age "Sindarin" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:people "Sinda" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Ar-Adûnakhôr a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "Ar-Zimrathôn" ;
+    schema1:image "253" ;
+    schema1:location "Númenor" ;
+    schema1:name "Ar-Adûnakhôr",
+        "King of Númenor",
+        "Tar-Herunúmen'' (Q" ;
+    schema1:url "https://tolkiengateway.net/wiki/Ar-Adûnakhôr"^^xsd:anyURI ;
+    tgwo:affiliation "King's Men" ;
+    tgwo:age "Adûnaic",
+        "Tar-Ardamin" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Elros" ;
+    tgwo:people "Númenórean" ;
+    tgwo:rule "- (63 years" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Arador a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:caption "Arador from ''Born of Hope" ;
+    schema1:children "Arathorn II" ;
+    schema1:deathDate "Coldfells" ;
+    schema1:image "110",
+        "Born of Hope - Arador.jpg" ;
+    schema1:location "Rivendell" ;
+    schema1:name "Arador",
+        "Chieftain of the Dúnedain" ;
+    schema1:url "https://tolkiengateway.net/wiki/Arador"^^xsd:anyURI ;
+    tgwo:age "Argonui",
+        "Sindarin, Westron" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Isildur" ;
+    tgwo:people "Arnorian" ;
+    tgwo:rule "-" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Araglas a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "Arahad I" ;
+    schema1:image "159" ;
+    schema1:location "Rivendell" ;
+    schema1:name "Araglas",
+        "Chieftain of the Dúnedain" ;
+    schema1:url "https://tolkiengateway.net/wiki/Araglas"^^xsd:anyURI ;
+    tgwo:age "Aragorn I",
+        "Sindarin, Westron" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Isildur" ;
+    tgwo:people "Arnorian" ;
+    tgwo:rule "-" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Aragost a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "Aravorn" ;
+    schema1:image "157" ;
+    schema1:location "Rivendell" ;
+    schema1:name "Aragost",
+        "Chieftain of the Dúnedain" ;
+    schema1:url "https://tolkiengateway.net/wiki/Aragost"^^xsd:anyURI ;
+    tgwo:age "Arahad I",
+        "Sindarin, Westron" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Isildur" ;
+    tgwo:people "Arnorian" ;
+    tgwo:rule "-" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Arahael a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "Aranuir" ;
+    schema1:image "165" ;
+    schema1:location "Rivendell" ;
+    schema1:name "Arahael",
+        "Chieftain of the Dúnedain" ;
+    schema1:url "https://tolkiengateway.net/wiki/Arahael"^^xsd:anyURI ;
+    tgwo:age "Aranarth",
+        "Sindarin, Westron" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Isildur" ;
+    tgwo:people "Arnorian" ;
+    tgwo:rule "-" ;
+    tgwo:siblings "At least one sibling" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Aranarth a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:caption "Aranarth\" by Elena Kukanova" ;
+    schema1:children "Arahael, at least one other" ;
+    schema1:image "168",
+        "Elena Kukanova - Aranarth.jpeg" ;
+    schema1:location "Rivendell" ;
+    schema1:name "Aranarth",
+        "Chieftain of the Dúnedain" ;
+    schema1:url "https://tolkiengateway.net/wiki/Aranarth"^^xsd:anyURI ;
+    tgwo:age "Arvedui and Fíriel",
+        "Sindarin, Westron" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Isildur" ;
+    tgwo:people "Arnorian" ;
+    tgwo:rule "-" ;
+    tgwo:siblings "At least one younger brother" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Arantar a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "Tarcil" ;
+    schema1:image "250" ;
+    schema1:location "Annúminas" ;
+    schema1:name "Arantar",
+        "King of Arnor" ;
+    schema1:url "https://tolkiengateway.net/wiki/Arantar"^^xsd:anyURI ;
+    tgwo:age "Eldacar",
+        "Sindarin" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Isildur" ;
+    tgwo:people "Arnorian" ;
+    tgwo:rule "-" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Aranuir a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "Aravir" ;
+    schema1:image "163" ;
+    schema1:location "Rivendell" ;
+    schema1:name "Aranuir",
+        "Chieftain of the Dúnedain" ;
+    schema1:url "https://tolkiengateway.net/wiki/Aranuir"^^xsd:anyURI ;
+    tgwo:age "Arahael",
+        "Sindarin and Westron" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Isildur" ;
+    tgwo:people "Arnorian" ;
+    tgwo:rule "-" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Aranwë a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "Voronwë" ;
+    schema1:name "Aranwë" ;
+    schema1:spouse "Falathrim lady related to Círdan" ;
+    schema1:url "https://tolkiengateway.net/wiki/Aranwë"^^xsd:anyURI ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "Fingolfin" ;
+    tgwo:people "Noldo" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Araphant a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "Arvedui" ;
+    schema1:image "175" ;
+    schema1:location "Arthedain" ;
+    schema1:name "Araphant",
+        "King of Arthedain" ;
+    schema1:url "https://tolkiengateway.net/wiki/Araphant"^^xsd:anyURI ;
+    tgwo:age "Araval",
+        "Sindarin, Westron" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Isildur" ;
+    tgwo:people "Arnorian" ;
+    tgwo:rule "-" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Araphor a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "Argeleb II" ;
+    schema1:image "198" ;
+    schema1:location "Arthedain" ;
+    schema1:name "Araphor",
+        "King of Arthedain" ;
+    schema1:url "https://tolkiengateway.net/wiki/Araphor"^^xsd:anyURI ;
+    tgwo:age "Arveleg I",
+        "Sindarin, Westron" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Isildur" ;
+    tgwo:people "Arnorian" ;
+    tgwo:rule "-" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Arassuil a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "Arathorn I" ;
+    schema1:image "156" ;
+    schema1:location "Rivendell" ;
+    schema1:name "Arassuil",
+        "Chieftain of the Dúnedain" ;
+    schema1:url "https://tolkiengateway.net/wiki/Arassuil"^^xsd:anyURI ;
+    tgwo:age "Arahad II",
+        "Sindarin, Westron" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Isildur" ;
+    tgwo:people "Arnorian" ;
+    tgwo:rule "-" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Aratan a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:birthDate "Gondor" ;
+    schema1:caption "Aratan in ''The Lord of the Rings Online" ;
+    schema1:deathDate "Disaster of the Gladden Fields" ;
+    schema1:image "104",
+        "The Lord of the Rings Online - Aratan.jpg" ;
+    schema1:location "Gondor" ;
+    schema1:name "Aratan" ;
+    schema1:url "https://tolkiengateway.net/wiki/Aratan"^^xsd:anyURI ;
+    tgwo:age "Isildur",
+        "Sindarin, Westron" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Isildur" ;
+    tgwo:people "Arnorian" ;
+    tgwo:pronun "Q," ;
+    tgwo:siblings "Elendur, Ciryon and Valandil" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Tar-Alcarin a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "Tar-Calmacil" ;
+    schema1:image "331" ;
+    schema1:location "Númenor" ;
+    schema1:name "King of Númenor",
+        "Tar-Alcarin" ;
+    schema1:url "https://tolkiengateway.net/wiki/Tar-Alcarin"^^xsd:anyURI ;
+    tgwo:affiliation "King's Men" ;
+    tgwo:age "Adûnaic, Sindarin and Quenya",
+        "Tar-Vanimeldë and Herucalmo" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Elros" ;
+    tgwo:people "Númenórean" ;
+    tgwo:rule "- (''de jure'') - (''de facto" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Tar-Ancalimon a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "Tar-Telemmaitë" ;
+    schema1:image "400" ;
+    schema1:location "Númenor" ;
+    schema1:name "King of Númenor",
+        "Tar-Ancalimon" ;
+    schema1:url "https://tolkiengateway.net/wiki/Tar-Ancalimon"^^xsd:anyURI ;
+    tgwo:affiliation "King's Men" ;
+    tgwo:age "Adûnaic, Sindarin and Quenya",
+        "Tar-Atanamir" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Elros" ;
+    tgwo:people "Númenórean" ;
+    tgwo:rule "- (165 years" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Tar-Ancalimë a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:birthDate "Armenelos" ;
+    schema1:caption "Queen Ancalime the Princess Shepherdess\" by Sara M. Morello" ;
+    schema1:children "Anárion" ;
+    schema1:image "412",
+        "Sara M. Morello - Queen Ancalime the Princess Shepherdess.jpg" ;
+    schema1:location "Númenor" ;
+    schema1:name "Emerwen Aranel''''' (Q, \"Princess Shepherdess",
+        "Ruling Queen of Númenor",
+        "Tar-Ancalimë" ;
+    schema1:spouse "Hallacar" ;
+    schema1:url "https://tolkiengateway.net/wiki/Tar-Ancalimë"^^xsd:anyURI ;
+    tgwo:age "Adûnaic, Sindarin and Quenya",
+        "Aldarion and Erendis" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Female" ;
+    tgwo:house "House of Elros" ;
+    tgwo:people "Númenórean" ;
+    tgwo:rule "- (205 years" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Tar-Anárion a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:birthDate "Emerië" ;
+    schema1:children "Two daughters, Tar-Súrion" ;
+    schema1:image "401 years" ;
+    schema1:location "Númenor" ;
+    schema1:name "King of Númenor",
+        "Tar-Anárion" ;
+    schema1:url "https://tolkiengateway.net/wiki/Tar-Anárion"^^xsd:anyURI ;
+    tgwo:age "Adûnaic, Sindarin and Quenya",
+        "Tar-Ancalimë and Hallacar" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:house "House of Elros" ;
+    tgwo:people "Númenórean" ;
+    tgwo:rule "- (114 years" ;
+    tgwo:usesTemplate "Infobox character" .
+
+tgw:Telimektar a schema1:Person,
+        schema1:Thing ;
+    dcterms:source "Tolkien Gateway" ;
+    schema1:children "LúthienNB" ;
+    schema1:location "ValinorTol EressëaIlwë" ;
+    schema1:name "Telimektar",
+        "Telumaithor/Telumaithar'', ''Daimort/Daimord'' (G)''Mordo/Taimordo/Taimondo'', ''Telmaithron'', ''Taimavar'' (Q" ;
+    schema1:url "https://tolkiengateway.net/wiki/Telimektar"^^xsd:anyURI ;
+    tgwo:age "Tulkas & Nessa" ;
+    tgwo:category "Character" ;
+    tgwo:gender "Male" ;
+    tgwo:notablefor "Guarding the world from Melko's return" ;
+    tgwo:people "Vala" ;
+    tgwo:usesTemplate "Infobox character" ;
+    tgwo:weapon "Silver sword" .
+
