@@ -1,0 +1,55 @@
+# ============================================
+# TESTS POUR L'INTERFACE DONNÉES LIÉES
+# ============================================
+
+# 1. Vérifier la distinction page/ressource
+PREFIX schema: <http://schema.org/>
+
+SELECT ?page ?entity ?pageName ?entityName WHERE {
+  ?page a schema:WebPage ;
+        schema:about ?entity ;
+        schema:name ?pageName .
+
+  ?entity schema:name ?entityName .
+
+  FILTER(CONTAINS(STR(?page), "/page/") && CONTAINS(STR(?entity), "/resource/"))
+}
+LIMIT 10
+
+# 2. Entités avec le plus de liens (bonnes pour la démo)
+SELECT ?entity ?name (COUNT(?link) AS ?linkCount) WHERE {
+  ?entity schema:name ?name ;
+          schema:relatedTo ?link .
+}
+GROUP BY ?entity ?name
+ORDER BY DESC(?linkCount)
+LIMIT 15
+
+# 3. Vérifier la négociation de contenu (pas vraiment SPARQL, mais utile)
+# Ces URIs devraient être déréférençables :
+SELECT ?entity ?name WHERE {
+  ?entity a schema:Person ;
+          schema:name ?name .
+  FILTER(CONTAINS(?name, "Gandalf") || CONTAINS(?name, "Frodo") || CONTAINS(?name, "Aragorn"))
+}
+
+# 4. Toutes les propriétés d'une entité spécifique (pour tester l'interface)
+SELECT ?property ?value WHERE {
+  <http://tolkiengateway.net/resource/Gandalf> ?property ?value .
+}
+ORDER BY ?property
+
+# 5. Liens entrants et sortants (pour l'interface Linked Data)
+SELECT ?incoming ?property ?outgoing WHERE {
+  {
+    # Liens sortants
+    <http://tolkiengateway.net/resource/Gandalf> ?property ?outgoing .
+    BIND("outgoing" AS ?direction)
+  }
+  UNION
+  {
+    # Liens entrants
+    ?incoming ?property <http://tolkiengateway.net/resource/Gandalf> .
+    BIND("incoming" AS ?direction)
+  }
+}

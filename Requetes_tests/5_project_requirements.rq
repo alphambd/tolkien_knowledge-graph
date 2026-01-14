@@ -1,0 +1,59 @@
+# ============================================
+# VÉRIFICATION DES EXIGENCES DU PROJET
+# ============================================
+
+# EXIGENCE 1: "Chaque page doit correspondre à une entité"
+SELECT (COUNT(?page) AS ?totalPages) (COUNT(DISTINCT ?entity) AS ?linkedEntities) WHERE {
+  ?page a schema:WebPage ;
+        schema:about ?entity .
+}
+
+# EXIGENCE 2: "Étiquettes dans plusieurs langues"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?entity ?name (GROUP_CONCAT(DISTINCT LANG(?label); SEPARATOR=", ") AS ?languages) WHERE {
+  ?entity a schema:Person ;
+          schema:name ?name ;
+          rdfs:label ?label .
+}
+GROUP BY ?entity ?name
+HAVING (COUNT(DISTINCT LANG(?label)) >= 2)
+LIMIT 10
+
+# EXIGENCE 3: "Liens vers d'autres KG (DBpedia/YAGO)"
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?entity ?name (COUNT(?external) AS ?externalLinks) WHERE {
+  ?entity a schema:Person ;
+          schema:name ?name ;
+          owl:sameAs ?external .
+  FILTER(CONTAINS(STR(?external), "dbpedia") || CONTAINS(STR(?external), "yago"))
+}
+GROUP BY ?entity ?name
+ORDER BY DESC(?externalLinks)
+LIMIT 10
+
+# EXIGENCE 4: "Facts implicites" (inférence avec sameAs)
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <http://schema.org/>
+
+SELECT DISTINCT ?entity ?name ?externalProperty ?externalValue WHERE {
+  ?entity a schema:Person ;
+          schema:name ?name ;
+          owl:sameAs ?external .
+
+  # Propriétés de l'entité externe (fait "implicite" pour notre KG)
+  ?external ?externalProperty ?externalValue .
+
+  FILTER(CONTAINS(STR(?external), "dbpedia"))
+
+  # S'assurer que cette propriété n'existe pas déjà dans notre KG
+  FILTER NOT EXISTS {
+    ?entity ?externalProperty ?externalValue .
+  }
+}
+LIMIT 15
+
+# EXIGENCE 5: "Accessible via SPARQL endpoint" -> Test de connexion
+# (Cette requête prouve que le endpoint fonctionne)
+SELECT "SPARQL endpoint is working!" AS ?test WHERE {
+  BIND("✓" AS ?dummy)
+}

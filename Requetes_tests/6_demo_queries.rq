@@ -1,0 +1,137 @@
+# ============================================
+# REQUÊTES IMPRESSIONNANTES POUR LA DÉMO
+# ============================================
+
+# 1. "L'arbre de la connaissance" - Hiérarchie complète
+PREFIX schema: <http://schema.org/>
+PREFIX tgwo: <http://tolkiengateway.net/ontology/>
+
+SELECT ?character ?name ?card ?location ?event WHERE {
+  ?character a schema:Person ;
+             schema:name ?name .
+
+  OPTIONAL {
+    ?character tgwo:hasCardRepresentation ?card .
+  }
+
+  OPTIONAL {
+    ?character schema:birthPlace ?location .
+    ?location a schema:Place .
+  }
+
+  OPTIONAL {
+    ?character schema:performerIn ?event .
+    ?event a schema:Event .
+  }
+
+  FILTER(CONTAINS(LCASE(?name), "gandalf") ||
+         CONTAINS(LCASE(?name), "aragorn") ||
+         CONTAINS(LCASE(?name), "frodo"))
+}
+
+# 2. "Réseau social" de la Terre du Milieu
+PREFIX schema: <http://schema.org/>
+PREFIX tgwo: <http://tolkiengateway.net/ontology/>
+
+SELECT ?character1 ?name1 ?character2 ?name2 ?relationship WHERE {
+  ?character1 a schema:Person ;
+              schema:name ?name1 .
+
+  ?character2 a schema:Person ;
+              schema:name ?name2 .
+
+  # Différents types de relations
+  {
+    ?character1 schema:spouse ?character2 .
+    BIND("spouse" AS ?relationship)
+  }
+  UNION
+  {
+    ?character1 schema:parent ?character2 .
+    BIND("parent" AS ?relationship)
+  }
+  UNION
+  {
+    ?character1 schema:sibling ?character2 .
+    BIND("sibling" AS ?relationship)
+  }
+  UNION
+  {
+    ?character1 tgwo:allyOf ?character2 .
+    BIND("ally" AS ?relationship)
+  }
+
+  FILTER(?character1 != ?character2)
+}
+ORDER BY ?name1 ?relationship
+LIMIT 20
+
+# 3. "Cartes collection" - Vue complète
+PREFIX tgwo: <http://tolkiengateway.net/ontology/>
+PREFIX schema: <http://schema.org/>
+
+SELECT ?card ?cardName ?character ?characterName ?expansion ?cardType WHERE {
+  ?card a tgwo:Card ;
+        schema:name ?cardName ;
+        tgwo:expansion ?expansion ;
+        tgwo:cardType ?cardType .
+
+  OPTIONAL {
+    ?card tgwo:representsEntity ?character .
+    ?character a schema:Person ;
+               schema:name ?characterName .
+  }
+}
+ORDER BY ?expansion ?cardName
+LIMIT 25
+
+# 4. "Voyage dans le temps" - Chronologie
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?character ?name ?birth ?death ?age WHERE {
+  ?character a schema:Person ;
+             schema:name ?name ;
+             schema:birthDate ?birth .
+
+  OPTIONAL {
+    ?character schema:deathDate ?death .
+  }
+
+  # Essayer d'extraire l'année (simple)
+  BIND(REPLACE(?birth, ".*([0-9]{4}).*", "$1") AS ?birthYear)
+  BIND(REPLACE(?death, ".*([0-9]{4}).*", "$1") AS ?deathYear)
+
+  # Calcul d'âge approximatif
+  BIND(IF(BOUND(?deathYear) && ?deathYear != "",
+          xsd:integer(?deathYear) - xsd:integer(?birthYear),
+          "Alive") AS ?age)
+}
+ORDER BY ?birthYear
+LIMIT 15
+
+# 5. "Multivers" - Connexions entre KG
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <http://schema.org/>
+
+SELECT ?localName ?localProperty ?localValue ?externalKG ?externalProperty ?externalValue WHERE {
+  # Entités avec alignements
+  ?localEntity a schema:Person ;
+               schema:name ?localName ;
+               owl:sameAs ?externalEntity .
+
+  # Propriétés locales
+  ?localEntity ?localProperty ?localValue .
+
+  # Propriétés externes (simulées - en vrai besoin d'un SERVICE)
+  BIND(IF(CONTAINS(STR(?externalEntity), "dbpedia"), "DBpedia",
+         IF(CONTAINS(STR(?externalEntity), "yago"), "YAGO", "Other")) AS ?externalKG)
+
+  # Pour la démo, on simule des propriétés externes
+  BIND(CONCAT("external_", STR(?localProperty)) AS ?externalProperty)
+  BIND(CONCAT("value_from_", ?externalKG) AS ?externalValue)
+
+  FILTER(CONTAINS(LCASE(?localName), "elrond") ||
+         CONTAINS(LCASE(?localName), "galadriel"))
+}
+LIMIT 10

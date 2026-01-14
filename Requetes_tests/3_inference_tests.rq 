@@ -1,0 +1,58 @@
+# ============================================
+# TESTS D'INFÉRENCE RDFS
+# ============================================
+
+# IMPORTANT : À exécuter AVEC l'inférence activée dans Fuseki
+# (Bouton "Inference" -> "RDFS" dans l'interface web)
+
+# 1. Vérifier que Character → Person est inféré
+PREFIX schema: <http://schema.org/>
+PREFIX tgwo: <http://tolkiengateway.net/ontology/>
+
+SELECT ?character ?name WHERE {
+  ?character a tgwo:Character ;
+             schema:name ?name .
+  # Cette requête devrait aussi retourner les résultats
+  # même si ?character n'est pas explicitement schema:Person
+  ?character a schema:Person .
+}
+LIMIT 10
+
+# 2. Test de transitivité (si tu as une hiérarchie)
+# Exemple : Wizard → Character → Person
+PREFIX tgwo: <http://tolkiengateway.net/ontology/>
+PREFIX schema: <http://schema.org/>
+
+SELECT ?wizard ?name WHERE {
+  ?wizard a tgwo:Wizard ;
+          schema:name ?name .
+  ?wizard a schema:Person .  # Devrait être inféré
+}
+
+# 3. Inférence de propriétés (si rdfs:subPropertyOf)
+PREFIX schema: <http://schema.org/>
+PREFIX tgwo: <http://tolkiengateway.net/ontology/>
+
+# Si tgwo:bornIn rdfs:subPropertyOf schema:birthPlace
+SELECT ?character ?location WHERE {
+  ?character a schema:Person ;
+             tgwo:bornIn ?location .
+  # Devrait aussi matcher avec schema:birthPlace
+  ?character schema:birthPlace ?location .
+}
+
+# 4. Test d'inférence avec owl:sameAs
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <http://schema.org/>
+
+# Trouver toutes les propriétés de Gandalf via sameAs
+SELECT ?property ?value WHERE {
+  # Gandalf dans ton KG
+  <http://tolkiengateway.net/resource/Gandalf> owl:sameAs ?external .
+
+  # Union : propriétés locales OU propriétés de l'entité externe
+  { <http://tolkiengateway.net/resource/Gandalf> ?property ?value }
+  UNION
+  { ?external ?property ?value }
+}
+LIMIT 20

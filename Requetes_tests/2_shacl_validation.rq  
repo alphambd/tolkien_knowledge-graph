@@ -1,0 +1,48 @@
+# ============================================
+# VÉRIFICATION MANUELLE DES CONTRAINTES SHACL
+# ============================================
+
+# 1. Personnages sans nom (violation sh:minCount)
+PREFIX schema: <http://schema.org/>
+SELECT ?character WHERE {
+  ?character a schema:Person .
+  FILTER NOT EXISTS { ?character schema:name ?name }
+}
+
+# 2. Personnages avec trop de noms (>3 = violation sh:maxCount)
+SELECT ?character (COUNT(?name) AS ?nameCount) WHERE {
+  ?character a schema:Person ;
+             schema:name ?name .
+}
+GROUP BY ?character
+HAVING (COUNT(?name) > 3)
+
+# 3. Cartes sans ID valide (pattern AS-100)
+PREFIX tgwo: <http://tolkiengateway.net/ontology/>
+SELECT ?card ?cardId WHERE {
+  ?card a tgwo:Card ;
+        tgwo:cardId ?cardId .
+  FILTER (!REGEX(?cardId, "^[A-Z]{2}-[0-9]+$"))
+}
+
+# 4. Pages sans lien 'about' (violation WebPageShape)
+PREFIX schema: <http://schema.org/>
+SELECT ?page WHERE {
+  ?page a schema:WebPage .
+  FILTER NOT EXISTS { ?page schema:about ?entity }
+}
+
+# 5. Liens 'about' qui ne pointent pas vers des IRI
+SELECT ?page ?about WHERE {
+  ?page a schema:WebPage ;
+        schema:about ?about .
+  FILTER (!isIRI(?about))
+}
+
+# 6. Vérification des valeurs de genre (doit être Male/Female)
+PREFIX schema: <http://schema.org/>
+SELECT ?character ?gender WHERE {
+  ?character a schema:Person ;
+             schema:gender ?gender .
+  FILTER (?gender != "Male" && ?gender != "Female")
+}

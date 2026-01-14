@@ -1,0 +1,70 @@
+# ============================================
+# 1. COMPTAGE DE BASE
+# ============================================
+
+# Combien de triples au total ?
+SELECT (COUNT(*) AS ?totalTriples) WHERE {
+  ?s ?p ?o .
+}
+
+# Combien d'entités différentes ?
+SELECT (COUNT(DISTINCT ?s) AS ?totalEntities) WHERE {
+  ?s ?p ?o .
+}
+
+# Distribution des types RDF
+SELECT ?type (COUNT(?entity) AS ?count) WHERE {
+  ?entity a ?type .
+}
+GROUP BY ?type
+ORDER BY DESC(?count)
+LIMIT 20
+
+# ============================================
+# 2. PERSONNAGES
+# ============================================
+
+# Tous les personnages avec leurs noms
+PREFIX schema: <http://schema.org/>
+SELECT ?character ?name WHERE {
+  ?character a schema:Person ;
+             schema:name ?name .
+}
+ORDER BY ?name
+LIMIT 20
+
+# Personnages par race
+PREFIX tgwo: <http://tolkiengateway.net/ontology/>
+SELECT ?race (COUNT(?char) AS ?count) WHERE {
+  ?char a schema:Person ;
+        tgwo:race ?race .
+}
+GROUP BY ?race
+ORDER BY DESC(?count)
+
+# ============================================
+# 3. LIEUX
+# ============================================
+
+# Tous les lieux avec hiérarchie
+PREFIX schema: <http://schema.org/>
+SELECT ?place ?name ?containedIn WHERE {
+  ?place a schema:Place ;
+         schema:name ?name .
+  OPTIONAL { ?place schema:containedInPlace ?containedIn }
+}
+ORDER BY ?name
+LIMIT 15
+
+# ============================================
+# 4. CARTES METW
+# ============================================
+
+# Cartes par expansion
+PREFIX tgwo: <http://tolkiengateway.net/ontology/>
+SELECT ?expansion (COUNT(?card) AS ?cardCount) WHERE {
+  ?card a tgwo:Card ;
+        tgwo:expansion ?expansion .
+}
+GROUP BY ?expansion
+ORDER BY ?expansion
