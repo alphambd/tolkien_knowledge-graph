@@ -489,7 +489,7 @@ function downloadTurtle() {
     // Générer le Turtle depuis les données de la page
     const entityName = "{{ entity_name }}";
     const entityUri = "{{ entity_uri }}";
-    const properties = "{{ properties|tojson|safe }}";
+    const properties = {{ properties|tojson|safe }};
 
     let turtleContent = `@prefix schema: <http://schema.org/> .
 @prefix tgo: <http://tolkiengateway.net/ontology/> .
