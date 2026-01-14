@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implicit Facts Discovery - Tolkien Knowledge Graph</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* REUSE YOUR EXISTING STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6572 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "🔍";
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section-title {
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: #3498db;
+        }
+
+        .queries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .query-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            border: 2px solid #e9ecef;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .query-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: #3498db;
+            background: white;
+        }
+
+        .query-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: #3498db;
+        }
+
+        .query-icon {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .query-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .query-desc {
+            color: #6c757d;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .query-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .result-count {
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .run-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .run-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .results-section {
+            margin-top: 40px;
+            display: none;
+        }
+
+        .results-container {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 20px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .results-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .results-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .results-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .results-table tr:hover {
+            background: #e8f4fc;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+        }
+
+        .loading i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #3498db;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 20px;
+            transition: all 0.2s;
+        }
+
+        .back-btn:hover {
+            background: #5a6268;
+            text-decoration: none;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .explanation {
+            background: #fff8e1;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid #ffb300;
+        }
+
+        .explanation h3 {
+            color: #e65100;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #7f8c8d;
+            border-top: 1px solid #ecf0f1;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .queries-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Implicit Facts Discovery</h1>
+            <p class="subtitle">Discover hidden relationships and connections in the Tolkien Knowledge Graph</p>
+        </header>
+
+        <div class="content">
+            
+
+            <h2 class="section-title"><i class="fas fa-search"></i> Available Discovery Queries</h2>
+            <p style="color: #666; margin-bottom: 20px;">Click on any query to discover implicit facts:</p>
+
+            <div class="queries-grid">
+                <!-- Family Relationships -->
+                <div class="query-card" onclick="runQuery('family_relationships')">
+                    <div class="query-icon">
+                        <i class="fas fa-family"></i>
+                    </div>
+                    <div class="query-title">Family Relationships</div>
+                    <div class="query-desc">
+                        Discover parent-child relationships and infer grandparent connections.
+                        Shows both explicit family ties and implicit multigenerational links.
+                    </div>
+                    <div class="query-stats">
+                        <span class="result-count" id="count-family">0 results</span>
+                        <button class="run-btn">Run Query</button>
+                    </div>
+                </div>
+
+                <!-- Multilingual Entities -->
+                <div class="query-card" onclick="runQuery('multilingual_entities')">
+                    <div class="query-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="query-title">Multilingual Entities</div>
+                    <div class="query-desc">
+                        Find characters with names in multiple languages (English, French, Spanish, German, Italian).
+                        Shows international representation of Tolkien's characters.
+                    </div>
+                    <div class="query-stats">
+                        <span class="result-count" id="count-multilingual">0 results</span>
+                        <button class="run-btn">Run Query</button>
+                    </div>
+                </div>
+
+                <!-- Transitive Connections -->
+                <div class="query-card" onclick="runQuery('transitive_connections')">
+                    <div class="query-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="query-title">Transitive Connections</div>
+                    <div class="query-desc">
+                        Discover indirect relationships: if A is related to B, and B to C, then A is indirectly connected to C.
+                        Reveals hidden networks in Middle-earth.
+                    </div>
+                    <div class="query-stats">
+                        <span class="result-count" id="count-transitive">0 results</span>
+                        <button class="run-btn">Run Query</button>
+                    </div>
+                </div>
+
+                <!-- Type Inheritance 
+                <div class="query-card" onclick="runQuery('type_inheritance')">
+                    <div class="query-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <div class="query-title">Type Inheritance</div>
+                    <div class="query-desc">
+                        Explore the class hierarchy: which entities inherit properties from parent classes.
+                        Shows how schema.org classes are specialized for Tolkien's world.
+                    </div>
+                    <div class="query-stats">
+                        <span class="result-count" id="count-inheritance">0 results</span>
+                        <button class="run-btn">Run Query</button>
+                    </div>
+                </div>
+                -->
+                
+                <!-- Most Described
+                <div class="query-card" onclick="runQuery('most_described')">
+                    <div class="query-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="query-title">Most Described Characters</div>
+                    <div class="query-desc">
+                        Find which characters have the most properties in the knowledge graph.
+                        Shows the richness of information for each character.
+                    </div>
+                    <div class="query-stats">
+                        <span class="result-count" id="count-described">0 results</span>
+                        <button class="run-btn">Run Query</button>
+                    </div>
+                </div>
+                -->
+            </div>
+            
+
+            <!-- Results Section -->
+            <div id="resultsSection" class="results-section">
+                <h2 class="section-title">
+                    <i class="fas fa-list"></i> 
+                    <span id="resultsTitle">Query Results</span>
+                    <span style="font-size: 0.9rem; color: #7f8c8d; margin-left: auto;" id="resultsCount"></span>
+                </h2>
+                
+                <div id="loading" class="loading" style="display: none;">
+                    <i class="fas fa-spinner"></i>
+                    <p>Discovering implicit facts...</p>
+                </div>
+                
+                <div id="resultsContainer" class="results-container">
+                    <!-- Results will be inserted here -->
+                </div>
+                
+                <a href="javascript:void(0)" onclick="hideResults()" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Queries
+                </a>
+            </div>
+
+            <div class="explanation">
+                <h3><i class="fas fa-lightbulb"></i> What are Implicit Facts?</h3>
+                <p>Implicit facts are relationships and information that are not directly stored in the graph but can be <strong>inferred</strong> from existing data. For example:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>If A is parent of B, and B is parent of C → A is grandparent of C</li>
+                    <li>If X is connected to Y, and Y to Z → X is indirectly connected to Z</li>
+                    <li>Characters with names in multiple languages</li>
+                    <li>Type inheritance chains</li>
+                </ul>
+            </div>
+
+
+            <div style="margin-top: 40px; padding: 20px; background: #e8f4fc; border-radius: 10px;">
+                <h3 style="color: #2c3e50; margin-bottom: 10px;">
+                    <i class="fas fa-info-circle"></i> Technical Details
+                </h3>
+                <p style="color: #666; line-height: 1.6;">
+                    These queries use <strong>SPARQL 1.1</strong> with property paths and inference capabilities.
+                    The data is fetched from the Fuseki triplestore using the 
+                    <code>http://localhost:3030/tolkienKG/sparql</code> endpoint.
+                    Implicit facts are computed at query time, demonstrating the power of semantic reasoning.
+                </p>
+            </div>
+
+
+            <a href="/" class="back-btn" style="background: #3498db;">
+                <i class="fas fa-home"></i> Back to Home
+            </a>
+        </div>
+
+        <footer>
+            <p>Semantic Web Project - Tolkien Gateway Knowledge Graph</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                Implicit Facts Discovery | Built with Flask & SPARQL
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Store query descriptions
+        const queryTitles = {
+            'family_relationships': 'Family Relationships',
+            'multilingual_entities': 'Multilingual Entities', 
+            'transitive_connections': 'Transitive Connections',
+            'type_inheritance': 'Type Inheritance',
+            'most_described': 'Most Described Characters'
+        };
+
+        // Store query descriptions
+        const queryDescriptions = {
+            'family_relationships': 'Parent-child and grandparent relationships inferred from the graph.',
+            'multilingual_entities': 'Characters with names in multiple languages.',
+            'transitive_connections': 'Indirect connections through relatedTo property.',
+            'type_inheritance': 'Class hierarchy and inheritance chains.',
+            'most_described': 'Characters with the most properties in the graph.'
+        };
+
+        async function runQuery(queryName) {
+            // Show loading
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('resultsContainer').innerHTML = '';
+            document.getElementById('resultsSection').style.display = 'block';
+            
+            // Set title
+            document.getElementById('resultsTitle').textContent = queryTitles[queryName];
+            
+            // Scroll to results
+            document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+            
+            try {
+                // Fetch results
+                const response = await fetch(`/api/implicit-facts/${queryName}`);
+                const data = await response.json();
+                
+                // Hide loading
+                document.getElementById('loading').style.display = 'none';
+                
+                if (data.results && data.results.bindings) {
+                    const bindings = data.results.bindings;
+                    const vars = data.head.vars;
+                    
+                    // Update count
+                    document.getElementById('resultsCount').textContent = `${bindings.length} results`;
+                    
+                    // Create table
+                    let html = `
+                        <div style="margin-bottom: 20px; color: #666; font-size: 0.95rem;">
+                            <i class="fas fa-info-circle"></i> ${queryDescriptions[queryName]}
+                        </div>
+                        <table class="results-table">
+                            <thead>
+                                <tr>
+                    `;
+                    
+                    // Headers
+                    vars.forEach(v => {
+                        html += `<th>${v.replace(/([A-Z])/g, ' $1').trim()}</th>`;
+                    });
+                    
+                    html += `</tr></thead><tbody>`;
+                    
+                    // Rows
+                    bindings.forEach(row => {
+                        html += `<tr>`;
+                        vars.forEach(v => {
+                            if (row[v]) {
+                                const value = row[v].value;
+                                let displayValue = value;
+                                
+                                // Format URIs
+                                if (row[v].type === 'uri') {
+                                    if (value.includes('tolkiengateway.net/resource/')) {
+                                        const entityName = value.split('/').pop().replace(/_/g, ' ');
+                                        displayValue = `<a href="/resource/${entityName.replace(/ /g, '_')}" 
+                                            style="color: #3498db; text-decoration: none; font-weight: 500;">
+                                            ${entityName}
+                                        </a>`;
+                                    } else if (value.includes('schema.org/')) {
+                                        displayValue = `<span style="color: #9b59b6;">schema:${value.split('/').pop()}</span>`;
+                                    } else {
+                                        displayValue = `<span style="color: #666; font-family: monospace; font-size: 0.9em;">
+                                            ${value.length > 40 ? value.substring(0, 40) + '...' : value}
+                                        </span>`;
+                                    }
+                                } else {
+                                    // Literal values
+                                    displayValue = value;
+                                    if (value.length > 50) {
+                                        displayValue = value.substring(0, 50) + '...';
+                                    }
+                                }
+                                
+                                html += `<td>${displayValue}</td>`;
+                            } else {
+                                html += `<td style="color: #ccc;">-</td>`;
+                            }
+                        });
+                        html += `</tr>`;
+                    });
+                    
+                    html += `</tbody></table>`;
+                    
+                    if (bindings.length === 0) {
+                        html = `
+                            <div style="text-align: center; padding: 40px; color: #7f8c8d;">
+                                <i class="fas fa-inbox" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                                <h3>No Results Found</h3>
+                                <p>This query didn't find any implicit facts.</p>
+                            </div>
+                        `;
+                    }
+                    
+                    document.getElementById('resultsContainer').innerHTML = html;
+                    
+                    // Update count in the card
+                    document.getElementById(`count-${queryName.split('_')[0]}`).textContent = 
+                        `${bindings.length} results`;
+                        
+                } else {
+                    document.getElementById('resultsContainer').innerHTML = `
+                        <div style="text-align: center; padding: 40px; color: #dc3545;">
+                            <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                            <h3>Error Loading Results</h3>
+                            <p>${data.error || 'Unknown error'}</p>
+                        </div>
+                    `;
+                }
+                
+            } catch (error) {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('resultsContainer').innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #dc3545;">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                        <h3>Connection Error</h3>
+                        <p>Could not connect to the SPARQL endpoint.</p>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        function hideResults() {
+            document.getElementById('resultsSection').style.display = 'none';
+            document.getElementById('resultsContainer').innerHTML = '';
+        }
+
+        // Load initial counts on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // You could pre-load counts here if desired
+            // For now, we'll load them when queries are run
+        });
+    </script>
+</body>
+</html>
