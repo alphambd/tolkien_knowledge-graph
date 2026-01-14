@@ -70,7 +70,7 @@ def extract_wikipedia_title(url):
 def main():
     """Fonction principale"""
 
-    # Liste de test (5 personnages pour la démo)
+    # Liste de test (5 personnages pour la démonstation)
     test_characters = ["Elrond", "Gandalf", "Aragorn", "Galadriel", "Sauron"]
 
     g = Graph()
@@ -105,7 +105,7 @@ def main():
             print(f"    Aucun lien Wikipedia trouvé")
             continue
 
-        # 3. Prendre le premier lien Wikipedia (le plus pertinent)
+
         wiki_url = wikipedia_links[0]
         wiki_title = extract_wikipedia_title(wiki_url)
 

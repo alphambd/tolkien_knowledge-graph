@@ -123,7 +123,7 @@ def get_all_wiki_pages(limit=None):
                 continue_params = {"apcontinue": data["continue"]["apcontinue"]}
                 time.sleep(0.3)  # Be polite to the API
             else:
-                break  # No more pages
+                break
 
             # Stop if we reached the limit (for testing)
             if limit and page_count >= limit:
@@ -141,7 +141,7 @@ def get_all_wiki_pages(limit=None):
 # FUNCTION 3: Create URIs
 # ---------------------------
 
-def create_page_uri(title):# À METTRE À LA PLACE :
+def create_page_uri(title):#  À LA PLACE :
     """Create URI for the wiki page (schema:WebPage)."""
     safe = safe_uri_name(title)
     return URIRef(f"http://tolkiengateway.net/page/{safe}")  #
@@ -208,8 +208,8 @@ def main():
     print("=" * 70)
 
     # Ask user for limit (for testing)
-    print("\n  WARNING: Tolkien Gateway has ~15,000 pages.")
-    #print("   This will take 5-10 minutes to fetch all pages.")
+    print("\n WARNING: Tolkien Gateway has ~15,000 pages.")
+    #print("This will take 5-10 minutes to fetch all pages.")
 
     test_mode = input("Run in test mode? (y/n): ").lower()
 
@@ -298,27 +298,27 @@ def main():
         return
 
     # Step 5: Send to Fuseki
-    print(f"\n STEP 5: Sending to Fuseki server...")
+    #print(f"\n STEP 5: Sending to Fuseki server...")
     send_success = send_to_fuseki(g, OUTPUT_FILE)
 
     # Final summary
-    print("\n" + "=" * 70)
-    print("SUMMARY")
-    print("=" * 70)
-    print(f"Pages processed: {len(all_pages)}")
-    print(f"Triples created: {triples_count}")
-    print(f"Output file: {OUTPUT_FILE}")
+    #print("\n" + "=" * 70)
+    #print("SUMMARY")
+    #print("=" * 70)
+    #print(f"Pages processed: {len(all_pages)}")
+    #print(f"Triples created: {triples_count}")
+    #print(f"Output file: {OUTPUT_FILE}")
 
-    if send_success:
-        print("Fuseki:  Data successfully uploaded")
-        print("\nYou can now query Fuseki with:")
-        print("  http://localhost:3030/tolkienKG")
-    else:
-        print("Fuseki:   Data saved locally but not sent to Fuseki")
+    #if send_success:
+        #print("Fuseki:  Data successfully uploaded")
+        #print("\nYou can now query Fuseki with:")
+        #print("  http://localhost:3030/tolkienKG")
+    #else:
+        #print("Fuseki:   Data saved locally but not sent to Fuseki")
 
-    print("\n" + "=" * 70)
-    print("DONE!")
-    print("=" * 70)
+    #print("\n" + "=" * 70)
+    #print("DONE!")
+    #print("=" * 70)
 
 
 # ---------------------------

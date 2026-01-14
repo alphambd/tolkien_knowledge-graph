@@ -1,0 +1,2754 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://schema.org/Book> rdfs:label "Book" .
+
+<http://schema.org/CreativeWork> rdfs:label "Chapter" .
+
+<http://schema.org/Event> rdfs:label "Event" .
+
+<http://schema.org/Game> rdfs:label "Game" .
+
+<http://schema.org/MediaObject> rdfs:label "Media" .
+
+<http://schema.org/Movie> rdfs:label "Film" .
+
+<http://schema.org/MusicAlbum> rdfs:label "Album" .
+
+<http://schema.org/MusicComposition> rdfs:label "Song" .
+
+<http://schema.org/Organization> rdfs:label "Organization" .
+
+<http://schema.org/Periodical> rdfs:label "Journal" .
+
+<http://schema.org/Person> rdfs:label "Character",
+        "Race" .
+
+<http://schema.org/Place> rdfs:label "Location" .
+
+<http://schema.org/Product> rdfs:label "Item" .
+
+<http://schema.org/WebSite> rdfs:label "Website" .
+
+<http://tolkiengateway.net/ontology/category> rdfs:label "category" .
+
+<http://tolkiengateway.net/ontology/eyeColor> rdfs:label "eye color" .
+
+<http://tolkiengateway.net/ontology/hairColor> rdfs:label "hair color" .
+
+<http://tolkiengateway.net/ontology/race> rdfs:label "race" .
+
+<http://tolkiengateway.net/ontology/realm> rdfs:label "realm" .
+
+<http://tolkiengateway.net/ontology/usesTemplate> rdfs:label "uses template" .
+
+<http://tolkiengateway.net/resource/Adalbert_Bolger> rdfs:label "Adalbert Bolger"@en,
+        "Adalbert Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Adaldrida_Bolger> rdfs:label "Adaldrida Bolger"@en,
+        "Adaldrida Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Adalgar_Bolger> rdfs:label "Adalgar Bolger"@en,
+        "Adalgar Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Adalgrim_Took> rdfs:label "Adalgrim Took"@en,
+        "Adalgrim Took"@fr .
+
+<http://tolkiengateway.net/resource/Adam_Hornblower> rdfs:label "Adam Hornblower"@en,
+        "Adam Hornblower"@fr .
+
+<http://tolkiengateway.net/resource/Adamanta_Chubb> rdfs:label "Adamanta Chubb"@en,
+        "Adamanta Chubb"@fr .
+
+<http://tolkiengateway.net/resource/Adelard_Took> rdfs:label "Adelard Took"@en,
+        "Adelard Took"@fr .
+
+<http://tolkiengateway.net/resource/Adrahil> rdfs:label "Adrahil"@en,
+        "Adrahil"@fr .
+
+<http://tolkiengateway.net/resource/Aerin> rdfs:label "Aerin"@en,
+        "Aerin"@fr,
+        "encyclo/personnages/hommes/1a/peuple de hador/aerin"@fr .
+
+<http://tolkiengateway.net/resource/Aghan> rdfs:label "Aghan"@en,
+        "Aghan"@fr .
+
+<http://tolkiengateway.net/resource/Aglahad> rdfs:label "Aglahad"@en,
+        "Aglahad"@fr .
+
+<http://tolkiengateway.net/resource/Ainur> rdfs:label "Ainur"@en,
+        "Ainur"@fr,
+        "encyclo/peuples/ainur/ainur"@fr .
+
+<http://tolkiengateway.net/resource/Alan_Bliss> rdfs:label "Alan Bliss"@en,
+        "Alan Bliss"@fr .
+
+<http://tolkiengateway.net/resource/Alan_Gutierrez> rdfs:label "Alan Gutierrez"@en,
+        "Alan Gutierrez"@fr .
+
+<http://tolkiengateway.net/resource/Alan_Howard> rdfs:label "Alan Howard"@en,
+        "Alan Howard"@fr .
+
+<http://tolkiengateway.net/resource/Alan_Lee> rdfs:label "Alan Lee"@en,
+        "Alan Lee"@fr .
+
+<http://tolkiengateway.net/resource/Alan_Rabinowitz> rdfs:label "Alan Rabinowitz"@en,
+        "Alan Rabinowitz"@fr .
+
+<http://tolkiengateway.net/resource/Aldamir> rdfs:label "Aldamir"@en,
+        "Aldamir"@fr .
+
+<http://tolkiengateway.net/resource/Aldor> rdfs:label "Aldor"@en,
+        "Aldor"@fr .
+
+<http://tolkiengateway.net/resource/Alex_Lewis> rdfs:label "Alex Lewis"@en,
+        "Alex Lewis"@fr .
+
+<http://tolkiengateway.net/resource/Alfrida_of_the_Yale> rdfs:label "Alfrida"@en,
+        "Alfrida"@fr .
+
+<http://tolkiengateway.net/resource/Algund> rdfs:label "Algund"@en,
+        "Algund"@fr,
+        "encyclo/personnages/hommes/1a/peuple de hador/algund"@fr .
+
+<http://tolkiengateway.net/resource/Almiel> rdfs:label "Almiel"@en,
+        "Almiel"@fr,
+        "encyclo/personnages/hommes/2a/numenoreens/almiel"@fr .
+
+<http://tolkiengateway.net/resource/Alphros> rdfs:label "Alphros"@en,
+        "Alphros"@fr .
+
+<http://tolkiengateway.net/resource/Amaranth_Brandybuck> rdfs:label "Amaranth Brandybuck"@en,
+        "Amaranth Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Amarië> rdfs:label "Amarië"@en,
+        "Amarië"@fr,
+        "encyclo/personnages/elfes/vanyar/amarie"@fr .
+
+<http://tolkiengateway.net/resource/Amethyst_Hornblower> rdfs:label "Amethyst Hornblower"@en,
+        "Amethyst Hornblower"@fr .
+
+<http://tolkiengateway.net/resource/Amlach> rdfs:label "Amlach"@en,
+        "Amlach"@fr,
+        "encyclo/personnages/hommes/1a/peuple de hador/amlach"@fr .
+
+<http://tolkiengateway.net/resource/Amlaith> rdfs:label "Amlaith"@en,
+        "Amlaith"@fr .
+
+<http://tolkiengateway.net/resource/Amroth> rdfs:label "Amroth"@en,
+        "Amroth"@fr .
+
+<http://tolkiengateway.net/resource/Amrothos> rdfs:label "Amrothos"@en,
+        "Amrothos"@fr .
+
+<http://tolkiengateway.net/resource/Anairë> rdfs:label "Anairë"@en,
+        "Anairë"@fr,
+        "encyclo/personnages/elfes/noldor/anaire"@fr .
+
+<http://tolkiengateway.net/resource/Anar> rdfs:label "Anar"@en,
+        "Anar"@fr .
+
+<http://tolkiengateway.net/resource/Anardil> rdfs:label "Anardil"@en,
+        "Anardil"@fr .
+
+<http://tolkiengateway.net/resource/Anborn> rdfs:label "Anborn"@en,
+        "Anborn"@fr .
+
+<http://tolkiengateway.net/resource/Andróg> rdfs:label "Andróg"@en,
+        "Andróg"@fr,
+        "encyclo:personnages:hommes:1a:peuple de hador:androg"@fr .
+
+<http://tolkiengateway.net/resource/Andwise_Roper> rdfs:label "Andwise Roper"@en,
+        "Andwise Roper"@fr .
+
+<http://tolkiengateway.net/resource/Andy_Serkis> rdfs:label "Andy Serkis"@en,
+        "Andy Serkis"@fr .
+
+<http://tolkiengateway.net/resource/Angamaitë> rdfs:label "Angamaite"@de,
+        "Angamaitë"@en,
+        "Angamaitë"@fr,
+        "encyclo:personnages:hommes:3a:dunedain:angamaite"@fr .
+
+<http://tolkiengateway.net/resource/Angbor> rdfs:label "Angbor"@en,
+        "Angbor"@fr .
+
+<http://tolkiengateway.net/resource/Angelica_Baggins> rdfs:label "Angelica Baggins"@en,
+        "Angelica Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Angelimir> rdfs:label "Angelimir"@en,
+        "Angelimir"@fr .
+
+<http://tolkiengateway.net/resource/Angelo_Montanini> rdfs:label "Angelo Montanini"@en,
+        "Angelo Montanini"@fr .
+
+<http://tolkiengateway.net/resource/Angus_McBride> rdfs:label "Angus McBride"@en,
+        "Angus McBride"@fr .
+
+<http://tolkiengateway.net/resource/Anke_Eißmann> rdfs:label "Anke Eißmann"@en,
+        "Anke Eißmann"@fr .
+
+<http://tolkiengateway.net/resource/Annael> rdfs:label "Annael"@en,
+        "Annael"@fr,
+        "encyclo/personnages/elfes/teleri/sindar/annael"@fr .
+
+<http://tolkiengateway.net/resource/Anne_C_Petty> rdfs:label "Anne C. Petty"@en,
+        "Anne C. Petty"@fr .
+
+<http://tolkiengateway.net/resource/Anson_Roper> rdfs:label "Anson Roper"@en,
+        "Anson Roper"@fr .
+
+<http://tolkiengateway.net/resource/António_Quadros> rdfs:label "António Quadros"@en,
+        "António Quadros"@fr .
+
+<http://tolkiengateway.net/resource/Arador> rdfs:label "Arador"@en,
+        "Arador"@fr .
+
+<http://tolkiengateway.net/resource/Araglas> rdfs:label "Araglas"@en,
+        "Araglas"@fr .
+
+<http://tolkiengateway.net/resource/Aragorn> rdfs:label "Aragorn"@de,
+        "Aragorn"@en,
+        "Aragorn"@es,
+        "Aragorn"@fr,
+        "Aragorn"@it .
+
+<http://tolkiengateway.net/resource/Aragorn_I> rdfs:label "Aragorn I"@en,
+        "Aragorn I"@fr .
+
+<http://tolkiengateway.net/resource/Aragost> rdfs:label "Aragost"@en,
+        "Aragost"@fr .
+
+<http://tolkiengateway.net/resource/Arahad_I> rdfs:label "Arahad I"@en,
+        "Arahad I"@fr .
+
+<http://tolkiengateway.net/resource/Arahad_II> rdfs:label "Arahad II"@en,
+        "Arahad II"@fr .
+
+<http://tolkiengateway.net/resource/Arahael> rdfs:label "Arahael"@en,
+        "Arahael"@fr .
+
+<http://tolkiengateway.net/resource/Aranarth> rdfs:label "Aranarth"@en,
+        "Aranarth"@fr .
+
+<http://tolkiengateway.net/resource/Arantar> rdfs:label "Arantar"@en,
+        "Arantar"@fr .
+
+<http://tolkiengateway.net/resource/Aranuir> rdfs:label "Aranuir"@en,
+        "Aranuir"@fr .
+
+<http://tolkiengateway.net/resource/Aranwë> rdfs:label "Aranwe"@de,
+        "Aranwë"@en,
+        "Aranwë"@fr,
+        "encyclo/personnages/elfes/noldor/aranwe"@fr .
+
+<http://tolkiengateway.net/resource/Araphant> rdfs:label "Araphant"@en,
+        "Araphant"@fr .
+
+<http://tolkiengateway.net/resource/Araphor> rdfs:label "Araphor"@en,
+        "Araphor"@fr .
+
+<http://tolkiengateway.net/resource/Arassuil> rdfs:label "Arassuil"@en,
+        "Arassuil"@fr .
+
+<http://tolkiengateway.net/resource/Aratan> rdfs:label "Aratan"@en,
+        "Aratan"@fr .
+
+<http://tolkiengateway.net/resource/Arathorn_I> rdfs:label "Arathorn I"@en,
+        "Arathorn I"@fr .
+
+<http://tolkiengateway.net/resource/Arathorn_II> rdfs:label "Arathorn II"@en,
+        "Arathorn II"@fr .
+
+<http://tolkiengateway.net/resource/Araval> rdfs:label "Araval"@en,
+        "Araval"@fr .
+
+<http://tolkiengateway.net/resource/Aravir> rdfs:label "Aravir"@en,
+        "Aravir"@fr .
+
+<http://tolkiengateway.net/resource/Aravorn> rdfs:label "Aravorn"@en,
+        "Aravorn"@fr .
+
+<http://tolkiengateway.net/resource/Arciryas> rdfs:label "Arciryas"@en,
+        "Arciryas"@fr .
+
+<http://tolkiengateway.net/resource/Argeleb_I> rdfs:label "Argeleb I"@en,
+        "Argeleb I"@fr .
+
+<http://tolkiengateway.net/resource/Argeleb_II> rdfs:label "Argeleb"@en,
+        "Argeleb"@fr .
+
+<http://tolkiengateway.net/resource/Argonui> rdfs:label "Argonui"@en,
+        "Argonui"@fr .
+
+<http://tolkiengateway.net/resource/Arne_Zettersten> rdfs:label "Arne Zettersten"@en,
+        "Arne Zettersten"@fr .
+
+<http://tolkiengateway.net/resource/Artamir> rdfs:label "Artamir"@en,
+        "Artamir"@fr .
+
+<http://tolkiengateway.net/resource/Arthur_Rankin_Jr> rdfs:label "Arthur Rankin, Jr."@en,
+        "Arthur Rankin, Jr."@fr .
+
+<http://tolkiengateway.net/resource/Arthur_Tolkien> rdfs:label "Arthur Tolkien"@en,
+        "Arthur Tolkien"@fr,
+        "tolkien/portraits/arthur reuel tolkien"@fr .
+
+<http://tolkiengateway.net/resource/Arvedui> rdfs:label "Arvedui"@en,
+        "Arvedui"@fr .
+
+<http://tolkiengateway.net/resource/Arvegil> rdfs:label "Arvegil"@en,
+        "Arvegil"@fr .
+
+<http://tolkiengateway.net/resource/Arveleg_I> rdfs:label "Arveleg I"@en,
+        "Arveleg I"@fr .
+
+<http://tolkiengateway.net/resource/Arveleg_II> rdfs:label "Arveleg II"@en,
+        "Arveleg II"@fr .
+
+<http://tolkiengateway.net/resource/Arwen> rdfs:label "Arwen"@en,
+        "Arwen"@fr .
+
+<http://tolkiengateway.net/resource/Asphodel_Brandybuck> rdfs:label "Asphodel Brandybuck"@en,
+        "Asphodel Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Astrid_Lindgren> rdfs:label "Astrid Lindgren"@en,
+        "Astrid Lindgren"@fr .
+
+<http://tolkiengateway.net/resource/Atanatar_I> rdfs:label "Atanatar I"@en,
+        "Atanatar I"@fr .
+
+<http://tolkiengateway.net/resource/Atanatar_II> rdfs:label "Atanatar II"@en,
+        "Atanatar II"@fr .
+
+<http://tolkiengateway.net/resource/Audrey_Corman> rdfs:label "Audrey Corman"@en,
+        "Audrey Corman"@fr .
+
+<http://tolkiengateway.net/resource/Avari> rdfs:label "Avari"@en,
+        "Avari"@fr,
+        "encyclo/peuples/elfes/avari"@fr .
+
+<http://tolkiengateway.net/resource/Azog> rdfs:label "Azog"@en,
+        "Azog"@fr .
+
+<http://tolkiengateway.net/resource/Bain> rdfs:label "Bain"@en,
+        "Bain"@fr .
+
+<http://tolkiengateway.net/resource/Balbo_Baggins> rdfs:label "Balbo Baggins"@en,
+        "Balbo Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Balchoth> rdfs:label "Balchoth"@en,
+        "Balchoth"@fr .
+
+<http://tolkiengateway.net/resource/Baldor> rdfs:label "Baldor"@en,
+        "Baldor"@fr .
+
+<http://tolkiengateway.net/resource/Balin> rdfs:label "Balin"@en,
+        "Balin"@fr .
+
+<http://tolkiengateway.net/resource/Balrogs> rdfs:label "Balrogs"@en,
+        "Balrogs"@fr .
+
+<http://tolkiengateway.net/resource/Bandobras_Took> rdfs:label "Bandobras Took"@en,
+        "Bandobras Took"@fr .
+
+<http://tolkiengateway.net/resource/Barahir> rdfs:label "Barahir"@en,
+        "Barahir"@fr .
+
+<http://tolkiengateway.net/resource/Baranor> rdfs:label "Baranor"@en,
+        "Baranor"@fr .
+
+<http://tolkiengateway.net/resource/Bard> rdfs:label "Bard"@en,
+        "Bard"@fr .
+
+<http://tolkiengateway.net/resource/Bard_II> rdfs:label "Bard II"@en,
+        "Bard II"@fr .
+
+<http://tolkiengateway.net/resource/Bardings> rdfs:label "Bardings"@en,
+        "Bardings"@fr .
+
+<http://tolkiengateway.net/resource/Barliman_Butterbur> rdfs:label "Gerstenmann Butterblume"@de,
+        "Barliman Butterbur"@en,
+        "Barliman Butterbur"@fr,
+        "encyclo/personnages/hommes/3a/hommes de bree/prosper poiredebeurre"@fr .
+
+<http://tolkiengateway.net/resource/Barrow-wights> rdfs:label "Grabunholde"@de,
+        "Barrow-wights"@en,
+        "Barrow-wights"@fr .
+
+<http://tolkiengateway.net/resource/Basso_Boffin> rdfs:label "Basso Boffin"@en,
+        "Basso Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Beechbone> rdfs:label "Buchenbein"@de,
+        "Beechbone"@en,
+        "/encyclo/personnages/ents/osfayard"@fr,
+        "Beechbone"@fr .
+
+<http://tolkiengateway.net/resource/Belba_Baggins> rdfs:label "Belba Baggins"@en,
+        "Belba Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Belecthor_I> rdfs:label "Belecthor"@en,
+        "Belecthor"@fr .
+
+<http://tolkiengateway.net/resource/Belecthor_II> rdfs:label "Belecthor II"@en,
+        "Belecthor II"@fr .
+
+<http://tolkiengateway.net/resource/Beleg> rdfs:label "Beleg"@en,
+        "Beleg"@fr .
+
+<http://tolkiengateway.net/resource/Belegorn> rdfs:label "Belegorn"@en,
+        "Belegorn"@fr .
+
+<http://tolkiengateway.net/resource/Bell_Goodchild> rdfs:label "Bell Goodchild"@en,
+        "Bell Goodchild"@fr .
+
+<http://tolkiengateway.net/resource/Belladonna_Took> rdfs:label "Belladonna Took"@en,
+        "Belladonna Took"@fr .
+
+<http://tolkiengateway.net/resource/Beorn> rdfs:label "Beorn"@en,
+        "Beorn"@fr .
+
+<http://tolkiengateway.net/resource/Beornings> rdfs:label "Beornings"@en,
+        "Beornings"@fr .
+
+<http://tolkiengateway.net/resource/Beregond> rdfs:label "Beregond"@en,
+        "Beregond"@fr .
+
+<http://tolkiengateway.net/resource/Beren> rdfs:label "Beren"@en,
+        "Beren"@fr .
+
+<http://tolkiengateway.net/resource/Bergil> rdfs:label "Bergil"@en,
+        "Bergil"@fr .
+
+<http://tolkiengateway.net/resource/Berilac_Brandybuck> rdfs:label "Berilac Brandybuck"@en,
+        "Berilac Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Berylla_Boffin> rdfs:label "Berylla Boffin"@en,
+        "Berylla Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Berúthiel> rdfs:label "Berúthiel"@en,
+        "Berúthiel"@fr .
+
+<http://tolkiengateway.net/resource/Bifur> rdfs:label "Bifur"@en,
+        "Bifur"@fr .
+
+<http://tolkiengateway.net/resource/Bilbo_Baggins> rdfs:label "Bilbo Baggins"@en,
+        "Bilbo Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Bill_Butcher> rdfs:label "Bill Butcher"@en,
+        "Bill Butcher"@fr .
+
+<http://tolkiengateway.net/resource/Bill_Ferny> rdfs:label "Lutz Farning"@de,
+        "Bill Ferny"@en,
+        "Bill Ferny"@fr,
+        "encyclo:personnages:hommes:3a:hommes de bree:bill fougeron"@fr .
+
+<http://tolkiengateway.net/resource/Billy_Boyd> rdfs:label "Billy Boyd"@en,
+        "Billy Boyd"@fr .
+
+<http://tolkiengateway.net/resource/Bingo_Baggins> rdfs:label "Bingo Baggins"@en,
+        "Bingo Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Black_Númenóreans> rdfs:label "Black Númenóreans"@en,
+        "Black Númenóreans"@fr .
+
+<http://tolkiengateway.net/resource/Bladorthin> rdfs:label "Bladorthin"@en,
+        "Bladorthin"@fr .
+
+<http://tolkiengateway.net/resource/Blanco_Bracegirdle> rdfs:label "Blanco Bracegirdle"@en,
+        "Blanco Bracegirdle"@fr .
+
+<http://tolkiengateway.net/resource/Blue_Wizards> rdfs:label "Ithryn Luin"@de,
+        "Blue Wizards"@en,
+        "Blue Wizards"@fr,
+        "encyclo/personnages/ainur/maiar/istari/ithryn luin"@fr .
+
+<http://tolkiengateway.net/resource/Bob> rdfs:label "Hinz"@de,
+        "Bob"@en,
+        "Bob"@fr,
+        "encyclo:personnages:hobbits:bob"@fr .
+
+<http://tolkiengateway.net/resource/Bodo_Proudfoot> rdfs:label "Bodo Proudfoot"@en,
+        "Bodo Proudfoot"@fr .
+
+<http://tolkiengateway.net/resource/Bofur> rdfs:label "Bofur"@en,
+        "Bofur"@fr .
+
+<http://tolkiengateway.net/resource/Bolg> rdfs:label "Bolg"@en,
+        "Bolg"@fr .
+
+<http://tolkiengateway.net/resource/Bombur> rdfs:label "Bombur"@en,
+        "Bombur"@fr .
+
+<http://tolkiengateway.net/resource/Borin> rdfs:label "Borin"@en,
+        "Borin"@fr .
+
+<http://tolkiengateway.net/resource/Boromir> rdfs:label "Boromir"@de,
+        "Boromir"@en,
+        "Boromir"@es,
+        "Boromir"@fr,
+        "Boromir"@it .
+
+<http://tolkiengateway.net/resource/Borondir> rdfs:label "Borondir"@en,
+        "Borondir"@fr,
+        "encyclo:personnages:hommes:3a:dunedain:gondoriens:borondir"@fr .
+
+<http://tolkiengateway.net/resource/Bosco_Boffin> rdfs:label "Bosco Boffin"@en,
+        "Bosco Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Bowman_Cotton> rdfs:label "Bowman Cotton"@en,
+        "Bowman Cotton"@fr .
+
+<http://tolkiengateway.net/resource/Brand> rdfs:label "Brand"@en,
+        "Brand"@fr .
+
+<http://tolkiengateway.net/resource/Brego> rdfs:label "Brego"@en,
+        "Brego"@fr .
+
+<http://tolkiengateway.net/resource/Brent_McIntyre> rdfs:label "Brent McIntyre"@en,
+        "Brent McIntyre"@fr .
+
+<http://tolkiengateway.net/resource/Brian_Sergent> rdfs:label "Brian Sergent"@en,
+        "Brian Sergent"@fr .
+
+<http://tolkiengateway.net/resource/Brian_Sibley> rdfs:label "Brian Sibley"@en,
+        "Brian Sibley"@fr .
+
+<http://tolkiengateway.net/resource/Briffo_Boffin> rdfs:label "Briffo Boffin"@en,
+        "Briffo Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Bruce_Allpress> rdfs:label "Bruce Allpress"@en,
+        "Bruce Allpress"@fr .
+
+<http://tolkiengateway.net/resource/Bruce_Hopkins> rdfs:label "Bruce Hopkins"@en,
+        "Bruce Hopkins"@fr .
+
+<http://tolkiengateway.net/resource/Bruno_Bracegirdle> rdfs:label "Bruno Bracegirdle"@en,
+        "Bruno Bracegirdle"@fr .
+
+<http://tolkiengateway.net/resource/Brytta> rdfs:label "Brytta"@en,
+        "Brytta"@fr .
+
+<http://tolkiengateway.net/resource/Bucca_of_the_Marish> rdfs:label "Bucca"@de,
+        "Bucca of the Marish"@en,
+        "Bucca of the Marish"@fr,
+        "encyclo:personnages:hobbits:bucca du maresque"@fr .
+
+<http://tolkiengateway.net/resource/Buffo_Boffin> rdfs:label "Buffo Boffin"@en,
+        "Buffo Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Bungo_Baggins> rdfs:label "Bungo Baggins"@en,
+        "Bungo Baggins"@fr .
+
+<http://tolkiengateway.net/resource/C_S_Lewis> rdfs:label "C. S. Lewis"@de,
+        "C.S. Lewis"@en,
+        "C.S. Lewis"@fr .
+
+<http://tolkiengateway.net/resource/Calimehtar> rdfs:label "Calimehtar"@en,
+        "Calimehtar"@fr .
+
+<http://tolkiengateway.net/resource/Calimmacil> rdfs:label "Calimmacil"@en,
+        "Calimmacil"@fr .
+
+<http://tolkiengateway.net/resource/Calmacil> rdfs:label "Calmacil"@en,
+        "Calmacil"@fr .
+
+<http://tolkiengateway.net/resource/Calum_Gittins> rdfs:label "Calum Gittins"@en,
+        "Calum Gittins"@fr .
+
+<http://tolkiengateway.net/resource/Camellia_Sackville> rdfs:label "Camellia Sackville"@en,
+        "Camellia Sackville"@fr .
+
+<http://tolkiengateway.net/resource/Cameron_Rhodes> rdfs:label "Cameron Rhodes"@en,
+        "Cameron Rhodes"@fr .
+
+<http://tolkiengateway.net/resource/Captain_of_the_guard> rdfs:label "Captain of the guard"@en,
+        "Captain of the guard"@fr .
+
+<http://tolkiengateway.net/resource/Caramella_Chubb> rdfs:label "Caramella Pausbacken"@de,
+        "Caramella Chubb"@en,
+        "Caramella Chubb"@fr .
+
+<http://tolkiengateway.net/resource/Carandrian> rdfs:label "Carandrian"@en,
+        "Carandrian"@fr .
+
+<http://tolkiengateway.net/resource/Carc> rdfs:label "Carc"@en,
+        "Carc"@fr .
+
+<http://tolkiengateway.net/resource/Carl> rdfs:label "Carl"@en,
+        "Carl"@fr .
+
+<http://tolkiengateway.net/resource/Carl_Cotton> rdfs:label "Carl Cotton"@en,
+        "Carl Cotton"@fr .
+
+<http://tolkiengateway.net/resource/Carl_F_Hostetter> rdfs:label "Carl F. Hostetter"@en,
+        "Carl F. Hostetter"@fr .
+
+<http://tolkiengateway.net/resource/Castamir> rdfs:label "Castamir"@en,
+        "Castamir"@fr .
+
+<http://tolkiengateway.net/resource/Cate_Blanchett> rdfs:label "Cate Blanchett"@en,
+        "Cate Blanchett"@fr .
+
+<http://tolkiengateway.net/resource/Catherine_Karina_Chmiel> rdfs:label "Catherine Karina Chmiel"@en,
+        "Catherine Karina Chmiel"@fr .
+
+<http://tolkiengateway.net/resource/Celandine_Brandybuck> rdfs:label "Celandine Brandybuck"@en,
+        "Celandine Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Celeborn> rdfs:label "Celeborn"@en,
+        "Celeborn"@fr .
+
+<http://tolkiengateway.net/resource/Celebrindor> rdfs:label "Celebrindor"@en,
+        "Celebrindor"@fr .
+
+<http://tolkiengateway.net/resource/Celebrían> rdfs:label "Celebrían"@en,
+        "Celebrían"@fr .
+
+<http://tolkiengateway.net/resource/Celepharn> rdfs:label "Celepharn"@en,
+        "Celepharn"@fr .
+
+<http://tolkiengateway.net/resource/Cemendur> rdfs:label "Cemendur"@en,
+        "Cemendur"@fr .
+
+<http://tolkiengateway.net/resource/Ceorl> rdfs:label "Ceorl"@en,
+        "Ceorl"@fr,
+        "encyclo:personnages:hommes:3a:hommes du nord:rohirrim:ceorl"@fr .
+
+<http://tolkiengateway.net/resource/Charles_Williams> rdfs:label "Charles Williams"@en,
+        "Charles Williams"@fr .
+
+<http://tolkiengateway.net/resource/Chica_Chubb> rdfs:label "Chica Chubb"@en,
+        "Chica Chubb"@fr .
+
+<http://tolkiengateway.net/resource/Chief_of_the_guards> rdfs:label "Chief of the guards"@en,
+        "Chief of the guards"@fr .
+
+<http://tolkiengateway.net/resource/Chris_Seeman> rdfs:label "Chris Seeman"@en,
+        "Chris Seeman"@fr .
+
+<http://tolkiengateway.net/resource/Christina_Wald> rdfs:label "Christina Suzanna Wald"@en,
+        "Christina Suzanna Wald"@fr .
+
+<http://tolkiengateway.net/resource/Christopher_Lee> rdfs:label "Christopher Lee"@en,
+        "Christopher Lee"@fr .
+
+<http://tolkiengateway.net/resource/Christopher_Tolkien> rdfs:label "Christopher Tolkien"@en,
+        "Christopher Tolkien"@fr .
+
+<http://tolkiengateway.net/resource/Cirion> rdfs:label "Cirion"@en,
+        "Cirion"@fr .
+
+<http://tolkiengateway.net/resource/Ciryandil> rdfs:label "Ciryandil"@en,
+        "Ciryandil"@fr .
+
+<http://tolkiengateway.net/resource/Ciryon> rdfs:label "Ciryon"@en,
+        "Ciryon"@fr .
+
+<http://tolkiengateway.net/resource/Coleman_Charlton> rdfs:label "Coleman Charlton"@en,
+        "Coleman Charlton"@fr .
+
+<http://tolkiengateway.net/resource/Colin_Duriez> rdfs:label "Colin Duriez"@en,
+        "Colin Duriez"@fr .
+
+<http://tolkiengateway.net/resource/Colombo_Arditi> rdfs:label "Colombo Arditi"@en,
+        "Colombo Arditi"@fr .
+
+<http://tolkiengateway.net/resource/Colombo_Hornblower> rdfs:label "Colombo Hornblower"@en,
+        "Colombo Hornblower"@fr .
+
+<http://tolkiengateway.net/resource/Cor_Blok> rdfs:label "Cor Blok"@en,
+        "Cor Blok"@fr .
+
+<http://tolkiengateway.net/resource/Cora_Goodbody> rdfs:label "Cora Goodbody"@en,
+        "Cora Goodbody"@fr .
+
+<http://tolkiengateway.net/resource/Corsairs_of_Umbar> rdfs:label "Corsairs of Umbar"@en,
+        "Corsairs of Umbar"@fr .
+
+<http://tolkiengateway.net/resource/Cortney_Skinner> rdfs:label "Cortney Skinner"@en,
+        "Cortney Skinner"@fr .
+
+<http://tolkiengateway.net/resource/Cotman> rdfs:label "Cotman"@en,
+        "Cotman"@fr .
+
+<http://tolkiengateway.net/resource/Cottar> rdfs:label "Cottar"@en,
+        "Cottar"@fr .
+
+<http://tolkiengateway.net/resource/Councillors> rdfs:label "Councillors"@en,
+        "Councillors"@fr .
+
+<http://tolkiengateway.net/resource/Craig_Parker> rdfs:label "Craig Parker"@en,
+        "Craig Parker"@fr .
+
+<http://tolkiengateway.net/resource/Círdan> rdfs:label "Círdan"@en,
+        "Círdan"@fr,
+        "encyclo:personnages:elfes:teleri:sindar:cirdan"@fr .
+
+<http://tolkiengateway.net/resource/Daddy_Twofoot> rdfs:label "Väterchen Zwiefuß"@de,
+        "Daddy Twofoot"@en,
+        "Daddy Twofoot"@fr .
+
+<http://tolkiengateway.net/resource/Daisy_Baggins> rdfs:label "Daisy Baggins"@en,
+        "Daisy Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Daisy_Gamgee> rdfs:label "Daisy Gamgee"@en,
+        "Daisy Gamgee"@fr .
+
+<http://tolkiengateway.net/resource/Damrod> rdfs:label "Damrod"@en,
+        "Damrod"@fr,
+        "encyclo:personnages:hommes:3a:dunedain:gondoriens:damrod"@fr .
+
+<http://tolkiengateway.net/resource/Daniel_Falconer> rdfs:label "Daniel Falconer"@en,
+        "Daniel Falconer"@fr .
+
+<http://tolkiengateway.net/resource/Daniel_Govar> rdfs:label "Daniel Govar"@en,
+        "Daniel Govar"@fr .
+
+<http://tolkiengateway.net/resource/Daniel_Grotta> rdfs:label "Daniel Grotta"@en,
+        "Daniel Grotta"@fr .
+
+<http://tolkiengateway.net/resource/Daniel_Reeve> rdfs:label "Daniel Reeve"@en,
+        "Daniel Reeve"@fr .
+
+<http://tolkiengateway.net/resource/David_Day> rdfs:label "David Day"@en,
+        "David Day"@fr .
+
+<http://tolkiengateway.net/resource/David_McDaniel> rdfs:label "David McDaniel"@en,
+        "David McDaniel"@fr .
+
+<http://tolkiengateway.net/resource/David_Salo> rdfs:label "David Salo"@en,
+        "David Salo"@fr .
+
+<http://tolkiengateway.net/resource/David_Weatherley> rdfs:label "David Weatherley"@en,
+        "David Weatherley"@fr .
+
+<http://tolkiengateway.net/resource/David_Wenham> rdfs:label "David Wenham"@en,
+        "David Wenham"@fr .
+
+<http://tolkiengateway.net/resource/Denethor> rdfs:label "Denethor"@en,
+        "Denethor"@fr .
+
+<http://tolkiengateway.net/resource/Denethor_I> rdfs:label "Denethor I"@en,
+        "Denethor I"@fr .
+
+<http://tolkiengateway.net/resource/Derufin> rdfs:label "Derufin"@en,
+        "Derufin"@fr .
+
+<http://tolkiengateway.net/resource/Dervorin> rdfs:label "Dervorin"@en,
+        "Dervorin"@fr .
+
+<http://tolkiengateway.net/resource/Diamond_of_Long_Cleeve> rdfs:label "Diamond of Long Cleeve"@en,
+        "Diamond of Long Cleeve"@fr .
+
+<http://tolkiengateway.net/resource/Diana_Glyer> rdfs:label "Diana Glyer"@en,
+        "Diana Glyer"@fr .
+
+<http://tolkiengateway.net/resource/Dick_Plotz> rdfs:label "Dick Plotz"@en,
+        "Dick Plotz"@fr .
+
+<http://tolkiengateway.net/resource/Dimitra_Fimi> rdfs:label "Dimitra Fimi"@en,
+        "Dimitra Fimi"@fr .
+
+<http://tolkiengateway.net/resource/Dina_Diggle> rdfs:label "Dina Diggle"@en,
+        "Dina Diggle"@fr .
+
+<http://tolkiengateway.net/resource/Dinodas_Brandybuck> rdfs:label "Dinodas Brandybuck"@en,
+        "Dinodas Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Dior> rdfs:label "Dior"@en,
+        "Dior"@fr .
+
+<http://tolkiengateway.net/resource/Doderic_Brandybuck> rdfs:label "Doderic Brandybuck"@en,
+        "Doderic Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Dodinas_Brandybuck> rdfs:label "Dodinas Brandybuck"@en,
+        "Dodinas Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Dominic_Monaghan> rdfs:label "Dominic Monaghan"@en,
+        "Dominic Monaghan"@fr .
+
+<http://tolkiengateway.net/resource/Donato_Giancola> rdfs:label "Donato Giancola"@en,
+        "Donato Giancola"@fr .
+
+<http://tolkiengateway.net/resource/Donnamira_Took> rdfs:label "Donnamira Took"@en,
+        "Donnamira Took"@fr .
+
+<http://tolkiengateway.net/resource/Dora_Baggins> rdfs:label "Dora Baggins"@en,
+        "Dora Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Dori> rdfs:label "Dori"@en,
+        "Dori"@fr .
+
+<http://tolkiengateway.net/resource/Douglas_A_Anderson> rdfs:label "Douglas A. Anderson"@en,
+        "Douglas A. Anderson"@fr .
+
+<http://tolkiengateway.net/resource/Douglas_Chaffee> rdfs:label "Douglas Chaffee"@en,
+        "Douglas Chaffee"@fr .
+
+<http://tolkiengateway.net/resource/Drogo_Baggins> rdfs:label "Drogo Baggins"@en,
+        "Drogo Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Druda_Burrows> rdfs:label "Druda Burrows"@en,
+        "Druda Burrows"@fr .
+
+<http://tolkiengateway.net/resource/Dudo_Baggins> rdfs:label "Dudo Baggins"@en,
+        "Dudo Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Duilin> rdfs:label "Duilin"@en,
+        "Duilin"@fr .
+
+<http://tolkiengateway.net/resource/Duinhir> rdfs:label "Duinhir"@en,
+        "Duinhir"@fr .
+
+<http://tolkiengateway.net/resource/Dunlendings> rdfs:label "Dunlendings"@en,
+        "Dunlendings"@fr .
+
+<http://tolkiengateway.net/resource/Durin_IV> rdfs:label "Durin IV"@en,
+        "Durin IV"@fr .
+
+<http://tolkiengateway.net/resource/Durin_V> rdfs:label "Durin V"@en,
+        "Durin V"@fr .
+
+<http://tolkiengateway.net/resource/Durin_VI> rdfs:label "Durin VI"@en,
+        "Durin VI"@fr .
+
+<http://tolkiengateway.net/resource/Durins_Bane> rdfs:label "Durin's Bane"@en,
+        "Durin's Bane"@fr .
+
+<http://tolkiengateway.net/resource/Dwalin> rdfs:label "Dwalin"@en,
+        "Dwalin"@fr .
+
+<http://tolkiengateway.net/resource/Dwarves_of_Belegost> rdfs:label "Dwarves of Belegost"@en,
+        "Dwarves of Belegost"@fr .
+
+<http://tolkiengateway.net/resource/Dwarves_of_Erebor> rdfs:label "Dwarves of Erebor"@en,
+        "Dwarves of Erebor"@fr .
+
+<http://tolkiengateway.net/resource/Dáin_I> rdfs:label "Dáin I"@en,
+        "Dáin I"@fr .
+
+<http://tolkiengateway.net/resource/Dáin_Ironfoot> rdfs:label "Dáin II"@en,
+        "Dáin II"@fr .
+
+<http://tolkiengateway.net/resource/Déor> rdfs:label "Déor"@en,
+        "Déor"@fr .
+
+<http://tolkiengateway.net/resource/Déorwine> rdfs:label "Déorwine"@en,
+        "Déorwine"@fr .
+
+<http://tolkiengateway.net/resource/Dírhael> rdfs:label "Dírhael"@en,
+        "Dírhael"@fr .
+
+<http://tolkiengateway.net/resource/Dís> rdfs:label "Dís"@en,
+        "Dís"@fr .
+
+<http://tolkiengateway.net/resource/Dúnedain_of_Arnor> rdfs:label "Dúnedain of Arnor"@en,
+        "Dúnedain of Arnor"@fr .
+
+<http://tolkiengateway.net/resource/Dúnhere> rdfs:label "Dúnhere"@en,
+        "Dúnhere"@fr .
+
+<http://tolkiengateway.net/resource/Easterlings> rdfs:label "Easterlings"@en,
+        "Easterlings"@fr .
+
+<http://tolkiengateway.net/resource/Ecthelion_I> rdfs:label "Ecthelion I"@en,
+        "Ecthelion I"@fr .
+
+<http://tolkiengateway.net/resource/Ecthelion_II> rdfs:label "Ecthelion II"@en,
+        "Ecthelion II"@fr .
+
+<http://tolkiengateway.net/resource/Edith_Tolkien> rdfs:label "Edith Tolkien"@en,
+        "Edith Tolkien"@fr .
+
+<http://tolkiengateway.net/resource/Edward_Beard_Jr> rdfs:label "Edward Beard, Jr."@en,
+        "Edward Beard, Jr."@fr .
+
+<http://tolkiengateway.net/resource/Egalmoth> rdfs:label "Egalmoth"@en,
+        "Egalmoth"@fr .
+
+<http://tolkiengateway.net/resource/Eglantine_Banks> rdfs:label "Eglantine Banks"@en,
+        "Eglantine Banks"@fr .
+
+<http://tolkiengateway.net/resource/Elanor_Gardner> rdfs:label "Elanor Gardner"@en,
+        "Elanor Gardner"@fr .
+
+<http://tolkiengateway.net/resource/Eldacar> rdfs:label "Eldacar"@en,
+        "Eldacar"@fr .
+
+<http://tolkiengateway.net/resource/Eldar> rdfs:label "Eldar"@en,
+        "Eldar"@fr .
+
+<http://tolkiengateway.net/resource/Elena_Kukanova> rdfs:label "Elena Kukanova"@en,
+        "Elena Kukanova"@fr .
+
+<http://tolkiengateway.net/resource/Elendur> rdfs:label "Elendur"@en,
+        "Elendur"@fr .
+
+<http://tolkiengateway.net/resource/Elfhelm> rdfs:label "Elfhelm"@en,
+        "Elfhelm"@fr .
+
+<http://tolkiengateway.net/resource/Elfhild> rdfs:label "Elfhild"@en,
+        "Elfhild"@fr .
+
+<http://tolkiengateway.net/resource/Elijah_Wood> rdfs:label "Elijah Wood"@en,
+        "Elijah Wood"@fr .
+
+<http://tolkiengateway.net/resource/Elizabeth_Moody> rdfs:label "Elizabeth Moody"@en,
+        "Elizabeth Moody"@fr .
+
+<http://tolkiengateway.net/resource/Elladan_and_Elrohir> rdfs:label "Elladan and Elrohir"@en,
+        "Elladan and Elrohir"@fr .
+
+<http://tolkiengateway.net/resource/Elphir> rdfs:label "Elphir"@en,
+        "Elphir"@fr .
+
+<http://tolkiengateway.net/resource/Elrond> rdfs:label "Elrond"@de,
+        "Elrond"@en,
+        "Elrond"@es,
+        "Elrond"@fr,
+        "Elrond"@it .
+
+<http://tolkiengateway.net/resource/Elves> rdfs:label "Elves"@en,
+        "Elves"@fr .
+
+<http://tolkiengateway.net/resource/Elves_of_Eregion> rdfs:label "Elves of Eregion"@en,
+        "Elves of Eregion"@fr .
+
+<http://tolkiengateway.net/resource/Elves_of_Lindon> rdfs:label "Elves of Lindon"@en,
+        "Elves of Lindon"@fr .
+
+<http://tolkiengateway.net/resource/Elves_of_Mirkwood> rdfs:label "Elves of Mirkwood"@en,
+        "Elves of Mirkwood"@fr .
+
+<http://tolkiengateway.net/resource/Elves_of_Nargothrond> rdfs:label "Elves of Nargothrond"@en,
+        "Elves of Nargothrond"@fr .
+
+<http://tolkiengateway.net/resource/Emily_Austin> rdfs:label "Emily Austin"@en,
+        "Emily Austin"@fr .
+
+<http://tolkiengateway.net/resource/Eofor> rdfs:label "Eofor"@en,
+        "Eofor"@fr .
+
+<http://tolkiengateway.net/resource/Eorl> rdfs:label "Eorl"@en,
+        "Eorl"@fr .
+
+<http://tolkiengateway.net/resource/Eradan> rdfs:label "Eradan"@en,
+        "Eradan"@fr .
+
+<http://tolkiengateway.net/resource/Erchirion> rdfs:label "Erchirion"@en,
+        "Erchirion"@fr .
+
+<http://tolkiengateway.net/resource/Erestor> rdfs:label "Erestor"@en,
+        "Erestor"@fr .
+
+<http://tolkiengateway.net/resource/Eric_Fraser> rdfs:label "Eric Fraser"@en,
+        "Eric Fraser"@fr .
+
+<http://tolkiengateway.net/resource/Erkenbrand> rdfs:label "Erkenbrand"@en,
+        "Erkenbrand"@fr .
+
+<http://tolkiengateway.net/resource/Erling> rdfs:label "Erling"@en,
+        "Erling"@fr .
+
+<http://tolkiengateway.net/resource/Esmeralda_Took> rdfs:label "Esmeralda Took"@en,
+        "Esmeralda Took"@fr .
+
+<http://tolkiengateway.net/resource/Estella_Bolger> rdfs:label "Estella Bolger"@en,
+        "Estella Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Estelmo> rdfs:label "Estelmo"@en,
+        "Estelmo"@fr .
+
+<http://tolkiengateway.net/resource/Everard_Took> rdfs:label "Everard Took"@en,
+        "Everard Took"@fr .
+
+<http://tolkiengateway.net/resource/Eärendil> rdfs:label "Eärendil"@en,
+        "Eärendil"@fr .
+
+<http://tolkiengateway.net/resource/Eärendur> rdfs:label "Eärendur"@en,
+        "Eärendur"@fr .
+
+<http://tolkiengateway.net/resource/Eärnil_I> rdfs:label "Eärnil I"@en,
+        "Eärnil I"@fr .
+
+<http://tolkiengateway.net/resource/Eärnil_II> rdfs:label "Eärnil II"@en,
+        "Eärnil II"@fr .
+
+<http://tolkiengateway.net/resource/Eärnur> rdfs:label "Eärnur"@en,
+        "Eärnur"@fr .
+
+<http://tolkiengateway.net/resource/F> rdfs:label "F"@en,
+        "F"@fr .
+
+<http://tolkiengateway.net/resource/Falathrim> rdfs:label "Falathrim"@en,
+        "Falathrim"@fr .
+
+<http://tolkiengateway.net/resource/Falco_Chubb-Baggins> rdfs:label "Falco Chubb-Baggins"@en,
+        "Falco Chubb-Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Fallohides> rdfs:label "Fallohides"@en,
+        "Fallohides"@fr .
+
+<http://tolkiengateway.net/resource/Falmari> rdfs:label "Falmari"@en,
+        "Falmari"@fr .
+
+<http://tolkiengateway.net/resource/Fang> rdfs:label "Fang"@en,
+        "Fang"@fr .
+
+<http://tolkiengateway.net/resource/Faramir> rdfs:label "Faramir"@de,
+        "Faramir"@en,
+        "Faramir"@es,
+        "Faramir"@fr,
+        "Faramir"@it .
+
+<http://tolkiengateway.net/resource/Farin> rdfs:label "Farin"@en,
+        "Farin"@fr .
+
+<http://tolkiengateway.net/resource/Farmer_Cotton> rdfs:label "Farmer Cotton"@en,
+        "Farmer Cotton"@fr .
+
+<http://tolkiengateway.net/resource/Farmer_Hogg> rdfs:label "Farmer Hogg"@en,
+        "Farmer Hogg"@fr .
+
+<http://tolkiengateway.net/resource/Farmer_Maggot> rdfs:label "Farmer Maggot"@en,
+        "Farmer Maggot"@fr .
+
+<http://tolkiengateway.net/resource/Fastolph_Bolger> rdfs:label "Fastolph Bolger"@en,
+        "Fastolph Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Fastred> rdfs:label "Fastred"@en,
+        "Fastred"@fr .
+
+<http://tolkiengateway.net/resource/Fastred_of_Greenholm> rdfs:label "Fastred of Greenholm"@en,
+        "Fastred of Greenholm"@fr .
+
+<http://tolkiengateway.net/resource/Fell_beasts> rdfs:label "Fell beasts"@en,
+        "Fell beasts"@fr .
+
+<http://tolkiengateway.net/resource/Fengel> rdfs:label "Fengel"@en,
+        "Fengel"@fr .
+
+<http://tolkiengateway.net/resource/Ferdibrand_Took> rdfs:label "Ferdibrand Took"@en,
+        "Ferdibrand Took"@fr .
+
+<http://tolkiengateway.net/resource/Ferdinand_Took> rdfs:label "Ferdinand Took"@en,
+        "Ferdinand Took"@fr .
+
+<http://tolkiengateway.net/resource/Ferumbras_Took_I> rdfs:label "Ferumbras Took I"@en,
+        "Ferumbras Took I"@fr .
+
+<http://tolkiengateway.net/resource/Ferumbras_Took_II> rdfs:label "Ferumbras Took II"@en,
+        "Ferumbras Took II"@fr .
+
+<http://tolkiengateway.net/resource/Ferumbras_Took_III> rdfs:label "Ferumbras Took III"@en,
+        "Ferumbras Took III"@fr .
+
+<http://tolkiengateway.net/resource/Filibert_Bolger> rdfs:label "Filibert Bolger"@en,
+        "Filibert Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Finduilas> rdfs:label "Finduilas"@en,
+        "Finduilas"@fr .
+
+<http://tolkiengateway.net/resource/Fire-drakes> rdfs:label "Fire-drakes"@en,
+        "Fire-drakes"@fr .
+
+<http://tolkiengateway.net/resource/Flambard_Took> rdfs:label "Flambard Took"@en,
+        "Flambard Took"@fr .
+
+<http://tolkiengateway.net/resource/Flói> rdfs:label "Flói"@en,
+        "Flói"@fr .
+
+<http://tolkiengateway.net/resource/Folca> rdfs:label "Folca"@en,
+        "Folca"@fr .
+
+<http://tolkiengateway.net/resource/Folco_Boffin> rdfs:label "Folco Boffin"@en,
+        "Folco Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Folcred_and_Fastred> rdfs:label "Folcred and Fastred"@en,
+        "Folcred and Fastred"@fr .
+
+<http://tolkiengateway.net/resource/Folcwine> rdfs:label "Folcwine"@en,
+        "Folcwine"@fr .
+
+<http://tolkiengateway.net/resource/Forlong> rdfs:label "Forlong"@en,
+        "Forlong"@fr .
+
+<http://tolkiengateway.net/resource/Forthwini> rdfs:label "Forthwini"@en,
+        "Forthwini"@fr .
+
+<http://tolkiengateway.net/resource/Fortinbras_Took_I> rdfs:label "Fortinbras Took I"@en,
+        "Fortinbras Took I"@fr .
+
+<http://tolkiengateway.net/resource/Fortinbras_Took_II> rdfs:label "Fortinbras Took II"@en,
+        "Fortinbras Took II"@fr .
+
+<http://tolkiengateway.net/resource/Fosco_Baggins> rdfs:label "Fosco Baggins"@en,
+        "Fosco Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Fram> rdfs:label "Fram"@en,
+        "Fram"@fr .
+
+<http://tolkiengateway.net/resource/Frank_Frazetta> rdfs:label "Frank Frazetta"@en,
+        "Frank Frazetta"@fr .
+
+<http://tolkiengateway.net/resource/Freca> rdfs:label "Freca"@en,
+        "Freca"@fr .
+
+<http://tolkiengateway.net/resource/Fredegar_Bolger> rdfs:label "Fredegar Bolger"@en,
+        "Fredegar Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Frerin> rdfs:label "Frerin"@en,
+        "Frerin"@fr .
+
+<http://tolkiengateway.net/resource/Frodo_Baggins> rdfs:label "Frodo Beutlin"@de,
+        "Frodo Baggins"@en,
+        "Frodo Bolsón"@es,
+        "Frodon Sacquet"@fr,
+        "Frodo Baggins"@it .
+
+<http://tolkiengateway.net/resource/Frumgar> rdfs:label "Frumgar"@en,
+        "Frumgar"@fr .
+
+<http://tolkiengateway.net/resource/Frár> rdfs:label "Frár"@en,
+        "Frár"@fr .
+
+<http://tolkiengateway.net/resource/Fréa> rdfs:label "Fréa"@en,
+        "Fréa"@fr .
+
+<http://tolkiengateway.net/resource/Fréaláf> rdfs:label "Fréaláf"@en,
+        "Fréaláf"@fr .
+
+<http://tolkiengateway.net/resource/Fréawine> rdfs:label "Fréawine"@en,
+        "Fréawine"@fr .
+
+<http://tolkiengateway.net/resource/Frór> rdfs:label "Frór"@en,
+        "Frór"@fr .
+
+<http://tolkiengateway.net/resource/Fundin> rdfs:label "Fundin"@en,
+        "Fundin"@fr .
+
+<http://tolkiengateway.net/resource/Fíli> rdfs:label "Fíli"@en,
+        "Fíli"@fr .
+
+<http://tolkiengateway.net/resource/Fíriel> rdfs:label "Fíriel"@en,
+        "Fíriel"@fr .
+
+<http://tolkiengateway.net/resource/Gaffer_Gamgee> rdfs:label "Gaffer Gamgee"@en,
+        "Gaffer Gamgee"@fr .
+
+<http://tolkiengateway.net/resource/Gail_McIntosh> rdfs:label "Gail B. McIntosh"@en,
+        "Gail B. McIntosh"@fr .
+
+<http://tolkiengateway.net/resource/Galador> rdfs:label "Galador"@en,
+        "Galador"@fr .
+
+<http://tolkiengateway.net/resource/Galadriel> rdfs:label "Galadriel"@de,
+        "Galadriel"@en,
+        "Galadriel"@es,
+        "Galadriel"@fr,
+        "Galadriel"@it .
+
+<http://tolkiengateway.net/resource/Galdor> rdfs:label "Galdor"@en,
+        "Galdor"@fr .
+
+<http://tolkiengateway.net/resource/Galion> rdfs:label "Galion"@en,
+        "Galion"@fr .
+
+<http://tolkiengateway.net/resource/Gamling> rdfs:label "Gamling"@en,
+        "Gamling"@fr .
+
+<http://tolkiengateway.net/resource/Gandalf> rdfs:label "Gandalf"@de,
+        "Gandalf"@en,
+        "Gandalf"@es,
+        "Gandalf"@fr,
+        "Gandalf"@it .
+
+<http://tolkiengateway.net/resource/General_Targg> rdfs:label "General Targg"@en,
+        "General Targg"@fr .
+
+<http://tolkiengateway.net/resource/Gerda_Boffin> rdfs:label "Gerda Boffin"@en,
+        "Gerda Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Gerontius_Took> rdfs:label "Gerontius Took"@en,
+        "Gerontius Took"@fr .
+
+<http://tolkiengateway.net/resource/Ghân-buri-Ghân> rdfs:label "Ghân-buri-Ghân"@en,
+        "Ghân-buri-Ghân"@fr .
+
+<http://tolkiengateway.net/resource/Giants> rdfs:label "Giants"@en,
+        "Giants"@fr .
+
+<http://tolkiengateway.net/resource/Gilbarad> rdfs:label "Gilbarad"@en,
+        "Gilbarad"@fr .
+
+<http://tolkiengateway.net/resource/Gildor> rdfs:label "Gildor"@en,
+        "Gildor"@fr .
+
+<http://tolkiengateway.net/resource/Gilly_Brownlock> rdfs:label "Gilly Brownlock"@en,
+        "Gilly Brownlock"@fr .
+
+<http://tolkiengateway.net/resource/Gilmith> rdfs:label "Gilmith"@en,
+        "Gilmith"@fr .
+
+<http://tolkiengateway.net/resource/Gilraen> rdfs:label "Gilraen"@en,
+        "Gilraen"@fr .
+
+<http://tolkiengateway.net/resource/Gimli> rdfs:label "Gimli"@de,
+        "Gimli"@en,
+        "Gimli"@es,
+        "Gimli"@fr,
+        "Gimli"@it .
+
+<http://tolkiengateway.net/resource/Gino_Acevedo> rdfs:label "Geno Acevedo"@en,
+        "Geno Acevedo"@fr .
+
+<http://tolkiengateway.net/resource/Girion> rdfs:label "Girion"@en,
+        "Girion"@fr .
+
+<http://tolkiengateway.net/resource/Glorfindel> rdfs:label "Glorfindel"@en,
+        "Glorfindel"@fr .
+
+<http://tolkiengateway.net/resource/Gléowine> rdfs:label "Gléowine"@en,
+        "Gléowine"@fr .
+
+<http://tolkiengateway.net/resource/Glóin> rdfs:label "Glóin"@en,
+        "Glóin"@fr .
+
+<http://tolkiengateway.net/resource/Golasgil> rdfs:label "Golasgil"@en,
+        "Golasgil"@fr .
+
+<http://tolkiengateway.net/resource/Goldberry> rdfs:label "Goldberry"@en,
+        "Goldberry"@fr .
+
+<http://tolkiengateway.net/resource/Goldwine> rdfs:label "Goldwine"@en,
+        "Goldwine"@fr .
+
+<http://tolkiengateway.net/resource/Golfimbul> rdfs:label "Golfimbul"@en,
+        "Golfimbul"@fr .
+
+<http://tolkiengateway.net/resource/Gollum> rdfs:label "Gollum"@de,
+        "Gollum"@en,
+        "Gollum"@es,
+        "Gollum"@fr,
+        "Gollum"@it .
+
+<http://tolkiengateway.net/resource/Gondolindrim> rdfs:label "Gondolindrim"@en,
+        "Gondolindrim"@fr .
+
+<http://tolkiengateway.net/resource/Gongs> rdfs:label "Gongs"@en,
+        "Gongs"@fr .
+
+<http://tolkiengateway.net/resource/Gorbadoc_Brandybuck> rdfs:label "Gorbadoc Brandybuck"@en,
+        "Gorbadoc Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Gorbag> rdfs:label "Gorbag"@en,
+        "Gorbag"@fr .
+
+<http://tolkiengateway.net/resource/Gorbulas_Brandybuck> rdfs:label "Gorbulas Brandybuck"@en,
+        "Gorbulas Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Gorhendad_Oldbuck> rdfs:label "Gorhendad Oldbuck"@en,
+        "Gorhendad Oldbuck"@fr .
+
+<http://tolkiengateway.net/resource/Gormadoc_Brandybuck> rdfs:label "Gormadoc Brandybuck"@en,
+        "Gormadoc Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Gothmog> rdfs:label "Gothmog"@en,
+        "Gothmog"@fr .
+
+<http://tolkiengateway.net/resource/Gram> rdfs:label "Gram"@en,
+        "Gram"@fr .
+
+<http://tolkiengateway.net/resource/Great_Eagle> rdfs:label "Great Eagle"@en,
+        "Great Eagle"@fr .
+
+<http://tolkiengateway.net/resource/Great_Goblin> rdfs:label "Great Goblin"@en,
+        "Great Goblin"@fr .
+
+<http://tolkiengateway.net/resource/Green-elves> rdfs:label "Laiquendi"@de,
+        "Green-elves"@en,
+        "Green-elves"@fr .
+
+<http://tolkiengateway.net/resource/Griffo_Boffin> rdfs:label "Griffo Boffin"@en,
+        "Griffo Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Grim> rdfs:label "Grim"@en,
+        "Grim"@fr .
+
+<http://tolkiengateway.net/resource/Grimbeorn> rdfs:label "Grimbeorn"@en,
+        "Grimbeorn"@fr .
+
+<http://tolkiengateway.net/resource/Grimbold> rdfs:label "Grimbold"@en,
+        "Grimbold"@fr .
+
+<http://tolkiengateway.net/resource/Grip> rdfs:label "Grip"@en,
+        "Grip"@fr .
+
+<http://tolkiengateway.net/resource/Grishnákh> rdfs:label "Grishnákh"@en,
+        "Grishnákh"@fr .
+
+<http://tolkiengateway.net/resource/Gruffo_Boffin> rdfs:label "Gruffo Boffin"@en,
+        "Gruffo Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Gríma> rdfs:label "Gríma"@en,
+        "Gríma"@fr .
+
+<http://tolkiengateway.net/resource/Gróin> rdfs:label "Gróin"@en,
+        "Gróin"@fr .
+
+<http://tolkiengateway.net/resource/Grór> rdfs:label "Grór"@en,
+        "Grór"@fr .
+
+<http://tolkiengateway.net/resource/Gundabald_Bolger> rdfs:label "Gundabald Bolger"@en,
+        "Gundabald Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Gundahad_Bolger> rdfs:label "Gundahad Bolger"@en,
+        "Gundahad Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Gundahar_Bolger> rdfs:label "Gundahar Bolger"@en,
+        "Gundahar Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Gundolpho_Bolger> rdfs:label "Gundolpho Bolger"@en,
+        "Gundolpho Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Guthláf> rdfs:label "Guthláf"@en,
+        "Guthláf"@fr .
+
+<http://tolkiengateway.net/resource/Guy_Gavriel_Kay> rdfs:label "Guy Gavriel Kay"@en,
+        "Guy Gavriel Kay"@fr .
+
+<http://tolkiengateway.net/resource/Gwaihir> rdfs:label "Gwaihir"@en,
+        "Gwaihir"@fr .
+
+<http://tolkiengateway.net/resource/Gálmód> rdfs:label "Gálmód"@en,
+        "Gálmód"@fr .
+
+<http://tolkiengateway.net/resource/Gárulf> rdfs:label "Gárulf"@en,
+        "Gárulf"@fr .
+
+<http://tolkiengateway.net/resource/H_E_Riddett> rdfs:label "H.E. Riddett"@en,
+        "H.E. Riddett"@fr .
+
+<http://tolkiengateway.net/resource/Hador> rdfs:label "Hador"@en,
+        "Hador"@fr .
+
+<http://tolkiengateway.net/resource/Halbarad> rdfs:label "Halbarad"@en,
+        "Halbarad"@fr .
+
+<http://tolkiengateway.net/resource/Haldir> rdfs:label "Haldir"@en,
+        "Haldir"@fr .
+
+<http://tolkiengateway.net/resource/Haleth> rdfs:label "Haleth"@en,
+        "Haleth"@fr .
+
+<http://tolkiengateway.net/resource/Half-orcs> rdfs:label "Halborks"@de,
+        "Half-orcs"@en,
+        "Half-orcs"@fr .
+
+<http://tolkiengateway.net/resource/Halfast_Gamgee> rdfs:label "Halfast Gamgee"@en,
+        "Halfast Gamgee"@fr .
+
+<http://tolkiengateway.net/resource/Halfred_Gamgee> rdfs:label "Halfred Gamgee"@en,
+        "Halfred Gamgee"@fr .
+
+<http://tolkiengateway.net/resource/Halfred_Greenhand> rdfs:label "Halfred Greenhand"@en,
+        "Halfred Greenhand"@fr .
+
+<http://tolkiengateway.net/resource/Halfred_of_Overhill> rdfs:label "Halfred Gamgee"@en,
+        "Halfred Gamgee"@fr .
+
+<http://tolkiengateway.net/resource/Hallas> rdfs:label "Hallas"@en,
+        "Hallas"@fr .
+
+<http://tolkiengateway.net/resource/Hamfast_of_Gamwich> rdfs:label "Hamfast of Gamwich"@en,
+        "Hamfast of Gamwich"@fr .
+
+<http://tolkiengateway.net/resource/Hamson_Gamgee> rdfs:label "Hamson Gamgee"@en,
+        "Hamson Gamgee"@fr .
+
+<http://tolkiengateway.net/resource/Hanna_Goldworthy> rdfs:label "Hanna Goldworthy"@en,
+        "Hanna Goldworthy"@fr .
+
+<http://tolkiengateway.net/resource/Hannar> rdfs:label "Hannar"@en,
+        "Hannar"@fr .
+
+<http://tolkiengateway.net/resource/Haradrim> rdfs:label "Haradrim"@en,
+        "Haradrim"@fr .
+
+<http://tolkiengateway.net/resource/Harding> rdfs:label "Harding"@en,
+        "Harding"@fr .
+
+<http://tolkiengateway.net/resource/Harfoots> rdfs:label "Harfoots"@en,
+        "Harfoots"@fr .
+
+<http://tolkiengateway.net/resource/Harry_Goatleaf> rdfs:label "Harry Goatleaf"@en,
+        "Harry Goatleaf"@fr .
+
+<http://tolkiengateway.net/resource/Harry_Sinclair> rdfs:label "Harry Sinclair"@en,
+        "Harry Sinclair"@fr .
+
+<http://tolkiengateway.net/resource/Heinz_Edelmann> rdfs:label "Heinz Edelmann"@en,
+        "Heinz Edelmann"@fr .
+
+<http://tolkiengateway.net/resource/Helm> rdfs:label "Helm"@en,
+        "Helm"@fr .
+
+<http://tolkiengateway.net/resource/Helms_daughter> rdfs:label "Helm's daughter"@en,
+        "Helm's daughter"@fr .
+
+<http://tolkiengateway.net/resource/Helmut_W_Pesch> rdfs:label "Helmut W. Pesch"@en,
+        "Helmut W. Pesch"@fr .
+
+<http://tolkiengateway.net/resource/Hending> rdfs:label "Hending"@en,
+        "Hending"@fr .
+
+<http://tolkiengateway.net/resource/Henry_Gee> rdfs:label "Henry Gee"@en,
+        "Henry Gee"@fr .
+
+<http://tolkiengateway.net/resource/Herb-master> rdfs:label "Herb-master"@en,
+        "Herb-master"@fr .
+
+<http://tolkiengateway.net/resource/Herefara> rdfs:label "Herefara"@en,
+        "Herefara"@fr .
+
+<http://tolkiengateway.net/resource/Heribald_Bolger> rdfs:label "Heribald Bolger"@en,
+        "Heribald Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Herion> rdfs:label "Herion"@en,
+        "Herion"@fr .
+
+<http://tolkiengateway.net/resource/Herubrand> rdfs:label "Herubrand"@en,
+        "Herubrand"@fr .
+
+<http://tolkiengateway.net/resource/Herugar_Bolger> rdfs:label "Herugar Bolger"@en,
+        "Herugar Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Hilary_Tolkien> rdfs:label "Hilary Tolkien"@en,
+        "Hilary Tolkien"@fr .
+
+<http://tolkiengateway.net/resource/Hild> rdfs:label "Hild"@en,
+        "Hild"@fr .
+
+<http://tolkiengateway.net/resource/Hilda_Bracegirdle> rdfs:label "Hilda Bracegirdle"@en,
+        "Hilda Bracegirdle"@fr .
+
+<http://tolkiengateway.net/resource/Hildibrand_Took> rdfs:label "Hildibrand Took"@en,
+        "Hildibrand Took"@fr .
+
+<http://tolkiengateway.net/resource/Hildifons_Took> rdfs:label "Hildifons Took"@en,
+        "Hildifons Took"@fr .
+
+<http://tolkiengateway.net/resource/Hildigard_Took> rdfs:label "Hildigard Took"@en,
+        "Hildigard Took"@fr .
+
+<http://tolkiengateway.net/resource/Hildigrim_Took> rdfs:label "Hildigrim Took"@en,
+        "Hildigrim Took"@fr .
+
+<http://tolkiengateway.net/resource/Hill-trolls> rdfs:label "Hügeltrolle"@de,
+        "Hill-trolls"@en,
+        "Hill-trolls"@fr .
+
+<http://tolkiengateway.net/resource/Hirgon> rdfs:label "Hirgon"@en,
+        "Hirgon"@fr .
+
+<http://tolkiengateway.net/resource/Hirluin> rdfs:label "Hirluin"@en,
+        "Hirluin"@fr .
+
+<http://tolkiengateway.net/resource/Hob_Gammidge> rdfs:label "Hob Gammidge"@en,
+        "Hob Gammidge"@fr .
+
+<http://tolkiengateway.net/resource/Hob_Hayward> rdfs:label "Hob Hayward"@en,
+        "Hob Hayward"@fr .
+
+<http://tolkiengateway.net/resource/Hobson> rdfs:label "Hobson"@en,
+        "Hobson"@fr .
+
+<http://tolkiengateway.net/resource/Holman_Cotton> rdfs:label "Holman Cotton"@en,
+        "Holman Cotton"@fr .
+
+<http://tolkiengateway.net/resource/Holman_Greenhand> rdfs:label "Holman Greenhand"@en,
+        "Holman Greenhand"@fr .
+
+<http://tolkiengateway.net/resource/Holman_the_greenhanded> rdfs:label "Holman the greenhanded"@en,
+        "Holman the greenhanded"@fr .
+
+<http://tolkiengateway.net/resource/Horn> rdfs:label "Horn"@en,
+        "Horn"@fr .
+
+<http://tolkiengateway.net/resource/Horses> rdfs:label "Horses"@en,
+        "Horses"@fr .
+
+<http://tolkiengateway.net/resource/Howard_Shore> rdfs:label "Howard Shore"@en,
+        "Howard Shore"@fr .
+
+<http://tolkiengateway.net/resource/Hugo_Boffin> rdfs:label "Hugo Boffin"@en,
+        "Hugo Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Hugo_Bracegirdle> rdfs:label "Hugo Bracegirdle"@en,
+        "Hugo Bracegirdle"@fr .
+
+<http://tolkiengateway.net/resource/Hugo_Dyson> rdfs:label "Hugo Dyson"@en,
+        "Hugo Dyson"@fr .
+
+<http://tolkiengateway.net/resource/Hugo_Weaving> rdfs:label "Hugo Wallace Weaving"@en,
+        "Hugo Wallace Weaving"@fr .
+
+<http://tolkiengateway.net/resource/Humphrey_Carpenter> rdfs:label "Humphrey Carpenter"@en,
+        "Humphrey Carpenter"@fr .
+
+<http://tolkiengateway.net/resource/Huorns> rdfs:label "Huorns"@en,
+        "Huorns"@fr .
+
+<http://tolkiengateway.net/resource/Hyarmendacil_I> rdfs:label "Hyarmendacil I"@en,
+        "Hyarmendacil I"@fr .
+
+<http://tolkiengateway.net/resource/Hyarmendacil_II> rdfs:label "Hyarmendacil II"@en,
+        "Hyarmendacil II"@fr .
+
+<http://tolkiengateway.net/resource/Háma> rdfs:label "Háma"@en,
+        "Háma"@fr .
+
+<http://tolkiengateway.net/resource/Húrin> rdfs:label "Húrin"@en,
+        "Húrin"@fr .
+
+<http://tolkiengateway.net/resource/Húrin_I> rdfs:label "Húrin I"@en,
+        "Húrin I"@fr .
+
+<http://tolkiengateway.net/resource/Húrin_II> rdfs:label "Húrin II"@en,
+        "Húrin II"@fr .
+
+<http://tolkiengateway.net/resource/Húrin_of_Emyn_Arnen> rdfs:label "Húrin of Emyn Arnen"@en,
+        "Húrin of Emyn Arnen"@fr .
+
+<http://tolkiengateway.net/resource/Iago_Grubb> rdfs:label "Iago Grubb"@en,
+        "Iago Grubb"@fr .
+
+<http://tolkiengateway.net/resource/Ian_Brodie> rdfs:label "Ian Brodie"@en,
+        "Ian Brodie"@fr .
+
+<http://tolkiengateway.net/resource/Ian_Holm> rdfs:label "Ian Holm"@en,
+        "Ian Holm"@fr .
+
+<http://tolkiengateway.net/resource/Ian_McKellen> rdfs:label "Ian McKellen"@en,
+        "Ian McKellen"@fr .
+
+<http://tolkiengateway.net/resource/Ian_Mune> rdfs:label "Ian Mune"@en,
+        "Ian Mune"@fr .
+
+<http://tolkiengateway.net/resource/Iathrim> rdfs:label "Iathrim"@en,
+        "Iathrim"@fr .
+
+<http://tolkiengateway.net/resource/Idis> rdfs:label "Idis"@en,
+        "Idis"@fr .
+
+<http://tolkiengateway.net/resource/Ilberic_Brandybuck> rdfs:label "Ilberic Brandybuck"@en,
+        "Ilberic Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Imrahil> rdfs:label "Imrahil"@en,
+        "Imrahil"@fr .
+
+<http://tolkiengateway.net/resource/Imrazôr> rdfs:label "Imrazôr"@en,
+        "Imrazôr"@fr .
+
+<http://tolkiengateway.net/resource/Inger_Edelfeldt> rdfs:label "Inger Edelfeldt"@en,
+        "Inger Edelfeldt"@fr .
+
+<http://tolkiengateway.net/resource/Ingold> rdfs:label "Ingold"@en,
+        "Ingold"@fr .
+
+<http://tolkiengateway.net/resource/Ioreth> rdfs:label "Ioreth"@en,
+        "Ioreth"@fr .
+
+<http://tolkiengateway.net/resource/Iorlas> rdfs:label "Iorlas"@en,
+        "Iorlas"@fr .
+
+<http://tolkiengateway.net/resource/Isembard_Took> rdfs:label "Isembard Took"@en,
+        "Isembard Took"@fr .
+
+<http://tolkiengateway.net/resource/Isembold_Took> rdfs:label "Isembold Took"@en,
+        "Isembold Took"@fr .
+
+<http://tolkiengateway.net/resource/Isengar_Took> rdfs:label "Isengar Took"@en,
+        "Isengar Took"@fr .
+
+<http://tolkiengateway.net/resource/Isengrim_Took_I> rdfs:label "Isengrim Took I"@en,
+        "Isengrim Took I"@fr .
+
+<http://tolkiengateway.net/resource/Isengrim_Took_II> rdfs:label "Isengrim Took II"@en,
+        "Isengrim Took II"@fr .
+
+<http://tolkiengateway.net/resource/Isengrim_Took_III> rdfs:label "Isengrim Took III"@en,
+        "Isengrim Took III"@fr .
+
+<http://tolkiengateway.net/resource/Isildur> rdfs:label "Isildur"@en,
+        "Isildur"@fr .
+
+<http://tolkiengateway.net/resource/Isumbras_Took_I> rdfs:label "Isumbras Took I"@en,
+        "Isumbras Took I"@fr .
+
+<http://tolkiengateway.net/resource/Isumbras_Took_II> rdfs:label "Isumbras Took II"@en,
+        "Isumbras Took II"@fr .
+
+<http://tolkiengateway.net/resource/Isumbras_Took_III> rdfs:label "Isumbras Took III"@en,
+        "Isumbras Took III"@fr .
+
+<http://tolkiengateway.net/resource/Isumbras_Took_IV> rdfs:label "Isumbras Took IV"@en,
+        "Isumbras Took IV"@fr .
+
+<http://tolkiengateway.net/resource/Ivorwen> rdfs:label "Ivorwen"@en,
+        "Ivorwen"@fr .
+
+<http://tolkiengateway.net/resource/Ivriniel> rdfs:label "Ivriniel"@en,
+        "Ivriniel"@fr .
+
+<http://tolkiengateway.net/resource/Ivy_Goodenough> rdfs:label "Ivy Goodenough"@en,
+        "Ivy Goodenough"@fr .
+
+<http://tolkiengateway.net/resource/J_R_R_Tolkien> rdfs:label "J.R.R. Tolkien"@en,
+        "J.R.R. Tolkien"@fr .
+
+<http://tolkiengateway.net/resource/J_R_R_Tolkien_temp> rdfs:label "J. R. R. Tolkien"@de,
+        "J.R.R. Tolkien"@en,
+        "J.R.R. Tolkien"@fr,
+        "tolkien:bio"@fr .
+
+<http://tolkiengateway.net/resource/J_R_Titmass> rdfs:label "Historian of Oxford"@en,
+        "Historian of Oxford"@fr .
+
+<http://tolkiengateway.net/resource/Jago_Boffin> rdfs:label "Jago Boffin"@en,
+        "Jago Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Jane_Chance> rdfs:label "Jane Chance"@en,
+        "Jane Chance"@fr .
+
+<http://tolkiengateway.net/resource/Jed_Brophy> rdfs:label "Jed Brophy"@en,
+        "Jed Brophy"@fr .
+
+<http://tolkiengateway.net/resource/Jef_Murray> rdfs:label "Jef Murray"@en,
+        "Jef Murray"@fr .
+
+<http://tolkiengateway.net/resource/Jemima_Catlin> rdfs:label "Jemima Catlin"@en,
+        "Jemima Catlin"@fr .
+
+<http://tolkiengateway.net/resource/Jenny_Dolfen> rdfs:label "Jenny Dolfen"@en,
+        "Jenny Dolfen"@fr .
+
+<http://tolkiengateway.net/resource/Jessamine_Boffin> rdfs:label "Jessamine Boffin"@en,
+        "Jessamine Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Johan_Vanhecke> rdfs:label "Johan Vanhecke"@en,
+        "Johan Vanhecke"@fr .
+
+<http://tolkiengateway.net/resource/John_Bach> rdfs:label "John Bach"@en,
+        "John Bach"@fr .
+
+<http://tolkiengateway.net/resource/John_Benjamin_Tolkien> rdfs:label "John Benjamin Tolkien"@en,
+        "John Benjamin Tolkien"@fr .
+
+<http://tolkiengateway.net/resource/John_D_Rateliff> rdfs:label "John D. Rateliff"@en,
+        "John D. Rateliff"@fr .
+
+<http://tolkiengateway.net/resource/John_Garth> rdfs:label "John Garth"@en,
+        "John Garth"@fr .
+
+<http://tolkiengateway.net/resource/John_Howe> rdfs:label "John Howe"@en,
+        "John Howe"@fr .
+
+<http://tolkiengateway.net/resource/John_Noble> rdfs:label "John Noble"@en,
+        "John Noble"@fr .
+
+<http://tolkiengateway.net/resource/John_Rhys-Davies> rdfs:label "John Rhys-Davies"@en,
+        "John Rhys-Davies"@fr .
+
+<http://tolkiengateway.net/resource/Justin_Gerard> rdfs:label "Justin Gerard"@en,
+        "Justin Gerard"@fr .
+
+<http://tolkiengateway.net/resource/Karen_Wynn_Fonstad> rdfs:label "Karen Wynn Fonstad"@en,
+        "Karen Wynn Fonstad"@fr .
+
+<http://tolkiengateway.net/resource/Karl_Urban> rdfs:label "Karl Urban"@en,
+        "Karl Urban"@fr .
+
+<http://tolkiengateway.net/resource/Kay_Woollard> rdfs:label "Kay Woollard"@en,
+        "Kay Woollard"@fr .
+
+<http://tolkiengateway.net/resource/Khamûl> rdfs:label "Khamûl"@en,
+        "Khamûl"@fr .
+
+<http://tolkiengateway.net/resource/King_of_the_Dead> rdfs:label "King of the Dead"@en,
+        "King of the Dead"@fr .
+
+<http://tolkiengateway.net/resource/Kiryandil> rdfs:label "Kiryandil"@en,
+        "Kiryandil"@fr .
+
+<http://tolkiengateway.net/resource/Klaus_Ensikat> rdfs:label "Klaus Ensikat"@en,
+        "Klaus Ensikat"@fr .
+
+<http://tolkiengateway.net/resource/Kíli> rdfs:label "Kíli"@en,
+        "Kíli"@fr .
+
+<http://tolkiengateway.net/resource/Lagduf> rdfs:label "Lagduf"@en,
+        "Lagduf"@fr .
+
+<http://tolkiengateway.net/resource/Lake-men> rdfs:label "Lake-men"@en,
+        "Lake-men"@fr .
+
+<http://tolkiengateway.net/resource/Lalia_Clayhanger> rdfs:label "Lalia Clayhanger"@en,
+        "Lalia Clayhanger"@fr .
+
+<http://tolkiengateway.net/resource/Landroval> rdfs:label "Landroval"@en,
+        "Landroval"@fr .
+
+<http://tolkiengateway.net/resource/Largo_Baggins> rdfs:label "Largo Baggins"@en,
+        "Largo Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Larry_Elmore> rdfs:label "Larry D. Elmore"@en,
+        "Larry D. Elmore"@fr .
+
+<http://tolkiengateway.net/resource/Lascelles_Abercrombie> rdfs:label "Lascelles Abercrombie"@en,
+        "Lascelles Abercrombie"@fr .
+
+<http://tolkiengateway.net/resource/Laura_Grubb> rdfs:label "Laura Grubb"@en,
+        "Laura Grubb"@fr .
+
+<http://tolkiengateway.net/resource/Lavender_Grubb> rdfs:label "Lavender Grubb"@en,
+        "Lavender Grubb"@fr .
+
+<http://tolkiengateway.net/resource/Lawrence_Makoare> rdfs:label "Lawrence Makoare"@en,
+        "Lawrence Makoare"@fr .
+
+<http://tolkiengateway.net/resource/Leader_of_the_Éothéod> rdfs:label "Leader of the Éothéod"@en,
+        "Leader of the Éothéod"@fr .
+
+<http://tolkiengateway.net/resource/Leaflock> rdfs:label "Leaflock"@en,
+        "Leaflock"@fr .
+
+<http://tolkiengateway.net/resource/Legolas> rdfs:label "Legolas"@de,
+        "Legolas"@en,
+        "Legolas"@es,
+        "Legolas"@fr,
+        "Legolas"@it .
+
+<http://tolkiengateway.net/resource/Lief> rdfs:label "Lief"@en,
+        "Lief"@fr .
+
+<http://tolkiengateway.net/resource/Lily_Baggins> rdfs:label "Lily Baggins"@en,
+        "Lily Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Lily_Brown> rdfs:label "Lily Brown"@en,
+        "Lily Brown"@fr .
+
+<http://tolkiengateway.net/resource/Linda_Baggins> rdfs:label "Linda Baggins"@en,
+        "Linda Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Lindir> rdfs:label "Lindir"@en,
+        "Lindir"@fr .
+
+<http://tolkiengateway.net/resource/Liv_Tyler> rdfs:label "Liv Tyler"@en,
+        "Liv Tyler"@fr .
+
+<http://tolkiengateway.net/resource/Livia_Rusz> rdfs:label "Livia Rusz"@en,
+        "Livia Rusz"@fr .
+
+<http://tolkiengateway.net/resource/Liz_Danforth> rdfs:label "Elizabeth T. Danforth"@en,
+        "Elizabeth T. Danforth"@fr .
+
+<http://tolkiengateway.net/resource/Lobelia_Sackville-Baggins> rdfs:label "Lobelia Sackville-Baggins"@en,
+        "Lobelia Sackville-Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Lofar> rdfs:label "Lofar"@en,
+        "Lofar"@fr .
+
+<http://tolkiengateway.net/resource/Lonely_Troll> rdfs:label "Lonely Troll"@en,
+        "Lonely Troll"@fr .
+
+<http://tolkiengateway.net/resource/Longo_Baggins> rdfs:label "Longo Baggins"@en,
+        "Longo Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Lord_Thorne> rdfs:label "Lord Thorne"@en,
+        "Lord Thorne"@fr .
+
+<http://tolkiengateway.net/resource/Lori_Dungey> rdfs:label "Lori Dungey"@en,
+        "Lori Dungey"@fr .
+
+<http://tolkiengateway.net/resource/Lossoth> rdfs:label "Lossoth"@en,
+        "Lossoth"@fr .
+
+<http://tolkiengateway.net/resource/Lotho_Sackville-Baggins> rdfs:label "Lotho Sackville-Baggins"@en,
+        "Lotho Sackville-Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Lothíriel> rdfs:label "Lothíriel"@en,
+        "Lothíriel"@fr .
+
+<http://tolkiengateway.net/resource/Lugdush> rdfs:label "Lugdush"@en,
+        "Lugdush"@fr .
+
+<http://tolkiengateway.net/resource/Léod> rdfs:label "Léod"@en,
+        "Léod"@fr .
+
+<http://tolkiengateway.net/resource/Lída_Holubová> rdfs:label "Lída Aegeri Holubová"@en,
+        "Lída Aegeri Holubová"@fr .
+
+<http://tolkiengateway.net/resource/Lóni> rdfs:label "Lóni"@en,
+        "Lóni"@fr .
+
+<http://tolkiengateway.net/resource/Mablung> rdfs:label "Mablung"@en,
+        "Mablung"@fr .
+
+<http://tolkiengateway.net/resource/Madoc_Brandybuck> rdfs:label "Madoc Brandybuck"@en,
+        "Madoc Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Maiar> rdfs:label "Maiar"@en,
+        "Maiar"@fr .
+
+<http://tolkiengateway.net/resource/Malbeth> rdfs:label "Malbeth"@en,
+        "Malbeth"@fr .
+
+<http://tolkiengateway.net/resource/Mallor> rdfs:label "Mallor"@en,
+        "Mallor"@fr .
+
+<http://tolkiengateway.net/resource/Malva_Headstrong> rdfs:label "Malva Headstrong"@en,
+        "Malva Headstrong"@fr .
+
+<http://tolkiengateway.net/resource/Malvegil> rdfs:label "Malvegil"@en,
+        "Malvegil"@fr .
+
+<http://tolkiengateway.net/resource/Manwë> rdfs:label "Manwë"@en,
+        "Manwë"@fr .
+
+<http://tolkiengateway.net/resource/Marcel_Bülles> rdfs:label "Marcel Bülles"@en,
+        "Marcel Bülles"@fr .
+
+<http://tolkiengateway.net/resource/Marcho_and_Blanco> rdfs:label "Marcho and Blanco"@en,
+        "Marcho and Blanco"@fr .
+
+<http://tolkiengateway.net/resource/Mardil> rdfs:label "Mardil"@en,
+        "Mardil"@fr .
+
+<http://tolkiengateway.net/resource/Margaret_Organ-Kean> rdfs:label "Margaret Organ-Kean"@en,
+        "Margaret Organ-Kean"@fr .
+
+<http://tolkiengateway.net/resource/Margrethe_II_of_Denmark> rdfs:label "Margrethe II of Denmark"@en,
+        "Margrethe II of Denmark"@fr .
+
+<http://tolkiengateway.net/resource/Marhari> rdfs:label "Marhari"@en,
+        "Marhari"@fr .
+
+<http://tolkiengateway.net/resource/Marhath> rdfs:label "Marhath"@en,
+        "Marhath"@fr .
+
+<http://tolkiengateway.net/resource/Marhwini> rdfs:label "Marhwini"@en,
+        "Marhwini"@fr .
+
+<http://tolkiengateway.net/resource/Maria_Isabel_Braga> rdfs:label "Maria Isabel Braga"@en,
+        "Maria Isabel Braga"@fr .
+
+<http://tolkiengateway.net/resource/Marigold_Gamgee> rdfs:label "Marigold Gamgee"@en,
+        "Marigold Gamgee"@fr .
+
+<http://tolkiengateway.net/resource/Mark_Ferguson> rdfs:label "Mark Ferguson"@en,
+        "Mark Ferguson"@fr .
+
+<http://tolkiengateway.net/resource/Mark_Poole> rdfs:label "Mark Poole"@en,
+        "Mark Poole"@fr .
+
+<http://tolkiengateway.net/resource/Marmadas_Brandybuck> rdfs:label "Marmadas Brandybuck"@en,
+        "Marmadas Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Marmadoc_Brandybuck> rdfs:label "Marmadoc Brandybuck"@en,
+        "Marmadoc Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Marroc_Brandybuck> rdfs:label "Marroc Brandybuck"@en,
+        "Marroc Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Marton_Csokas> rdfs:label "Marton Csokas"@en,
+        "Marton Csokas"@fr .
+
+<http://tolkiengateway.net/resource/Martyn_Sanderson> rdfs:label "Martyn Sanderson"@en,
+        "Martyn Sanderson"@fr .
+
+<http://tolkiengateway.net/resource/Mary_Fairburn> rdfs:label "Mary Fairburn"@en,
+        "Mary Fairburn"@fr .
+
+<http://tolkiengateway.net/resource/Master_of_Lake-town> rdfs:label "Master of Lake-town"@en,
+        "Master of Lake-town"@fr .
+
+<http://tolkiengateway.net/resource/Mat_Heathertoes> rdfs:label "Mat Heathertoes"@en,
+        "Mat Heathertoes"@fr .
+
+<http://tolkiengateway.net/resource/Matěj_Čadil> rdfs:label "Matěj Čadil"@en,
+        "Matěj Čadil"@fr .
+
+<http://tolkiengateway.net/resource/Mauhúr> rdfs:label "Mauhúr"@en,
+        "Mauhúr"@fr .
+
+<http://tolkiengateway.net/resource/May> rdfs:label "May"@en,
+        "May"@fr .
+
+<http://tolkiengateway.net/resource/May_Gamgee> rdfs:label "May Gamgee"@en,
+        "May Gamgee"@fr .
+
+<http://tolkiengateway.net/resource/Megan_Edwards> rdfs:label "Megan Edwards"@en,
+        "Megan Edwards"@fr .
+
+<http://tolkiengateway.net/resource/Melilot_Brandybuck> rdfs:label "Melilot Brandybuck"@en,
+        "Melilot Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Men_of_Bree> rdfs:label "Men of Bree"@en,
+        "Men of Bree"@fr .
+
+<http://tolkiengateway.net/resource/Men_of_Dale> rdfs:label "Men of Dale"@en,
+        "Men of Dale"@fr .
+
+<http://tolkiengateway.net/resource/Menegilda_Goold> rdfs:label "Menegilda Goold"@en,
+        "Menegilda Goold"@fr .
+
+<http://tolkiengateway.net/resource/Meneldil> rdfs:label "Meneldil"@en,
+        "Meneldil"@fr .
+
+<http://tolkiengateway.net/resource/Meneldor> rdfs:label "Meneldor"@en,
+        "Meneldor"@fr .
+
+<http://tolkiengateway.net/resource/Mentha_Brandybuck> rdfs:label "Mentha Brandybuck"@en,
+        "Mentha Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Meriadoc_Brandybuck> rdfs:label "Meriadoc Brandybuter"@de,
+        "Meriadoc Brandybuck"@en,
+        "Meriadoc Brandigamo"@es,
+        "Meriadoc Brandebouc"@fr,
+        "Meriadoc Brandibuck"@it .
+
+<http://tolkiengateway.net/resource/Merimac_Brandybuck> rdfs:label "Merimac Brandybuck"@en,
+        "Merimac Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Merimas_Brandybuck> rdfs:label "Merimas Brandybuck"@en,
+        "Merimas Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Mermaids> rdfs:label "Mermaids"@en,
+        "Mermaids"@fr .
+
+<http://tolkiengateway.net/resource/Michael_D_C_Drout> rdfs:label "Michael D.C. Drout"@en,
+        "Michael D.C. Drout"@fr .
+
+<http://tolkiengateway.net/resource/Michael_Elsworth> rdfs:label "Michael Elsworth"@en,
+        "Michael Elsworth"@fr .
+
+<http://tolkiengateway.net/resource/Michael_Martinez> rdfs:label "Michael Martinez"@en,
+        "Michael Martinez"@fr .
+
+<http://tolkiengateway.net/resource/Milo_Burrows> rdfs:label "Milo Burrows"@en,
+        "Milo Burrows"@fr .
+
+<http://tolkiengateway.net/resource/Mimosa_Bunce> rdfs:label "Mimosa Bunce"@en,
+        "Mimosa Bunce"@fr .
+
+<http://tolkiengateway.net/resource/Minardil> rdfs:label "Minardil"@en,
+        "Minardil"@fr .
+
+<http://tolkiengateway.net/resource/Minastan> rdfs:label "Minastan"@en,
+        "Minastan"@fr .
+
+<http://tolkiengateway.net/resource/Minohtar> rdfs:label "Minohtar"@en,
+        "Minohtar"@fr .
+
+<http://tolkiengateway.net/resource/Minstrel_of_Gondor> rdfs:label "Minstrel of Gondor"@en,
+        "Minstrel of Gondor"@fr .
+
+<http://tolkiengateway.net/resource/Minto_Burrows> rdfs:label "Minto Burrows"@en,
+        "Minto Burrows"@fr .
+
+<http://tolkiengateway.net/resource/Mirabella_Took> rdfs:label "Mirabella Took"@en,
+        "Mirabella Took"@fr .
+
+<http://tolkiengateway.net/resource/Miranda_Otto> rdfs:label "Miranda Otto"@en,
+        "Miranda Otto"@fr .
+
+<http://tolkiengateway.net/resource/Miriam_Ellis> rdfs:label "Miriam Ellis"@en,
+        "Miriam Ellis"@fr .
+
+<http://tolkiengateway.net/resource/Mithrellas> rdfs:label "Mithrellas"@en,
+        "Mithrellas"@fr .
+
+<http://tolkiengateway.net/resource/Moro_Burrows> rdfs:label "Moro Burrows"@en,
+        "Moro Burrows"@fr .
+
+<http://tolkiengateway.net/resource/Morwen> rdfs:label "Morwen"@en,
+        "Morwen"@fr .
+
+<http://tolkiengateway.net/resource/Morwen_Steelsheen> rdfs:label "Morwen"@en,
+        "Morwen"@fr .
+
+<http://tolkiengateway.net/resource/Mosco_Burrows> rdfs:label "Mosco Burrows"@en,
+        "Mosco Burrows"@fr .
+
+<http://tolkiengateway.net/resource/Mouth_of_Sauron> rdfs:label "Mouth of Sauron"@en,
+        "Mouth of Sauron"@fr .
+
+<http://tolkiengateway.net/resource/Mrs_Bunce> rdfs:label "Mrs. Bunce"@en,
+        "Mrs. Bunce"@fr .
+
+<http://tolkiengateway.net/resource/Mrs_Maggot> rdfs:label "Mrs Maggot"@en,
+        "Mrs Maggot"@fr .
+
+<http://tolkiengateway.net/resource/Mungo_Baggins> rdfs:label "Mungo Baggins"@en,
+        "Mungo Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Muzgash> rdfs:label "Muzgash"@en,
+        "Muzgash"@fr .
+
+<http://tolkiengateway.net/resource/Myrtle_Burrows> rdfs:label "Myrtle Burrows"@en,
+        "Myrtle Burrows"@fr .
+
+<http://tolkiengateway.net/resource/Mário_Braga> rdfs:label "Mário Braga"@en,
+        "Mário Braga"@fr .
+
+<http://tolkiengateway.net/resource/Nandor> rdfs:label "Nandor"@en,
+        "Nandor"@fr .
+
+<http://tolkiengateway.net/resource/Nar> rdfs:label "Nar"@en,
+        "Nar"@fr .
+
+<http://tolkiengateway.net/resource/Narmacil_I> rdfs:label "Narmacil I"@en,
+        "Narmacil I"@fr .
+
+<http://tolkiengateway.net/resource/Narmacil_II> rdfs:label "Narmacil II"@en,
+        "Narmacil II"@fr .
+
+<http://tolkiengateway.net/resource/Nazgûl> rdfs:label "Nazgûl"@en,
+        "Nazgûl"@fr .
+
+<http://tolkiengateway.net/resource/Nils-Lennart_Johannesson> rdfs:label "Nils-Lennart Johannesson"@en,
+        "Nils-Lennart Johannesson"@fr .
+
+<http://tolkiengateway.net/resource/Nils_Ivar_Agøy> rdfs:label "Nils Ivar Agøy"@en,
+        "Nils Ivar Agøy"@fr .
+
+<http://tolkiengateway.net/resource/Nimrodel> rdfs:label "Nimrodel"@en,
+        "Nimrodel"@fr .
+
+<http://tolkiengateway.net/resource/Nina_Lightfoot> rdfs:label "Nina Lightfoot"@en,
+        "Nina Lightfoot"@fr .
+
+<http://tolkiengateway.net/resource/Nob> rdfs:label "Nob"@en,
+        "Nob"@fr .
+
+<http://tolkiengateway.net/resource/Noel_Appleby> rdfs:label "Noel Appleby"@en,
+        "Noel Appleby"@fr .
+
+<http://tolkiengateway.net/resource/Nora_Bolger> rdfs:label "Nora Bolger"@en,
+        "Nora Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Nori> rdfs:label "Nori"@en,
+        "Nori"@fr .
+
+<http://tolkiengateway.net/resource/Norman_Forsey> rdfs:label "Norman Forsey"@en,
+        "Norman Forsey"@fr .
+
+<http://tolkiengateway.net/resource/Northmen> rdfs:label "Northmen"@en,
+        "Northmen"@fr .
+
+<http://tolkiengateway.net/resource/Náin> rdfs:label "Náin"@en,
+        "Náin"@fr .
+
+<http://tolkiengateway.net/resource/Náin_I> rdfs:label "Náin I"@en,
+        "Náin I"@fr .
+
+<http://tolkiengateway.net/resource/Náin_II> rdfs:label "Náin II"@en,
+        "Náin II"@fr .
+
+<http://tolkiengateway.net/resource/Náli> rdfs:label "Náli"@en,
+        "Náli"@fr .
+
+<http://tolkiengateway.net/resource/Nár> rdfs:label "Nár"@en,
+        "Nár"@fr .
+
+<http://tolkiengateway.net/resource/Oathbreakers> rdfs:label "Oathbreakers"@en,
+        "Oathbreakers"@fr .
+
+<http://tolkiengateway.net/resource/Odo_Proudfoot> rdfs:label "Odo Proudfoot"@en,
+        "Odo Proudfoot"@fr .
+
+<http://tolkiengateway.net/resource/Odovacar_Bolger> rdfs:label "Odovacar Bolger"@en,
+        "Odovacar Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Ogres> rdfs:label "Ogres"@en,
+        "Ogres"@fr .
+
+<http://tolkiengateway.net/resource/Ohtar> rdfs:label "Ohtar"@en,
+        "Ohtar"@fr .
+
+<http://tolkiengateway.net/resource/Old_Man_Willow> rdfs:label "Old Man Willow"@en,
+        "Old Man Willow"@fr .
+
+<http://tolkiengateway.net/resource/Old_Noakes> rdfs:label "Old Noakes"@en,
+        "Old Noakes"@fr .
+
+<http://tolkiengateway.net/resource/Old_Pennicruik> rdfs:label "Old Pennicruik"@en,
+        "Old Pennicruik"@fr .
+
+<http://tolkiengateway.net/resource/Olivia_Tennet> rdfs:label "Olivia Tennet"@en,
+        "Olivia Tennet"@fr .
+
+<http://tolkiengateway.net/resource/Olo_Proudfoot> rdfs:label "Olo Proudfoot"@en,
+        "Olo Proudfoot"@fr .
+
+<http://tolkiengateway.net/resource/Olwyn> rdfs:label "Olwyn"@en,
+        "Olwyn"@fr .
+
+<http://tolkiengateway.net/resource/Omar_Rayyan> rdfs:label "Omar Rayyan"@en,
+        "Omar Rayyan"@fr .
+
+<http://tolkiengateway.net/resource/Ondoher> rdfs:label "Ondoher"@en,
+        "Ondoher"@fr .
+
+<http://tolkiengateway.net/resource/Orcs_of_Mordor> rdfs:label "Orcs of Mordor"@en,
+        "Orcs of Mordor"@fr .
+
+<http://tolkiengateway.net/resource/Orgulas_Brandybuck> rdfs:label "Orgulas Brandybuck"@en,
+        "Orgulas Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Ori> rdfs:label "Ori"@en,
+        "Ori"@fr .
+
+<http://tolkiengateway.net/resource/Orlando_Bloom> rdfs:label "Orlando Bloom"@en,
+        "Orlando Bloom"@fr .
+
+<http://tolkiengateway.net/resource/Ornendil> rdfs:label "Ornendil"@en,
+        "Ornendil"@fr .
+
+<http://tolkiengateway.net/resource/Orodreth> rdfs:label "Orodreth"@en,
+        "Orodreth"@fr .
+
+<http://tolkiengateway.net/resource/Oromë> rdfs:label "Oromë"@en,
+        "Oromë"@fr .
+
+<http://tolkiengateway.net/resource/Orophin> rdfs:label "Orophin"@en,
+        "Orophin"@fr .
+
+<http://tolkiengateway.net/resource/Ostoher> rdfs:label "Ostoher"@en,
+        "Ostoher"@fr .
+
+<http://tolkiengateway.net/resource/Otho_Sackville-Baggins> rdfs:label "Otho Sackville-Baggins"@en,
+        "Otho Sackville-Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Otto_Boffin> rdfs:label "Otto Boffin"@en,
+        "Otto Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Owen_Barfield> rdfs:label "Owen Barfield"@en,
+        "Owen Barfield"@fr .
+
+<http://tolkiengateway.net/resource/Paladin_Took_I> rdfs:label "Paladin Took I"@en,
+        "Paladin Took I"@fr .
+
+<http://tolkiengateway.net/resource/Paladin_Took_II> rdfs:label "Paladin Took II"@en,
+        "Paladin Took II"@fr .
+
+<http://tolkiengateway.net/resource/Pansy_Baggins> rdfs:label "Pansy Baggins"@en,
+        "Pansy Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Pauline_Baynes> rdfs:label "Pauline Baynes"@en,
+        "Pauline Baynes"@fr .
+
+<http://tolkiengateway.net/resource/Pearl_Took> rdfs:label "Pearl Took"@en,
+        "Pearl Took"@fr .
+
+<http://tolkiengateway.net/resource/Peeping_Jack> rdfs:label "Peeping Jack"@en,
+        "Peeping Jack"@fr .
+
+<http://tolkiengateway.net/resource/Pelendur> rdfs:label "Pelendur"@en,
+        "Pelendur"@fr .
+
+<http://tolkiengateway.net/resource/Peony_Baggins> rdfs:label "Peony Baggins"@en,
+        "Peony Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Peregrin_Took> rdfs:label "Peregrin Tuk"@de,
+        "Peregrin Took"@en,
+        "Peregrin Tuk"@es,
+        "Peregrin Touque"@fr,
+        "Peregrino Tuc"@it .
+
+<http://tolkiengateway.net/resource/Pervinca_Took> rdfs:label "Pervinca Took"@en,
+        "Pervinca Took"@fr .
+
+<http://tolkiengateway.net/resource/Pete_Fenlon> rdfs:label "Pete Fenlon"@en,
+        "Pete Fenlon"@fr .
+
+<http://tolkiengateway.net/resource/Peter_Chuklev> rdfs:label "Peter Chuklev"@en,
+        "Peter Chuklev"@fr .
+
+<http://tolkiengateway.net/resource/Peter_Corrigan> rdfs:label "Peter Corrigan"@en,
+        "Peter Corrigan"@fr .
+
+<http://tolkiengateway.net/resource/Peter_Jackson> rdfs:label "Peter Jackson"@en,
+        "Peter Jackson"@fr .
+
+<http://tolkiengateway.net/resource/Peter_Kľúčik> rdfs:label "Peter Kľúčik"@en,
+        "Peter Kľúčik"@fr .
+
+<http://tolkiengateway.net/resource/Peter_McKenzie> rdfs:label "Peter McKenzie"@en,
+        "Peter McKenzie"@fr .
+
+<http://tolkiengateway.net/resource/Peter_Pracownik> rdfs:label "Peter Pracownik"@en,
+        "Peter Pracownik"@fr .
+
+<http://tolkiengateway.net/resource/Peter_S_Beagle> rdfs:label "Peter S. Beagle"@en,
+        "Peter S. Beagle"@fr .
+
+<http://tolkiengateway.net/resource/Petty-dwarves> rdfs:label "Kleinzwerge"@de,
+        "Petty-dwarves"@en,
+        "Petty-dwarves"@fr,
+        "encyclo/peuples/nains/petits-nains"@fr .
+
+<http://tolkiengateway.net/resource/Pimpernel_Took> rdfs:label "Pimpernel Took"@en,
+        "Pimpernel Took"@fr .
+
+<http://tolkiengateway.net/resource/Polo_Baggins> rdfs:label "Polo Baggins"@en,
+        "Polo Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Ponto_Baggins_I> rdfs:label "Ponto Baggins"@en,
+        "Ponto Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Ponto_Baggins_II> rdfs:label "Ponto Baggins II"@en,
+        "Ponto Baggins II"@fr .
+
+<http://tolkiengateway.net/resource/Poppy_Chubb-Baggins> rdfs:label "Poppy Chubb-Baggins"@en,
+        "Poppy Chubb-Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Porto_Baggins> rdfs:label "Porto Baggins"@en,
+        "Porto Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Posco_Baggins> rdfs:label "Posco Baggins"@en,
+        "Posco Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Pott_the_Mayor> rdfs:label "Pott the Mayor"@en,
+        "Pott the Mayor"@fr .
+
+<http://tolkiengateway.net/resource/Primo_Grubb> rdfs:label "Primo Grubb"@en,
+        "Primo Grubb"@fr .
+
+<http://tolkiengateway.net/resource/Primrose_Boffin> rdfs:label "Primrose Boffin"@en,
+        "Primrose Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Primula_Brandybuck> rdfs:label "Primula Brandybuck"@en,
+        "Primula Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Prisca_Baggins> rdfs:label "Prisca Baggins"@en,
+        "Prisca Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Przemysław_Mroczkowski> rdfs:label "Przemysław Mroczkowski"@en,
+        "Przemysław Mroczkowski"@fr .
+
+<http://tolkiengateway.net/resource/Quickbeam> rdfs:label "Quickbeam"@en,
+        "Quickbeam"@fr .
+
+<http://tolkiengateway.net/resource/Quinton_Hoover> rdfs:label "Quinton Hoover"@en,
+        "Quinton Hoover"@fr .
+
+<http://tolkiengateway.net/resource/Radagast> rdfs:label "Radagast"@en,
+        "Radagast"@fr .
+
+<http://tolkiengateway.net/resource/Ralph_Bakshi> rdfs:label "Ralph Bakshi"@en,
+        "Ralph Bakshi"@fr .
+
+<http://tolkiengateway.net/resource/Randy_Gallegos> rdfs:label "Randy Gallegos"@en,
+        "Randy Gallegos"@fr .
+
+<http://tolkiengateway.net/resource/Reginard_Took> rdfs:label "Reginard Took"@en,
+        "Reginard Took"@fr .
+
+<http://tolkiengateway.net/resource/Richard_E_Blackwelder> rdfs:label "Richard E. Blackwelder"@en,
+        "Richard E. Blackwelder"@fr .
+
+<http://tolkiengateway.net/resource/Rob_Alexander> rdfs:label "Rob Alexander"@en,
+        "Rob Alexander"@fr .
+
+<http://tolkiengateway.net/resource/Robert_Havard> rdfs:label "Robert Havard"@en,
+        "Robert Havard"@fr .
+
+<http://tolkiengateway.net/resource/Robin_Smallburrow> rdfs:label "Robin Smallburrow"@en,
+        "Robin Smallburrow"@fr .
+
+<http://tolkiengateway.net/resource/Roger_Garland> rdfs:label "Roger Garland"@en,
+        "Roger Garland"@fr .
+
+<http://tolkiengateway.net/resource/Rohirrim> rdfs:label "Rohirrim"@en,
+        "Rohirrim"@fr .
+
+<http://tolkiengateway.net/resource/Rollo_Boffin> rdfs:label "Rollo Boffin"@en,
+        "Rollo Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Ron_Chironna> rdfs:label "Ron Chironna"@en,
+        "Ron Chironna"@fr .
+
+<http://tolkiengateway.net/resource/Rorimac_Brandybuck> rdfs:label "Rorimac Brandybuck"@en,
+        "Rorimac Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Rosa_Baggins> rdfs:label "Rosa Baggins"@en,
+        "Rosa Baggins"@fr .
+
+<http://tolkiengateway.net/resource/Rosamunda_Took> rdfs:label "Rosamunda Took"@en,
+        "Rosamunda Took"@fr .
+
+<http://tolkiengateway.net/resource/Rose> rdfs:label "Rose"@en,
+        "Rose"@fr .
+
+<http://tolkiengateway.net/resource/Rose_Cotton> rdfs:label "Rose Cotton"@en,
+        "Rose Cotton"@fr .
+
+<http://tolkiengateway.net/resource/Rowan> rdfs:label "Rowan"@en,
+        "Rowan"@fr .
+
+<http://tolkiengateway.net/resource/Rowlie_Appledore> rdfs:label "Rowlie Appledore"@en,
+        "Rowlie Appledore"@fr .
+
+<http://tolkiengateway.net/resource/Roäc> rdfs:label "Roäc"@en,
+        "Roäc"@fr .
+
+<http://tolkiengateway.net/resource/Ruby_Bolger> rdfs:label "Ruby Bolger"@en,
+        "Ruby Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Rudibert_Bolger> rdfs:label "Rudibert Bolger"@en,
+        "Rudibert Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Rudigar_Bolger> rdfs:label "Rudigar Bolger"@en,
+        "Rudigar Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Rudolph_Bolger> rdfs:label "Rudolph Bolger"@en,
+        "Rudolph Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Rufus_Burrows> rdfs:label "Rufus Burrows"@en,
+        "Rufus Burrows"@fr .
+
+<http://tolkiengateway.net/resource/Ryszard_Derdziński> rdfs:label "Ryszard Derdziński"@en,
+        "Ryszard Derdziński"@fr .
+
+<http://tolkiengateway.net/resource/Rían> rdfs:label "Rían"@en,
+        "Rían"@fr .
+
+<http://tolkiengateway.net/resource/Rómendacil_I> rdfs:label "Rómendacil I"@en,
+        "Rómendacil I"@fr .
+
+<http://tolkiengateway.net/resource/Rómendacil_II> rdfs:label "Rómendacil II"@en,
+        "Rómendacil II"@fr .
+
+<http://tolkiengateway.net/resource/Rúmil> rdfs:label "Rúmil"@en,
+        "Rúmil"@fr .
+
+<http://tolkiengateway.net/resource/Saint_Brendan> rdfs:label "Saint Brendan"@en,
+        "Saint Brendan"@fr .
+
+<http://tolkiengateway.net/resource/Sala_Baker> rdfs:label "Sala Baker"@en,
+        "Sala Baker"@fr .
+
+<http://tolkiengateway.net/resource/Salvia_Brandybuck> rdfs:label "Salvia Brandybuck"@en,
+        "Salvia Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Samwise_Gamgee> rdfs:label "Samweis Gamdschie"@de,
+        "Samwise Gamgee"@en,
+        "Samsagaz Gamyi"@es,
+        "Samsagace Gamegie"@fr,
+        "Samvise Gamgee"@it .
+
+<http://tolkiengateway.net/resource/Sancho_Proudfoot> rdfs:label "Sancho Proudfoot"@en,
+        "Sancho Proudfoot"@fr .
+
+<http://tolkiengateway.net/resource/Sandyman> rdfs:label "Sandyman"@en,
+        "Sandyman"@fr .
+
+<http://tolkiengateway.net/resource/Sangahyando> rdfs:label "Sangahyando"@en,
+        "Sangahyando"@fr .
+
+<http://tolkiengateway.net/resource/Sapphira_Brockhouse> rdfs:label "Sapphira Brockhouse"@en,
+        "Sapphira Brockhouse"@fr .
+
+<http://tolkiengateway.net/resource/Saradas_Brandybuck> rdfs:label "Saradas Brandybuck"@en,
+        "Saradas Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Saradoc_Brandybuck> rdfs:label "Saradoc Brandybuck"@en,
+        "Saradoc Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Sarah_McLeod> rdfs:label "Sarah McLeod"@en,
+        "Sarah McLeod"@fr .
+
+<http://tolkiengateway.net/resource/Saruman> rdfs:label "Saruman"@de,
+        "Saruman"@en,
+        "Saruman"@es,
+        "Saruman"@fr,
+        "Saruman"@it .
+
+<http://tolkiengateway.net/resource/Sauron> rdfs:label "Sauron"@de,
+        "Sauron"@en,
+        "Sauron"@es,
+        "Sauron"@fr,
+        "Sauron"@it .
+
+<http://tolkiengateway.net/resource/Scatha> rdfs:label "Scatha"@en,
+        "Scatha"@fr .
+
+<http://tolkiengateway.net/resource/Sean_Astin> rdfs:label "Sean Astin"@en,
+        "Sean Astin"@fr .
+
+<http://tolkiengateway.net/resource/Sean_Bean> rdfs:label "Sean Bean"@en,
+        "Sean Bean"@fr .
+
+<http://tolkiengateway.net/resource/Seredic_Brandybuck> rdfs:label "Seredic Brandybuck"@en,
+        "Seredic Brandybuck"@fr .
+
+<http://tolkiengateway.net/resource/Shagrat> rdfs:label "Shagrat"@en,
+        "Shagrat"@fr .
+
+<http://tolkiengateway.net/resource/Shank> rdfs:label "Shank"@en,
+        "Shank"@fr .
+
+<http://tolkiengateway.net/resource/Shelob> rdfs:label "Shelob"@en,
+        "Shelob"@fr .
+
+<http://tolkiengateway.net/resource/Sigismond_Took> rdfs:label "Sigismond Took"@en,
+        "Sigismond Took"@fr .
+
+<http://tolkiengateway.net/resource/Silvan_Elves> rdfs:label "Silvan Elves"@en,
+        "Silvan Elves"@fr .
+
+<http://tolkiengateway.net/resource/Simon_Tolkien> rdfs:label "Simon Tolkien"@en,
+        "Simon Tolkien"@fr .
+
+<http://tolkiengateway.net/resource/Siriondil> rdfs:label "Siriondil"@en,
+        "Siriondil"@fr .
+
+<http://tolkiengateway.net/resource/Skinbark> rdfs:label "Skinbark"@en,
+        "Skinbark"@fr .
+
+<http://tolkiengateway.net/resource/Smaug> rdfs:label "Smaug"@en,
+        "Smaug"@fr .
+
+<http://tolkiengateway.net/resource/Snaga> rdfs:label "Snaga"@en,
+        "Snaga"@fr .
+
+<http://tolkiengateway.net/resource/Soni_Alcorn-Hender> rdfs:label "Soni Alcorn-Hender"@en,
+        "Soni Alcorn-Hender"@fr .
+
+<http://tolkiengateway.net/resource/Spiders> rdfs:label "Spiders"@en,
+        "Spiders"@fr .
+
+<http://tolkiengateway.net/resource/Spiros_Gelekas> rdfs:label "Spiros Gelekas"@en,
+        "Spiros Gelekas"@fr .
+
+<http://tolkiengateway.net/resource/Sprites> rdfs:label "Sprites"@en,
+        "Sprites"@fr .
+
+<http://tolkiengateway.net/resource/Squint-eyed_southerner> rdfs:label "Schielender Südländer"@de,
+        "Squint-eyed southerner"@en,
+        "Squint-eyed southerner"@fr .
+
+<http://tolkiengateway.net/resource/Stefano_Baldo> rdfs:label "Stefano Baldo"@en,
+        "Stefano Baldo"@fr .
+
+<http://tolkiengateway.net/resource/Stephen_Hickman> rdfs:label "Stephen Hickman"@en,
+        "Stephen Hickman"@fr .
+
+<http://tolkiengateway.net/resource/Stephen_Ure> rdfs:label "Stephen Ure"@en,
+        "Stephen Ure"@fr .
+
+<http://tolkiengateway.net/resource/Stephen_Walsh> rdfs:label "Stephen Graham Walsh"@en,
+        "Stephen Graham Walsh"@fr .
+
+<http://tolkiengateway.net/resource/Stuart_D_Lee> rdfs:label "Stuart D. Lee"@en,
+        "Stuart D. Lee"@fr .
+
+<http://tolkiengateway.net/resource/Sylphs> rdfs:label "Sylphs"@en,
+        "Sylphs"@fr .
+
+<http://tolkiengateway.net/resource/Talking_purse> rdfs:label "Talking purse"@en,
+        "Talking purse"@fr .
+
+<http://tolkiengateway.net/resource/Tanta_Hornblower> rdfs:label "Tanta Hornblower"@en,
+        "Tanta Hornblower"@fr .
+
+<http://tolkiengateway.net/resource/Tarannon_Falastur> rdfs:label "Tarannon"@en,
+        "Tarannon"@fr .
+
+<http://tolkiengateway.net/resource/Tarcil> rdfs:label "Tarcil"@en,
+        "Tarcil"@fr .
+
+<http://tolkiengateway.net/resource/Tarciryan> rdfs:label "Tarciryan"@en,
+        "Tarciryan"@fr .
+
+<http://tolkiengateway.net/resource/Targon> rdfs:label "Targon"@en,
+        "Targon"@fr .
+
+<http://tolkiengateway.net/resource/Tarondor> rdfs:label "Tarondor"@en,
+        "Tarondor"@fr .
+
+<http://tolkiengateway.net/resource/Ted_Nasmith> rdfs:label "Ted Nasmith"@en,
+        "Ted Nasmith"@fr .
+
+<http://tolkiengateway.net/resource/Ted_Sandyman> rdfs:label "Ted Sandyman"@en,
+        "Ted Sandyman"@fr .
+
+<http://tolkiengateway.net/resource/Telemnar> rdfs:label "Telemnar"@en,
+        "Telemnar"@fr .
+
+<http://tolkiengateway.net/resource/Telimektar> rdfs:label "Telimektar"@en,
+        "Telimektar"@fr .
+
+<http://tolkiengateway.net/resource/Telumehtar_Umbardacil> rdfs:label "Telumehtar"@en,
+        "Telumehtar"@fr .
+
+<http://tolkiengateway.net/resource/Terry_Kevin_Amthor> rdfs:label "Terry Kevin Amthor"@en,
+        "Terry Kevin Amthor"@fr .
+
+<http://tolkiengateway.net/resource/The_Brothers_Hildebrandt> rdfs:label "The Brothers Hildebrandt"@en,
+        "The Brothers Hildebrandt"@fr .
+
+<http://tolkiengateway.net/resource/Thengel> rdfs:label "Thengel"@en,
+        "Thengel"@fr .
+
+<http://tolkiengateway.net/resource/Theobald_Bolger> rdfs:label "Theobald Bolger"@en,
+        "Theobald Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Thomas_M_Honegger> rdfs:label "Thomas Honegger"@de,
+        "Thomas M. Honegger"@en,
+        "Thomas M. Honegger"@fr .
+
+<http://tolkiengateway.net/resource/Thorin> rdfs:label "Thorin"@en,
+        "Thorin"@fr .
+
+<http://tolkiengateway.net/resource/Thorin_I> rdfs:label "Thorin I"@en,
+        "Thorin I"@fr .
+
+<http://tolkiengateway.net/resource/Thorin_Stonehelm> rdfs:label "Thorin III"@en,
+        "Thorin III"@fr .
+
+<http://tolkiengateway.net/resource/Thorondir> rdfs:label "Thorondir"@en,
+        "Thorondir"@fr .
+
+<http://tolkiengateway.net/resource/Thranduil> rdfs:label "Thranduil"@en,
+        "Thranduil"@fr .
+
+<http://tolkiengateway.net/resource/Thrushes> rdfs:label "Thrushes"@en,
+        "Thrushes"@fr .
+
+<http://tolkiengateway.net/resource/Thráin> rdfs:label "Thráin"@en,
+        "Thráin"@fr .
+
+<http://tolkiengateway.net/resource/Thráin_I> rdfs:label "Thráin I"@en,
+        "Thráin I"@fr .
+
+<http://tolkiengateway.net/resource/Thrór> rdfs:label "Thrór"@en,
+        "Thrór"@fr .
+
+<http://tolkiengateway.net/resource/Théoden> rdfs:label "Théoden"@de,
+        "Théoden"@en,
+        "Théoden"@es,
+        "Théoden"@fr,
+        "Théoden"@it .
+
+<http://tolkiengateway.net/resource/Théodred> rdfs:label "Théodred"@en,
+        "Théodred"@fr .
+
+<http://tolkiengateway.net/resource/Théodwyn> rdfs:label "Théodwyn"@en,
+        "Théodwyn"@fr .
+
+<http://tolkiengateway.net/resource/Timothy_Bartlett> rdfs:label "Timothy Bartlett"@en,
+        "Timothy Bartlett"@fr .
+
+<http://tolkiengateway.net/resource/Tobold_Hornblower> rdfs:label "Tobold Hornblower"@en,
+        "Tobold Hornblower"@fr .
+
+<http://tolkiengateway.net/resource/Togo_Goodbody> rdfs:label "Togo Goodbody"@en,
+        "Togo Goodbody"@fr .
+
+<http://tolkiengateway.net/resource/Tolman_Cotton_Junior> rdfs:label "Tolman Cotton Junior"@en,
+        "Tolman Cotton Junior"@fr .
+
+<http://tolkiengateway.net/resource/Tom_Bombadil> rdfs:label "Tom Bombadil"@de,
+        "Tom Bombadil"@en,
+        "Tom Bombadil"@es,
+        "Tom Bombadil"@fr,
+        "Tom Bombadil"@it .
+
+<http://tolkiengateway.net/resource/Tom_Cross> rdfs:label "Thomas Jess Cross"@en,
+        "Thomas Jess Cross"@fr .
+
+<http://tolkiengateway.net/resource/Tom_Pickthorn> rdfs:label "Tom Pickthorn"@en,
+        "Tom Pickthorn"@fr .
+
+<http://tolkiengateway.net/resource/Tom_Shippey> rdfs:label "Thomas Alan Shippey"@en,
+        "Thomas Alan Shippey"@fr .
+
+<http://tolkiengateway.net/resource/Tosto_Boffin> rdfs:label "Tosto Boffin"@en,
+        "Tosto Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Tove_Jansson> rdfs:label "Tove Jansson"@en,
+        "Tove Jansson"@fr .
+
+<http://tolkiengateway.net/resource/Treebeard> rdfs:label "Treebeard"@de,
+        "Treebeard"@en,
+        "Treebeard"@es,
+        "Treebeard"@fr,
+        "Treebeard"@it .
+
+<http://tolkiengateway.net/resource/Trolls> rdfs:label "Trolls"@en,
+        "Trolls"@fr .
+
+<http://tolkiengateway.net/resource/Turambar> rdfs:label "Turambar"@en,
+        "Turambar"@fr .
+
+<http://tolkiengateway.net/resource/Turgon> rdfs:label "Turgon"@en,
+        "Turgon"@fr .
+
+<http://tolkiengateway.net/resource/Túrin_I> rdfs:label "Túrin I"@en,
+        "Túrin I"@fr .
+
+<http://tolkiengateway.net/resource/Túrin_II> rdfs:label "Túrin II"@en,
+        "Túrin II"@fr .
+
+<http://tolkiengateway.net/resource/Uffo_Boffin> rdfs:label "Uffo Boffin"@en,
+        "Uffo Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Uglúk> rdfs:label "Uglúk"@en,
+        "Uglúk"@fr .
+
+<http://tolkiengateway.net/resource/Valacar> rdfs:label "Valacar"@en,
+        "Valacar"@fr .
+
+<http://tolkiengateway.net/resource/Valandil> rdfs:label "Valandil"@en,
+        "Valandil"@fr .
+
+<http://tolkiengateway.net/resource/Valandur> rdfs:label "Valandur"@en,
+        "Valandur"@fr .
+
+<http://tolkiengateway.net/resource/Vampires> rdfs:label "Vampires"@en,
+        "Vampires"@fr .
+
+<http://tolkiengateway.net/resource/Vanyar> rdfs:label "Vanyar"@en,
+        "Vanyar"@fr .
+
+<http://tolkiengateway.net/resource/Varda> rdfs:label "Varda"@en,
+        "Varda"@fr .
+
+<http://tolkiengateway.net/resource/Vera_Chapman> rdfs:label "Vera Chapman"@en,
+        "Vera Chapman"@fr .
+
+<http://tolkiengateway.net/resource/Verlyn_Flieger> rdfs:label "Verlyn Flieger"@en,
+        "Verlyn Flieger"@fr .
+
+<http://tolkiengateway.net/resource/Vidugavia> rdfs:label "Vidugavia"@en,
+        "Vidugavia"@fr .
+
+<http://tolkiengateway.net/resource/Vidumavi> rdfs:label "Vidumavi"@en,
+        "Vidumavi"@fr .
+
+<http://tolkiengateway.net/resource/Viggo_Mortensen> rdfs:label "Viggo Mortensen"@en,
+        "Viggo Mortensen"@fr .
+
+<http://tolkiengateway.net/resource/Vigo_Boffin> rdfs:label "Vigo Boffin"@en,
+        "Vigo Boffin"@fr .
+
+<http://tolkiengateway.net/resource/Vorondil> rdfs:label "Vorondil"@en,
+        "Vorondil"@fr .
+
+<http://tolkiengateway.net/resource/W_H_Auden> rdfs:label "W.H. Auden"@en,
+        "W.H. Auden"@fr .
+
+<http://tolkiengateway.net/resource/Walda> rdfs:label "Walda"@en,
+        "Walda"@fr .
+
+<http://tolkiengateway.net/resource/Warden_of_the_Houses_of_Healing> rdfs:label "Warden of the Houses of Healing"@en,
+        "Warden of the Houses of Healing"@fr .
+
+<http://tolkiengateway.net/resource/Wargs> rdfs:label "Wargs"@en,
+        "Wargs"@fr .
+
+<http://tolkiengateway.net/resource/Watcher_in_the_Water> rdfs:label "Watcher in the Water"@en,
+        "Watcher in the Water"@fr .
+
+<http://tolkiengateway.net/resource/Werewolves> rdfs:label "Werewolves"@en,
+        "Werewolves"@fr .
+
+<http://tolkiengateway.net/resource/Wilcome_Cotton_I> rdfs:label "Wilcome Cotton"@en,
+        "Wilcome Cotton"@fr .
+
+<http://tolkiengateway.net/resource/Wilcome_Cotton_II> rdfs:label "Wilcome Cotton"@en,
+        "Wilcome Cotton"@fr .
+
+<http://tolkiengateway.net/resource/Wilibald_Bolger> rdfs:label "Wilibald Bolger"@en,
+        "Wilibald Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Wilimar_Bolger> rdfs:label "Wilimar Bolger"@en,
+        "Wilimar Bolger"@fr .
+
+<http://tolkiengateway.net/resource/Will_Whitfoot> rdfs:label "Will Whitfoot"@en,
+        "Will Whitfoot"@fr .
+
+<http://tolkiengateway.net/resource/William_Craigie> rdfs:label "William Craigie"@en,
+        "William Craigie"@fr .
+
+<http://tolkiengateway.net/resource/William_Johnson> rdfs:label "William Johnson"@en,
+        "William Johnson"@fr .
+
+<http://tolkiengateway.net/resource/William_O_Connor> rdfs:label "William M. O’Connor"@en,
+        "William M. O’Connor"@fr .
+
+<http://tolkiengateway.net/resource/William_Tom_and_Bert> rdfs:label "William, Tom, and Bert"@en,
+        "William, Tom, and Bert"@fr .
+
+<http://tolkiengateway.net/resource/Willie_Banks> rdfs:label "Willie Banks"@en,
+        "Willie Banks"@fr .
+
+<http://tolkiengateway.net/resource/Wiseman_Gamwich> rdfs:label "Wiseman Gamwich"@en,
+        "Wiseman Gamwich"@fr .
+
+<http://tolkiengateway.net/resource/Witch-king> rdfs:label "Witch-king"@en,
+        "Witch-king"@fr .
+
+<http://tolkiengateway.net/resource/Wolf> rdfs:label "Wolf"@en,
+        "Wolf"@fr .
+
+<http://tolkiengateway.net/resource/Wolfgang_Krege> rdfs:label "Wolfgang Krege"@en,
+        "Wolfgang Krege"@fr .
+
+<http://tolkiengateway.net/resource/Wrot> rdfs:label "Wrot"@en,
+        "Wrot"@fr .
+
+<http://tolkiengateway.net/resource/Wulf> rdfs:label "Wulf"@en,
+        "Wulf"@fr .
+
+<http://tolkiengateway.net/resource/Wídfara> rdfs:label "Wídfara"@en,
+        "Wídfara"@fr .
+
+<http://tolkiengateway.net/resource/Yavanna> rdfs:label "Yavanna"@en,
+        "Yavanna"@fr .
+
+<http://tolkiengateway.net/resource/Ármann_Jakobsson> rdfs:label "Ármann Jakobsson"@en,
+        "Ármann Jakobsson"@fr .
+
+<http://tolkiengateway.net/resource/Åke_Ohlmarks> rdfs:label "Åke Joel Ohlmarks"@en,
+        "Åke Joel Ohlmarks"@fr .
+
+<http://tolkiengateway.net/resource/Éomer> rdfs:label "Éomer"@en,
+        "Éomer"@fr .
+
+<http://tolkiengateway.net/resource/Éomund> rdfs:label "Éomund"@en,
+        "Éomund"@fr .
+
+<http://tolkiengateway.net/resource/Éothain> rdfs:label "Éothain"@en,
+        "Éothain"@fr .
+
+<http://tolkiengateway.net/resource/Éothéod> rdfs:label "Éothéod"@en,
+        "Éothéod"@fr .
+
+<http://tolkiengateway.net/resource/Éowin> rdfs:label "Éowin"@en,
+        "Éowin"@fr .
+
+<http://tolkiengateway.net/resource/Éowyn> rdfs:label "Éowyn"@de,
+        "Éowyn"@en,
+        "Éowyn"@es,
+        "Éowyn"@fr,
+        "Éowyn"@it .
+
+<http://tolkiengateway.net/resource/Óin> rdfs:label "Óin"@en,
+        "Óin"@fr .
+
+<http://tolkiengateway.net/resource/Šárka_Škorpíková> rdfs:label "Šárka Škorpíková"@en,
+        "Šárka Škorpíková"@fr .
+

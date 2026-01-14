@@ -6,7 +6,7 @@ from rdflib import Graph, Literal, Namespace, RDFS, URIRef, RDF
 
 def add_multilingual_final():
     print("=" * 60)
-    print("AJOUT MULTILINGUE AVEC TAGS DE LANGUE CORRECTS")
+    print("AJOUT MULTILINGUE")
     print("=" * 60)
 
     # Charger le graphe COMPLET

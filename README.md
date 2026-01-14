@@ -1,11 +1,38 @@
+
+### **1. START FUSEKI** (the triplestore)
+```bash
+# In one terminal:
+cd apache-jena-fuseki-4.10.0
+./fuseki-server --loc=../data /tolkienKG
+```
+
+### **2. LOAD THE DATA**
+```bash
+# In a SECOND terminal:
+python src/load_data_to_fuseki.py
+```
+
+### **3. START THE INTERFACE**
+```bash
+# In a THIRD terminal:
+python src/main.py
+```
+
+## 🌐 **ACCESS:**
+
+1. **Admin interface**: http://localhost:3030
+2. **User interface**: http://localhost:5001
+3. **Example**: http://localhost:5001/resource/Gandalf
+
+
+
+
+
 # Tolkien Knowledge Graph
 
 This project builds a Knowledge Graph from the Tolkien Gateway wiki,
 inspired by DBpedia and YAGO. The KG is enriched with external datasets
 and exposed through SPARQL and Linked Data interfaces.
-
-
-
 
 # Tolkien Knowledge Graph Project
 
@@ -49,3 +76,8 @@ The KG will represent characters, items, and locations from Tolkien's legendariu
 - Fichier RDF : `data/tolkien_pages_entities.ttl` (7.5 MB)
 - Triples générés : 115,190
 - Données dans Fuseki : 137,610 triples (avec métadonnées)
+
+
+
+
+

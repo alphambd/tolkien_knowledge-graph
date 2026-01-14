@@ -35,7 +35,7 @@ def merge_all_knowledge_graphs():
         ("data/metw_integration_cards.ttl", "METW Cards"),
         ("data/multilingual_labels_only.ttl", "Multilingual Labels"),
         ("data/api_alignments.ttl", "DBpedia/YAGO Alignments"),
-        #("data/elrond_schema.ttl", "Elrond Example"),  # ← Optionnel
+        #("data/elrond_schema.ttl", "Elrond Example"),
     ]
 
     total_triples = 0

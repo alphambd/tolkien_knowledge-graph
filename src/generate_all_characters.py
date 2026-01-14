@@ -163,7 +163,7 @@ def get_characters_from_category(category, limit=None):
             "action": "query",
             "list": "categorymembers",
             "cmtitle": f"Category:{category}",
-            "cmlimit": "max",  # Use max (500) instead of 50
+            "cmlimit": "max",
             "format": "json",
         }
         if cmcontinue:
@@ -370,10 +370,10 @@ def main():
     g.bind("xsd", XSD)
 
     print("=" * 50)
-    print("Starting RDF graph generation - ALL CHARACTERS WITH SCHEMA.ORG")
+    print("Starting RDF graph generation - ALL CHARACTERS WITH SCHEMA.ORG USED")
     print("=" * 50)
 
-    # Retrieve ALL characters (no limit)
+    # Retrieve ALL characters
     characters = get_characters_from_category("Third_Age_characters")
 
     # Counters for tracking

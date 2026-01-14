@@ -1,6 +1,6 @@
 import requests
 
-# Test les deux
+# les deux
 urls = [
     "http://localhost:3030/tolkienKG/query",
     "http://localhost:3030/tolkienKG/sparql"
@@ -14,8 +14,8 @@ for url in urls:
         r = requests.get(url, params={'query': query}, timeout=3)
         print(f"Status: {r.status_code}")
         if r.status_code == 200:
-            print("✅ Works!")
+            print(" Works!")
         else:
-            print(f"❌ Failed: {r.text[:100]}")
+            print(f" Failed: {r.text[:100]}")
     except Exception as e:
         print(f"❌ Error: {e}")

@@ -14,7 +14,7 @@ from rdflib import Graph, URIRef, Literal, Namespace, RDF, RDFS, XSD
 # Configuration
 # ---------------------------
 API_URL = "https://tolkiengateway.net/w/api.php"
-FUSEKI_ENDPOINT = "http://localhost:3030/tolkienKG"  # Keep for optional use
+FUSEKI_ENDPOINT = "http://localhost:3030/tolkienKG"
 
 # ---------------------------
 # Namespaces (schema.org focused)
@@ -36,20 +36,20 @@ XSD = XSD
 CATEGORY_TO_SCHEMA = {
     "Character": SCHEMA.Person,
     "Location": SCHEMA.Place,
-    "Item": SCHEMA.Product,  # Changed from Thing to Product for collectibles
+    "Item": SCHEMA.Product,
     "Book": SCHEMA.Book,
     "Film": SCHEMA.Movie,
     "Event": SCHEMA.Event,
     "Organization": SCHEMA.Organization,
     "Media": SCHEMA.MediaObject,
     "Race": SCHEMA.Person,
-    "Chapter": SCHEMA.CreativeWork,  # NEW: For chapters, scenes
-    "Song": SCHEMA.MusicComposition,  # NEW
-    "Album": SCHEMA.MusicAlbum,  # NEW
-    "Game": SCHEMA.Game,  # NEW: For video/board games
-    "Website": SCHEMA.WebSite,  # NEW
-    "Journal": SCHEMA.Periodical,  # NEW
-    "Other": SCHEMA.Thing  # Default fallback
+    "Chapter": SCHEMA.CreativeWork,
+    "Song": SCHEMA.MusicComposition,
+    "Album": SCHEMA.MusicAlbum,
+    "Game": SCHEMA.Game,
+    "Website": SCHEMA.WebSite,
+    "Journal": SCHEMA.Periodical,
+    "Other": SCHEMA.Thing
 }
 
 # Property mappings from infobox fields to schema.org
@@ -595,7 +595,7 @@ def add_schema_ontology(graph):
                       Literal(f"A {category.lower()} from Tolkien's legendarium")))
 
 # ---------------------------
-# Main Program (updated for schema.org)
+# Main Program ( schema.org)
 # ---------------------------
 def main():
     print("=" * 70)
@@ -791,10 +791,10 @@ def main():
                     f.write(f"  Schema.org class: {class_name}\n\n")
                 f.write(f"\nTotal: {len(working_templates)} templates\n")
 
-            print(f"✓ Template mappings saved: {template_list_file}")
+            print(f" Template mappings saved: {template_list_file}")
 
             # Generate statistics
-            print(f"\n📊 SCHEMA.ORG STATISTICS:")
+            print(f"\n SCHEMA.ORG STATISTICS:")
             print(f"   schema:Person entities: {len(list(graph.subjects(RDF.type, SCHEMA.Person)))}")
             print(f"   schema:Place entities: {len(list(graph.subjects(RDF.type, SCHEMA.Place)))}")
             print(f"   schema:Book entities: {len(list(graph.subjects(RDF.type, SCHEMA.Book)))}")
@@ -819,7 +819,7 @@ def main():
             try:
                 with open(OUTPUT_FILE, "rb") as f:
                     response = requests.post(
-                        FUSEKI_ENDPOINT + "/data",  # Use /data endpoint
+                        FUSEKI_ENDPOINT + "/data",
                         data=f,
                         headers={"Content-Type": "text/turtle"},
                         timeout=60

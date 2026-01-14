@@ -23,6 +23,7 @@ if [ $? -eq 0 ]; then
     echo "  Web Interface: http://localhost:3030"
     echo "  Linked Data:   http://localhost:5000"
     echo "  SPARQL:        http://localhost:3030/tolkienKG/sparql"
+    echo "  Final KG file: data/output/final_knowledge_graph.ttl"
 else
     echo ""
     echo "ERROR: Data loading failed"

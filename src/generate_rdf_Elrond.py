@@ -77,7 +77,7 @@ def clean_wiki_text(text):
     # Clean extra whitespace
     text = re.sub(r'\s+', ' ', text).strip()
 
-    text = re.split(r'<ref', text)[0]  # Keep only content before <ref
+    text = re.split(r'<ref', text)[0]
 
     return text
 
