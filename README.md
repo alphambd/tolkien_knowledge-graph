@@ -1,4 +1,4 @@
-
+## PROJECT EXECUTION STEPS
 ### **1. START FUSEKI** (the triplestore)
 ```bash
 # In one terminal:
@@ -71,11 +71,6 @@ The KG will represent characters, items, and locations from Tolkien's legendariu
   - `http://example.org/tolkien/resource/X` (l'entité réelle)
 - Lien établi via `foaf:primaryTopic` : `page/X → resource/X`
 - Inspiration DBpedia/YAGO : même distinction conceptuelle
-
-**Résultats :**
-- Fichier RDF : `data/tolkien_pages_entities.ttl` (7.5 MB)
-- Triples générés : 115,190
-- Données dans Fuseki : 137,610 triples (avec métadonnées)
 
 
 
