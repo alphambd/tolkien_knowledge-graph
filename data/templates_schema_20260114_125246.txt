@@ -1,0 +1,197 @@
+SCHEMA.ORG TEMPLATE MAPPINGS
+==================================================
+
+Template:Actor
+  Category: Character
+  Schema.org class: Person
+
+Template:Album
+  Category: Album
+  Schema.org class: MusicAlbum
+
+Template:Amonhen
+  Category: Other
+  Schema.org class: Thing
+
+Template:Artist infobox
+  Category: Character
+  Schema.org class: Person
+
+Template:Audiobook infobox
+  Category: Book
+  Schema.org class: Book
+
+Template:Author infobox
+  Category: Character
+  Schema.org class: Person
+
+Template:Band
+  Category: Organization
+  Schema.org class: Organization
+
+Template:Battle
+  Category: Event
+  Schema.org class: Event
+
+Template:Beyondbree
+  Category: Other
+  Schema.org class: Thing
+
+Template:Board game infobox
+  Category: Game
+  Schema.org class: Game
+
+Template:Book
+  Category: Book
+  Schema.org class: Book
+
+Template:Campaign
+  Category: Event
+  Schema.org class: Event
+
+Template:Chapter
+  Category: Chapter
+  Schema.org class: CreativeWork
+
+Template:Collectible
+  Category: Item
+  Schema.org class: Product
+
+Template:Collectible card
+  Category: Item
+  Schema.org class: Product
+
+Template:Company infobox
+  Category: Organization
+  Schema.org class: Organization
+
+Template:Convention
+  Category: Other
+  Schema.org class: Thing
+
+Template:Director
+  Category: Character
+  Schema.org class: Person
+
+Template:Dragon infobox
+  Category: Other
+  Schema.org class: Thing
+
+Template:Episode infobox
+  Category: Chapter
+  Schema.org class: CreativeWork
+
+Template:Events
+  Category: Event
+  Schema.org class: Event
+
+Template:Film infobox
+  Category: Film
+  Schema.org class: Movie
+
+Template:Infobox character
+  Category: Character
+  Schema.org class: Person
+
+Template:Infoboxes
+  Category: Other
+  Schema.org class: Thing
+
+Template:Journal
+  Category: Journal
+  Schema.org class: Periodical
+
+Template:Kingdom
+  Category: Location
+  Schema.org class: Place
+
+Template:Letter infobox
+  Category: Other
+  Schema.org class: Thing
+
+Template:Location infobox
+  Category: Location
+  Schema.org class: Place
+
+Template:Mallorn
+  Category: Journal
+  Schema.org class: Periodical
+
+Template:Modernpeople infobox
+  Category: Race
+  Schema.org class: Person
+
+Template:Mountain
+  Category: Location
+  Schema.org class: Place
+
+Template:Mythlore
+  Category: Journal
+  Schema.org class: Periodical
+
+Template:Noble House infobox
+  Category: Other
+  Schema.org class: Thing
+
+Template:Object infobox
+  Category: Item
+  Schema.org class: Product
+
+Template:Organization infobox
+  Category: Organization
+  Schema.org class: Organization
+
+Template:People infobox
+  Category: Race
+  Schema.org class: Person
+
+Template:Person infobox
+  Category: Character
+  Schema.org class: Person
+
+Template:Plant infobox
+  Category: Other
+  Schema.org class: Thing
+
+Template:Poem infobox
+  Category: Other
+  Schema.org class: Thing
+
+Template:Puzzle infobox
+  Category: Game
+  Schema.org class: Game
+
+Template:Race infobox
+  Category: Race
+  Schema.org class: Person
+
+Template:SEVEN
+  Category: Other
+  Schema.org class: Thing
+
+Template:Scene
+  Category: Chapter
+  Schema.org class: CreativeWork
+
+Template:Song
+  Category: Song
+  Schema.org class: MusicComposition
+
+Template:VTbox
+  Category: Other
+  Schema.org class: Thing
+
+Template:Video game infobox
+  Category: Film
+  Schema.org class: Movie
+
+Template:War
+  Category: Event
+  Schema.org class: Event
+
+Template:Website
+  Category: Website
+  Schema.org class: WebSite
+
+
+Total: 48 templates
