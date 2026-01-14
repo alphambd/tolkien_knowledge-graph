@@ -27,7 +27,7 @@ def merge_all_knowledge_graphs():
     final_graph.bind("rdfs", RDFS)
     final_graph.bind("rdf", RDF)
 
-    # Fichiers à fusionner - AJOUTE LE FICHIER MULTILINGUE ICI
+    # Fichiers à fusionner
     files_to_merge = [
         ("data/ontology.ttl", "Ontology Definitions"),
         ("data/all_characters_schema.ttl", "Characters"),

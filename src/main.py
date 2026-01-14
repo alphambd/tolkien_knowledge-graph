@@ -197,56 +197,7 @@ def sort_key(property_uri, value):
 
 
 def clean_value(value, property_uri=""):
-    """Nettoyer les valeurs - VERSION AMÉLIORÉE"""
-    if not isinstance(value, str):
-        return value
-
-    # Nettoyages généraux
-    value = value.replace("''", "'").strip()
-
-    # Nettoyages spécifiques par propriété
-    if property_uri == "http://schema.org/alternateName":
-        value = value.replace("' (Q)'", " (Quenya), ")
-        value = value.replace("' (S)'", " (Sindarin), ")
-        value = value.replace("' (H)'", " (Haradrim), ")
-        value = value.replace("' (K)'", " (Khuzdul), ")
-        value = value.rstrip(', ')
-        # Supprimer le texte problématique
-        if value.endswith('(See below'):
-            value = value.replace('(See below', '').strip().rstrip(',')
-
-    elif property_uri == "http://schema.org/birthDate":
-        # S'assurer que "Timeless Halls" est présent si disponible
-        if "Creation of the Ainur" in value and "Timeless" not in value:
-            # On pourrait chercher dans les autres valeurs, mais on garde simple
-            pass
-
-    elif property_uri == "http://schema.org/description":
-        # Ajouter des espaces entre les titres
-        value = re.sub(r'([a-z])([A-Z])', r'\1 \2', value)
-
-    elif property_uri == "http://tolkiengateway.net/ontology/dates":
-        value = value.replace(', - ', ' - ')
-
-    elif property_uri == "http://tolkiengateway.net/ontology/died":
-        if value.startswith('Sailed west on'):
-            value = value.replace('Sailed west on ', '')
-
-    elif property_uri == "http://tolkiengateway.net/ontology/weapon":
-        value = re.sub(r'([a-z])([A-Z])', r'\1, \2', value)
-
-    elif property_uri == "http://tolkiengateway.net/ontology/people":
-        if value == "Maia (Wizard":
-            value = "Maia (Wizard)"
-
-    # Supprimer les espaces multiples
-    value = ' '.join(value.split())
-
-    return value
-
-
-def clean_value(value, property_uri=""):
-    """Nettoyer les valeurs - DERNIÈRES CORRECTIONS"""
+    """Nettoyer les valeurs - VERSION FINALE"""
     if not isinstance(value, str):
         return value
 
@@ -263,6 +214,36 @@ def clean_value(value, property_uri=""):
     if property_uri == "http://tolkiengateway.net/ontology/died":
         if value.startswith('Sailed west on '):
             value = value.replace('Sailed west on ', '')
+
+    # Nettoyer 'dated' (HTML/markup)
+    if property_uri == "http://tolkiengateway.net/ontology/dated":
+        value = re.sub(r'\{\{.*?\}\}', '', value)  # Enlève {{...}}
+        value = re.sub(r'\|.*?=', ' ', value)      # Enlève |param=value
+        value = re.sub(r'\}\}', '', value)         # Enlève les }} restants
+        value = re.sub(r'website=VanityFair', '', value)  # Enlève website=
+
+    # Nettoyage pour alternateName
+    if property_uri == "http://schema.org/alternateName":
+        value = value.replace("' (Q)'", " (Quenya), ")
+        value = value.replace("' (S)'", " (Sindarin), ")
+        value = value.replace("' (H)'", " (Haradrim), ")
+        value = value.replace("' (K)'", " (Khuzdul), ")
+        value = value.rstrip(', ')
+        if value.endswith('(See below'):
+            value = value.replace('(See below', '').strip().rstrip(',')
+
+    # Nettoyer description (ajouter espaces)
+    if property_uri == "http://schema.org/description":
+        value = re.sub(r'([a-z])([A-Z])', r'\1 \2', value)
+
+    # Nettoyer weapon (ajouter virgules)
+    if property_uri == "http://tolkiengateway.net/ontology/weapon":
+        value = re.sub(r'([a-z])([A-Z])', r'\1, \2', value)
+
+    # Corriger "Maia (Wizard"
+    if property_uri == "http://tolkiengateway.net/ontology/people":
+        if value == "Maia (Wizard":
+            value = "Maia (Wizard)"
 
     # Supprimer les espaces multiples
     value = ' '.join(value.split())

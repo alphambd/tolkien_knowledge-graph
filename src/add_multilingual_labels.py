@@ -24,7 +24,7 @@ def add_multilingual_final():
                 persons.append((str(s), str(name).strip()))
                 break
 
-    print(f"✅ {len(persons)} personnages trouvés")
+    print(f" {len(persons)} personnages trouvés")
 
     # Traductions améliorées
     translations = {
@@ -109,12 +109,12 @@ def add_multilingual_final():
 
 
     # Vérification
-    print(f"\n📊 STATISTIQUES:")
+    print(f"\n STATISTIQUES:")
     print(f"Personnages: {len(persons)}")
     print(f"Labels ajoutés: {added}")
 
     # Compter les langues
-    print(f"\n🌍 RÉPARTITION PAR LANGUE:")
+    print(f"\n RÉPARTITION PAR LANGUE:")
     lang_count = {}
     for s, p, o in g.triples((None, RDFS.label, None)):
         if hasattr(o, 'language') and o.language:
