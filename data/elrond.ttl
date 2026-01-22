@@ -1,0 +1,99 @@
+@prefix : <http://tolkiengateway.net/resource/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+# Entité principale
+:Elrond a :Character ;
+    schema:name "Elrond"@en ;
+    dct:identifier "Elrond" ;
+    
+    # Démographie et caractéristiques
+    :race :HalfElf ;
+    schema:gender "Male" ;
+    :age "6520"^^xsd:integer ;
+    :hasHairColor "Dark" ;
+    :hasEyeColor "Grey" ;
+    
+    # Naissance
+    schema:birthDate "532"^^xsd:gYear ;
+    schema:birthPlace :Havens_of_Sirion ;
+    
+    # Famille
+    schema:parent :Eärendil, :Elwing ;
+    :fosterParent :Maglor ;
+    schema:sibling :Elros ;
+    schema:spouse :Celebrían ;
+    schema:children :Elladan, :Elrohir, :Arwen ;
+    :fosterChild :Aragorn ;
+    
+    # Titres et positions
+    schema:honorificPrefix "Master Elrond" ;
+    schema:jobTitle "Lord of Rivendell" ;
+    :hasTitle "Ring-bearer of Vilya", "Vice-regent of Eriador", "Herald to Gil-galad" ;
+    
+    # Appartenances
+    :memberOf :White_Council ;
+    :associatedHouse :House_of_Hador, :House_of_Elwë ;
+    
+    # Localisations
+    schema:homeLocation :Mouths_of_Sirion, :Lindon, :Rivendell ;
+    :laterLocation :Aman ;
+    
+    # Langues
+    :speaksLanguage :Sindarin, :Quenya, :Westron ;
+    
+    # Dates importantes
+    :rulePeriodStart "1697"^^xsd:gYear ;
+    :rulePeriodEnd "3021"^^xsd:gYear ;
+    :ruleDuration "4765 years" ;
+    :sailedWest "3021-09-29"^^xsd:date ;
+    :sailedFrom :Grey_Havens ;
+    
+    # Vêtements
+    :wears "Grey mantle", "Silver circlet" ;
+    
+    # Multilingue
+    rdfs:label "Elrond"@en, "Elerondo"@qya, "Peredhel"@sjn ;
+    :pronunciation "['ɛlʲrond]"@sjn ;
+    
+    # Image
+    schema:image <https://tolkiengateway.net/w/images/thumb/Tatyafinwe_-_Portrait_of_Elrond.jpg/300px-Tatyafinwe_-_Portrait_of_Elrond.jpg> ;
+    schema:caption "Portrait of Elrond by Tatyafinwe"@en ;
+    
+    # Source
+    dct:source <https://tolkiengateway.net/wiki/Elrond> ;
+    schema:mainEntityOfPage <https://tolkiengateway.net/wiki/Elrond> .
+
+# Classes et propriétés définies
+:Character a rdfs:Class ;
+    rdfs:subClassOf schema:Person .
+
+:HalfElf a rdfs:Class ;
+    rdfs:subClassOf :Race .
+
+:race a rdf:Property ;
+    rdfs:domain :Character ;
+    rdfs:range :Race .
+
+:fosterParent a rdf:Property ;
+    rdfs:subPropertyOf schema:parent ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:Person .
+
+# Liens vers d'autres entités (quelques exemples)
+:Rivendell a schema:Place ;
+    schema:name "Rivendell"@en .
+
+:White_Council a schema:Organization ;
+    schema:name "White Council"@en .
+
+:House_of_Hador a :NobleHouse ;
+    schema:name "House of Hador"@en .
+
+:Sindarin a :Language ;
+    schema:name "Sindarin"@en ;
+    schema:inLanguage "sjn" .

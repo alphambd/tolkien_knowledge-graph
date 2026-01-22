@@ -1,0 +1,87 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix schema1: <http://schema.org/> .
+@prefix tg: <http://tolkiengateway.net/resource/> .
+@prefix tgo: <http://tolkiengateway.net/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+tg:Elrond a dbo:FictionalCharacter,
+        schema1:Person,
+        tgo:Character ;
+    schema1:caption "Portrait of Elrond by Tatyafinwe"@en ;
+    schema1:children tg:Aragorn,
+        tg:Arwen,
+        tg:Elladan,
+        tg:Elrohir ;
+    schema1:gender "Male"@en ;
+    schema1:honorificPrefix "Lord of Rivendell"@en ;
+    schema1:image "Tatyafinwe - Portrait of Elrond.jpg"@en ;
+    schema1:location tg:Aman,
+        tg:Lindon,
+        tg:Mouths_of_Sirion,
+        tg:Rivendell ;
+    schema1:name "Elrond"@en ;
+    schema1:parent tg:Elwing,
+        tg:Eärendil,
+        tg:Maglor ;
+    schema1:spouse tg:Celebrían ;
+    tgo:age "6520"^^xsd:string ;
+    tgo:alternateName "Elerondo (Q), Peredhel (S, Half-elven), Master Elrond"@en ;
+    tgo:birthDate "First Age 532"^^xsd:string ;
+    tgo:birthPlace tg:Havens_of_Sirion ;
+    tgo:clothing "Grey mantle, Silver circlet"@en ;
+    tgo:eyeColor "Grey"@en ;
+    tgo:hairColor "Dark"@en ;
+    tgo:heritage "Half-elven father and mother"@en ;
+    tgo:house "House of Hador, but preferred the House of Elwë"@en ;
+    tgo:knowsLanguage "Sindarin, Quenya, Westron"@en ;
+    tgo:memberOf "White Council"@en ;
+    tgo:position "Ring-bearer of Vilya, Vice-regent of Eriador, Herald to Gil-galad"@en ;
+    tgo:pronun "S, ['ɛlʲrond]"@en ;
+    tgo:race "Half-elf"@en ;
+    tgo:rulePeriod "Second Age 1697 - Third Age 3021 (ruled 4765 years)"@en ;
+    tgo:sailedfrom "Grey Havens"@en ;
+    tgo:sailedwest "29 September, Third Age 3021"^^xsd:string ;
+    tgo:sibling tg:Elros .
+
+tg:Aman a schema1:Thing ;
+    schema1:name "Aman"@en .
+
+tg:Aragorn a schema1:Thing ;
+    schema1:name "Aragorn"@en .
+
+tg:Arwen a schema1:Thing ;
+    schema1:name "Arwen"@en .
+
+tg:Celebrían a schema1:Thing ;
+    schema1:name "Celebrían"@en .
+
+tg:Elladan a schema1:Thing ;
+    schema1:name "Elladan"@en .
+
+tg:Elrohir a schema1:Thing ;
+    schema1:name "Elrohir"@en .
+
+tg:Elros a schema1:Thing ;
+    schema1:name "Elros"@en .
+
+tg:Elwing a schema1:Thing ;
+    schema1:name "Elwing"@en .
+
+tg:Eärendil a schema1:Thing ;
+    schema1:name "Eärendil"@en .
+
+tg:Havens_of_Sirion a schema1:Thing ;
+    schema1:name "Havens of Sirion"@en .
+
+tg:Lindon a schema1:Thing ;
+    schema1:name "Lindon"@en .
+
+tg:Maglor a schema1:Thing ;
+    schema1:name "Maglor"@en .
+
+tg:Mouths_of_Sirion a schema1:Thing ;
+    schema1:name "Mouths of Sirion"@en .
+
+tg:Rivendell a schema1:Thing ;
+    schema1:name "Rivendell"@en .
+
